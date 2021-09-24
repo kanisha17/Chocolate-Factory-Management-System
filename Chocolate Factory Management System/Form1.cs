@@ -84,5 +84,10 @@ namespace Chocolate_Factory_Management_System
         {
             
         }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

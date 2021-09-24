@@ -23,9 +23,19 @@ namespace Chocolate_Factory_Management_System
             a1.ShowDialog();
         }
 
-        private void EMPLOYEEDETAILSStripMenuItem_Click(object sender, EventArgs e)
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Employeelogin e1 = new Employeelogin();
+
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Employee1 e1 = new Employee1();
             e1.ShowDialog();
         }
     }

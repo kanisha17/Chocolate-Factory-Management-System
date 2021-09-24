@@ -12,3 +12,17 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate Factory M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.splash.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Adminprofile.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Employeelogin.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\Chocolate Factory Management System.exe.config
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\Chocolate Factory Management System.exe
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\Chocolate Factory Management System.pdb
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Adminprofile.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Form1.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Form2.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Properties.Resources.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.splash.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.exe
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.pdb
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Employee1.resources

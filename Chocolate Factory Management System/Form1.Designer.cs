@@ -88,6 +88,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(402, 36);
             this.textBoxUsername.TabIndex = 4;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // textBoxPassword
             // 
