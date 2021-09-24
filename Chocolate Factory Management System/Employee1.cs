@@ -50,7 +50,30 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonLoadTable_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from EmployeeDetails";
+                //MessageBox.Show(query);
+                command.CommandText = query;
+
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
+
+
+                connection.Close();
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
