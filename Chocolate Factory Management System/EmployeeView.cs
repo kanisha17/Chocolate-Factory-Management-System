@@ -58,5 +58,33 @@ namespace Chocolate_Factory_Management_System
             f1.ShowDialog();
             this.Hide();
         }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+           if(printPreviewDialog1.ShowDialog()==DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("EMPLOYEE SUMMARY", new Font("Lucida Bright", 24, FontStyle.Bold), Brushes.Red, new Point(250));
+            e.Graphics.DrawString("Employee Name: "+textBoxEmployeeName.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30,120));
+            e.Graphics.DrawString("Employee Department: " + textBoxDepartment.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 170));
+            e.Graphics.DrawString("Employee Date Of Birth: " + textBoxDOB.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 220));
+            e.Graphics.DrawString("Employee Gender: " + textBoxGender.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 270));
+            e.Graphics.DrawString("Employee Address: " + textBoxAddress.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 320));
+            e.Graphics.DrawString("Employee Pincode: " + textBoxPincode.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 370));
+            e.Graphics.DrawString("Employee City: " + textBoxCity.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 420));
+            e.Graphics.DrawString("Employee State: " + textBoxState.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 470));
+            e.Graphics.DrawString("Employee Phone Number: " + textBoxPhone.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 520));
+            e.Graphics.DrawString("Employee Qualification: " + textBoxQualification.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 570));
+        }
     }
 }

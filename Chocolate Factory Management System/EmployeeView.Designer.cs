@@ -29,6 +29,7 @@ namespace Chocolate_Factory_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeView));
             this.labelViewEID = new System.Windows.Forms.Label();
             this.textBoxViewEID = new System.Windows.Forms.TextBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -55,6 +56,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxQualification = new System.Windows.Forms.TextBox();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
             // labelViewEID
@@ -95,6 +98,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonPrint.TabIndex = 3;
             this.buttonPrint.Text = "PRINT";
             this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonHome
             // 
@@ -296,6 +300,22 @@ namespace Chocolate_Factory_Management_System
             this.buttonClose.Text = "X";
             this.buttonClose.UseVisualStyleBackColor = true;
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // EmployeeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -363,5 +383,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.TextBox textBoxQualification;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
