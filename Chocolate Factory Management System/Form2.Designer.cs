@@ -37,14 +37,14 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.EMPLOYEEDETAILSStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salaryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,32 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem5.Text = "EMPLOYEE DETAILS";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
+            // employeeToolStripMenuItem1
+            // 
+            this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
+            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.employeeToolStripMenuItem1.Text = "Employee";
+            this.employeeToolStripMenuItem1.Click += new System.EventHandler(this.employeeToolStripMenuItem1_Click);
+            // 
+            // viewToolStripMenuItem1
+            // 
+            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
+            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.viewToolStripMenuItem1.Text = "View";
+            this.viewToolStripMenuItem1.Click += new System.EventHandler(this.viewToolStripMenuItem1_Click);
+            // 
+            // attendanceToolStripMenuItem1
+            // 
+            this.attendanceToolStripMenuItem1.Name = "attendanceToolStripMenuItem1";
+            this.attendanceToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.attendanceToolStripMenuItem1.Text = "Attendance";
+            // 
+            // salaryToolStripMenuItem1
+            // 
+            this.salaryToolStripMenuItem1.Name = "salaryToolStripMenuItem1";
+            this.salaryToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.salaryToolStripMenuItem1.Text = "Salary";
+            // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
@@ -140,31 +166,6 @@ namespace Chocolate_Factory_Management_System
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
             this.salaryToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
             this.salaryToolStripMenuItem.Text = "Salary";
-            // 
-            // employeeToolStripMenuItem1
-            // 
-            this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
-            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.employeeToolStripMenuItem1.Text = "Employee";
-            this.employeeToolStripMenuItem1.Click += new System.EventHandler(this.employeeToolStripMenuItem1_Click);
-            // 
-            // viewToolStripMenuItem1
-            // 
-            this.viewToolStripMenuItem1.Name = "viewToolStripMenuItem1";
-            this.viewToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.viewToolStripMenuItem1.Text = "View";
-            // 
-            // attendanceToolStripMenuItem1
-            // 
-            this.attendanceToolStripMenuItem1.Name = "attendanceToolStripMenuItem1";
-            this.attendanceToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.attendanceToolStripMenuItem1.Text = "Attendance";
-            // 
-            // salaryToolStripMenuItem1
-            // 
-            this.salaryToolStripMenuItem1.Name = "salaryToolStripMenuItem1";
-            this.salaryToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.salaryToolStripMenuItem1.Text = "Salary";
             // 
             // Form2
             // 

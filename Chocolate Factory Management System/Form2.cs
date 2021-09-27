@@ -38,5 +38,11 @@ namespace Chocolate_Factory_Management_System
             Employee1 e1 = new Employee1();
             e1.ShowDialog();
         }
+
+        private void viewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EmployeeView e2 = new EmployeeView();
+            e2.ShowDialog();
+        }
     }
 }

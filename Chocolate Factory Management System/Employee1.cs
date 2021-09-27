@@ -35,6 +35,7 @@ namespace Chocolate_Factory_Management_System
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Saved Successfully");
+             
             }
             catch (Exception ee)
             {
@@ -118,6 +119,14 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+
         }
     }
 }
