@@ -41,18 +41,7 @@ namespace Chocolate_Factory_Management_System
 
         private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Panel pan = new Panel();
-            this.Controls.Add(pan);
-
-            Graphics graph = pan.CreateGraphics();
-            Size si = this.ClientSize;
-            bitmap = new Bitmap(si.Width, si.Height, graph);
-            graph = Graphics.FromImage(bitmap);
-
-            Point pt = PointToScreen(pan.Location);
-            graph.CopyFromScreen(pt.X, pt.Y, 0, 0, si);
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            
         }
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -153,6 +142,22 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show("Error" + ef);
             }
+        }
+
+        private void pRINTToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Panel pan = new Panel();
+            this.Controls.Add(pan);
+
+            Graphics graph = pan.CreateGraphics();
+            Size si = this.ClientSize;
+            bitmap = new Bitmap(si.Width, si.Height, graph);
+            graph = Graphics.FromImage(bitmap);
+
+            Point pt = PointToScreen(pan.Location);
+            graph.CopyFromScreen(pt.X, pt.Y, 0, 0, si);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }
