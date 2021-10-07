@@ -86,5 +86,60 @@ namespace Chocolate_Factory_Management_System
             e.Graphics.DrawString("Employee Phone Number: " + textBoxPhone.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 520));
             e.Graphics.DrawString("Employee Qualification: " + textBoxQualification.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 570));
         }
+
+        private void textBoxQualification_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDOB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxGender_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDepartment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxEmployeeName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,3 +27,4 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.pdb
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Employee1.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.EmployeeView.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.CustomerRegister.resources

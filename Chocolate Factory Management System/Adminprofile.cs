@@ -105,5 +105,11 @@ namespace Chocolate_Factory_Management_System
         {
             Close();
         }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
     }
 }

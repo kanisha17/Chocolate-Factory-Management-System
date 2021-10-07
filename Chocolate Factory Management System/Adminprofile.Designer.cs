@@ -50,6 +50,7 @@ namespace Chocolate_Factory_Management_System
             this.labelID = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.buttonHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelFisrtName
@@ -238,11 +239,22 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePicker1.Size = new System.Drawing.Size(447, 40);
             this.dateTimePicker1.TabIndex = 21;
             // 
+            // buttonHome
+            // 
+            this.buttonHome.Location = new System.Drawing.Point(115, 628);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(132, 42);
+            this.buttonHome.TabIndex = 22;
+            this.buttonHome.Text = "HOME";
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
             // Adminprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1034);
+            this.Controls.Add(this.buttonHome);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelID);
@@ -297,5 +309,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button buttonHome;
     }
 }

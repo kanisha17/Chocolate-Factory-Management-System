@@ -52,6 +52,12 @@
     <Compile Include="Adminprofile.Designer.cs">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRegister.Designer.cs">
+      <DependentUpon>CustomerRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="Adminprofile.resx">
       <DependentUpon>Adminprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerRegister.resx">
+      <DependentUpon>CustomerRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee1.resx">
       <DependentUpon>Employee1.cs</DependentUpon>

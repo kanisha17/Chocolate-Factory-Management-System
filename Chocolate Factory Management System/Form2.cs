@@ -44,5 +44,26 @@ namespace Chocolate_Factory_Management_System
             EmployeeView e2 = new EmployeeView();
             e2.ShowDialog();
         }
+
+        private void salaryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void csutomerRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerRegister c1 = new CustomerRegister();
+            c1.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cUSTOMERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
