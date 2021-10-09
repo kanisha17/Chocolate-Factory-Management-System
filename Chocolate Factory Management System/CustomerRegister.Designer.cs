@@ -59,6 +59,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID = new System.Windows.Forms.TextBox();
             this.printDocument1c = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1c = new System.Windows.Forms.PrintPreviewDialog();
+            this.labelCID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -91,21 +93,21 @@ namespace Chocolate_Factory_Management_System
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.addToolStripMenuItem.Text = "ADD";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.editToolStripMenuItem.Text = "EDIT";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.deleteToolStripMenuItem.Text = "DELETE";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -299,11 +301,32 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialog1c.Name = "printPreviewDialog1c";
             this.printPreviewDialog1c.Visible = false;
             // 
+            // labelCID
+            // 
+            this.labelCID.AutoSize = true;
+            this.labelCID.Location = new System.Drawing.Point(36, 39);
+            this.labelCID.Name = "labelCID";
+            this.labelCID.Size = new System.Drawing.Size(37, 20);
+            this.labelCID.TabIndex = 22;
+            this.labelCID.Text = "CID";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(457, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(403, 31);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "CUSTOMER REGISTRATION";
+            // 
             // CustomerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 607);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCID);
             this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.dateTimePickercDOB);
             this.Controls.Add(this.buttonClose);
@@ -367,5 +390,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxCID;
         private System.Drawing.Printing.PrintDocument printDocument1c;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1c;
+        private System.Windows.Forms.Label labelCID;
+        private System.Windows.Forms.Label label1;
     }
 }

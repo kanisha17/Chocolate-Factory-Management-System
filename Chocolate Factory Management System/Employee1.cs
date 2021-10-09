@@ -159,5 +159,10 @@ namespace Chocolate_Factory_Management_System
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
         }
+
+        private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

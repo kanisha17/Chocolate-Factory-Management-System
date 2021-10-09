@@ -90,6 +90,12 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupplierRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierRegister.Designer.cs">
+      <DependentUpon>SupplierRegister.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adminprofile.resx">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierRegister.resx">
+      <DependentUpon>SupplierRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

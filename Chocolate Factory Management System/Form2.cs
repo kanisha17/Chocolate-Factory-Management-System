@@ -65,5 +65,16 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void sUPPLIERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SupplierRegister s1 = new SupplierRegister();
+            s1.ShowDialog();
+        }
     }
 }

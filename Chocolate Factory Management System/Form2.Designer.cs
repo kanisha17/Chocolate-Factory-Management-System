@@ -31,6 +31,7 @@ namespace Chocolate_Factory_Management_System
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ADMINPROFILEStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@ namespace Chocolate_Factory_Management_System
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@ namespace Chocolate_Factory_Management_System
             this.eNQUIERYDETAILSToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(283, 493);
+            this.menuStrip1.Size = new System.Drawing.Size(286, 493);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,6 +90,12 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem1.Size = new System.Drawing.Size(270, 29);
             this.toolStripMenuItem1.Text = ".";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // aToolStripMenuItem
+            // 
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(123, 34);
+            this.aToolStripMenuItem.Text = "a";
             // 
             // toolStripMenuItem3
             // 
@@ -201,17 +207,19 @@ namespace Chocolate_Factory_Management_System
             this.sUPPLIERDETAILSToolStripMenuItem.Name = "sUPPLIERDETAILSToolStripMenuItem";
             this.sUPPLIERDETAILSToolStripMenuItem.Size = new System.Drawing.Size(270, 31);
             this.sUPPLIERDETAILSToolStripMenuItem.Text = "SUPPLIER DETAILS";
+            this.sUPPLIERDETAILSToolStripMenuItem.Click += new System.EventHandler(this.sUPPLIERDETAILSToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(214, 36);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.supplierToolStripMenuItem.Text = "Supplier";
+            this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem3
             // 
             this.viewToolStripMenuItem3.Name = "viewToolStripMenuItem3";
-            this.viewToolStripMenuItem3.Size = new System.Drawing.Size(214, 36);
+            this.viewToolStripMenuItem3.Size = new System.Drawing.Size(270, 36);
             this.viewToolStripMenuItem3.Text = "View";
             // 
             // toolStripMenuItem8
@@ -251,12 +259,6 @@ namespace Chocolate_Factory_Management_System
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
             this.salaryToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
             this.salaryToolStripMenuItem.Text = "Salary";
-            // 
-            // aToolStripMenuItem
-            // 
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.aToolStripMenuItem.Text = "a";
             // 
             // Form2
             // 
