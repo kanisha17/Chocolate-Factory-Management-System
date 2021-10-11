@@ -13,17 +13,17 @@ namespace Chocolate_Factory_Management_System
 {
     public partial class EmployeeView : Form
     {
-        private OleDbConnection connection = new OleDbConnection();
+        private OleDbConnection con= new OleDbConnection();
         public EmployeeView()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdata.accdb;Persist Security Info=False;";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdata.accdb;Persist Security Info=False;";
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Qualification from EmployeeDetails where EID=@parm1", connection);
+            con.Open();
+            OleDbCommand c1 = new OleDbCommand("select EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Qualification from EmployeeDetails where EID=@parm1", con);
             c1.Parameters.AddWithValue("@parm1",textBoxViewEID.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
@@ -44,7 +44,7 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show("No Data Found");
             }
-            connection.Close();
+            con.Close();
         }
 
         private void EmployeeView_Load(object sender, EventArgs e)

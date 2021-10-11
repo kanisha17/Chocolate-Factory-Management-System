@@ -68,6 +68,8 @@ namespace Chocolate_Factory_Management_System
             this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelEmpDetails = new System.Windows.Forms.Label();
+            this.labelDateOfJoining = new System.Windows.Forms.Label();
+            this.dateTimePickerDt = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +84,7 @@ namespace Chocolate_Factory_Management_System
             this.labelEID.Size = new System.Drawing.Size(49, 25);
             this.labelEID.TabIndex = 0;
             this.labelEID.Text = "EID";
+            this.labelEID.Click += new System.EventHandler(this.labelEID_Click);
             // 
             // labelEName
             // 
@@ -383,21 +386,21 @@ namespace Chocolate_Factory_Management_System
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // eDITToolStripMenuItem
             // 
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // dELETEToolStripMenuItem
             // 
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
@@ -418,8 +421,8 @@ namespace Chocolate_Factory_Management_System
             // hOMEToolStripMenuItem
             // 
             this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
-            this.hOMEToolStripMenuItem.Text = "HOME";
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.hOMEToolStripMenuItem.Text = "EXIT";
             this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // labelEmpDetails
@@ -432,11 +435,31 @@ namespace Chocolate_Factory_Management_System
             this.labelEmpDetails.TabIndex = 32;
             this.labelEmpDetails.Text = "EMPLOYEE REGISTRATION";
             // 
+            // labelDateOfJoining
+            // 
+            this.labelDateOfJoining.AutoSize = true;
+            this.labelDateOfJoining.Font = new System.Drawing.Font("Lucida Bright", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDateOfJoining.Location = new System.Drawing.Point(544, 325);
+            this.labelDateOfJoining.Name = "labelDateOfJoining";
+            this.labelDateOfJoining.Size = new System.Drawing.Size(184, 25);
+            this.labelDateOfJoining.TabIndex = 33;
+            this.labelDateOfJoining.Text = "Date Of Joining";
+            // 
+            // dateTimePickerDt
+            // 
+            this.dateTimePickerDt.Location = new System.Drawing.Point(745, 324);
+            this.dateTimePickerDt.Name = "dateTimePickerDt";
+            this.dateTimePickerDt.Size = new System.Drawing.Size(286, 26);
+            this.dateTimePickerDt.TabIndex = 34;
+            this.dateTimePickerDt.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // Employee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1444, 712);
+            this.Controls.Add(this.dateTimePickerDt);
+            this.Controls.Add(this.labelDateOfJoining);
             this.Controls.Add(this.labelEmpDetails);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonClose);
@@ -513,5 +536,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.Label labelEmpDetails;
+        private System.Windows.Forms.Label labelDateOfJoining;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDt;
     }
 }

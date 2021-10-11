@@ -14,6 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class CustomerRegister : Form
     {
         private OleDbConnection connection = new OleDbConnection();
+        int count = 0;
         public CustomerRegister()
         {
             InitializeComponent();
@@ -29,7 +30,10 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update Customers set FirstName='" + textBoxcFirstName.Text + "', LastName='" + textBoxcLastName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "', Address='" + textBoxcAddress.Text + "',City='"+textBoxcCity.Text+"', Pincode='" + textBoxcPincode.Text + "',Email='" + textBoxcEmail.Text + "' where CID=" + textBoxCID.Text + "";
+                string query = "update Customers set FirstName='" + textBoxcFirstName.Text + "', " +
+                    "LastName='" + textBoxcLastName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
+                    " Address='" + textBoxcAddress.Text + "',City='"+textBoxcCity.Text+"', " +
+                    "Pincode='" + textBoxcPincode.Text + "',Email='" + textBoxcEmail.Text + "' where PhoneNo=" +textBoxcPhone.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -150,6 +154,31 @@ namespace Chocolate_Factory_Management_System
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void sEARCHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            count = 0;
+            connection.Open();
+            OleDbCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText="select *from Customers where PhoneNo='"+textBoxSearch.Text+"'";
+            command.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(command);
+            da.Fill(dt);
+            count = Convert.ToInt32(dt.Rows.Count.ToString());
+            dataGridView1.DataSource = dt;
+            connection.Close();
+
+            if (count == 0)
+            {
+                MessageBox.Show("Record Not Found");
+            }
+            else
+            {
+                MessageBox.Show("Record Found");
+            }
         }
     }
 }

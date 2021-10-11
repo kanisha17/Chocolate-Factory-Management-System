@@ -47,7 +47,8 @@ namespace Chocolate_Factory_Management_System
 
         private void salaryToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            EmployeeSalary e1 = new EmployeeSalary();
+            e1.ShowDialog();
         }
 
         private void csutomerRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,6 +76,11 @@ namespace Chocolate_Factory_Management_System
         {
             SupplierRegister s1 = new SupplierRegister();
             s1.ShowDialog();
+        }
+
+        private void attendanceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

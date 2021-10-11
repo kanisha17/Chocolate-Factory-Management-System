@@ -73,8 +73,10 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into EmployeeDetails (EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Qualification) " +
-                    "values('" + textBoxEID.Text + "','" + textBoxEmployeeName.Text + "','" + comboBoxDepartment.Text + "','" + dateTimePickerDOB.Value.Date + "','" + comboBoxGender.Text + "','" + textBoxAddress.Text + "','" + textBoxPincode.Text + "','" + textBoxCity.Text + "','" + textBoxState.Text + "','" + textBoxPhone.Text + "','" + textBoxQualification.Text + "')";
+                command.CommandText = "insert into EmployeeDetails (EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Qualification,DateOfJoining) " +
+                    "values('" + textBoxEID.Text + "','" + textBoxEmployeeName.Text + "','" + comboBoxDepartment.Text + "','" + dateTimePickerDOB.Value.Date + "'," +
+                    "'" + comboBoxGender.Text + "','" + textBoxAddress.Text + "','" + textBoxPincode.Text + "','" + textBoxCity.Text + "','" + textBoxState.Text + "'," +
+                    "'" + textBoxPhone.Text + "','" + textBoxQualification.Text + "','"+dateTimePickerDt.Value.Date+"')";
 
 
                 command.ExecuteNonQuery();
@@ -96,7 +98,10 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "', Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "', Gender='" + comboBoxGender.Text + "', Address='" + textBoxAddress.Text + "', Pincode='" + textBoxPincode.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "',Qualification='" + textBoxQualification.Text + "' where EID=" + textBoxEID.Text + "";
+                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "', Department='" + comboBoxDepartment.Text + "'," +
+                    "DOB='" + dateTimePickerDOB.Value.Date + "', Gender='" + comboBoxGender.Text + "', Address='" + textBoxAddress.Text + "', " +
+                    "Pincode='" + textBoxPincode.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
+                    "Qualification='" + textBoxQualification.Text + "','"+dateTimePickerDt.Value.Date+"' where EID=" + textBoxEID.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -161,6 +166,16 @@ namespace Chocolate_Factory_Management_System
         }
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelEID_Click(object sender, EventArgs e)
         {
 
         }
