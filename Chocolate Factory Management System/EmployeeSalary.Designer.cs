@@ -59,6 +59,13 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialogSalary = new System.Windows.Forms.PrintPreviewDialog();
             this.labelEmployeeName = new System.Windows.Forms.Label();
             this.textBoxEmployeeName = new System.Windows.Forms.TextBox();
+            this.eXITToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelSID = new System.Windows.Forms.Label();
+            this.textBoxSID = new System.Windows.Forms.TextBox();
             this.groupBoxCalculateSalary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalarySlip)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -250,7 +257,9 @@ namespace Chocolate_Factory_Management_System
             this.pRINTToolStripMenuItem,
             this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem,
-            this.eXITToolStripMenuItem1});
+            this.eXITToolStripMenuItem1,
+            this.eXITToolStripMenuItem2,
+            this.rEFRESHToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1298, 33);
@@ -259,30 +268,34 @@ namespace Chocolate_Factory_Management_System
             // 
             // pRINTToolStripMenuItem
             // 
+            this.pRINTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aDDToolStripMenuItem,
+            this.eDITToolStripMenuItem,
+            this.dELETEToolStripMenuItem});
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.pRINTToolStripMenuItem.Text = "MENU";
             this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(70, 32);
-            this.cLEARToolStripMenuItem.Text = "VIEW";
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
+            this.cLEARToolStripMenuItem.Text = "PRINT";
             this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
-            this.eXITToolStripMenuItem.Text = "CLEAR";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
+            this.eXITToolStripMenuItem.Text = "VIEW";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem1
             // 
             this.eXITToolStripMenuItem1.Name = "eXITToolStripMenuItem1";
-            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(62, 32);
-            this.eXITToolStripMenuItem1.Text = "EXIT";
+            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(79, 29);
+            this.eXITToolStripMenuItem1.Text = "CLEAR";
             this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click);
             // 
             // printDocumentSalary
@@ -316,11 +329,64 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEmployeeName.Size = new System.Drawing.Size(261, 26);
             this.textBoxEmployeeName.TabIndex = 14;
             // 
+            // eXITToolStripMenuItem2
+            // 
+            this.eXITToolStripMenuItem2.Name = "eXITToolStripMenuItem2";
+            this.eXITToolStripMenuItem2.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem2.Text = "EXIT";
+            this.eXITToolStripMenuItem2.Click += new System.EventHandler(this.eXITToolStripMenuItem2_Click);
+            // 
+            // aDDToolStripMenuItem
+            // 
+            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem.Text = "ADD";
+            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
+            // 
+            // eDITToolStripMenuItem
+            // 
+            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem.Text = "EDIT";
+            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
+            // 
+            // dELETEToolStripMenuItem
+            // 
+            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem.Text = "DELETE";
+            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
+            // 
+            // rEFRESHToolStripMenuItem
+            // 
+            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
+            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
+            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
+            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
+            // 
+            // labelSID
+            // 
+            this.labelSID.AutoSize = true;
+            this.labelSID.Location = new System.Drawing.Point(98, 274);
+            this.labelSID.Name = "labelSID";
+            this.labelSID.Size = new System.Drawing.Size(37, 20);
+            this.labelSID.TabIndex = 15;
+            this.labelSID.Text = "SID";
+            // 
+            // textBoxSID
+            // 
+            this.textBoxSID.Location = new System.Drawing.Point(255, 268);
+            this.textBoxSID.Name = "textBoxSID";
+            this.textBoxSID.Size = new System.Drawing.Size(261, 26);
+            this.textBoxSID.TabIndex = 16;
+            // 
             // EmployeeSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1298, 582);
+            this.Controls.Add(this.textBoxSID);
+            this.Controls.Add(this.labelSID);
             this.Controls.Add(this.textBoxEmployeeName);
             this.Controls.Add(this.labelEmployeeName);
             this.Controls.Add(this.dataGridViewSalarySlip);
@@ -376,5 +442,12 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem1;
         private System.Windows.Forms.Label labelEmployeeName;
         private System.Windows.Forms.TextBox textBoxEmployeeName;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
+        private System.Windows.Forms.Label labelSID;
+        private System.Windows.Forms.TextBox textBoxSID;
     }
 }

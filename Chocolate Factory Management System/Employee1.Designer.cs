@@ -29,9 +29,9 @@ namespace Chocolate_Factory_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee1));
             this.labelEID = new System.Windows.Forms.Label();
             this.labelEName = new System.Windows.Forms.Label();
@@ -69,7 +69,10 @@ namespace Chocolate_Factory_Management_System
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelEmpDetails = new System.Windows.Forms.Label();
             this.labelDateOfJoining = new System.Windows.Forms.Label();
-            this.dateTimePickerDt = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerJoining = new System.Windows.Forms.DateTimePicker();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -264,7 +267,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxQualification
             // 
             this.textBoxQualification.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQualification.Location = new System.Drawing.Point(745, 269);
+            this.textBoxQualification.Location = new System.Drawing.Point(745, 265);
             this.textBoxQualification.Name = "textBoxQualification";
             this.textBoxQualification.Size = new System.Drawing.Size(286, 29);
             this.textBoxQualification.TabIndex = 19;
@@ -309,33 +312,33 @@ namespace Chocolate_Factory_Management_System
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Location = new System.Drawing.Point(4, 378);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1254, 261);
@@ -366,7 +369,8 @@ namespace Chocolate_Factory_Management_System
             this.mENUToolStripMenuItem,
             this.rEFRESHToolStripMenuItem,
             this.pRINTToolStripMenuItem,
-            this.hOMEToolStripMenuItem});
+            this.hOMEToolStripMenuItem,
+            this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1444, 33);
@@ -387,21 +391,21 @@ namespace Chocolate_Factory_Management_System
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // eDITToolStripMenuItem
             // 
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // dELETEToolStripMenuItem
             // 
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
@@ -422,8 +426,8 @@ namespace Chocolate_Factory_Management_System
             // hOMEToolStripMenuItem
             // 
             this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.hOMEToolStripMenuItem.Text = "EXIT";
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.hOMEToolStripMenuItem.Text = "CLEAR";
             this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // labelEmpDetails
@@ -440,26 +444,52 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelDateOfJoining.AutoSize = true;
             this.labelDateOfJoining.Font = new System.Drawing.Font("Lucida Bright", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDateOfJoining.Location = new System.Drawing.Point(544, 325);
+            this.labelDateOfJoining.Location = new System.Drawing.Point(544, 306);
             this.labelDateOfJoining.Name = "labelDateOfJoining";
             this.labelDateOfJoining.Size = new System.Drawing.Size(184, 25);
             this.labelDateOfJoining.TabIndex = 33;
             this.labelDateOfJoining.Text = "Date Of Joining";
             // 
-            // dateTimePickerDt
+            // dateTimePickerJoining
             // 
-            this.dateTimePickerDt.Location = new System.Drawing.Point(745, 324);
-            this.dateTimePickerDt.Name = "dateTimePickerDt";
-            this.dateTimePickerDt.Size = new System.Drawing.Size(286, 26);
-            this.dateTimePickerDt.TabIndex = 34;
-            this.dateTimePickerDt.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePickerJoining.Location = new System.Drawing.Point(745, 306);
+            this.dateTimePickerJoining.Name = "dateTimePickerJoining";
+            this.dateTimePickerJoining.Size = new System.Drawing.Size(286, 26);
+            this.dateTimePickerJoining.TabIndex = 34;
+            this.dateTimePickerJoining.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(745, 349);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(286, 26);
+            this.textBoxEmail.TabIndex = 35;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Lucida Bright", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(553, 345);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(73, 25);
+            this.labelEmail.TabIndex = 36;
+            this.labelEmail.Text = "Email";
+            // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // Employee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1444, 712);
-            this.Controls.Add(this.dateTimePickerDt);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.dateTimePickerJoining);
             this.Controls.Add(this.labelDateOfJoining);
             this.Controls.Add(this.labelEmpDetails);
             this.Controls.Add(this.dataGridView1);
@@ -538,6 +568,9 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.Label labelEmpDetails;
         private System.Windows.Forms.Label labelDateOfJoining;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDt;
+        private System.Windows.Forms.DateTimePicker dateTimePickerJoining;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }

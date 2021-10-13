@@ -76,7 +76,7 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = "insert into EmployeeDetails (EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Qualification,DateOfJoining) " +
                     "values('" + textBoxEID.Text + "','" + textBoxEmployeeName.Text + "','" + comboBoxDepartment.Text + "','" + dateTimePickerDOB.Value.Date + "'," +
                     "'" + comboBoxGender.Text + "','" + textBoxAddress.Text + "','" + textBoxPincode.Text + "','" + textBoxCity.Text + "','" + textBoxState.Text + "'," +
-                    "'" + textBoxPhone.Text + "','" + textBoxQualification.Text + "','"+dateTimePickerDt.Value.Date+"')";
+                    "'" + textBoxPhone.Text + "','" + textBoxQualification.Text + "','"+dateTimePickerJoining.Value.Date+"')";
 
 
                 command.ExecuteNonQuery();
@@ -98,10 +98,11 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "', Department='" + comboBoxDepartment.Text + "'," +
-                    "DOB='" + dateTimePickerDOB.Value.Date + "', Gender='" + comboBoxGender.Text + "', Address='" + textBoxAddress.Text + "', " +
-                    "Pincode='" + textBoxPincode.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
-                    "Qualification='" + textBoxQualification.Text + "','"+dateTimePickerDt.Value.Date+"' where EID=" + textBoxEID.Text + "";
+                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
+                    "Department='"+comboBoxDepartment.Text+ "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
+                    "Gender='" +comboBoxGender.Text + "',Address='"+textBoxAddress.Text+ "',Pincode='"+textBoxPincode.Text+ "'," +
+                    "City='"+textBoxCity.Text+ "',State='"+textBoxState.Text+ "',Phone='"+textBoxPhone.Text+ "'," +
+                    "Email='"+textBoxEmail.Text+ "',Qualification='"+textBoxQualification.Text+ "',DateOfJoining='"+dateTimePickerJoining.Value.Date+"' where EID=" + textBoxEID.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -117,13 +118,20 @@ namespace Chocolate_Factory_Management_System
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
-            this.Hide();
-        }
+            textBoxEID.Clear();
+            textBoxEmployeeName.Clear();
+            comboBoxDepartment.ResetText();
+            textBoxAddress.Clear();
+            textBoxPincode.Clear();
+            textBoxCity.Clear();
+            textBoxState.Clear();
+            textBoxPhone.Clear();
+            textBoxEmail.Clear();
+            textBoxQualification.Clear();        }
 
         private void rEFRESHToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             try
             {
 
@@ -183,6 +191,13 @@ namespace Chocolate_Factory_Management_System
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
     }
 }
