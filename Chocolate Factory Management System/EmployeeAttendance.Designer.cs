@@ -174,6 +174,7 @@ namespace Chocolate_Factory_Management_System
             this.dataGridViewEmpAttendance.RowTemplate.Height = 28;
             this.dataGridViewEmpAttendance.Size = new System.Drawing.Size(1260, 304);
             this.dataGridViewEmpAttendance.TabIndex = 15;
+            this.dataGridViewEmpAttendance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEmpAttendance_CellContentClick);
             // 
             // textBoxLastName
             // 

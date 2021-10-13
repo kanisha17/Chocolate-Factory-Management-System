@@ -8,37 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+
 namespace Chocolate_Factory_Management_System
 {
-    public partial class SupplierRegister : Form
+    public partial class PurchaseOrder : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        public SupplierRegister()
+        public PurchaseOrder()
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdataa.accdb;Persist Security Info=False;";
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void PurchaseOrder_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void labelClose_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void rEFRESHToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             try
             {
 
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "select *from Supplier";
+                string query = "select *from PurchaseOrder";
                 //MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -57,30 +54,29 @@ namespace Chocolate_Factory_Management_System
             }
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
         }
 
-        private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             try
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into Supplier (SID,SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,PhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
-                    "values('" + textBoxSID.Text + "','" + textBoxSupplierName.Text + "','" + textBoxCompanyName.Text + "','" + textBoxBusinessType.Text + "','" + dateTimePickersDOB.Value.Date + "'," +
-                    "'" + textBoxAddress.Text + "','" + textBoxPincode.Text + "','" + textBoxCity.Text + "','" + textBoxState.Text + "','" + textBoxPhoneNo.Text + "','" + textBoxEmail.Text + "','"+checkedListBoxInsured.Text+"','"+checkedListBoxLicensed.Text+"'," +
-                    "'" +textBoxLicenseNo.Text + "','" + textBoxBankName.Text + "','" + textBoxBankAccountNo.Text + "','" + textBoxBankAddress.Text + "')";
+                command.CommandText = "insert into PurchaseOrder (OrderNo,Date,ProductName,Quantity(gm),Quantity(kg),Price,Total) " +
+                    "values('" + textBoxOrderNo.Text + "','" + dateTimePickerOrderDate.Text + "','" +comboBoxProductName.Text + "','" + textBoxQuantitygm.Text + "'," +
+                    "'" + textBoxQuantitykg.Text + "','" + textBoxUnitPrice.Text + "','" + textBoxTotal.Text + "')";
 
 
                 command.ExecuteNonQuery();
@@ -94,28 +90,18 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void SupplierRegister_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxCity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             try
             {
 
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update Supplier set SupplierName='" + textBoxSupplierName.Text + "', CompanyName='" + textBoxCompanyName.Text + "',BusinessType='"+textBoxBusinessType.Text+"'," +
-                    "DOB='" + dateTimePickersDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', State='" + textBoxState.Text + "', Pincode='" + textBoxPincode.Text + "'," +
-                    " City='" + textBoxCity.Text + "',PhoneNo='" + textBoxPhoneNo.Text + "',Email='" +textBoxEmail.Text + "',Insured='"+checkedListBoxInsured.Text+"'," +
-                    "Licensed='"+checkedListBoxLicensed.Text+"',LicenseNo='"+textBoxLicenseNo.Text+"',BankName='"+textBoxBankName.Text+"',BankAccountNo='"+textBoxBankAccountNo.Text+"',BankAddress='"+textBoxBankAddress.Text+"' where SID=" + textBoxSID.Text + "";
+                string query = "update PurchaseOrder set  Date='"+dateTimePickerOrderDate.Value.Date+"',ProductName='" + comboBoxProductName.Text + "'," +
+                    "Quantity(gm)='" + textBoxQuantitygm + "', Quantity(kg)='" + textBoxQuantitykg.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "', " +
+                    "Total='" +textBoxTotal.Text + "' where OrderNo=" + textBoxOrderNo.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -137,7 +123,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "delete from Supplier where SID=" + textBoxSID.Text + "";
+                string query = "delete from PurchaseOrder where OrderNo=" + textBoxOrderNo.Text + "";
                 //MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -150,31 +136,40 @@ namespace Chocolate_Factory_Management_System
             }
             connection.Close();
         }
-        Bitmap bitmap;
+
         private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Panel pan = new Panel();
-            this.Controls.Add(pan);
-
-            Graphics graph = pan.CreateGraphics();
-            Size si = this.ClientSize;
-            bitmap = new Bitmap(si.Width, si.Height, graph);
-            graph = Graphics.FromImage(bitmap);
-
-            Point pt = PointToScreen(pan.Location);
-            graph.CopyFromScreen(pt.X, pt.Y, 0, 0, si);
-            printPreviewDialogSup.Document = printDocumentSup;
-         printPreviewDialogSup.ShowDialog();
+            if (printPreviewDialogPO.ShowDialog() == DialogResult.OK)
+            {
+                printDocumentPO.Print();
+            }
         }
 
-        private void printDocumentSup_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void printDocumentPO_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bitmap, 0, 0);
+
         }
 
-        private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sEARCHToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from PurchaseOrder where [OrderNo] like('"+textBoxOrderNo.Text+"%')";
+                //MessageBox.Show(query);
+                command.CommandText = query;
 
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("Enter a valid input");
+            }
         }
     }
 }

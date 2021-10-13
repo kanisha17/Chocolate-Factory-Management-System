@@ -17,7 +17,7 @@ namespace Chocolate_Factory_Management_System
         public EmployeeView()
         {
             InitializeComponent();
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdata.accdb;Persist Security Info=False;";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdataa.accdb;Persist Security Info=False;";
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)

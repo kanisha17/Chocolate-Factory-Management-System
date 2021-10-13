@@ -60,12 +60,12 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickersDOB = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelBusinessType = new System.Windows.Forms.Label();
             this.textBoxBusinessType = new System.Windows.Forms.TextBox();
@@ -336,27 +336,7 @@ namespace Chocolate_Factory_Management_System
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
             this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
             this.mENUToolStripMenuItem.Text = "MENU";
-            // 
-            // rEFRESHToolStripMenuItem
-            // 
-            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
-            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
-            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
-            // 
-            // hOMEToolStripMenuItem
-            // 
-            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
-            this.hOMEToolStripMenuItem.Text = "HOME";
-            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
+            this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
             // 
             // aDDToolStripMenuItem
             // 
@@ -378,6 +358,27 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
+            // 
+            // rEFRESHToolStripMenuItem
+            // 
+            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
+            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
+            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
+            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
+            // 
+            // pRINTToolStripMenuItem
+            // 
+            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
+            this.pRINTToolStripMenuItem.Text = "PRINT";
+            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
+            // 
+            // hOMEToolStripMenuItem
+            // 
+            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.hOMEToolStripMenuItem.Text = "HOME";
+            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 

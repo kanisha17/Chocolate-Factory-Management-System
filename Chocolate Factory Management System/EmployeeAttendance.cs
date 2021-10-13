@@ -26,5 +26,10 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void dataGridViewEmpAttendance_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

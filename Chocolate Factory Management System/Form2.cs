@@ -82,5 +82,11 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void purchaseOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PurchaseOrder p1 = new PurchaseOrder();
+            p1.ShowDialog();
+        }
     }
 }
