@@ -29,16 +29,6 @@ namespace Chocolate_Factory_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseOrder));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelUnitPrice = new System.Windows.Forms.Label();
             this.labelQuantitykg = new System.Windows.Forms.Label();
@@ -49,95 +39,17 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQuantitykg = new System.Windows.Forms.TextBox();
             this.textBoxUnitPrice = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
-            this.textBoxOrderNo = new System.Windows.Forms.TextBox();
-            this.labelOrderNo = new System.Windows.Forms.Label();
+            this.textBoxSID = new System.Windows.Forms.TextBox();
+            this.labelSID = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.dateTimePickerOrderDate = new System.Windows.Forms.DateTimePicker();
-            this.printDocumentPO = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialogPO = new System.Windows.Forms.PrintPreviewDialog();
-            this.textBoxSearchOrderNo = new System.Windows.Forms.TextBox();
-            this.sEARCHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonEXIT = new System.Windows.Forms.Button();
+            this.buttonCLEAR = new System.Windows.Forms.Button();
+            this.buttonADD = new System.Windows.Forms.Button();
+            this.buttonCALCULATE = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(792, 470);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mENUToolStripMenuItem,
-            this.rEFRESHToolStripMenuItem,
-            this.pRINTToolStripMenuItem,
-            this.eXITToolStripMenuItem,
-            this.sEARCHToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1299, 33);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mENUToolStripMenuItem
-            // 
-            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aDDToolStripMenuItem,
-            this.eDITToolStripMenuItem,
-            this.dELETEToolStripMenuItem});
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
-            this.mENUToolStripMenuItem.Text = "MENU";
-            // 
-            // aDDToolStripMenuItem
-            // 
-            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.aDDToolStripMenuItem.Text = "ADD";
-            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
-            // 
-            // eDITToolStripMenuItem
-            // 
-            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.eDITToolStripMenuItem.Text = "EDIT";
-            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
-            // 
-            // dELETEToolStripMenuItem
-            // 
-            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dELETEToolStripMenuItem.Text = "DELETE";
-            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
-            // 
-            // rEFRESHToolStripMenuItem
-            // 
-            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
-            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
-            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
-            // 
-            // eXITToolStripMenuItem
-            // 
-            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.eXITToolStripMenuItem.Text = "EXIT";
-            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // labelTotal
             // 
@@ -177,13 +89,10 @@ namespace Chocolate_Factory_Management_System
             // 
             // labelProductName
             // 
-            this.labelProductName.AutoSize = true;
-            this.labelProductName.Location = new System.Drawing.Point(856, 185);
+            this.labelProductName.Location = new System.Drawing.Point(0, 0);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(110, 20);
-            this.labelProductName.TabIndex = 10;
-            this.labelProductName.Text = "Product Name";
-            this.labelProductName.Click += new System.EventHandler(this.label5_Click);
+            this.labelProductName.Size = new System.Drawing.Size(100, 23);
+            this.labelProductName.TabIndex = 29;
             // 
             // comboBoxProductName
             // 
@@ -231,21 +140,21 @@ namespace Chocolate_Factory_Management_System
             this.textBoxTotal.Size = new System.Drawing.Size(249, 26);
             this.textBoxTotal.TabIndex = 16;
             // 
-            // textBoxOrderNo
+            // textBoxSID
             // 
-            this.textBoxOrderNo.Location = new System.Drawing.Point(995, 74);
-            this.textBoxOrderNo.Name = "textBoxOrderNo";
-            this.textBoxOrderNo.Size = new System.Drawing.Size(249, 26);
-            this.textBoxOrderNo.TabIndex = 17;
+            this.textBoxSID.Location = new System.Drawing.Point(995, 74);
+            this.textBoxSID.Name = "textBoxSID";
+            this.textBoxSID.Size = new System.Drawing.Size(249, 26);
+            this.textBoxSID.TabIndex = 17;
             // 
-            // labelOrderNo
+            // labelSID
             // 
-            this.labelOrderNo.AutoSize = true;
-            this.labelOrderNo.Location = new System.Drawing.Point(856, 80);
-            this.labelOrderNo.Name = "labelOrderNo";
-            this.labelOrderNo.Size = new System.Drawing.Size(73, 20);
-            this.labelOrderNo.TabIndex = 18;
-            this.labelOrderNo.Text = "Order No";
+            this.labelSID.AutoSize = true;
+            this.labelSID.Location = new System.Drawing.Point(856, 80);
+            this.labelSID.Name = "labelSID";
+            this.labelSID.Size = new System.Drawing.Size(37, 20);
+            this.labelSID.TabIndex = 18;
+            this.labelSID.Text = "SID";
             // 
             // labelDate
             // 
@@ -263,45 +172,75 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickerOrderDate.Size = new System.Drawing.Size(249, 26);
             this.dateTimePickerOrderDate.TabIndex = 20;
             // 
-            // printDocumentPO
+            // textBoxSearch
             // 
-            this.printDocumentPO.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentPO_PrintPage);
+            this.textBoxSearch.Location = new System.Drawing.Point(995, 42);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(186, 26);
+            this.textBoxSearch.TabIndex = 22;
             // 
-            // printPreviewDialogPO
+            // buttonSearch
             // 
-            this.printPreviewDialogPO.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialogPO.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialogPO.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialogPO.Document = this.printDocumentPO;
-            this.printPreviewDialogPO.Enabled = true;
-            this.printPreviewDialogPO.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialogPO.Icon")));
-            this.printPreviewDialogPO.Name = "printPreviewDialogPO";
-            this.printPreviewDialogPO.Visible = false;
+            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 28;
             // 
-            // textBoxSearchOrderNo
+            // buttonEXIT
             // 
-            this.textBoxSearchOrderNo.Location = new System.Drawing.Point(414, 7);
-            this.textBoxSearchOrderNo.Name = "textBoxSearchOrderNo";
-            this.textBoxSearchOrderNo.Size = new System.Drawing.Size(186, 26);
-            this.textBoxSearchOrderNo.TabIndex = 22;
+            this.buttonEXIT.Location = new System.Drawing.Point(506, 434);
+            this.buttonEXIT.Name = "buttonEXIT";
+            this.buttonEXIT.Size = new System.Drawing.Size(104, 38);
+            this.buttonEXIT.TabIndex = 24;
+            this.buttonEXIT.Text = "EXIT";
+            this.buttonEXIT.UseVisualStyleBackColor = true;
+            this.buttonEXIT.Click += new System.EventHandler(this.buttonEXIT_Click);
             // 
-            // sEARCHToolStripMenuItem
+            // buttonCLEAR
             // 
-            this.sEARCHToolStripMenuItem.Name = "sEARCHToolStripMenuItem";
-            this.sEARCHToolStripMenuItem.Size = new System.Drawing.Size(94, 29);
-            this.sEARCHToolStripMenuItem.Text = "SEARCH";
-            this.sEARCHToolStripMenuItem.Click += new System.EventHandler(this.sEARCHToolStripMenuItem_Click);
+            this.buttonCLEAR.Location = new System.Drawing.Point(363, 434);
+            this.buttonCLEAR.Name = "buttonCLEAR";
+            this.buttonCLEAR.Size = new System.Drawing.Size(98, 38);
+            this.buttonCLEAR.TabIndex = 25;
+            this.buttonCLEAR.Text = "CLEAR";
+            this.buttonCLEAR.UseVisualStyleBackColor = true;
+            this.buttonCLEAR.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonADD
+            // 
+            this.buttonADD.Location = new System.Drawing.Point(185, 434);
+            this.buttonADD.Name = "buttonADD";
+            this.buttonADD.Size = new System.Drawing.Size(123, 38);
+            this.buttonADD.TabIndex = 26;
+            this.buttonADD.Text = "ADD";
+            this.buttonADD.UseVisualStyleBackColor = true;
+            this.buttonADD.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // buttonCALCULATE
+            // 
+            this.buttonCALCULATE.Location = new System.Drawing.Point(633, 434);
+            this.buttonCALCULATE.Name = "buttonCALCULATE";
+            this.buttonCALCULATE.Size = new System.Drawing.Size(153, 38);
+            this.buttonCALCULATE.TabIndex = 27;
+            this.buttonCALCULATE.Text = "CALCULATE";
+            this.buttonCALCULATE.UseVisualStyleBackColor = true;
+            this.buttonCALCULATE.Click += new System.EventHandler(this.buttonCALCULATE_Click);
             // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 578);
-            this.Controls.Add(this.textBoxSearchOrderNo);
+            this.Controls.Add(this.buttonCALCULATE);
+            this.Controls.Add(this.buttonADD);
+            this.Controls.Add(this.buttonCLEAR);
+            this.Controls.Add(this.buttonEXIT);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dateTimePickerOrderDate);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.labelOrderNo);
-            this.Controls.Add(this.textBoxOrderNo);
+            this.Controls.Add(this.labelSID);
+            this.Controls.Add(this.textBoxSID);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxUnitPrice);
             this.Controls.Add(this.textBoxQuantitykg);
@@ -312,30 +251,15 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelQuantitykg);
             this.Controls.Add(this.labelUnitPrice);
             this.Controls.Add(this.labelTotal);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "PurchaseOrder";
             this.Text = "PurchaseOrder";
             this.Load += new System.EventHandler(this.PurchaseOrder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label labelUnitPrice;
         private System.Windows.Forms.Label labelQuantitykg;
@@ -346,13 +270,15 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxQuantitykg;
         private System.Windows.Forms.TextBox textBoxUnitPrice;
         private System.Windows.Forms.TextBox textBoxTotal;
-        private System.Windows.Forms.TextBox textBoxOrderNo;
-        private System.Windows.Forms.Label labelOrderNo;
+        private System.Windows.Forms.TextBox textBoxSID;
+        private System.Windows.Forms.Label labelSID;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerOrderDate;
-        private System.Drawing.Printing.PrintDocument printDocumentPO;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialogPO;
-        private System.Windows.Forms.ToolStripMenuItem sEARCHToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBoxSearchOrderNo;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonEXIT;
+        private System.Windows.Forms.Button buttonCLEAR;
+        private System.Windows.Forms.Button buttonADD;
+        private System.Windows.Forms.Button buttonCALCULATE;
     }
 }

@@ -30,17 +30,10 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerRegister));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sEARCHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelFirstName = new System.Windows.Forms.Label();
-            this.labelLastName = new System.Windows.Forms.Label();
+            this.labelCustomerName = new System.Windows.Forms.Label();
             this.labelDOB = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelCity = new System.Windows.Forms.Label();
@@ -49,8 +42,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPhone = new System.Windows.Forms.Label();
             this.textBoxcCity = new System.Windows.Forms.TextBox();
             this.textBoxcAddress = new System.Windows.Forms.TextBox();
-            this.textBoxcLastName = new System.Windows.Forms.TextBox();
-            this.textBoxcFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerName = new System.Windows.Forms.TextBox();
             this.textBoxcPincode = new System.Windows.Forms.TextBox();
             this.textBoxcPhone = new System.Windows.Forms.TextBox();
             this.textBoxcEmail = new System.Windows.Forms.TextBox();
@@ -63,102 +55,49 @@ namespace Chocolate_Factory_Management_System
             this.labelCID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.menuStrip1.SuspendLayout();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mENUToolStripMenuItem,
-            this.rEFRESHToolStripMenuItem,
-            this.pRINTToolStripMenuItem,
-            this.hOMEToolStripMenuItem,
-            this.sEARCHToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1260, 33);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mENUToolStripMenuItem
-            // 
-            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
-            this.mENUToolStripMenuItem.Text = "MENU";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.addToolStripMenuItem.Text = "ADD";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.editToolStripMenuItem.Text = "EDIT";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.deleteToolStripMenuItem.Text = "DELETE";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // rEFRESHToolStripMenuItem
+            // labelCustomerName
             // 
-            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
-            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
-            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
-            // 
-            // hOMEToolStripMenuItem
-            // 
-            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.hOMEToolStripMenuItem.Text = "EXIT";
-            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
-            // 
-            // sEARCHToolStripMenuItem
-            // 
-            this.sEARCHToolStripMenuItem.Name = "sEARCHToolStripMenuItem";
-            this.sEARCHToolStripMenuItem.Size = new System.Drawing.Size(94, 29);
-            this.sEARCHToolStripMenuItem.Text = "SEARCH";
-            this.sEARCHToolStripMenuItem.Click += new System.EventHandler(this.sEARCHToolStripMenuItem_Click);
-            // 
-            // labelFirstName
-            // 
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(36, 76);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(86, 20);
-            this.labelFirstName.TabIndex = 1;
-            this.labelFirstName.Text = "First Name";
-            // 
-            // labelLastName
-            // 
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(36, 128);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(86, 20);
-            this.labelLastName.TabIndex = 2;
-            this.labelLastName.Text = "Last Name";
+            this.labelCustomerName.AutoSize = true;
+            this.labelCustomerName.Location = new System.Drawing.Point(36, 76);
+            this.labelCustomerName.Name = "labelCustomerName";
+            this.labelCustomerName.Size = new System.Drawing.Size(124, 20);
+            this.labelCustomerName.TabIndex = 1;
+            this.labelCustomerName.Text = "Customer Name";
             // 
             // labelDOB
             // 
@@ -227,19 +166,12 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcAddress.Size = new System.Drawing.Size(280, 26);
             this.textBoxcAddress.TabIndex = 10;
             // 
-            // textBoxcLastName
+            // textBoxCustomerName
             // 
-            this.textBoxcLastName.Location = new System.Drawing.Point(229, 122);
-            this.textBoxcLastName.Name = "textBoxcLastName";
-            this.textBoxcLastName.Size = new System.Drawing.Size(280, 26);
-            this.textBoxcLastName.TabIndex = 12;
-            // 
-            // textBoxcFirstName
-            // 
-            this.textBoxcFirstName.Location = new System.Drawing.Point(229, 70);
-            this.textBoxcFirstName.Name = "textBoxcFirstName";
-            this.textBoxcFirstName.Size = new System.Drawing.Size(280, 26);
-            this.textBoxcFirstName.TabIndex = 13;
+            this.textBoxCustomerName.Location = new System.Drawing.Point(258, 85);
+            this.textBoxCustomerName.Name = "textBoxCustomerName";
+            this.textBoxCustomerName.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCustomerName.TabIndex = 25;
             // 
             // textBoxcPincode
             // 
@@ -305,7 +237,6 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialog1c.AutoScrollMargin = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1c.AutoScrollMinSize = new System.Drawing.Size(0, 0);
             this.printPreviewDialog1c.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1c.Document = this.printDocument1c;
             this.printPreviewDialog1c.Enabled = true;
             this.printPreviewDialog1c.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1c.Icon")));
             this.printPreviewDialog1c.Name = "printPreviewDialog1c";
@@ -332,16 +263,102 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(431, 7);
+            this.textBoxSearch.Location = new System.Drawing.Point(1067, 146);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(161, 26);
             this.textBoxSearch.TabIndex = 24;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(1080, 98);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(104, 27);
+            this.buttonSearch.TabIndex = 0;
+            this.buttonSearch.Text = "SEARCH";
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mENUToolStripMenuItem,
+            this.rEFRESHToolStripMenuItem,
+            this.pRINTToolStripMenuItem,
+            this.vIEWToolStripMenuItem,
+            this.eXITToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1260, 33);
+            this.menuStrip1.TabIndex = 26;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mENUToolStripMenuItem
+            // 
+            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aDDToolStripMenuItem1,
+            this.eDITToolStripMenuItem1,
+            this.dELETEToolStripMenuItem1});
+            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.mENUToolStripMenuItem.Text = "MENU";
+            this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
+            // 
+            // aDDToolStripMenuItem1
+            // 
+            this.aDDToolStripMenuItem1.Name = "aDDToolStripMenuItem1";
+            this.aDDToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem1.Text = "ADD";
+            this.aDDToolStripMenuItem1.Click += new System.EventHandler(this.aDDToolStripMenuItem1_Click_1);
+            // 
+            // eDITToolStripMenuItem1
+            // 
+            this.eDITToolStripMenuItem1.Name = "eDITToolStripMenuItem1";
+            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem1.Text = "EDIT";
+            this.eDITToolStripMenuItem1.Click += new System.EventHandler(this.eDITToolStripMenuItem1_Click);
+            // 
+            // dELETEToolStripMenuItem1
+            // 
+            this.dELETEToolStripMenuItem1.Name = "dELETEToolStripMenuItem1";
+            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem1.Text = "DELETE";
+            this.dELETEToolStripMenuItem1.Click += new System.EventHandler(this.dELETEToolStripMenuItem1_Click);
+            // 
+            // rEFRESHToolStripMenuItem
+            // 
+            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
+            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
+            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
+            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click_1);
+            // 
+            // pRINTToolStripMenuItem
+            // 
+            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.pRINTToolStripMenuItem.Text = "CLEAR";
+            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click_1);
+            // 
+            // vIEWToolStripMenuItem
+            // 
+            this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
+            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
+            this.vIEWToolStripMenuItem.Text = "VIEW";
+            this.vIEWToolStripMenuItem.Click += new System.EventHandler(this.vIEWToolStripMenuItem_Click);
+            // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click_1);
             // 
             // CustomerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 607);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCID);
@@ -352,8 +369,7 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxcEmail);
             this.Controls.Add(this.textBoxcPhone);
             this.Controls.Add(this.textBoxcPincode);
-            this.Controls.Add(this.textBoxcFirstName);
-            this.Controls.Add(this.textBoxcLastName);
+            this.Controls.Add(this.textBoxCustomerName);
             this.Controls.Add(this.textBoxcAddress);
             this.Controls.Add(this.textBoxcCity);
             this.Controls.Add(this.labelPhone);
@@ -362,33 +378,24 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelCity);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelDOB);
-            this.Controls.Add(this.labelLastName);
-            this.Controls.Add(this.labelFirstName);
+            this.Controls.Add(this.labelCustomerName);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "CustomerRegister";
             this.Text = " ";
             this.Load += new System.EventHandler(this.CustomerRegister_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
-        private System.Windows.Forms.Label labelFirstName;
-        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label labelCustomerName;
         private System.Windows.Forms.Label labelDOB;
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.Label labelCity;
@@ -397,8 +404,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelPhone;
         private System.Windows.Forms.TextBox textBoxcCity;
         private System.Windows.Forms.TextBox textBoxcAddress;
-        private System.Windows.Forms.TextBox textBoxcLastName;
-        private System.Windows.Forms.TextBox textBoxcFirstName;
+        private System.Windows.Forms.TextBox textBoxCustomerName;
         private System.Windows.Forms.TextBox textBoxcPincode;
         private System.Windows.Forms.TextBox textBoxcPhone;
         private System.Windows.Forms.TextBox textBoxcEmail;
@@ -410,7 +416,16 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1c;
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem sEARCHToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vIEWToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }

@@ -13,6 +13,7 @@ namespace Chocolate_Factory_Management_System
     public partial class SupplierRegister : Form
     {
         private OleDbConnection connection = new OleDbConnection();
+        int count = 0;
         public SupplierRegister()
         {
             InitializeComponent();
@@ -64,9 +65,24 @@ namespace Chocolate_Factory_Management_System
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
-            this.Hide();
+            textBoxAddress.Clear();
+            textBoxBankAccountNo.Clear();
+            textBoxBankAddress.Clear();
+            textBoxBankName.Clear();
+            textBoxBusinessType.Clear();
+            textBoxCity.Clear();
+            textBoxCompanyName.Clear();
+            textBoxEmail.Clear();
+            textBoxLicenseNo.Clear();
+            textBoxPhoneNo.Clear();
+            textBoxPincode.Clear();
+            textBoxSearch.Clear();
+            textBoxSID.Clear();
+            textBoxState.Clear();
+            textBoxSupplierName.Clear();
+            checkedListBoxInsured.ResetText();
+            checkedListBoxLicensed.ResetText();
+            
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,8 +130,8 @@ namespace Chocolate_Factory_Management_System
                 command.Connection = connection;
                 string query = "update Supplier set SupplierName='" + textBoxSupplierName.Text + "', CompanyName='" + textBoxCompanyName.Text + "',BusinessType='"+textBoxBusinessType.Text+"'," +
                     "DOB='" + dateTimePickersDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', State='" + textBoxState.Text + "', Pincode='" + textBoxPincode.Text + "'," +
-                    " City='" + textBoxCity.Text + "',PhoneNo='" + textBoxPhoneNo.Text + "',Email='" +textBoxEmail.Text + "',Insured='"+checkedListBoxInsured.Text+"'," +
-                    "Licensed='"+checkedListBoxLicensed.Text+"',LicenseNo='"+textBoxLicenseNo.Text+"',BankName='"+textBoxBankName.Text+"',BankAccountNo='"+textBoxBankAccountNo.Text+"',BankAddress='"+textBoxBankAddress.Text+"' where SID=" + textBoxSID.Text + "";
+                    " City='" + textBoxCity.Text + "',Email='" +textBoxEmail.Text + "',Insured='"+checkedListBoxInsured.Text+"'," +
+                    "Licensed='"+checkedListBoxLicensed.Text+"',LicenseNo='"+textBoxLicenseNo.Text+"',BankName='"+textBoxBankName.Text+"',BankAccountNo='"+textBoxBankAccountNo.Text+"',BankAddress='"+textBoxBankAddress.Text+"' where PhoneNo='" + textBoxPhoneNo.Text + "'";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -137,7 +153,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "delete from Supplier where SID=" + textBoxSID.Text + "";
+                string query = "delete from Supplier where PhoneNo='" + textBoxPhoneNo.Text + "'";
                 //MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -150,31 +166,86 @@ namespace Chocolate_Factory_Management_System
             }
             connection.Close();
         }
-        Bitmap bitmap;
+      
         private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Panel pan = new Panel();
-            this.Controls.Add(pan);
-
-            Graphics graph = pan.CreateGraphics();
-            Size si = this.ClientSize;
-            bitmap = new Bitmap(si.Width, si.Height, graph);
-            graph = Graphics.FromImage(bitmap);
-
-            Point pt = PointToScreen(pan.Location);
-            graph.CopyFromScreen(pt.X, pt.Y, 0, 0, si);
-            printPreviewDialogSup.Document = printDocumentSup;
-         printPreviewDialogSup.ShowDialog();
+            
         }
 
         private void printDocumentSup_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bitmap, 0, 0);
+            
         }
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void vIEWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand c1 = new OleDbCommand("select SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,,PhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress  from Supplier where SID=@parm1", connection);
+            c1.Parameters.AddWithValue("@parm1", textBoxSID.Text);
+            OleDbDataReader reader1;
+            reader1 = c1.ExecuteReader();
+            if (reader1.Read())
+            {
+                textBoxSupplierName.Text = reader1["SupplierName"].ToString();
+                textBoxCompanyName.Text = reader1["CompanyName"].ToString();
+                textBoxBusinessType.Text = reader1["BusinessType"].ToString();
+                dateTimePickersDOB.Text = reader1["DOB"].ToString();
+                textBoxAddress.Text = reader1["Address"].ToString();
+                textBoxPincode.Text = reader1["Pincode"].ToString();
+                textBoxCity.Text = reader1["City"].ToString();
+                textBoxState.Text = reader1["State"].ToString();
+                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
+                textBoxEmail.Text = reader1["Email"].ToString();
+                checkedListBoxInsured.Text = reader1["Insured"].ToString();
+                checkedListBoxLicensed.Text = reader1["Licensed"].ToString();
+                textBoxLicenseNo.Text = reader1["LicenseNo"].ToString();
+                textBoxBankName.Text = reader1["BankName"].ToString();
+                textBoxBankAccountNo.Text = reader1["BankAccountNo"].ToString();
+                textBoxBankAddress.Text = reader1["BankAddress"].ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("No Data Found");
+            }
+            connection.Close();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            count = 0;
+            connection.Open();
+            OleDbCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select *from Supplier where PhoneNo='" + textBoxSearch.Text + "'";
+            command.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(command);
+            da.Fill(dt);
+            count = Convert.ToInt32(dt.Rows.Count.ToString());
+            dataGridView1.DataSource = dt;
+            connection.Close();
+
+            if (count == 0)
+            {
+                MessageBox.Show("Record Not Found");
+            }
+            else
+            {
+                MessageBox.Show("Record Found");
+            }
         }
     }
 }

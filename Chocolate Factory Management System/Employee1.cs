@@ -14,6 +14,8 @@ namespace Chocolate_Factory_Management_System
     public partial class Employee1 : Form
     {
         private OleDbConnection connection = new OleDbConnection();
+        OleDbCommand command;
+        
         public Employee1()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace Chocolate_Factory_Management_System
             Close();
         }
 
-        Bitmap bitmap;
+
 
         private void printPreviewDialog1_Load(object sender, EventArgs e)
         {
@@ -36,12 +38,27 @@ namespace Chocolate_Factory_Management_System
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bitmap, 0, 0);
+            e.Graphics.DrawString("EMPLOYEE SUMMARY", new Font("Lucida Bright", 24, FontStyle.Bold), Brushes.Red, new Point(250));
+
+            e.Graphics.DrawString("Employee ID: " + textBoxEID.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 120));
+            e.Graphics.DrawString("Employee Name: " + textBoxEmployeeName.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 170));
+            e.Graphics.DrawString("Employee Department: " + comboBoxDepartment.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 220));
+            e.Graphics.DrawString("Employee DOB: " + dateTimePickerDOB.Value.Date, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 270));
+            e.Graphics.DrawString("Employee Gender: " + comboBoxGender.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 320));
+            e.Graphics.DrawString("Employee Address: " + textBoxAddress.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 370));
+            e.Graphics.DrawString("Employee Pincode: " + textBoxPincode.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 420));
+            e.Graphics.DrawString("Employee City: " + textBoxCity.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 470));
+            e.Graphics.DrawString("Employee State: " + textBoxState.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 520));
+            e.Graphics.DrawString("Employee Phone: " + textBoxPhone.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 570));
+            e.Graphics.DrawString("Employee Email: " + textBoxEmail.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 620));
+            e.Graphics.DrawString("Employee Qualification: " + textBoxQualification.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 670));
+            e.Graphics.DrawString("Employee Joining Date: " + dateTimePickerJoining.Value.Date, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 720));
+
         }
 
         private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,23 +88,32 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "insert into EmployeeDetails (EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Qualification,DateOfJoining) " +
-                    "values('" + textBoxEID.Text + "','" + textBoxEmployeeName.Text + "','" + comboBoxDepartment.Text + "','" + dateTimePickerDOB.Value.Date + "'," +
-                    "'" + comboBoxGender.Text + "','" + textBoxAddress.Text + "','" + textBoxPincode.Text + "','" + textBoxCity.Text + "','" + textBoxState.Text + "'," +
-                    "'" + textBoxPhone.Text + "','" + textBoxQualification.Text + "','"+dateTimePickerJoining.Value.Date+"')";
-
+                command = new OleDbCommand("insert into EmployeeDetails(EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification,DateOfJoining) " +
+                    "values(@eid,@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
+                command.Parameters.AddWithValue("@eid", textBoxEID.Text);
+                command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
+                command.Parameters.AddWithValue("@department",comboBoxDepartment.Text);
+                command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
+                command.Parameters.AddWithValue("@gender", comboBoxGender.Text);
+                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                command.Parameters.AddWithValue("@city", textBoxCity.Text);
+                command.Parameters.AddWithValue("@state", textBoxState.Text);
+                command.Parameters.AddWithValue("@phone",textBoxPhone.Text);
+                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
+                command.Parameters.AddWithValue("@qualification", textBoxQualification.Text);
+                command.Parameters.AddWithValue("@joiningdate",dateTimePickerJoining.Text);
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Saved Successfully");
 
+                connection.Close();
+                MessageBox.Show("Saved Successfully");
             }
-            catch (Exception ee)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error" + ee);
+                MessageBox.Show(ex.ToString());
             }
-            connection.Close();
+            
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -99,10 +125,10 @@ namespace Chocolate_Factory_Management_System
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
-                    "Department='"+comboBoxDepartment.Text+ "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
-                    "Gender='" +comboBoxGender.Text + "',Address='"+textBoxAddress.Text+ "',Pincode='"+textBoxPincode.Text+ "'," +
-                    "City='"+textBoxCity.Text+ "',State='"+textBoxState.Text+ "',Phone='"+textBoxPhone.Text+ "'," +
-                    "Email='"+textBoxEmail.Text+ "',Qualification='"+textBoxQualification.Text+ "',DateOfJoining='"+dateTimePickerJoining.Value.Date+"' where EID=" + textBoxEID.Text + "";
+                    "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
+                    "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
+                    "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
+                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" + textBoxEID.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -118,6 +144,7 @@ namespace Chocolate_Factory_Management_System
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            textBoxSearch.Clear();
             textBoxEID.Clear();
             textBoxEmployeeName.Clear();
             comboBoxDepartment.ResetText();
@@ -127,50 +154,16 @@ namespace Chocolate_Factory_Management_System
             textBoxState.Clear();
             textBoxPhone.Clear();
             textBoxEmail.Clear();
-            textBoxQualification.Clear();        }
-
-        private void rEFRESHToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select *from EmployeeDetails";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                OleDbDataAdapter da = new OleDbDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-
-
-
-                connection.Close();
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
+            textBoxQualification.Clear();
         }
+    
 
         private void pRINTToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Panel pan = new Panel();
-            this.Controls.Add(pan);
-
-            Graphics graph = pan.CreateGraphics();
-            Size si = this.ClientSize;
-            bitmap = new Bitmap(si.Width, si.Height, graph);
-            graph = Graphics.FromImage(bitmap);
-
-            Point pt = PointToScreen(pan.Location);
-            graph.CopyFromScreen(pt.X, pt.Y, 0, 0, si);
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
         }
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,26 +171,51 @@ namespace Chocolate_Factory_Management_System
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelEID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void vIEWToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
+            
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand c1 = new OleDbCommand("select EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification from EmployeeDetails where EID=@parm1", connection);
+            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
+            OleDbDataReader reader1;
+            reader1 = c1.ExecuteReader();
+            if (reader1.Read())
+            {
+                textBoxEmployeeName.Text = reader1["EmployeeName"].ToString();
+                comboBoxDepartment.Text = reader1["Department"].ToString();
+                dateTimePickerDOB.Text = reader1["DOB"].ToString();
+                comboBoxDepartment.Text = reader1["Gender"].ToString();
+                textBoxAddress.Text = reader1["Address"].ToString();
+                textBoxPincode.Text = reader1["Pincode"].ToString();
+                textBoxCity.Text = reader1["City"].ToString();
+                textBoxState.Text = reader1["State"].ToString();
+                textBoxPhone.Text = reader1["Phone"].ToString();
+                textBoxEmail.Text = reader1["Email"].ToString();
+                textBoxQualification.Text = reader1["Qualification"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("No Data Found");
+            }
+            connection.Close();
+        }
+
+        private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -66,6 +66,8 @@ namespace Chocolate_Factory_Management_System
             this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelBusinessType = new System.Windows.Forms.Label();
             this.textBoxBusinessType = new System.Windows.Forms.TextBox();
@@ -77,6 +79,8 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxInsured = new System.Windows.Forms.CheckedListBox();
             this.printDocumentSup = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialogSup = new System.Windows.Forms.PrintPreviewDialog();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -270,21 +274,21 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(570, 229);
+            this.textBoxEmail.Location = new System.Drawing.Point(570, 278);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(236, 26);
             this.textBoxEmail.TabIndex = 27;
             // 
             // textBoxPhoneNo
             // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(570, 179);
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(569, 223);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(236, 26);
             this.textBoxPhoneNo.TabIndex = 28;
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(570, 272);
+            this.textBoxCity.Location = new System.Drawing.Point(570, 182);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(236, 26);
             this.textBoxCity.TabIndex = 29;
@@ -320,7 +324,9 @@ namespace Chocolate_Factory_Management_System
             this.mENUToolStripMenuItem,
             this.rEFRESHToolStripMenuItem,
             this.pRINTToolStripMenuItem,
-            this.hOMEToolStripMenuItem});
+            this.hOMEToolStripMenuItem,
+            this.vIEWToolStripMenuItem,
+            this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1299, 33);
@@ -341,21 +347,21 @@ namespace Chocolate_Factory_Management_System
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // eDITToolStripMenuItem
             // 
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // dELETEToolStripMenuItem
             // 
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
@@ -376,9 +382,23 @@ namespace Chocolate_Factory_Management_System
             // hOMEToolStripMenuItem
             // 
             this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
-            this.hOMEToolStripMenuItem.Text = "HOME";
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.hOMEToolStripMenuItem.Text = "CLEAR";
             this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
+            // 
+            // vIEWToolStripMenuItem
+            // 
+            this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
+            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(70, 32);
+            this.vIEWToolStripMenuItem.Text = "VIEW";
+            this.vIEWToolStripMenuItem.Click += new System.EventHandler(this.vIEWToolStripMenuItem_Click);
+            // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -457,7 +477,7 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxInsured.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.checkedListBoxInsured.Location = new System.Drawing.Point(570, 313);
+            this.checkedListBoxInsured.Location = new System.Drawing.Point(569, 329);
             this.checkedListBoxInsured.Name = "checkedListBoxInsured";
             this.checkedListBoxInsured.Size = new System.Drawing.Size(236, 27);
             this.checkedListBoxInsured.TabIndex = 47;
@@ -477,11 +497,30 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialogSup.Name = "printPreviewDialogSup";
             this.printPreviewDialogSup.Visible = false;
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(870, 314);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 48;
+            this.buttonSearch.Text = "SEARCH";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(1010, 317);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(100, 26);
+            this.textBoxSearch.TabIndex = 49;
+            // 
             // SupplierRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 506);
+            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.checkedListBoxInsured);
             this.Controls.Add(this.labelLicensed);
             this.Controls.Add(this.labelInsured);
@@ -581,5 +620,9 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.CheckedListBox checkedListBoxInsured;
         private System.Drawing.Printing.PrintDocument printDocumentSup;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialogSup;
+        private System.Windows.Forms.ToolStripMenuItem vIEWToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }

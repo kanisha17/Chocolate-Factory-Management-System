@@ -30,31 +30,28 @@ namespace Chocolate_Factory_Management_System
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-
+            Employee e1 = new Employee();
+            e1.ShowDialog();
         }
 
         private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Employee1 e1 = new Employee1();
-            e1.ShowDialog();
+           
         }
 
         private void viewToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            EmployeeView e2 = new EmployeeView();
-            e2.ShowDialog();
+           
         }
 
         private void salaryToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            EmployeeSalary e1 = new EmployeeSalary();
-            e1.ShowDialog();
+            
         }
 
         private void csutomerRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CustomerRegister c1 = new CustomerRegister();
-            c1.ShowDialog();
+        
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -64,29 +61,54 @@ namespace Chocolate_Factory_Management_System
 
         private void cUSTOMERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Customer c1 = new Customer();
+            c1.ShowDialog();
         }
 
         private void sUPPLIERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Supplier s1 = new Supplier();
+            s1.ShowDialog();
         }
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SupplierRegister s1 = new SupplierRegister();
-            s1.ShowDialog();
+           
         }
 
         private void attendanceToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void purchaseOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PurchaseOrder p1 = new PurchaseOrder();
-            p1.ShowDialog();
+          
+        }
+
+        private void viewToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salesOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void billAndPaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
