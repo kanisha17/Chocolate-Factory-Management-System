@@ -29,7 +29,6 @@ namespace Chocolate_Factory_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerRegister));
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,12 +45,9 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcPincode = new System.Windows.Forms.TextBox();
             this.textBoxcPhone = new System.Windows.Forms.TextBox();
             this.textBoxcEmail = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dateTimePickercDOB = new System.Windows.Forms.DateTimePicker();
             this.textBoxCID = new System.Windows.Forms.TextBox();
-            this.printDocument1c = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1c = new System.Windows.Forms.PrintPreviewDialog();
             this.labelCID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -61,34 +57,10 @@ namespace Chocolate_Factory_Management_System
             this.aDDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eDITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
-            this.addToolStripMenuItem.Text = "ADD";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
-            this.editToolStripMenuItem.Text = "EDIT";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
-            this.deleteToolStripMenuItem.Text = "DELETE";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // labelCustomerName
             // 
@@ -194,16 +166,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcEmail.Size = new System.Drawing.Size(280, 26);
             this.textBoxcEmail.TabIndex = 17;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 276);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1248, 232);
-            this.dataGridView1.TabIndex = 18;
-            // 
             // buttonClose
             // 
             this.buttonClose.Location = new System.Drawing.Point(1211, 36);
@@ -227,20 +189,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(100, 26);
             this.textBoxCID.TabIndex = 21;
-            // 
-            // printDocument1c
-            // 
-            this.printDocument1c.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1c_PrintPage);
-            // 
-            // printPreviewDialog1c
-            // 
-            this.printPreviewDialog1c.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1c.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1c.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1c.Enabled = true;
-            this.printPreviewDialog1c.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1c.Icon")));
-            this.printPreviewDialog1c.Name = "printPreviewDialog1c";
-            this.printPreviewDialog1c.Visible = false;
             // 
             // labelCID
             // 
@@ -283,9 +231,7 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem,
-            this.rEFRESHToolStripMenuItem,
             this.pRINTToolStripMenuItem,
-            this.vIEWToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -325,26 +271,12 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem1.Text = "DELETE";
             this.dELETEToolStripMenuItem1.Click += new System.EventHandler(this.dELETEToolStripMenuItem1_Click);
             // 
-            // rEFRESHToolStripMenuItem
-            // 
-            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
-            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
-            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click_1);
-            // 
             // pRINTToolStripMenuItem
             // 
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
             this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.pRINTToolStripMenuItem.Text = "CLEAR";
             this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click_1);
-            // 
-            // vIEWToolStripMenuItem
-            // 
-            this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
-            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
-            this.vIEWToolStripMenuItem.Text = "VIEW";
-            this.vIEWToolStripMenuItem.Click += new System.EventHandler(this.vIEWToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -365,7 +297,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.dateTimePickercDOB);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxcEmail);
             this.Controls.Add(this.textBoxcPhone);
             this.Controls.Add(this.textBoxcPincode);
@@ -383,7 +314,6 @@ namespace Chocolate_Factory_Management_System
             this.Name = "CustomerRegister";
             this.Text = " ";
             this.Load += new System.EventHandler(this.CustomerRegister_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -408,12 +338,9 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxcPincode;
         private System.Windows.Forms.TextBox textBoxcPhone;
         private System.Windows.Forms.TextBox textBoxcEmail;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DateTimePicker dateTimePickercDOB;
         private System.Windows.Forms.TextBox textBoxCID;
-        private System.Drawing.Printing.PrintDocument printDocument1c;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1c;
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSearch;
@@ -423,9 +350,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vIEWToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }

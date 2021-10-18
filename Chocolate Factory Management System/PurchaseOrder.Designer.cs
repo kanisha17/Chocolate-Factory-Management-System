@@ -181,10 +181,11 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(0, 0);
+            this.buttonSearch.Location = new System.Drawing.Point(849, 33);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(106, 35);
             this.buttonSearch.TabIndex = 28;
+            this.buttonSearch.Text = "SEARCH";
             // 
             // buttonEXIT
             // 

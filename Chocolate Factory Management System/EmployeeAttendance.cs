@@ -22,79 +22,15 @@ namespace Chocolate_Factory_Management_System
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void rEFRESHToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select *from EmployeeAttendance";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                OleDbDataAdapter da = new OleDbDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridViewEmpAttendance.DataSource = dt;
-
-
-
-                connection.Close();
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-        }
-
+       
         private void eMPDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
           
         }
 
-        private void eMPATTENDANCEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "insert into EmployeeAttendance (EID,CurrentDate,Mark,Permission,Reason) " +
-                    "values('" +textBoxEID.Text + "','" +dateTimePickerCurrentDate.Value.Date+ "','" +checkedListBoxMark.Text + "','"+checkedListBoxPermission.Text+"','"+textBoxReason.Text+"')";
-
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Saved Successfully");
-
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("Error" + ee);
-            }
-            connection.Close();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -106,51 +42,7 @@ namespace Chocolate_Factory_Management_System
             
         }
 
-        private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update EmployeeAttendance set CurrentDate='" + dateTimePickerCurrentDate.Value.Date+ "'," +
-                    "Mark='" +checkedListBoxMark.Text + "',Permission='"+checkedListBoxPermission.Text+"'," +
-                    "Reason='"+textBoxReason.Text+"' where EID=" + textBoxEID.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
-        }
-
-        private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from EmployeeAttendance where EID=" + textBoxEID.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
-        }
+        
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -159,11 +51,12 @@ namespace Chocolate_Factory_Management_System
             this.Hide();
         }
 
-        private void vIEWToolStripMenuItem_Click(object sender, EventArgs e)
+       
+        private void buttonSearch_Click_1(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CurrentDate,Mark,Permission,Reason from EmployeeAttendance where EID=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
+            OleDbCommand c1 = new OleDbCommand("select CurrentDate,Mark,Permission,Reason from EmployeeAttendance where AttendanceID=@parm1", connection);
+            c1.Parameters.AddWithValue("@parm1",textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
@@ -172,7 +65,7 @@ namespace Chocolate_Factory_Management_System
                 checkedListBoxMark.Text = reader1["Mark"].ToString();
                 checkedListBoxPermission.Text = reader1["Permission"].ToString();
                 textBoxReason.Text = reader1["Reason"].ToString();
-                
+
             }
             else
             {
@@ -181,14 +74,26 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void buttonSearch_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "insert into EmployeeAttendance (EID,CurrentDate,Mark,Permission,Reason) " +
+                    "values('" + textBoxEID.Text + "','" + dateTimePickerCurrentDate.Value.Date + "','" + checkedListBoxMark.Text + "','" + checkedListBoxPermission.Text + "','" + textBoxReason.Text + "')";
 
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Saved Successfully");
+
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("Error" + ee);
+            }
+            connection.Close();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

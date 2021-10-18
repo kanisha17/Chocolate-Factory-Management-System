@@ -30,19 +30,10 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.dataGridViewEmpAttendance = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sEARCHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eMPDETAILSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eMPATTENDANCEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentDate = new System.Windows.Forms.Label();
             this.labelEID = new System.Windows.Forms.Label();
             this.labelMark = new System.Windows.Forms.Label();
@@ -54,27 +45,15 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxPermission = new System.Windows.Forms.CheckedListBox();
             this.checkedListBoxMark = new System.Windows.Forms.CheckedListBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpAttendance)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(490, 7);
+            this.textBoxSearch.Location = new System.Drawing.Point(795, 244);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(214, 26);
-            this.textBoxSearch.TabIndex = 2;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dataGridViewEmpAttendance
-            // 
-            this.dataGridViewEmpAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmpAttendance.Location = new System.Drawing.Point(12, 329);
-            this.dataGridViewEmpAttendance.Name = "dataGridViewEmpAttendance";
-            this.dataGridViewEmpAttendance.RowHeadersWidth = 62;
-            this.dataGridViewEmpAttendance.RowTemplate.Height = 28;
-            this.dataGridViewEmpAttendance.Size = new System.Drawing.Size(1268, 182);
-            this.dataGridViewEmpAttendance.TabIndex = 3;
+            this.textBoxSearch.Size = new System.Drawing.Size(100, 26);
+            this.textBoxSearch.TabIndex = 21;
             // 
             // menuStrip1
             // 
@@ -82,11 +61,8 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem,
-            this.rEFRESHToolStripMenuItem,
             this.cLEARToolStripMenuItem,
-            this.vIEWToolStripMenuItem,
-            this.eXITToolStripMenuItem,
-            this.sEARCHToolStripMenuItem});
+            this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1292, 33);
@@ -96,42 +72,10 @@ namespace Chocolate_Factory_Management_System
             // 
             // mENUToolStripMenuItem
             // 
-            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aDDToolStripMenuItem,
-            this.eDITToolStripMenuItem,
-            this.dELETEToolStripMenuItem});
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
-            this.mENUToolStripMenuItem.Text = "MENU";
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(66, 29);
+            this.mENUToolStripMenuItem.Text = "ADD";
             this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
-            // 
-            // aDDToolStripMenuItem
-            // 
-            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
-            this.aDDToolStripMenuItem.Text = "ADD";
-            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
-            // 
-            // eDITToolStripMenuItem
-            // 
-            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
-            this.eDITToolStripMenuItem.Text = "EDIT";
-            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
-            // 
-            // dELETEToolStripMenuItem
-            // 
-            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
-            this.dELETEToolStripMenuItem.Text = "DELETE";
-            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
-            // 
-            // rEFRESHToolStripMenuItem
-            // 
-            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
-            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
-            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
@@ -140,42 +84,12 @@ namespace Chocolate_Factory_Management_System
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
-            // vIEWToolStripMenuItem
-            // 
-            this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
-            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(70, 29);
-            this.vIEWToolStripMenuItem.Text = "VIEW";
-            this.vIEWToolStripMenuItem.Click += new System.EventHandler(this.vIEWToolStripMenuItem_Click);
-            // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
-            // 
-            // sEARCHToolStripMenuItem
-            // 
-            this.sEARCHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eMPDETAILSToolStripMenuItem,
-            this.eMPATTENDANCEToolStripMenuItem});
-            this.sEARCHToolStripMenuItem.Name = "sEARCHToolStripMenuItem";
-            this.sEARCHToolStripMenuItem.Size = new System.Drawing.Size(94, 29);
-            this.sEARCHToolStripMenuItem.Text = "SEARCH";
-            // 
-            // eMPDETAILSToolStripMenuItem
-            // 
-            this.eMPDETAILSToolStripMenuItem.Name = "eMPDETAILSToolStripMenuItem";
-            this.eMPDETAILSToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
-            this.eMPDETAILSToolStripMenuItem.Text = "EMP DETAILS";
-            this.eMPDETAILSToolStripMenuItem.Click += new System.EventHandler(this.eMPDETAILSToolStripMenuItem_Click);
-            // 
-            // eMPATTENDANCEToolStripMenuItem
-            // 
-            this.eMPATTENDANCEToolStripMenuItem.Name = "eMPATTENDANCEToolStripMenuItem";
-            this.eMPATTENDANCEToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
-            this.eMPATTENDANCEToolStripMenuItem.Text = "EMP ATTENDANCE";
-            this.eMPATTENDANCEToolStripMenuItem.Click += new System.EventHandler(this.eMPATTENDANCEToolStripMenuItem_Click);
             // 
             // labelCurrentDate
             // 
@@ -197,13 +111,11 @@ namespace Chocolate_Factory_Management_System
             // 
             // labelMark
             // 
-            this.labelMark.AutoSize = true;
             this.labelMark.Location = new System.Drawing.Point(95, 242);
             this.labelMark.Name = "labelMark";
-            this.labelMark.Size = new System.Drawing.Size(44, 20);
-            this.labelMark.TabIndex = 7;
+            this.labelMark.Size = new System.Drawing.Size(100, 23);
+            this.labelMark.TabIndex = 20;
             this.labelMark.Text = "Mark";
-            this.labelMark.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxEID
             // 
@@ -268,9 +180,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(319, 96);
+            this.buttonSearch.Location = new System.Drawing.Point(659, 242);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(109, 30);
             this.buttonSearch.TabIndex = 19;
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -292,13 +204,11 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelMark);
             this.Controls.Add(this.labelEID);
             this.Controls.Add(this.labelCurrentDate);
-            this.Controls.Add(this.dataGridViewEmpAttendance);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "EmployeeAttendance";
             this.Text = "EmployeeAttendance";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmpAttendance)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -308,19 +218,10 @@ namespace Chocolate_Factory_Management_System
 
         #endregion
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.DataGridView dataGridViewEmpAttendance;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vIEWToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sEARCHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eMPDETAILSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eMPATTENDANCEToolStripMenuItem;
         private System.Windows.Forms.Label labelCurrentDate;
         private System.Windows.Forms.Label labelEID;
         private System.Windows.Forms.Label labelMark;
