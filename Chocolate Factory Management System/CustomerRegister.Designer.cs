@@ -47,8 +47,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcEmail = new System.Windows.Forms.TextBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dateTimePickercDOB = new System.Windows.Forms.DateTimePicker();
-            this.textBoxCID = new System.Windows.Forms.TextBox();
-            this.labelCID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
@@ -62,10 +60,25 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
             // labelCustomerName
             // 
             this.labelCustomerName.AutoSize = true;
-            this.labelCustomerName.Location = new System.Drawing.Point(36, 76);
+            this.labelCustomerName.Location = new System.Drawing.Point(36, 125);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(124, 20);
             this.labelCustomerName.TabIndex = 1;
@@ -140,9 +153,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxCustomerName
             // 
-            this.textBoxCustomerName.Location = new System.Drawing.Point(258, 85);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(229, 125);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
-            this.textBoxCustomerName.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCustomerName.Size = new System.Drawing.Size(283, 26);
             this.textBoxCustomerName.TabIndex = 25;
             // 
             // textBoxcPincode
@@ -183,22 +196,6 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickercDOB.Size = new System.Drawing.Size(280, 26);
             this.dateTimePickercDOB.TabIndex = 20;
             // 
-            // textBoxCID
-            // 
-            this.textBoxCID.Location = new System.Drawing.Point(229, 39);
-            this.textBoxCID.Name = "textBoxCID";
-            this.textBoxCID.Size = new System.Drawing.Size(100, 26);
-            this.textBoxCID.TabIndex = 21;
-            // 
-            // labelCID
-            // 
-            this.labelCID.AutoSize = true;
-            this.labelCID.Location = new System.Drawing.Point(36, 39);
-            this.labelCID.Name = "labelCID";
-            this.labelCID.Size = new System.Drawing.Size(37, 20);
-            this.labelCID.TabIndex = 22;
-            this.labelCID.Text = "CID";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -211,14 +208,14 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(1067, 146);
+            this.textBoxSearch.Location = new System.Drawing.Point(229, 70);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(161, 26);
+            this.textBoxSearch.Size = new System.Drawing.Size(283, 26);
             this.textBoxSearch.TabIndex = 24;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(1080, 98);
+            this.buttonSearch.Location = new System.Drawing.Point(40, 69);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(104, 27);
             this.buttonSearch.TabIndex = 0;
@@ -293,8 +290,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelCID);
-            this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.dateTimePickercDOB);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.textBoxcEmail);
@@ -340,8 +335,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxcEmail;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DateTimePicker dateTimePickercDOB;
-        private System.Windows.Forms.TextBox textBoxCID;
-        private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonSearch;

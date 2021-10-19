@@ -35,7 +35,7 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CID,CustomerName,DOB,Address,City,Phone,Pincode,Email from Customer where Phone=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CustomerName,DOB,Address,City,Phone,Pincode,Email from Customer where Phone=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
@@ -84,8 +84,6 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show(ex.ToString());
             }
-
-
         }
 
         private void eDITToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -118,7 +116,6 @@ namespace Chocolate_Factory_Management_System
             textBoxcAddress.Clear();
             textBoxcCity.Clear();
             textBoxcEmail.Clear();
-            textBoxCID.Clear();
             textBoxcPhone.Clear();
             textBoxcPincode.Clear();
             textBoxCustomerName.Clear();

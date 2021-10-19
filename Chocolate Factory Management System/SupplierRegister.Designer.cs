@@ -32,7 +32,6 @@ namespace Chocolate_Factory_Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplierRegister));
             this.labelCity = new System.Windows.Forms.Label();
             this.labelPincode = new System.Windows.Forms.Label();
-            this.labelSID = new System.Windows.Forms.Label();
             this.labelCoName = new System.Windows.Forms.Label();
             this.labelDOB = new System.Windows.Forms.Label();
             this.labelSupName = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxState = new System.Windows.Forms.TextBox();
             this.textBoxSupplierName = new System.Windows.Forms.TextBox();
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
-            this.textBoxSID = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
             this.textBoxCity = new System.Windows.Forms.TextBox();
@@ -68,7 +66,6 @@ namespace Chocolate_Factory_Management_System
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelBusinessType = new System.Windows.Forms.Label();
             this.textBoxBusinessType = new System.Windows.Forms.TextBox();
             this.labelLicense = new System.Windows.Forms.Label();
@@ -81,14 +78,14 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialogSup = new System.Windows.Forms.PrintPreviewDialog();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.labelPhoneNo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCity
             // 
             this.labelCity.AutoSize = true;
-            this.labelCity.Location = new System.Drawing.Point(484, 188);
+            this.labelCity.Location = new System.Drawing.Point(484, 130);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(35, 20);
             this.labelCity.TabIndex = 0;
@@ -97,20 +94,11 @@ namespace Chocolate_Factory_Management_System
             // labelPincode
             // 
             this.labelPincode.AutoSize = true;
-            this.labelPincode.Location = new System.Drawing.Point(484, 136);
+            this.labelPincode.Location = new System.Drawing.Point(21, 364);
             this.labelPincode.Name = "labelPincode";
             this.labelPincode.Size = new System.Drawing.Size(66, 20);
             this.labelPincode.TabIndex = 1;
             this.labelPincode.Text = "Pincode";
-            // 
-            // labelSID
-            // 
-            this.labelSID.AutoSize = true;
-            this.labelSID.Location = new System.Drawing.Point(18, 80);
-            this.labelSID.Name = "labelSID";
-            this.labelSID.Size = new System.Drawing.Size(37, 20);
-            this.labelSID.TabIndex = 2;
-            this.labelSID.Text = "SID";
             // 
             // labelCoName
             // 
@@ -159,18 +147,15 @@ namespace Chocolate_Factory_Management_System
             // 
             // labelPhone
             // 
-            this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new System.Drawing.Point(484, 232);
+            this.labelPhone.Location = new System.Drawing.Point(273, 74);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(79, 20);
-            this.labelPhone.TabIndex = 9;
-            this.labelPhone.Text = "Phone No";
-            this.labelPhone.Click += new System.EventHandler(this.label3_Click);
+            this.labelPhone.Size = new System.Drawing.Size(100, 23);
+            this.labelPhone.TabIndex = 52;
             // 
             // labelState
             // 
             this.labelState.AutoSize = true;
-            this.labelState.Location = new System.Drawing.Point(484, 86);
+            this.labelState.Location = new System.Drawing.Point(484, 185);
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(48, 20);
             this.labelState.TabIndex = 10;
@@ -179,7 +164,7 @@ namespace Chocolate_Factory_Management_System
             // labelBankAccountNo
             // 
             this.labelBankAccountNo.AutoSize = true;
-            this.labelBankAccountNo.Location = new System.Drawing.Point(870, 229);
+            this.labelBankAccountNo.Location = new System.Drawing.Point(871, 270);
             this.labelBankAccountNo.Name = "labelBankAccountNo";
             this.labelBankAccountNo.Size = new System.Drawing.Size(133, 20);
             this.labelBankAccountNo.TabIndex = 11;
@@ -188,7 +173,7 @@ namespace Chocolate_Factory_Management_System
             // labelBankName
             // 
             this.labelBankName.AutoSize = true;
-            this.labelBankName.Location = new System.Drawing.Point(870, 176);
+            this.labelBankName.Location = new System.Drawing.Point(871, 217);
             this.labelBankName.Name = "labelBankName";
             this.labelBankName.Size = new System.Drawing.Size(92, 20);
             this.labelBankName.TabIndex = 12;
@@ -198,7 +183,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelSupRegistration.AutoSize = true;
             this.labelSupRegistration.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSupRegistration.Location = new System.Drawing.Point(464, 21);
+            this.labelSupRegistration.Location = new System.Drawing.Point(482, 49);
             this.labelSupRegistration.Name = "labelSupRegistration";
             this.labelSupRegistration.Size = new System.Drawing.Size(377, 31);
             this.labelSupRegistration.TabIndex = 15;
@@ -217,7 +202,7 @@ namespace Chocolate_Factory_Management_System
             // labelBankAddress
             // 
             this.labelBankAddress.AutoSize = true;
-            this.labelBankAddress.Location = new System.Drawing.Point(870, 273);
+            this.labelBankAddress.Location = new System.Drawing.Point(871, 314);
             this.labelBankAddress.Name = "labelBankAddress";
             this.labelBankAddress.Size = new System.Drawing.Size(109, 20);
             this.labelBankAddress.TabIndex = 17;
@@ -225,14 +210,14 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxBankAccountNo
             // 
-            this.textBoxBankAccountNo.Location = new System.Drawing.Point(1010, 223);
+            this.textBoxBankAccountNo.Location = new System.Drawing.Point(1011, 264);
             this.textBoxBankAccountNo.Name = "textBoxBankAccountNo";
             this.textBoxBankAccountNo.Size = new System.Drawing.Size(251, 26);
             this.textBoxBankAccountNo.TabIndex = 18;
             // 
             // textBoxBankName
             // 
-            this.textBoxBankName.Location = new System.Drawing.Point(1010, 173);
+            this.textBoxBankName.Location = new System.Drawing.Point(1011, 214);
             this.textBoxBankName.Name = "textBoxBankName";
             this.textBoxBankName.Size = new System.Drawing.Size(251, 26);
             this.textBoxBankName.TabIndex = 19;
@@ -246,7 +231,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxState
             // 
-            this.textBoxState.Location = new System.Drawing.Point(570, 80);
+            this.textBoxState.Location = new System.Drawing.Point(570, 179);
             this.textBoxState.Name = "textBoxState";
             this.textBoxState.Size = new System.Drawing.Size(236, 26);
             this.textBoxState.TabIndex = 22;
@@ -265,13 +250,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCompanyName.Size = new System.Drawing.Size(240, 26);
             this.textBoxCompanyName.TabIndex = 24;
             // 
-            // textBoxSID
-            // 
-            this.textBoxSID.Location = new System.Drawing.Point(150, 80);
-            this.textBoxSID.Name = "textBoxSID";
-            this.textBoxSID.Size = new System.Drawing.Size(240, 26);
-            this.textBoxSID.TabIndex = 25;
-            // 
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(570, 278);
@@ -288,23 +266,21 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(570, 182);
+            this.textBoxCity.Location = new System.Drawing.Point(569, 127);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(236, 26);
-            this.textBoxCity.TabIndex = 29;
-            this.textBoxCity.TextChanged += new System.EventHandler(this.textBoxCity_TextChanged);
+            this.textBoxCity.TabIndex = 51;
             // 
             // textBoxPincode
             // 
-            this.textBoxPincode.Location = new System.Drawing.Point(570, 127);
+            this.textBoxPincode.Location = new System.Drawing.Point(150, 358);
             this.textBoxPincode.Name = "textBoxPincode";
-            this.textBoxPincode.Size = new System.Drawing.Size(236, 26);
-            this.textBoxPincode.TabIndex = 30;
-            this.textBoxPincode.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
+            this.textBoxPincode.Size = new System.Drawing.Size(240, 26);
+            this.textBoxPincode.TabIndex = 50;
             // 
             // textBoxBankAddress
             // 
-            this.textBoxBankAddress.Location = new System.Drawing.Point(1010, 267);
+            this.textBoxBankAddress.Location = new System.Drawing.Point(1011, 308);
             this.textBoxBankAddress.Name = "textBoxBankAddress";
             this.textBoxBankAddress.Size = new System.Drawing.Size(251, 26);
             this.textBoxBankAddress.TabIndex = 31;
@@ -329,7 +305,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1299, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1299, 36);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -340,75 +316,61 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem,
             this.dELETEToolStripMenuItem});
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 32);
             this.mENUToolStripMenuItem.Text = "MENU";
             this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
             // 
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // eDITToolStripMenuItem
             // 
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // dELETEToolStripMenuItem
             // 
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
             // rEFRESHToolStripMenuItem
             // 
             this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
-            this.rEFRESHToolStripMenuItem.Text = "REFRESH";
-            this.rEFRESHToolStripMenuItem.Click += new System.EventHandler(this.rEFRESHToolStripMenuItem_Click);
+            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(16, 32);
             // 
             // pRINTToolStripMenuItem
             // 
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 29);
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(76, 32);
             this.pRINTToolStripMenuItem.Text = "PRINT";
             this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // hOMEToolStripMenuItem
             // 
             this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.hOMEToolStripMenuItem.Text = "CLEAR";
             this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // vIEWToolStripMenuItem
             // 
             this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
-            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(70, 32);
-            this.vIEWToolStripMenuItem.Text = "VIEW";
-            this.vIEWToolStripMenuItem.Click += new System.EventHandler(this.vIEWToolStripMenuItem_Click);
+            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(16, 32);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 362);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1287, 139);
-            this.dataGridView1.TabIndex = 35;
             // 
             // labelBusinessType
             // 
@@ -429,7 +391,7 @@ namespace Chocolate_Factory_Management_System
             // labelLicense
             // 
             this.labelLicense.AutoSize = true;
-            this.labelLicense.Location = new System.Drawing.Point(870, 124);
+            this.labelLicense.Location = new System.Drawing.Point(871, 165);
             this.labelLicense.Name = "labelLicense";
             this.labelLicense.Size = new System.Drawing.Size(88, 20);
             this.labelLicense.TabIndex = 13;
@@ -437,7 +399,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxLicenseNo
             // 
-            this.textBoxLicenseNo.Location = new System.Drawing.Point(1010, 124);
+            this.textBoxLicenseNo.Location = new System.Drawing.Point(1011, 165);
             this.textBoxLicenseNo.Name = "textBoxLicenseNo";
             this.textBoxLicenseNo.Size = new System.Drawing.Size(251, 26);
             this.textBoxLicenseNo.TabIndex = 20;
@@ -448,7 +410,7 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxLicensed.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.checkedListBoxLicensed.Location = new System.Drawing.Point(1010, 73);
+            this.checkedListBoxLicensed.Location = new System.Drawing.Point(1011, 114);
             this.checkedListBoxLicensed.Name = "checkedListBoxLicensed";
             this.checkedListBoxLicensed.Size = new System.Drawing.Size(251, 27);
             this.checkedListBoxLicensed.TabIndex = 44;
@@ -456,7 +418,7 @@ namespace Chocolate_Factory_Management_System
             // labelInsured
             // 
             this.labelInsured.AutoSize = true;
-            this.labelInsured.Location = new System.Drawing.Point(484, 320);
+            this.labelInsured.Location = new System.Drawing.Point(484, 336);
             this.labelInsured.Name = "labelInsured";
             this.labelInsured.Size = new System.Drawing.Size(63, 20);
             this.labelInsured.TabIndex = 45;
@@ -465,7 +427,7 @@ namespace Chocolate_Factory_Management_System
             // labelLicensed
             // 
             this.labelLicensed.AutoSize = true;
-            this.labelLicensed.Location = new System.Drawing.Point(872, 86);
+            this.labelLicensed.Location = new System.Drawing.Point(873, 127);
             this.labelLicensed.Name = "labelLicensed";
             this.labelLicensed.Size = new System.Drawing.Size(73, 20);
             this.labelLicensed.TabIndex = 46;
@@ -499,9 +461,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(870, 314);
+            this.buttonSearch.Location = new System.Drawing.Point(479, 423);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(109, 29);
             this.buttonSearch.TabIndex = 48;
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -509,16 +471,26 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(1010, 317);
+            this.textBoxSearch.Location = new System.Drawing.Point(632, 423);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(100, 26);
+            this.textBoxSearch.Size = new System.Drawing.Size(196, 26);
             this.textBoxSearch.TabIndex = 49;
+            // 
+            // labelPhoneNo
+            // 
+            this.labelPhoneNo.AutoSize = true;
+            this.labelPhoneNo.Location = new System.Drawing.Point(475, 232);
+            this.labelPhoneNo.Name = "labelPhoneNo";
+            this.labelPhoneNo.Size = new System.Drawing.Size(79, 20);
+            this.labelPhoneNo.TabIndex = 53;
+            this.labelPhoneNo.Text = "Phone No";
             // 
             // SupplierRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 506);
+            this.Controls.Add(this.labelPhoneNo);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.checkedListBoxInsured);
@@ -527,14 +499,12 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.checkedListBoxLicensed);
             this.Controls.Add(this.textBoxBusinessType);
             this.Controls.Add(this.labelBusinessType);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePickersDOB);
             this.Controls.Add(this.textBoxBankAddress);
             this.Controls.Add(this.textBoxPincode);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.textBoxPhoneNo);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxSID);
             this.Controls.Add(this.textBoxCompanyName);
             this.Controls.Add(this.textBoxSupplierName);
             this.Controls.Add(this.textBoxState);
@@ -555,7 +525,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelSupName);
             this.Controls.Add(this.labelDOB);
             this.Controls.Add(this.labelCoName);
-            this.Controls.Add(this.labelSID);
             this.Controls.Add(this.labelPincode);
             this.Controls.Add(this.labelCity);
             this.Controls.Add(this.menuStrip1);
@@ -565,7 +534,6 @@ namespace Chocolate_Factory_Management_System
             this.Load += new System.EventHandler(this.SupplierRegister_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,7 +543,6 @@ namespace Chocolate_Factory_Management_System
 
         private System.Windows.Forms.Label labelCity;
         private System.Windows.Forms.Label labelPincode;
-        private System.Windows.Forms.Label labelSID;
         private System.Windows.Forms.Label labelCoName;
         private System.Windows.Forms.Label labelDOB;
         private System.Windows.Forms.Label labelSupName;
@@ -594,7 +561,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxState;
         private System.Windows.Forms.TextBox textBoxSupplierName;
         private System.Windows.Forms.TextBox textBoxCompanyName;
-        private System.Windows.Forms.TextBox textBoxSID;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPhoneNo;
         private System.Windows.Forms.TextBox textBoxCity;
@@ -609,7 +575,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelBusinessType;
         private System.Windows.Forms.TextBox textBoxBusinessType;
         private System.Windows.Forms.Label labelLicense;
@@ -624,5 +589,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label labelPhoneNo;
     }
 }
