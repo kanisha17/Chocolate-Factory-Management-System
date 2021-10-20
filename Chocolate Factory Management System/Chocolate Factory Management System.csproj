@@ -59,23 +59,11 @@
     <Compile Include="Adminprofile.Designer.cs">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomerRegister.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerRegister.Designer.cs">
       <DependentUpon>CustomerRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee1.cs">
       <SubType>Form</SubType>
@@ -154,14 +142,8 @@
     <EmbeddedResource Include="Adminprofile.resx">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegister.resx">
       <DependentUpon>CustomerRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee1.resx">
       <DependentUpon>Employee1.cs</DependentUpon>
@@ -231,6 +213,78 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocolate factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Color1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\295128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\en1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp re1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp sal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp at2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

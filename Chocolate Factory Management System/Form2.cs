@@ -30,8 +30,7 @@ namespace Chocolate_Factory_Management_System
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            Employee e1 = new Employee();
-            e1.ShowDialog();
+           
         }
 
         private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -61,8 +60,7 @@ namespace Chocolate_Factory_Management_System
 
         private void cUSTOMERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer c1 = new Customer();
-            c1.ShowDialog();
+            
         }
 
         private void sUPPLIERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +107,36 @@ namespace Chocolate_Factory_Management_System
         private void paymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rEGISTRATIONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Employee1 e1 = new Employee1();
+            e1.ShowDialog();
+        }
+
+        private void aTTENDANCEToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            EmployeeAttendance e1 = new EmployeeAttendance();
+            e1.ShowDialog();
+        }
+
+        private void sALARYToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            EmployeeSalary e1 = new EmployeeSalary();
+            e1.ShowDialog();
+        }
+
+        private void rEGISTRATIONToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CustomerRegister c1 = new CustomerRegister();
+            c1.ShowDialog();
+        }
+
+        private void sALESORDERToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            SalesOrder s1 = new SalesOrder();
+            s1.ShowDialog();
         }
     }
 }

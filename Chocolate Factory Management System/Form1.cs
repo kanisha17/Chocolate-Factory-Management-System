@@ -17,23 +17,13 @@ namespace Chocolate_Factory_Management_System
         public Form1()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\UserLogin.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                labelCheckConnection.Text = "Connection Successful";
-
-                connection.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error" +ex);
-            }
+           
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -70,19 +60,10 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+        
         private void groupBoxUserLogin_Enter(object sender, EventArgs e)
         {
 
-        }
-
-        private void comboBoxAdminEmployee_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
