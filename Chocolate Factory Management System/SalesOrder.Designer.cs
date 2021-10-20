@@ -29,11 +29,9 @@ namespace Chocolate_Factory_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelQuantitykg = new System.Windows.Forms.Label();
-            this.labelQuantitygm = new System.Windows.Forms.Label();
+            this.labelQuantity = new System.Windows.Forms.Label();
             this.labelInvoiceNo = new System.Windows.Forms.Label();
-            this.textBoxQuantitykg = new System.Windows.Forms.TextBox();
-            this.textBoxQuantitygm = new System.Windows.Forms.TextBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.textBoxCID = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.labelItemName = new System.Windows.Forms.Label();
@@ -47,9 +45,6 @@ namespace Chocolate_Factory_Management_System
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonADD = new System.Windows.Forms.Button();
-            this.buttonCLEAR = new System.Windows.Forms.Button();
-            this.buttonEXIT = new System.Windows.Forms.Button();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.buttonPAY = new System.Windows.Forms.Button();
             this.dataGridViewSaleOrder = new System.Windows.Forms.DataGridView();
@@ -57,29 +52,28 @@ namespace Chocolate_Factory_Management_System
             this.labelDiscount = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.textBoxBalance = new System.Windows.Forms.TextBox();
-            this.textBoxGST = new System.Windows.Forms.TextBox();
             this.labelBalance = new System.Windows.Forms.Label();
-            this.labelGST = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelPaid = new System.Windows.Forms.Label();
+            this.textBoxPaid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelQuantitykg
+            // labelQuantity
             // 
-            this.labelQuantitykg.AutoSize = true;
-            this.labelQuantitykg.Location = new System.Drawing.Point(20, 283);
-            this.labelQuantitykg.Name = "labelQuantitykg";
-            this.labelQuantitykg.Size = new System.Drawing.Size(99, 20);
-            this.labelQuantitykg.TabIndex = 0;
-            this.labelQuantitykg.Text = "Quantity (kg)";
-            // 
-            // labelQuantitygm
-            // 
-            this.labelQuantitygm.AutoSize = true;
-            this.labelQuantitygm.Location = new System.Drawing.Point(15, 228);
-            this.labelQuantitygm.Name = "labelQuantitygm";
-            this.labelQuantitygm.Size = new System.Drawing.Size(104, 20);
-            this.labelQuantitygm.TabIndex = 1;
-            this.labelQuantitygm.Text = "Quantity (gm)";
+            this.labelQuantity.AutoSize = true;
+            this.labelQuantity.Location = new System.Drawing.Point(20, 219);
+            this.labelQuantity.Name = "labelQuantity";
+            this.labelQuantity.Size = new System.Drawing.Size(68, 20);
+            this.labelQuantity.TabIndex = 0;
+            this.labelQuantity.Text = "Quantity";
             // 
             // labelInvoiceNo
             // 
@@ -90,19 +84,12 @@ namespace Chocolate_Factory_Management_System
             this.labelInvoiceNo.TabIndex = 2;
             this.labelInvoiceNo.Text = "CID";
             // 
-            // textBoxQuantitykg
+            // textBoxQuantity
             // 
-            this.textBoxQuantitykg.Location = new System.Drawing.Point(121, 277);
-            this.textBoxQuantitykg.Name = "textBoxQuantitykg";
-            this.textBoxQuantitykg.Size = new System.Drawing.Size(209, 26);
-            this.textBoxQuantitykg.TabIndex = 3;
-            // 
-            // textBoxQuantitygm
-            // 
-            this.textBoxQuantitygm.Location = new System.Drawing.Point(121, 225);
-            this.textBoxQuantitygm.Name = "textBoxQuantitygm";
-            this.textBoxQuantitygm.Size = new System.Drawing.Size(209, 26);
-            this.textBoxQuantitygm.TabIndex = 4;
+            this.textBoxQuantity.Location = new System.Drawing.Point(121, 213);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(209, 26);
+            this.textBoxQuantity.TabIndex = 3;
             // 
             // textBoxCID
             // 
@@ -113,7 +100,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxTotal
             // 
-            this.textBoxTotal.Location = new System.Drawing.Point(121, 445);
+            this.textBoxTotal.Location = new System.Drawing.Point(112, 338);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(209, 26);
             this.textBoxTotal.TabIndex = 6;
@@ -130,7 +117,7 @@ namespace Chocolate_Factory_Management_System
             // labelUnitPrice
             // 
             this.labelUnitPrice.AutoSize = true;
-            this.labelUnitPrice.Location = new System.Drawing.Point(28, 402);
+            this.labelUnitPrice.Location = new System.Drawing.Point(19, 295);
             this.labelUnitPrice.Name = "labelUnitPrice";
             this.labelUnitPrice.Size = new System.Drawing.Size(77, 20);
             this.labelUnitPrice.TabIndex = 9;
@@ -139,7 +126,7 @@ namespace Chocolate_Factory_Management_System
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(28, 451);
+            this.labelTotal.Location = new System.Drawing.Point(44, 344);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(44, 20);
             this.labelTotal.TabIndex = 10;
@@ -147,7 +134,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxUnitPrice
             // 
-            this.textBoxUnitPrice.Location = new System.Drawing.Point(121, 402);
+            this.textBoxUnitPrice.Location = new System.Drawing.Point(112, 295);
             this.textBoxUnitPrice.Name = "textBoxUnitPrice";
             this.textBoxUnitPrice.Size = new System.Drawing.Size(209, 26);
             this.textBoxUnitPrice.TabIndex = 12;
@@ -161,7 +148,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickerDueDate
             // 
-            this.dateTimePickerDueDate.Location = new System.Drawing.Point(130, 535);
+            this.dateTimePickerDueDate.Location = new System.Drawing.Point(130, 471);
             this.dateTimePickerDueDate.Name = "dateTimePickerDueDate";
             this.dateTimePickerDueDate.Size = new System.Drawing.Size(200, 26);
             this.dateTimePickerDueDate.TabIndex = 14;
@@ -186,7 +173,7 @@ namespace Chocolate_Factory_Management_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 541);
+            this.label1.Location = new System.Drawing.Point(23, 477);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 16;
@@ -203,14 +190,14 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(166, 12);
+            this.textBoxSearch.Location = new System.Drawing.Point(418, 36);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(254, 26);
             this.textBoxSearch.TabIndex = 19;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(29, 9);
+            this.buttonSearch.Location = new System.Drawing.Point(308, 36);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(95, 29);
             this.buttonSearch.TabIndex = 20;
@@ -218,45 +205,19 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // buttonADD
-            // 
-            this.buttonADD.Location = new System.Drawing.Point(620, 561);
-            this.buttonADD.Name = "buttonADD";
-            this.buttonADD.Size = new System.Drawing.Size(75, 33);
-            this.buttonADD.TabIndex = 21;
-            this.buttonADD.Text = "ADD";
-            this.buttonADD.UseVisualStyleBackColor = true;
-            // 
-            // buttonCLEAR
-            // 
-            this.buttonCLEAR.Location = new System.Drawing.Point(728, 561);
-            this.buttonCLEAR.Name = "buttonCLEAR";
-            this.buttonCLEAR.Size = new System.Drawing.Size(75, 33);
-            this.buttonCLEAR.TabIndex = 22;
-            this.buttonCLEAR.Text = "CLEAR";
-            this.buttonCLEAR.UseVisualStyleBackColor = true;
-            // 
-            // buttonEXIT
-            // 
-            this.buttonEXIT.Location = new System.Drawing.Point(836, 561);
-            this.buttonEXIT.Name = "buttonEXIT";
-            this.buttonEXIT.Size = new System.Drawing.Size(75, 33);
-            this.buttonEXIT.TabIndex = 23;
-            this.buttonEXIT.Text = "EXIT";
-            this.buttonEXIT.UseVisualStyleBackColor = true;
-            // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(952, 561);
+            this.buttonCalculate.Location = new System.Drawing.Point(87, 536);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(128, 33);
             this.buttonCalculate.TabIndex = 24;
             this.buttonCalculate.Text = "CALCULATE";
             this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // buttonPAY
             // 
-            this.buttonPAY.Location = new System.Drawing.Point(1115, 561);
+            this.buttonPAY.Location = new System.Drawing.Point(1115, 578);
             this.buttonPAY.Name = "buttonPAY";
             this.buttonPAY.Size = new System.Drawing.Size(115, 33);
             this.buttonPAY.TabIndex = 25;
@@ -276,9 +237,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonLoadTable
             // 
-            this.buttonLoadTable.Location = new System.Drawing.Point(472, 561);
+            this.buttonLoadTable.Location = new System.Drawing.Point(708, 508);
             this.buttonLoadTable.Name = "buttonLoadTable";
-            this.buttonLoadTable.Size = new System.Drawing.Size(121, 33);
+            this.buttonLoadTable.Size = new System.Drawing.Size(262, 33);
             this.buttonLoadTable.TabIndex = 27;
             this.buttonLoadTable.Text = "Load Table";
             this.buttonLoadTable.UseVisualStyleBackColor = true;
@@ -287,7 +248,7 @@ namespace Chocolate_Factory_Management_System
             // labelDiscount
             // 
             this.labelDiscount.AutoSize = true;
-            this.labelDiscount.Location = new System.Drawing.Point(12, 321);
+            this.labelDiscount.Location = new System.Drawing.Point(12, 257);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(72, 20);
             this.labelDiscount.TabIndex = 28;
@@ -295,51 +256,111 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxDiscount
             // 
-            this.textBoxDiscount.Location = new System.Drawing.Point(121, 315);
+            this.textBoxDiscount.Location = new System.Drawing.Point(121, 251);
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(200, 26);
             this.textBoxDiscount.TabIndex = 29;
             // 
             // textBoxBalance
             // 
-            this.textBoxBalance.Location = new System.Drawing.Point(121, 493);
+            this.textBoxBalance.Location = new System.Drawing.Point(121, 429);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(200, 26);
             this.textBoxBalance.TabIndex = 30;
-            // 
-            // textBoxGST
-            // 
-            this.textBoxGST.Location = new System.Drawing.Point(121, 359);
-            this.textBoxGST.Name = "textBoxGST";
-            this.textBoxGST.Size = new System.Drawing.Size(200, 26);
-            this.textBoxGST.TabIndex = 31;
+            this.textBoxBalance.TextChanged += new System.EventHandler(this.textBoxBalance_TextChanged);
             // 
             // labelBalance
             // 
             this.labelBalance.AutoSize = true;
-            this.labelBalance.Location = new System.Drawing.Point(29, 499);
+            this.labelBalance.Location = new System.Drawing.Point(29, 435);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.Size = new System.Drawing.Size(67, 20);
             this.labelBalance.TabIndex = 32;
             this.labelBalance.Text = "Balance";
             // 
-            // labelGST
+            // menuStrip1
             // 
-            this.labelGST.AutoSize = true;
-            this.labelGST.Location = new System.Drawing.Point(29, 365);
-            this.labelGST.Name = "labelGST";
-            this.labelGST.Size = new System.Drawing.Size(42, 20);
-            this.labelGST.TabIndex = 33;
-            this.labelGST.Text = "GST";
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mENUToolStripMenuItem,
+            this.cLEARToolStripMenuItem,
+            this.eXITToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1242, 33);
+            this.menuStrip1.TabIndex = 35;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mENUToolStripMenuItem
+            // 
+            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aDDToolStripMenuItem,
+            this.eDITToolStripMenuItem,
+            this.dELETEToolStripMenuItem});
+            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.mENUToolStripMenuItem.Text = "MENU";
+            // 
+            // aDDToolStripMenuItem
+            // 
+            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.aDDToolStripMenuItem.Text = "ADD";
+            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
+            // 
+            // eDITToolStripMenuItem
+            // 
+            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.eDITToolStripMenuItem.Text = "EDIT";
+            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
+            // 
+            // dELETEToolStripMenuItem
+            // 
+            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem.Text = "DELETE";
+            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
+            // 
+            // cLEARToolStripMenuItem
+            // 
+            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.cLEARToolStripMenuItem.Text = "CLEAR";
+            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
+            // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // labelPaid
+            // 
+            this.labelPaid.AutoSize = true;
+            this.labelPaid.Location = new System.Drawing.Point(36, 383);
+            this.labelPaid.Name = "labelPaid";
+            this.labelPaid.Size = new System.Drawing.Size(40, 20);
+            this.labelPaid.TabIndex = 36;
+            this.labelPaid.Text = "Paid";
+            // 
+            // textBoxPaid
+            // 
+            this.textBoxPaid.Location = new System.Drawing.Point(112, 383);
+            this.textBoxPaid.Name = "textBoxPaid";
+            this.textBoxPaid.Size = new System.Drawing.Size(209, 26);
+            this.textBoxPaid.TabIndex = 37;
             // 
             // SalesOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 643);
-            this.Controls.Add(this.labelGST);
+            this.Controls.Add(this.textBoxPaid);
+            this.Controls.Add(this.labelPaid);
             this.Controls.Add(this.labelBalance);
-            this.Controls.Add(this.textBoxGST);
             this.Controls.Add(this.textBoxBalance);
             this.Controls.Add(this.textBoxDiscount);
             this.Controls.Add(this.labelDiscount);
@@ -347,9 +368,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.dataGridViewSaleOrder);
             this.Controls.Add(this.buttonPAY);
             this.Controls.Add(this.buttonCalculate);
-            this.Controls.Add(this.buttonEXIT);
-            this.Controls.Add(this.buttonCLEAR);
-            this.Controls.Add(this.buttonADD);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label2);
@@ -363,15 +381,17 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelItemName);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxCID);
-            this.Controls.Add(this.textBoxQuantitygm);
-            this.Controls.Add(this.textBoxQuantitykg);
+            this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.labelInvoiceNo);
-            this.Controls.Add(this.labelQuantitygm);
-            this.Controls.Add(this.labelQuantitykg);
+            this.Controls.Add(this.labelQuantity);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "SalesOrder";
             this.Text = "SalesOrder";
             this.Load += new System.EventHandler(this.SalesOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,11 +399,9 @@ namespace Chocolate_Factory_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Label labelQuantitykg;
-        private System.Windows.Forms.Label labelQuantitygm;
+        private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Label labelInvoiceNo;
-        private System.Windows.Forms.TextBox textBoxQuantitykg;
-        private System.Windows.Forms.TextBox textBoxQuantitygm;
+        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.TextBox textBoxCID;
         private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.Label labelItemName;
@@ -397,9 +415,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonADD;
-        private System.Windows.Forms.Button buttonCLEAR;
-        private System.Windows.Forms.Button buttonEXIT;
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Button buttonPAY;
         private System.Windows.Forms.DataGridView dataGridViewSaleOrder;
@@ -407,8 +422,15 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.TextBox textBoxDiscount;
         private System.Windows.Forms.TextBox textBoxBalance;
-        private System.Windows.Forms.TextBox textBoxGST;
         private System.Windows.Forms.Label labelBalance;
-        private System.Windows.Forms.Label labelGST;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+        private System.Windows.Forms.Label labelPaid;
+        private System.Windows.Forms.TextBox textBoxPaid;
     }
 }

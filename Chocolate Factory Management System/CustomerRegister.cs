@@ -18,7 +18,7 @@ namespace Chocolate_Factory_Management_System
         public CustomerRegister()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdataa.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
 
         }
 
@@ -95,7 +95,7 @@ namespace Chocolate_Factory_Management_System
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 string query = "update Customer set CustomerName='" +textBoxCustomerName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
-                    "Address='" + textBoxcAddress.Text + "',City='"+textBoxcCity+"',Pincode='" + textBoxcPincode.Text +"',Email='" + textBoxcEmail.Text + "' where Phone=" + textBoxSearch.Text + "";
+                    "Address='" + textBoxcAddress.Text + "',City='"+textBoxcCity.Text+"',Pincode='" + textBoxcPincode.Text +"',Email='" + textBoxcEmail.Text + "' where Phone=" + textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 

@@ -127,12 +127,6 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Supplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Supplier.Designer.cs">
-      <DependentUpon>Supplier.cs</DependentUpon>
-    </Compile>
     <Compile Include="SupplierRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Supplier.resx">
-      <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierRegister.resx">
       <DependentUpon>SupplierRegister.cs</DependentUpon>

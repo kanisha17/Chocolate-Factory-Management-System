@@ -64,12 +64,12 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelDOB.AutoSize = true;
             this.labelDOB.BackColor = System.Drawing.Color.Transparent;
-            this.labelDOB.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDOB.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDOB.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelDOB.Location = new System.Drawing.Point(451, 231);
-            this.labelDOB.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelDOB.Location = new System.Drawing.Point(714, 323);
+            this.labelDOB.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.labelDOB.Name = "labelDOB";
-            this.labelDOB.Size = new System.Drawing.Size(169, 27);
+            this.labelDOB.Size = new System.Drawing.Size(197, 31);
             this.labelDOB.TabIndex = 2;
             this.labelDOB.Text = "Date Of Birth";
             // 
@@ -77,54 +77,54 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelAddress.AutoSize = true;
             this.labelAddress.BackColor = System.Drawing.Color.Transparent;
-            this.labelAddress.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddress.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelAddress.Location = new System.Drawing.Point(451, 292);
-            this.labelAddress.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelAddress.Location = new System.Drawing.Point(720, 391);
+            this.labelAddress.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(112, 27);
+            this.labelAddress.Size = new System.Drawing.Size(129, 31);
             this.labelAddress.TabIndex = 3;
             this.labelAddress.Text = "Address";
             // 
             // textBoxFirstName
             // 
             this.textBoxFirstName.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxFirstName.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFirstName.Location = new System.Drawing.Point(646, 115);
-            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.textBoxFirstName.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirstName.Location = new System.Drawing.Point(943, 192);
+            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(380, 29);
+            this.textBoxFirstName.Size = new System.Drawing.Size(428, 31);
             this.textBoxFirstName.TabIndex = 4;
             // 
             // textBoxLastName
             // 
             this.textBoxLastName.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxLastName.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLastName.Location = new System.Drawing.Point(646, 168);
-            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.textBoxLastName.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLastName.Location = new System.Drawing.Point(943, 263);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(380, 29);
+            this.textBoxLastName.Size = new System.Drawing.Size(428, 31);
             this.textBoxLastName.TabIndex = 5;
             // 
             // textBoxAddress
             // 
             this.textBoxAddress.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxAddress.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(646, 290);
-            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.textBoxAddress.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAddress.Location = new System.Drawing.Point(943, 391);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(380, 29);
+            this.textBoxAddress.Size = new System.Drawing.Size(428, 31);
             this.textBoxAddress.TabIndex = 7;
             // 
             // labelAdminProfile
             // 
             this.labelAdminProfile.AutoSize = true;
             this.labelAdminProfile.BackColor = System.Drawing.Color.Transparent;
-            this.labelAdminProfile.Font = new System.Drawing.Font("Lucida Bright", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAdminProfile.Font = new System.Drawing.Font("Lucida Bright", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAdminProfile.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelAdminProfile.Location = new System.Drawing.Point(517, 36);
+            this.labelAdminProfile.Location = new System.Drawing.Point(771, 46);
             this.labelAdminProfile.Name = "labelAdminProfile";
-            this.labelAdminProfile.Size = new System.Drawing.Size(382, 50);
+            this.labelAdminProfile.Size = new System.Drawing.Size(489, 62);
             this.labelAdminProfile.TabIndex = 8;
             this.labelAdminProfile.Text = "ADMIN PROFILE";
             // 
@@ -132,11 +132,11 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelCity.AutoSize = true;
             this.labelCity.BackColor = System.Drawing.Color.Transparent;
-            this.labelCity.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCity.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCity.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelCity.Location = new System.Drawing.Point(451, 346);
+            this.labelCity.Location = new System.Drawing.Point(720, 460);
             this.labelCity.Name = "labelCity";
-            this.labelCity.Size = new System.Drawing.Size(61, 27);
+            this.labelCity.Size = new System.Drawing.Size(70, 31);
             this.labelCity.TabIndex = 12;
             this.labelCity.Text = "City";
             // 
@@ -144,58 +144,58 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelPincode.AutoSize = true;
             this.labelPincode.BackColor = System.Drawing.Color.Transparent;
-            this.labelPincode.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPincode.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPincode.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelPincode.Location = new System.Drawing.Point(451, 461);
+            this.labelPincode.Location = new System.Drawing.Point(714, 592);
             this.labelPincode.Name = "labelPincode";
-            this.labelPincode.Size = new System.Drawing.Size(108, 27);
+            this.labelPincode.Size = new System.Drawing.Size(124, 31);
             this.labelPincode.TabIndex = 13;
             this.labelPincode.Text = "Pincode";
             // 
             // labelPhoneNo
             // 
             this.labelPhoneNo.BackColor = System.Drawing.Color.Transparent;
-            this.labelPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPhoneNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelPhoneNo.Location = new System.Drawing.Point(451, 518);
+            this.labelPhoneNo.Location = new System.Drawing.Point(714, 657);
             this.labelPhoneNo.Name = "labelPhoneNo";
-            this.labelPhoneNo.Size = new System.Drawing.Size(169, 31);
+            this.labelPhoneNo.Size = new System.Drawing.Size(197, 36);
             this.labelPhoneNo.TabIndex = 33;
             this.labelPhoneNo.Text = "Phone No";
             // 
             // textBoxCity
             // 
             this.textBoxCity.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxCity.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCity.Location = new System.Drawing.Point(646, 346);
+            this.textBoxCity.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCity.Location = new System.Drawing.Point(943, 460);
             this.textBoxCity.Name = "textBoxCity";
-            this.textBoxCity.Size = new System.Drawing.Size(380, 29);
+            this.textBoxCity.Size = new System.Drawing.Size(428, 31);
             this.textBoxCity.TabIndex = 15;
             // 
             // textBoxPincode
             // 
             this.textBoxPincode.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxPincode.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPincode.Location = new System.Drawing.Point(646, 460);
+            this.textBoxPincode.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPincode.Location = new System.Drawing.Point(943, 592);
             this.textBoxPincode.Name = "textBoxPincode";
-            this.textBoxPincode.Size = new System.Drawing.Size(380, 29);
+            this.textBoxPincode.Size = new System.Drawing.Size(428, 31);
             this.textBoxPincode.TabIndex = 16;
             // 
             // textBoxPhoneNo
             // 
             this.textBoxPhoneNo.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(646, 520);
+            this.textBoxPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(943, 662);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(380, 29);
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(428, 31);
             this.textBoxPhoneNo.TabIndex = 33;
             // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Gold;
-            this.buttonClose.Location = new System.Drawing.Point(1879, 36);
+            this.buttonClose.Location = new System.Drawing.Point(2192, 42);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(45, 42);
+            this.buttonClose.Size = new System.Drawing.Size(52, 49);
             this.buttonClose.TabIndex = 20;
             this.buttonClose.Text = "X";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -204,63 +204,63 @@ namespace Chocolate_Factory_Management_System
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.CalendarMonthBackground = System.Drawing.Color.LavenderBlush;
-            this.dateTimePickerDOB.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(646, 227);
+            this.dateTimePickerDOB.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(943, 323);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
-            this.dateTimePickerDOB.Size = new System.Drawing.Size(380, 29);
+            this.dateTimePickerDOB.Size = new System.Drawing.Size(428, 31);
             this.dateTimePickerDOB.TabIndex = 21;
             // 
             // labelState
             // 
             this.labelState.AutoSize = true;
             this.labelState.BackColor = System.Drawing.Color.Transparent;
-            this.labelState.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelState.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelState.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelState.Location = new System.Drawing.Point(451, 408);
+            this.labelState.Location = new System.Drawing.Point(714, 530);
             this.labelState.Name = "labelState";
-            this.labelState.Size = new System.Drawing.Size(71, 27);
+            this.labelState.Size = new System.Drawing.Size(81, 31);
             this.labelState.TabIndex = 23;
             this.labelState.Text = "State";
             // 
             // textBoxState
             // 
             this.textBoxState.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxState.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxState.Location = new System.Drawing.Point(646, 406);
+            this.textBoxState.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxState.Location = new System.Drawing.Point(943, 530);
             this.textBoxState.Name = "textBoxState";
-            this.textBoxState.Size = new System.Drawing.Size(380, 29);
+            this.textBoxState.Size = new System.Drawing.Size(428, 31);
             this.textBoxState.TabIndex = 24;
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.BackColor = System.Drawing.Color.Transparent;
-            this.labelEmail.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelEmail.Location = new System.Drawing.Point(450, 577);
+            this.labelEmail.Location = new System.Drawing.Point(720, 728);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(77, 27);
+            this.labelEmail.Size = new System.Drawing.Size(89, 31);
             this.labelEmail.TabIndex = 25;
             this.labelEmail.Text = "Email";
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBoxEmail.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(646, 577);
+            this.textBoxEmail.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(943, 728);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(380, 29);
+            this.textBoxEmail.Size = new System.Drawing.Size(428, 31);
             this.textBoxEmail.TabIndex = 26;
             // 
             // labelFirstname
             // 
             this.labelFirstname.AutoSize = true;
             this.labelFirstname.BackColor = System.Drawing.Color.Transparent;
-            this.labelFirstname.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFirstname.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFirstname.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelFirstname.Location = new System.Drawing.Point(451, 113);
+            this.labelFirstname.Location = new System.Drawing.Point(714, 192);
             this.labelFirstname.Name = "labelFirstname";
-            this.labelFirstname.Size = new System.Drawing.Size(144, 27);
+            this.labelFirstname.Size = new System.Drawing.Size(165, 31);
             this.labelFirstname.TabIndex = 29;
             this.labelFirstname.Text = "First Name";
             // 
@@ -268,11 +268,11 @@ namespace Chocolate_Factory_Management_System
             // 
             this.label2Lastname.AutoSize = true;
             this.label2Lastname.BackColor = System.Drawing.Color.Transparent;
-            this.label2Lastname.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2Lastname.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2Lastname.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2Lastname.Location = new System.Drawing.Point(451, 170);
+            this.label2Lastname.Location = new System.Drawing.Point(714, 263);
             this.label2Lastname.Name = "label2Lastname";
-            this.label2Lastname.Size = new System.Drawing.Size(139, 27);
+            this.label2Lastname.Size = new System.Drawing.Size(159, 31);
             this.label2Lastname.TabIndex = 30;
             this.label2Lastname.Text = "Last Name";
             // 
@@ -283,9 +283,9 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonSearch.Location = new System.Drawing.Point(12, 91);
+            this.buttonSearch.Location = new System.Drawing.Point(14, 95);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(166, 32);
+            this.buttonSearch.Size = new System.Drawing.Size(194, 48);
             this.buttonSearch.TabIndex = 31;
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -293,15 +293,17 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(184, 91);
+            this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(228, 106);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(253, 29);
+            this.textBoxSearch.Size = new System.Drawing.Size(313, 33);
             this.textBoxSearch.TabIndex = 32;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.s2;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -310,7 +312,8 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1245, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1885, 42);
             this.menuStrip1.TabIndex = 35;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -320,9 +323,9 @@ namespace Chocolate_Factory_Management_System
             this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aDDToolStripMenuItem,
             this.eDITToolStripMenuItem});
-            this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
             this.mENUToolStripMenuItem.Text = "MENU";
             // 
             // aDDToolStripMenuItem
@@ -330,7 +333,7 @@ namespace Chocolate_Factory_Management_System
             this.aDDToolStripMenuItem.BackColor = System.Drawing.Color.SandyBrown;
             this.aDDToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(154, 34);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
@@ -339,36 +342,36 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.eDITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(154, 34);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
             this.cLEARToolStripMenuItem.BackColor = System.Drawing.Color.OrangeRed;
-            this.cLEARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cLEARToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(104, 36);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.Tomato;
-            this.eXITToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eXITToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(67, 29);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // Adminprofile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(21F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.s21;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1245, 686);
+            this.ClientSize = new System.Drawing.Size(1885, 1050);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label2Lastname);
@@ -392,10 +395,11 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelDOB);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "Adminprofile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adminprofile";
             this.Load += new System.EventHandler(this.Adminprofile_Load);
             this.menuStrip1.ResumeLayout(false);

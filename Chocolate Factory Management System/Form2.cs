@@ -65,8 +65,7 @@ namespace Chocolate_Factory_Management_System
 
         private void sUPPLIERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Supplier s1 = new Supplier();
-            s1.ShowDialog();
+         
         }
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,6 +136,18 @@ namespace Chocolate_Factory_Management_System
         {
             SalesOrder s1 = new SalesOrder();
             s1.ShowDialog();
+        }
+
+        private void rEGISTRATIONToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            SupplierRegister s1 = new SupplierRegister();
+            s1.ShowDialog();
+        }
+
+        private void pURCHASEORDERToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            PurchaseOrder p1 = new PurchaseOrder();
+            p1.ShowDialog();
         }
     }
 }

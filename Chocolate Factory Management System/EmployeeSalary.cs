@@ -18,7 +18,7 @@ namespace Chocolate_Factory_Management_System
         public EmployeeSalary()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\Cdataa.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
 
         }
         double basicsalary, da, hra, grossalary, pf, netsalary;

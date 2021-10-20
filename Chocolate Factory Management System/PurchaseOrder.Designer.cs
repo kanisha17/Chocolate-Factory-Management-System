@@ -32,7 +32,6 @@ namespace Chocolate_Factory_Management_System
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelUnitPrice = new System.Windows.Forms.Label();
             this.labelQuantitykg = new System.Windows.Forms.Label();
-            this.labelProductName = new System.Windows.Forms.Label();
             this.comboBoxProductName = new System.Windows.Forms.ComboBox();
             this.textBoxQuantitykg = new System.Windows.Forms.TextBox();
             this.textBoxUnitPrice = new System.Windows.Forms.TextBox();
@@ -43,24 +42,33 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickerOrderDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonEXIT = new System.Windows.Forms.Button();
-            this.buttonCLEAR = new System.Windows.Forms.Button();
-            this.buttonADD = new System.Windows.Forms.Button();
             this.buttonCALCULATE = new System.Windows.Forms.Button();
             this.labelproduct = new System.Windows.Forms.Label();
             this.dataGridViewPurchaseOrder = new System.Windows.Forms.DataGridView();
             this.buttonLoadTable = new System.Windows.Forms.Button();
-            this.labelGST = new System.Windows.Forms.Label();
-            this.textBoxGST = new System.Windows.Forms.TextBox();
-            this.buttonDELETE = new System.Windows.Forms.Button();
-            this.buttonEDIT = new System.Windows.Forms.Button();
+            this.labelDiscount = new System.Windows.Forms.Label();
+            this.textBoxDiscount = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxPaid = new System.Windows.Forms.TextBox();
+            this.labelPaid = new System.Windows.Forms.Label();
+            this.dateTimePickerDueDate = new System.Windows.Forms.DateTimePicker();
+            this.labelDueDate = new System.Windows.Forms.Label();
+            this.labelBalance = new System.Windows.Forms.Label();
+            this.textBoxBalance = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(856, 381);
+            this.labelTotal.Location = new System.Drawing.Point(856, 347);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(44, 20);
             this.labelTotal.TabIndex = 6;
@@ -69,7 +77,7 @@ namespace Chocolate_Factory_Management_System
             // labelUnitPrice
             // 
             this.labelUnitPrice.AutoSize = true;
-            this.labelUnitPrice.Location = new System.Drawing.Point(856, 297);
+            this.labelUnitPrice.Location = new System.Drawing.Point(856, 303);
             this.labelUnitPrice.Name = "labelUnitPrice";
             this.labelUnitPrice.Size = new System.Drawing.Size(77, 20);
             this.labelUnitPrice.TabIndex = 7;
@@ -78,18 +86,11 @@ namespace Chocolate_Factory_Management_System
             // labelQuantitykg
             // 
             this.labelQuantitykg.AutoSize = true;
-            this.labelQuantitykg.Location = new System.Drawing.Point(856, 239);
+            this.labelQuantitykg.Location = new System.Drawing.Point(862, 213);
             this.labelQuantitykg.Name = "labelQuantitykg";
             this.labelQuantitykg.Size = new System.Drawing.Size(68, 20);
             this.labelQuantitykg.TabIndex = 8;
             this.labelQuantitykg.Text = "Quantity";
-            // 
-            // labelProductName
-            // 
-            this.labelProductName.Location = new System.Drawing.Point(0, 0);
-            this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(100, 23);
-            this.labelProductName.TabIndex = 29;
             // 
             // comboBoxProductName
             // 
@@ -104,28 +105,28 @@ namespace Chocolate_Factory_Management_System
             "Honey",
             "Sugar",
             "Vanilla"});
-            this.comboBoxProductName.Location = new System.Drawing.Point(995, 177);
+            this.comboBoxProductName.Location = new System.Drawing.Point(995, 174);
             this.comboBoxProductName.Name = "comboBoxProductName";
             this.comboBoxProductName.Size = new System.Drawing.Size(249, 28);
             this.comboBoxProductName.TabIndex = 11;
             // 
             // textBoxQuantitykg
             // 
-            this.textBoxQuantitykg.Location = new System.Drawing.Point(995, 233);
+            this.textBoxQuantitykg.Location = new System.Drawing.Point(995, 213);
             this.textBoxQuantitykg.Name = "textBoxQuantitykg";
             this.textBoxQuantitykg.Size = new System.Drawing.Size(249, 26);
             this.textBoxQuantitykg.TabIndex = 14;
             // 
             // textBoxUnitPrice
             // 
-            this.textBoxUnitPrice.Location = new System.Drawing.Point(995, 291);
+            this.textBoxUnitPrice.Location = new System.Drawing.Point(995, 297);
             this.textBoxUnitPrice.Name = "textBoxUnitPrice";
             this.textBoxUnitPrice.Size = new System.Drawing.Size(249, 26);
             this.textBoxUnitPrice.TabIndex = 15;
             // 
             // textBoxTotal
             // 
-            this.textBoxTotal.Location = new System.Drawing.Point(995, 378);
+            this.textBoxTotal.Location = new System.Drawing.Point(995, 344);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(249, 26);
             this.textBoxTotal.TabIndex = 16;
@@ -178,39 +179,9 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // buttonEXIT
-            // 
-            this.buttonEXIT.Location = new System.Drawing.Point(682, 434);
-            this.buttonEXIT.Name = "buttonEXIT";
-            this.buttonEXIT.Size = new System.Drawing.Size(104, 38);
-            this.buttonEXIT.TabIndex = 24;
-            this.buttonEXIT.Text = "EXIT";
-            this.buttonEXIT.UseVisualStyleBackColor = true;
-            this.buttonEXIT.Click += new System.EventHandler(this.buttonEXIT_Click);
-            // 
-            // buttonCLEAR
-            // 
-            this.buttonCLEAR.Location = new System.Drawing.Point(558, 434);
-            this.buttonCLEAR.Name = "buttonCLEAR";
-            this.buttonCLEAR.Size = new System.Drawing.Size(98, 38);
-            this.buttonCLEAR.TabIndex = 25;
-            this.buttonCLEAR.Text = "CLEAR";
-            this.buttonCLEAR.UseVisualStyleBackColor = true;
-            this.buttonCLEAR.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // buttonADD
-            // 
-            this.buttonADD.Location = new System.Drawing.Point(155, 434);
-            this.buttonADD.Name = "buttonADD";
-            this.buttonADD.Size = new System.Drawing.Size(123, 38);
-            this.buttonADD.TabIndex = 26;
-            this.buttonADD.Text = "ADD";
-            this.buttonADD.UseVisualStyleBackColor = true;
-            this.buttonADD.Click += new System.EventHandler(this.button3_Click);
-            // 
             // buttonCALCULATE
             // 
-            this.buttonCALCULATE.Location = new System.Drawing.Point(995, 446);
+            this.buttonCALCULATE.Location = new System.Drawing.Point(1091, 528);
             this.buttonCALCULATE.Name = "buttonCALCULATE";
             this.buttonCALCULATE.Size = new System.Drawing.Size(153, 38);
             this.buttonCALCULATE.TabIndex = 27;
@@ -221,7 +192,7 @@ namespace Chocolate_Factory_Management_System
             // labelproduct
             // 
             this.labelproduct.AutoSize = true;
-            this.labelproduct.Location = new System.Drawing.Point(856, 185);
+            this.labelproduct.Location = new System.Drawing.Point(856, 177);
             this.labelproduct.Name = "labelproduct";
             this.labelproduct.Size = new System.Drawing.Size(110, 20);
             this.labelproduct.TabIndex = 30;
@@ -239,66 +210,155 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonLoadTable
             // 
-            this.buttonLoadTable.Location = new System.Drawing.Point(26, 434);
+            this.buttonLoadTable.Location = new System.Drawing.Point(294, 429);
             this.buttonLoadTable.Name = "buttonLoadTable";
-            this.buttonLoadTable.Size = new System.Drawing.Size(112, 38);
+            this.buttonLoadTable.Size = new System.Drawing.Size(259, 38);
             this.buttonLoadTable.TabIndex = 32;
             this.buttonLoadTable.Text = "Load Table";
             this.buttonLoadTable.UseVisualStyleBackColor = true;
             this.buttonLoadTable.Click += new System.EventHandler(this.buttonLoadTable_Click);
             // 
-            // labelGST
+            // labelDiscount
             // 
-            this.labelGST.AutoSize = true;
-            this.labelGST.Location = new System.Drawing.Point(856, 343);
-            this.labelGST.Name = "labelGST";
-            this.labelGST.Size = new System.Drawing.Size(42, 20);
-            this.labelGST.TabIndex = 34;
-            this.labelGST.Text = "GST";
+            this.labelDiscount.AutoSize = true;
+            this.labelDiscount.Location = new System.Drawing.Point(856, 265);
+            this.labelDiscount.Name = "labelDiscount";
+            this.labelDiscount.Size = new System.Drawing.Size(72, 20);
+            this.labelDiscount.TabIndex = 34;
+            this.labelDiscount.Text = "Discount";
             // 
-            // textBoxGST
+            // textBoxDiscount
             // 
-            this.textBoxGST.Location = new System.Drawing.Point(995, 337);
-            this.textBoxGST.Name = "textBoxGST";
-            this.textBoxGST.Size = new System.Drawing.Size(249, 26);
-            this.textBoxGST.TabIndex = 35;
+            this.textBoxDiscount.Location = new System.Drawing.Point(995, 259);
+            this.textBoxDiscount.Name = "textBoxDiscount";
+            this.textBoxDiscount.Size = new System.Drawing.Size(249, 26);
+            this.textBoxDiscount.TabIndex = 35;
             // 
-            // buttonDELETE
+            // menuStrip1
             // 
-            this.buttonDELETE.Location = new System.Drawing.Point(424, 434);
-            this.buttonDELETE.Name = "buttonDELETE";
-            this.buttonDELETE.Size = new System.Drawing.Size(113, 38);
-            this.buttonDELETE.TabIndex = 36;
-            this.buttonDELETE.Text = "DELETE";
-            this.buttonDELETE.UseVisualStyleBackColor = true;
-            this.buttonDELETE.Click += new System.EventHandler(this.buttonDELETE_Click);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mENUToolStripMenuItem,
+            this.cLEARToolStripMenuItem,
+            this.eXITToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1299, 33);
+            this.menuStrip1.TabIndex = 38;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // buttonEDIT
+            // mENUToolStripMenuItem
             // 
-            this.buttonEDIT.Location = new System.Drawing.Point(300, 434);
-            this.buttonEDIT.Name = "buttonEDIT";
-            this.buttonEDIT.Size = new System.Drawing.Size(106, 38);
-            this.buttonEDIT.TabIndex = 37;
-            this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = true;
-            this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
+            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aDDToolStripMenuItem,
+            this.eDITToolStripMenuItem,
+            this.dELETEToolStripMenuItem});
+            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.mENUToolStripMenuItem.Text = "MENU";
+            // 
+            // aDDToolStripMenuItem
+            // 
+            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.aDDToolStripMenuItem.Text = "ADD";
+            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
+            // 
+            // eDITToolStripMenuItem
+            // 
+            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.eDITToolStripMenuItem.Text = "EDIT";
+            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
+            // 
+            // dELETEToolStripMenuItem
+            // 
+            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.dELETEToolStripMenuItem.Text = "DELETE";
+            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
+            // 
+            // cLEARToolStripMenuItem
+            // 
+            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.cLEARToolStripMenuItem.Text = "CLEAR";
+            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
+            // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // textBoxPaid
+            // 
+            this.textBoxPaid.Location = new System.Drawing.Point(995, 386);
+            this.textBoxPaid.Name = "textBoxPaid";
+            this.textBoxPaid.Size = new System.Drawing.Size(249, 26);
+            this.textBoxPaid.TabIndex = 39;
+            // 
+            // labelPaid
+            // 
+            this.labelPaid.AutoSize = true;
+            this.labelPaid.Location = new System.Drawing.Point(856, 392);
+            this.labelPaid.Name = "labelPaid";
+            this.labelPaid.Size = new System.Drawing.Size(40, 20);
+            this.labelPaid.TabIndex = 40;
+            this.labelPaid.Text = "Paid";
+            this.labelPaid.Click += new System.EventHandler(this.labelPaid_Click);
+            // 
+            // dateTimePickerDueDate
+            // 
+            this.dateTimePickerDueDate.Location = new System.Drawing.Point(995, 471);
+            this.dateTimePickerDueDate.Name = "dateTimePickerDueDate";
+            this.dateTimePickerDueDate.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePickerDueDate.TabIndex = 41;
+            // 
+            // labelDueDate
+            // 
+            this.labelDueDate.AutoSize = true;
+            this.labelDueDate.Location = new System.Drawing.Point(859, 477);
+            this.labelDueDate.Name = "labelDueDate";
+            this.labelDueDate.Size = new System.Drawing.Size(74, 20);
+            this.labelDueDate.TabIndex = 42;
+            this.labelDueDate.Text = "DueDate";
+            // 
+            // labelBalance
+            // 
+            this.labelBalance.AutoSize = true;
+            this.labelBalance.Location = new System.Drawing.Point(856, 435);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.Size = new System.Drawing.Size(67, 20);
+            this.labelBalance.TabIndex = 43;
+            this.labelBalance.Text = "Balance";
+            // 
+            // textBoxBalance
+            // 
+            this.textBoxBalance.Location = new System.Drawing.Point(995, 429);
+            this.textBoxBalance.Name = "textBoxBalance";
+            this.textBoxBalance.Size = new System.Drawing.Size(258, 26);
+            this.textBoxBalance.TabIndex = 44;
             // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 578);
-            this.Controls.Add(this.buttonEDIT);
-            this.Controls.Add(this.buttonDELETE);
-            this.Controls.Add(this.textBoxGST);
-            this.Controls.Add(this.labelGST);
+            this.Controls.Add(this.textBoxBalance);
+            this.Controls.Add(this.labelBalance);
+            this.Controls.Add(this.labelDueDate);
+            this.Controls.Add(this.dateTimePickerDueDate);
+            this.Controls.Add(this.labelPaid);
+            this.Controls.Add(this.textBoxPaid);
+            this.Controls.Add(this.textBoxDiscount);
+            this.Controls.Add(this.labelDiscount);
             this.Controls.Add(this.buttonLoadTable);
             this.Controls.Add(this.dataGridViewPurchaseOrder);
             this.Controls.Add(this.labelproduct);
             this.Controls.Add(this.buttonCALCULATE);
-            this.Controls.Add(this.buttonADD);
-            this.Controls.Add(this.buttonCLEAR);
-            this.Controls.Add(this.buttonEXIT);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dateTimePickerOrderDate);
@@ -309,14 +369,17 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxUnitPrice);
             this.Controls.Add(this.textBoxQuantitykg);
             this.Controls.Add(this.comboBoxProductName);
-            this.Controls.Add(this.labelProductName);
             this.Controls.Add(this.labelQuantitykg);
             this.Controls.Add(this.labelUnitPrice);
             this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "PurchaseOrder";
             this.Text = "PurchaseOrder";
             this.Load += new System.EventHandler(this.PurchaseOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +389,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label labelUnitPrice;
         private System.Windows.Forms.Label labelQuantitykg;
-        private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.ComboBox comboBoxProductName;
         private System.Windows.Forms.TextBox textBoxQuantitykg;
         private System.Windows.Forms.TextBox textBoxUnitPrice;
@@ -337,16 +399,24 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.DateTimePicker dateTimePickerOrderDate;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonEXIT;
-        private System.Windows.Forms.Button buttonCLEAR;
-        private System.Windows.Forms.Button buttonADD;
         private System.Windows.Forms.Button buttonCALCULATE;
         private System.Windows.Forms.Label labelproduct;
         private System.Windows.Forms.DataGridView dataGridViewPurchaseOrder;
         private System.Windows.Forms.Button buttonLoadTable;
-        private System.Windows.Forms.Label labelGST;
-        private System.Windows.Forms.TextBox textBoxGST;
-        private System.Windows.Forms.Button buttonDELETE;
-        private System.Windows.Forms.Button buttonEDIT;
+        private System.Windows.Forms.Label labelDiscount;
+        private System.Windows.Forms.TextBox textBoxDiscount;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxPaid;
+        private System.Windows.Forms.Label labelPaid;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDueDate;
+        private System.Windows.Forms.Label labelDueDate;
+        private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.TextBox textBoxBalance;
     }
 }

@@ -189,7 +189,7 @@ namespace Chocolate_Factory_Management_System
             this.rEGISTRATIONToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rEGISTRATIONToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.emp_re1;
             this.rEGISTRATIONToolStripMenuItem.Name = "rEGISTRATIONToolStripMenuItem";
-            this.rEGISTRATIONToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.rEGISTRATIONToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.rEGISTRATIONToolStripMenuItem.Text = "Registration";
             this.rEGISTRATIONToolStripMenuItem.Click += new System.EventHandler(this.rEGISTRATIONToolStripMenuItem_Click);
             // 
@@ -199,7 +199,7 @@ namespace Chocolate_Factory_Management_System
             this.aTTENDANCEToolStripMenuItem1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aTTENDANCEToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.emp_at2;
             this.aTTENDANCEToolStripMenuItem1.Name = "aTTENDANCEToolStripMenuItem1";
-            this.aTTENDANCEToolStripMenuItem1.Size = new System.Drawing.Size(270, 36);
+            this.aTTENDANCEToolStripMenuItem1.Size = new System.Drawing.Size(261, 36);
             this.aTTENDANCEToolStripMenuItem1.Text = "Attendance";
             this.aTTENDANCEToolStripMenuItem1.Click += new System.EventHandler(this.aTTENDANCEToolStripMenuItem1_Click_1);
             // 
@@ -209,7 +209,7 @@ namespace Chocolate_Factory_Management_System
             this.sALARYToolStripMenuItem1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sALARYToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.emp_sal1;
             this.sALARYToolStripMenuItem1.Name = "sALARYToolStripMenuItem1";
-            this.sALARYToolStripMenuItem1.Size = new System.Drawing.Size(270, 36);
+            this.sALARYToolStripMenuItem1.Size = new System.Drawing.Size(261, 36);
             this.sALARYToolStripMenuItem1.Text = "Salary";
             this.sALARYToolStripMenuItem1.Click += new System.EventHandler(this.sALARYToolStripMenuItem1_Click_1);
             // 
@@ -237,7 +237,7 @@ namespace Chocolate_Factory_Management_System
             this.rEGISTRATIONToolStripMenuItem1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rEGISTRATIONToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.emp_re1;
             this.rEGISTRATIONToolStripMenuItem1.Name = "rEGISTRATIONToolStripMenuItem1";
-            this.rEGISTRATIONToolStripMenuItem1.Size = new System.Drawing.Size(270, 36);
+            this.rEGISTRATIONToolStripMenuItem1.Size = new System.Drawing.Size(261, 36);
             this.rEGISTRATIONToolStripMenuItem1.Text = "Registration";
             this.rEGISTRATIONToolStripMenuItem1.Click += new System.EventHandler(this.rEGISTRATIONToolStripMenuItem1_Click);
             // 
@@ -245,7 +245,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.sALESORDERToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sALESORDERToolStripMenuItem.Name = "sALESORDERToolStripMenuItem";
-            this.sALESORDERToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.sALESORDERToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.sALESORDERToolStripMenuItem.Text = "Sales Order";
             this.sALESORDERToolStripMenuItem.Click += new System.EventHandler(this.sALESORDERToolStripMenuItem_Click_1);
             // 
@@ -272,12 +272,14 @@ namespace Chocolate_Factory_Management_System
             this.rEGISTRATIONToolStripMenuItem2.Name = "rEGISTRATIONToolStripMenuItem2";
             this.rEGISTRATIONToolStripMenuItem2.Size = new System.Drawing.Size(426, 44);
             this.rEGISTRATIONToolStripMenuItem2.Text = "REGISTRATION";
+            this.rEGISTRATIONToolStripMenuItem2.Click += new System.EventHandler(this.rEGISTRATIONToolStripMenuItem2_Click);
             // 
             // pURCHASEORDERToolStripMenuItem
             // 
             this.pURCHASEORDERToolStripMenuItem.Name = "pURCHASEORDERToolStripMenuItem";
             this.pURCHASEORDERToolStripMenuItem.Size = new System.Drawing.Size(426, 44);
             this.pURCHASEORDERToolStripMenuItem.Text = "PURCHASE ORDER";
+            this.pURCHASEORDERToolStripMenuItem.Click += new System.EventHandler(this.pURCHASEORDERToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem8
             // 

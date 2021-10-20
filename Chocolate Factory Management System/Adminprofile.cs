@@ -60,7 +60,8 @@ namespace Chocolate_Factory_Management_System
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
-            f2.ShowDialog();
+            f2.Show();
+            this.Hide();
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,6 +128,11 @@ namespace Chocolate_Factory_Management_System
             textBoxPincode.Clear();
             textBoxSearch.Clear();
             textBoxState.Clear();
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
