@@ -100,7 +100,7 @@ namespace Chocolate_Factory_Management_System
             "Caramel",
             "Coco Powder",
             "Condensed Milk",
-            "Cinnamon",
+            "Cinamon",
             "Dry Fruits",
             "Honey",
             "Sugar",
@@ -244,7 +244,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1299, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1299, 36);
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -255,7 +255,7 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem,
             this.dELETEToolStripMenuItem});
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 32);
             this.mENUToolStripMenuItem.Text = "MENU";
             // 
             // aDDToolStripMenuItem
@@ -282,14 +282,14 @@ namespace Chocolate_Factory_Management_System
             // cLEARToolStripMenuItem
             // 
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 

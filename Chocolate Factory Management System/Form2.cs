@@ -134,8 +134,8 @@ namespace Chocolate_Factory_Management_System
 
         private void sALESORDERToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            SalesOrder s1 = new SalesOrder();
-            s1.ShowDialog();
+            Enquiry e1 = new Enquiry();
+            e1.ShowDialog();
         }
 
         private void rEGISTRATIONToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -148,6 +148,28 @@ namespace Chocolate_Factory_Management_System
         {
             PurchaseOrder p1 = new PurchaseOrder();
             p1.ShowDialog();
+        }
+
+        private void eNQUIERYDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductDetails p1 = new ProductDetails();
+            p1.ShowDialog();
+        }
+
+        private void enquiryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesOrder s1 = new SalesOrder();
+            s1.ShowDialog();
+        }
+
+        private void proftAndLossToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

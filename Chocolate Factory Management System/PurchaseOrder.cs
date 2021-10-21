@@ -13,14 +13,14 @@ namespace Chocolate_Factory_Management_System
 {
     public partial class PurchaseOrder : Form
     {
-        private OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb");
+        private OleDbConnection connection = new OleDbConnection();
         OleDbCommand command;
 
 
         public PurchaseOrder()
         {
             InitializeComponent();
-
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
         }
 
         double qty, price, dis, tot, a, b;
@@ -183,22 +183,22 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select SupplierID,PDate,ProductName,PQuantity,PDiscount,UnitPrice,PTotal,Paid,Balance,DueDate from PurchaseOrder where POrderNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select SupplierID,PurchaseDate,ProductName,PQuantity,PDiscount,UnitPrice,PTotal,Paid,Balance,DueDate from PurchaseOrder where POrderNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
                 textBoxSID.Text = reader1["SupplierID"].ToString();
-                dateTimePickerOrderDate.Text = reader1["PDate"].ToString();
+                dateTimePickerOrderDate.Text = reader1["PurchaseDate"].ToString();
                 comboBoxProductName.Text = reader1["ProductName"].ToString();
                 textBoxQuantitykg.Text = reader1["PQuantity"].ToString();
                 textBoxDiscount.Text = reader1["PDiscount"].ToString();
                 textBoxUnitPrice.Text = reader1["UnitPrice"].ToString();
                 textBoxTotal.Text = reader1["PTotal"].ToString();
-                textBoxTotal.Text = reader1["Paid"].ToString();
-                textBoxTotal.Text = reader1["Balance"].ToString();
-                textBoxTotal.Text = reader1["DueDate"].ToString();
+                textBoxPaid.Text = reader1["Paid"].ToString();
+                textBoxBalance.Text = reader1["Balance"].ToString();
+                dateTimePickerDueDate.Text = reader1["DueDate"].ToString();
             }
         
        

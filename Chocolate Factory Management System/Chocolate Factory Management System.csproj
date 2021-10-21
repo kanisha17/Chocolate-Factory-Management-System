@@ -40,6 +40,7 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -95,6 +96,12 @@
     <Compile Include="EmpSalaryReport.Designer.cs">
       <DependentUpon>EmpSalaryReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enquiry.Designer.cs">
+      <DependentUpon>Enquiry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,12 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.Designer.cs">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,11 +168,17 @@
     <EmbeddedResource Include="EmpSalaryReport.resx">
       <DependentUpon>EmpSalaryReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Enquiry.resx">
+      <DependentUpon>Enquiry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDetails.resx">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -276,6 +295,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\emp at2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\en11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cc1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb112.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a11.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

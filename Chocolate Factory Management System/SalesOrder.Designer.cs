@@ -157,14 +157,16 @@ namespace Chocolate_Factory_Management_System
             // 
             this.comboBoxItemName.FormattingEnabled = true;
             this.comboBoxItemName.Items.AddRange(new object[] {
-            "Choco Bar",
             "Choco Charms",
-            "Choco Delight",
-            "King Candy",
-            "Milky Goodness",
+            "Chocolate Mockup",
+            "DryFruit Chocolate",
+            "Heart Candy",
+            "Jelly Candy",
+            "Lolipops",
+            "Milk Chocolate",
+            "Raw Organic Chocolate",
             "Sugar Candy",
-            "Sugar And Smiles",
-            ""});
+            "Sugar And Smiles"});
             this.comboBoxItemName.Location = new System.Drawing.Point(121, 170);
             this.comboBoxItemName.Name = "comboBoxItemName";
             this.comboBoxItemName.Size = new System.Drawing.Size(209, 28);
@@ -305,14 +307,14 @@ namespace Chocolate_Factory_Management_System
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // eDITToolStripMenuItem
             // 
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
