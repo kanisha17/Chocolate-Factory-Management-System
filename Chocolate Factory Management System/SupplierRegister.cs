@@ -17,7 +17,7 @@ namespace Chocolate_Factory_Management_System
         public SupplierRegister()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
+           connection.ConnectionString = @"Provider =Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
 
@@ -33,51 +33,53 @@ namespace Chocolate_Factory_Management_System
             textBoxAddress.Clear();
             textBoxBankAccountNo.Clear();
             textBoxBankAddress.Clear();
-            textBoxBankName.Clear();
+           textBoxBankName.Clear();
             textBoxBusinessType.Clear();
-            textBoxCity.Clear();
+           textBoxCity.Clear();
             textBoxCompanyName.Clear();
             textBoxEmail.Clear();
-            textBoxLicenseNo.Clear();
+           textBoxLicenseNo.Clear();
             textBoxPhoneNo.Clear();
-            textBoxPincode.Clear();
+           textBoxPincode.Clear();
             textBoxSearch.Clear();
-            textBoxState.Clear();
+           textBoxState.Clear();
             textBoxSupplierName.Clear();
-            checkedListBoxInsured.ResetText();
-            checkedListBoxLicensed.ResetText();
+          checkedListBoxInsured.ResetText();
+           checkedListBoxLicensed.ResetText();
             
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
+          
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Supplier(SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhone,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
-                    "values(@suppliername,@companyname,@businesstype,@dob,@address,@pincode,@city,@state,@phone,@email,@insured,@licensed,@licenseno,@bankname,@bankaccountno,@bankaddress)", connection);
-
+       
+                command = new OleDbCommand("insert into Supplier(SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
+                    "values(@suppliername,@companyname,@businesstype,@dob,@address,@pincode,@city,@state,@phoneno,@email,@insured,@licensed,@licenseno,@bankname,@bankaccountno,@bankaddress)", connection);
                 command.Parameters.AddWithValue("@suppliername", textBoxSupplierName.Text);
-                command.Parameters.AddWithValue("@companyname", textBoxCompanyName.Text);
-                command.Parameters.AddWithValue("@businesstype", textBoxBusinessType.Text);
-                command.Parameters.AddWithValue("@dob", dateTimePickersDOB.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@city", textBoxCity.Text);
-                command.Parameters.AddWithValue("@state", textBoxState.Text);
-                command.Parameters.AddWithValue("@phone",textBoxPhoneNo.Text);
+                command.Parameters.AddWithValue("@companyname",textBoxCompanyName.Text);
+            command.Parameters.AddWithValue("@businesstype", textBoxBusinessType.Text);
+                 command.Parameters.AddWithValue("@dob", dateTimePickersDOB.Text);
+                 command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                  command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                 command.Parameters.AddWithValue("@city", textBoxCity.Text);
+                 command.Parameters.AddWithValue("@state", textBoxState.Text);
+                 command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@email", textBoxEmail.Text);
                 command.Parameters.AddWithValue("@insured", checkedListBoxInsured.Text);
                 command.Parameters.AddWithValue("@licensed", checkedListBoxLicensed.Text);
                 command.Parameters.AddWithValue("@licenseno", textBoxLicenseNo.Text);
-                command.Parameters.AddWithValue("@bankname",textBoxBankName.Text);
+                 command.Parameters.AddWithValue("@bankname", textBoxBankName.Text);
                 command.Parameters.AddWithValue("@bankaccountno", textBoxBankAccountNo.Text);
-                command.Parameters.AddWithValue("@bankaddress", textBoxBankAddress.Text);
+                command.Parameters.AddWithValue("@bankaddress",textBoxBankAddress.Text);
+                
 
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Added Successfully");
             }
             catch (Exception ex)
             {
@@ -92,20 +94,30 @@ namespace Chocolate_Factory_Management_System
 
      
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-
-
+        {     
             try
             {
 
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update Supplier set SupplierName='" + textBoxSupplierName.Text + "', CompanyName='" + textBoxCompanyName.Text + "',BusinessType='"+textBoxBusinessType.Text+"'," +
-                    "DOB='" + dateTimePickersDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', State='" + textBoxState.Text + "',SPhone='"+textBoxPhoneNo.Text+"', Pincode='" + textBoxPincode.Text + "'," +
-                    " City='" + textBoxCity.Text + "',Email='" +textBoxEmail.Text + "',Insured='"+checkedListBoxInsured.Text+"'," +
-                    "Licensed='"+checkedListBoxLicensed.Text+"',LicenseNo='"+textBoxLicenseNo.Text+"',BankName='"+textBoxBankName.Text+"',BankAccountNo='"+textBoxBankAccountNo.Text+"',BankAddress='"+textBoxBankAddress.Text+"' where SPhone=" +textBoxSearch.Text + "";
+               
+                string query= "update Supplier set SupplierName='" + textBoxSupplierName.Text + "'," +
+                    "CompanyName='"+textBoxCompanyName.Text+ "'," +
+                    "BusinessType='"+textBoxBusinessType.Text+ "'," +
+                    "DOB='"+dateTimePickersDOB.Value.Date+"'," +
+                    "Address='"+textBoxAddress.Text+"'," +
+                    "Pincode='"+textBoxPincode.Text+"'," +
+                    "City='"+textBoxCity.Text+"'," +
+                    "State='"+textBoxState.Text+"'," +
+                    "SPhoneNo='"+textBoxPhoneNo.Text+"'," +
+                    "Email='"+textBoxEmail.Text+"'," +
+                    "Insured='"+checkedListBoxInsured.Text+"'," +
+                    "Licensed='"+checkedListBoxLicensed.Text+"'," +
+                    "LicenseNo='"+textBoxLicenseNo.Text+"'," +
+                    "BankName='"+textBoxBankName.Text+ "'," +
+                    "BankAccountNo='"+textBoxBankAccountNo.Text+ "'," +
+                    "BankAddress='"+textBoxBankAddress.Text+"' where SPhoneNo=" + textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -117,6 +129,7 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
+
         }
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,7 +140,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "delete from Supplier where SPhone=" + textBoxSearch.Text + "";
+                string query = "delete from Supplier where SPhoneNo=" + textBoxSearch.Text + "";
                 //MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -166,7 +179,7 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhone,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress from Supplier where SPhone=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress from Supplier where SPhoneNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
@@ -175,12 +188,12 @@ namespace Chocolate_Factory_Management_System
                 textBoxSupplierName.Text = reader1["SupplierName"].ToString();
                 textBoxCompanyName.Text = reader1["CompanyName"].ToString();
                 textBoxBusinessType.Text = reader1["BusinessType"].ToString();
-                dateTimePickersDOB.Text = reader1["DOB"].ToString();
+              dateTimePickersDOB.Text = reader1["DOB"].ToString();
                 textBoxAddress.Text = reader1["Address"].ToString();
                 textBoxPincode.Text = reader1["Pincode"].ToString();
                 textBoxCity.Text = reader1["City"].ToString();
                 textBoxState.Text = reader1["State"].ToString();
-                textBoxPhoneNo.Text = reader1["SPhone"].ToString();
+              textBoxPhoneNo.Text = reader1["SPhoneNo"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
                 checkedListBoxInsured.Text = reader1["Insured"].ToString();
                 checkedListBoxLicensed.Text = reader1["Licensed"].ToString();
@@ -188,7 +201,7 @@ namespace Chocolate_Factory_Management_System
                 textBoxBankName.Text = reader1["BankName"].ToString();
                 textBoxBankAccountNo.Text = reader1["BankAccountNo"].ToString();
                 textBoxBankAddress.Text = reader1["BankAddress"].ToString();
-
+           
             }
             else
             {

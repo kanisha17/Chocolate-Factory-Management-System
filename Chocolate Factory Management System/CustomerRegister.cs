@@ -18,7 +18,7 @@ namespace Chocolate_Factory_Management_System
         public CustomerRegister()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
 
@@ -35,7 +35,7 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CustomerName,DOB,Address,City,Phone,Pincode,Email from Customer where Phone=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CustomerName,DOB,Address,City,Pincode,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
@@ -45,8 +45,9 @@ namespace Chocolate_Factory_Management_System
                 dateTimePickercDOB.Text = reader1["DOB"].ToString();
                 textBoxcAddress.Text = reader1["Address"].ToString();
                 textBoxcCity.Text = reader1["City"].ToString();
-                textBoxcPhone.Text = reader1["Phone"].ToString();
+              
                 textBoxcPincode.Text = reader1["Pincode"].ToString();
+                textBoxcPhone.Text = reader1["PhoneNo"].ToString();
                 textBoxcEmail.Text = reader1["Email"].ToString();
 
             }
@@ -65,14 +66,15 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Customer(CustomerName,DOB,Address,City,Phone,Pincode,Email) values(@customername,@dob,@address,@city,@phone,@pincode,@email)", connection);
+                command = new OleDbCommand("insert into Customer(CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
               
                 command.Parameters.AddWithValue("@customername", textBoxCustomerName.Text);
                 command.Parameters.AddWithValue("@dob", dateTimePickercDOB.Text);
                 command.Parameters.AddWithValue("@address", textBoxcAddress.Text);
                 command.Parameters.AddWithValue("@city", textBoxcCity.Text);
-                command.Parameters.AddWithValue("@phone",textBoxcPhone.Text);
+               
                 command.Parameters.AddWithValue("@pincode", textBoxcPincode.Text);
+                command.Parameters.AddWithValue("@phone", textBoxcPhone.Text);
                 command.Parameters.AddWithValue("@email", textBoxcEmail.Text);
 
                 command.ExecuteNonQuery();
@@ -94,8 +96,9 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update Customer set CustomerName='" +textBoxCustomerName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
-                    "Address='" + textBoxcAddress.Text + "',City='"+textBoxcCity.Text+"',Pincode='" + textBoxcPincode.Text +"',Email='" + textBoxcEmail.Text + "' where Phone=" + textBoxSearch.Text + "";
+                string query = "update Customer set CustomerName='" +textBoxCustomerName.Text + "',DOB='"+dateTimePickercDOB.Value.Date+"'," +
+                    "Address='"+textBoxcAddress.Text+"',City='"+textBoxcCity.Text+"',Pincode='"+textBoxcPincode.Text+"'," +
+                    "PhoneNo='"+textBoxcPhone.Text+"',Email='"+textBoxcEmail.Text+"' where PhoneNo="+textBoxSearch.Text+"";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -107,9 +110,10 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
+            
         }
 
-      
+
 
         private void pRINTToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -139,7 +143,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText= "delete from Customer where Phone=" + textBoxSearch.Text + "";
+                command.CommandText= "delete from Customer where PhoneNo=" + textBoxSearch.Text + "";
                 //MessageBox.Show(query);
                 
 

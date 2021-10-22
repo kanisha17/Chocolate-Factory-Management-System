@@ -18,7 +18,7 @@ namespace Chocolate_Factory_Management_System
         public SalesOrder()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
 
@@ -63,19 +63,19 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CID,SalesDate,ItemName,SQuantity,SDiscount,UnitPrice,STotal,Paid,Balance,DueDate from SalesOrder where SOrderNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select PhoneNo,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate from SalesOrder where SOrderNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
-                textBoxCID.Text = reader1["CID"].ToString();
+                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 dateTimePickerSDate.Text = reader1["SalesDate"].ToString();
                 comboBoxItemName.Text = reader1["ItemName"].ToString();
-                textBoxQuantity.Text = reader1["SQuantity"].ToString();
-                textBoxDiscount.Text = reader1["SDiscount"].ToString();
+                textBoxQuantity.Text = reader1["Quantity"].ToString();
+                textBoxDiscount.Text = reader1["Discount"].ToString();
                 textBoxUnitPrice.Text = reader1["UnitPrice"].ToString();
-                textBoxTotal.Text = reader1["STotal"].ToString();
+                textBoxTotal.Text = reader1["Total"].ToString();
                 textBoxPaid.Text = reader1["Paid"].ToString();
                 textBoxBalance.Text = reader1["Balance"].ToString();
                 dateTimePickerDueDate.Text = reader1["DueDate"].ToString();
@@ -144,9 +144,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into SalesOrder(CID,SalesDate,ItemName,SQuantity,SDiscount,UnitPrice,STotal,Paid,Balance,DueDate) " +
-                    "values(@cid,@salesdate,@itemname,@qty,@dis,@unitprice,@stotal,@paid,@balance,@duedate)", connection);
-                command.Parameters.AddWithValue("@cid", textBoxCID.Text);
+                command = new OleDbCommand("insert into SalesOrder(PhoneNo,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
+                    "values(@phoneno,@salesdate,@itemname,@qty,@dis,@unitprice,@stotal,@paid,@balance,@duedate)", connection);
+                command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@salesdate", dateTimePickerSDate.Text);
                 command.Parameters.AddWithValue("@itemname", comboBoxItemName.Text);
                 command.Parameters.AddWithValue("@qty", textBoxQuantity.Text);
@@ -178,7 +178,7 @@ namespace Chocolate_Factory_Management_System
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxBalance.Clear();
-            textBoxCID.Clear();
+            textBoxPhoneNo.Clear();
             textBoxDiscount.Clear();
             textBoxQuantity.Clear();
             textBoxSearch.Clear();
@@ -186,6 +186,7 @@ namespace Chocolate_Factory_Management_System
             textBoxUnitPrice.Clear();
             textBoxPaid.Clear();
             comboBoxItemName.ResetText();
+          
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -196,9 +197,9 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update SalesOrder set CID='"+textBoxCID.Text+"',SalesDate='" +dateTimePickerSDate.Value.Date + "'," +
-                    "ItemName='" +comboBoxItemName.Text + "',SQuantity='" + textBoxQuantity.Text + "',SDiscount='"+textBoxDiscount.Text+"'," +
-                    "UnitPrice='" +textBoxUnitPrice.Text + "',STotal='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"',Balance='"+textBoxBalance.Text+"'," +
+                string query = "update SalesOrder set PhoneNo='"+textBoxPhoneNo.Text+"',SalesDate='" +dateTimePickerSDate.Value.Date + "'," +
+                    "ItemName='" +comboBoxItemName.Text + "',Quantity='" + textBoxQuantity.Text + "',Discount='"+textBoxDiscount.Text+"'," +
+                    "UnitPrice='" +textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"',Balance='"+textBoxBalance.Text+"'," +
                     "DueDate='"+dateTimePickerDueDate.Value.Date+"' where SOrderNo=" + textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;

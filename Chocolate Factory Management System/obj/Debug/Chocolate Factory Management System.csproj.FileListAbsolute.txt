@@ -55,3 +55,5 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.SalesOrder.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Enquiry.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.ProductDetails.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.CustomerFeedback.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Supcs.resources

@@ -36,8 +36,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQuantitykg = new System.Windows.Forms.TextBox();
             this.textBoxUnitPrice = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
-            this.textBoxSID = new System.Windows.Forms.TextBox();
-            this.labelSID = new System.Windows.Forms.Label();
+            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
+            this.labelPhoneNo = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.dateTimePickerOrderDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDueDate = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
             this.textBoxBalance = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -131,21 +132,21 @@ namespace Chocolate_Factory_Management_System
             this.textBoxTotal.Size = new System.Drawing.Size(249, 26);
             this.textBoxTotal.TabIndex = 16;
             // 
-            // textBoxSID
+            // textBoxPhoneNo
             // 
-            this.textBoxSID.Location = new System.Drawing.Point(995, 74);
-            this.textBoxSID.Name = "textBoxSID";
-            this.textBoxSID.Size = new System.Drawing.Size(249, 26);
-            this.textBoxSID.TabIndex = 17;
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(995, 74);
+            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(249, 26);
+            this.textBoxPhoneNo.TabIndex = 17;
             // 
-            // labelSID
+            // labelPhoneNo
             // 
-            this.labelSID.AutoSize = true;
-            this.labelSID.Location = new System.Drawing.Point(856, 80);
-            this.labelSID.Name = "labelSID";
-            this.labelSID.Size = new System.Drawing.Size(37, 20);
-            this.labelSID.TabIndex = 18;
-            this.labelSID.Text = "SID";
+            this.labelPhoneNo.AutoSize = true;
+            this.labelPhoneNo.Location = new System.Drawing.Point(856, 80);
+            this.labelPhoneNo.Name = "labelPhoneNo";
+            this.labelPhoneNo.Size = new System.Drawing.Size(79, 20);
+            this.labelPhoneNo.TabIndex = 18;
+            this.labelPhoneNo.Text = "Phone No";
             // 
             // labelDate
             // 
@@ -165,14 +166,14 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(995, 42);
+            this.textBoxSearch.Location = new System.Drawing.Point(168, 538);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(186, 26);
+            this.textBoxSearch.Size = new System.Drawing.Size(312, 26);
             this.textBoxSearch.TabIndex = 22;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(849, 33);
+            this.buttonSearch.Location = new System.Drawing.Point(22, 529);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(106, 35);
             this.buttonSearch.TabIndex = 28;
@@ -322,9 +323,9 @@ namespace Chocolate_Factory_Management_System
             this.labelDueDate.AutoSize = true;
             this.labelDueDate.Location = new System.Drawing.Point(859, 477);
             this.labelDueDate.Name = "labelDueDate";
-            this.labelDueDate.Size = new System.Drawing.Size(74, 20);
+            this.labelDueDate.Size = new System.Drawing.Size(78, 20);
             this.labelDueDate.TabIndex = 42;
-            this.labelDueDate.Text = "DueDate";
+            this.labelDueDate.Text = "Due Date";
             // 
             // labelBalance
             // 
@@ -342,11 +343,21 @@ namespace Chocolate_Factory_Management_System
             this.textBoxBalance.Size = new System.Drawing.Size(258, 26);
             this.textBoxBalance.TabIndex = 44;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(173, 502);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 20);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Enter Purchase Order No";
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 578);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxBalance);
             this.Controls.Add(this.labelBalance);
             this.Controls.Add(this.labelDueDate);
@@ -363,8 +374,8 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dateTimePickerOrderDate);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.labelSID);
-            this.Controls.Add(this.textBoxSID);
+            this.Controls.Add(this.labelPhoneNo);
+            this.Controls.Add(this.textBoxPhoneNo);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxUnitPrice);
             this.Controls.Add(this.textBoxQuantitykg);
@@ -393,8 +404,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxQuantitykg;
         private System.Windows.Forms.TextBox textBoxUnitPrice;
         private System.Windows.Forms.TextBox textBoxTotal;
-        private System.Windows.Forms.TextBox textBoxSID;
-        private System.Windows.Forms.Label labelSID;
+        private System.Windows.Forms.TextBox textBoxPhoneNo;
+        private System.Windows.Forms.Label labelPhoneNo;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerOrderDate;
         private System.Windows.Forms.TextBox textBoxSearch;
@@ -418,5 +429,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelDueDate;
         private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.TextBox textBoxBalance;
+        private System.Windows.Forms.Label label1;
     }
 }

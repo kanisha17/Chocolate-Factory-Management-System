@@ -60,6 +60,12 @@
     <Compile Include="Adminprofile.Designer.cs">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerFeedback.Designer.cs">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="Adminprofile.resx">
       <DependentUpon>Adminprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerFeedback.resx">
+      <DependentUpon>CustomerFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegister.resx">
       <DependentUpon>CustomerRegister.cs</DependentUpon>

@@ -46,6 +46,9 @@ namespace Chocolate_Factory_Management_System
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelEnquiryForm = new System.Windows.Forms.Label();
+            this.buttonSEARCH = new System.Windows.Forms.Button();
+            this.labelToSearch = new System.Windows.Forms.Label();
+            this.textBoxSEARCH = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,7 +164,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonSUBMIT.Name = "buttonSUBMIT";
             this.buttonSUBMIT.Size = new System.Drawing.Size(154, 43);
             this.buttonSUBMIT.TabIndex = 13;
-            this.buttonSUBMIT.Text = "SUBMIT";
+            this.buttonSUBMIT.Text = "ADD";
             this.buttonSUBMIT.UseVisualStyleBackColor = true;
             this.buttonSUBMIT.Click += new System.EventHandler(this.buttonSUBMIT_Click);
             // 
@@ -174,21 +177,21 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1276, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1276, 36);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // cLEARToolStripMenuItem
             // 
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
@@ -202,11 +205,41 @@ namespace Chocolate_Factory_Management_System
             this.labelEnquiryForm.TabIndex = 15;
             this.labelEnquiryForm.Text = "ENQUIRY FORM";
             // 
+            // buttonSEARCH
+            // 
+            this.buttonSEARCH.Location = new System.Drawing.Point(12, 97);
+            this.buttonSEARCH.Name = "buttonSEARCH";
+            this.buttonSEARCH.Size = new System.Drawing.Size(115, 38);
+            this.buttonSEARCH.TabIndex = 16;
+            this.buttonSEARCH.Text = "SEARCH";
+            this.buttonSEARCH.UseVisualStyleBackColor = true;
+            this.buttonSEARCH.Click += new System.EventHandler(this.buttonSEARCH_Click);
+            // 
+            // labelToSearch
+            // 
+            this.labelToSearch.AutoSize = true;
+            this.labelToSearch.Location = new System.Drawing.Point(155, 71);
+            this.labelToSearch.Name = "labelToSearch";
+            this.labelToSearch.Size = new System.Drawing.Size(122, 20);
+            this.labelToSearch.TabIndex = 17;
+            this.labelToSearch.Text = "Enter Phone No";
+            // 
+            // textBoxSEARCH
+            // 
+            this.textBoxSEARCH.Location = new System.Drawing.Point(145, 103);
+            this.textBoxSEARCH.Name = "textBoxSEARCH";
+            this.textBoxSEARCH.Size = new System.Drawing.Size(229, 26);
+            this.textBoxSEARCH.TabIndex = 18;
+            this.textBoxSEARCH.Text = "90";
+            // 
             // Enquiry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1276, 653);
+            this.Controls.Add(this.textBoxSEARCH);
+            this.Controls.Add(this.labelToSearch);
+            this.Controls.Add(this.buttonSEARCH);
             this.Controls.Add(this.labelEnquiryForm);
             this.Controls.Add(this.buttonSUBMIT);
             this.Controls.Add(this.labelDate);
@@ -251,5 +284,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelEnquiryForm;
+        private System.Windows.Forms.Button buttonSEARCH;
+        private System.Windows.Forms.Label labelToSearch;
+        private System.Windows.Forms.TextBox textBoxSEARCH;
     }
 }

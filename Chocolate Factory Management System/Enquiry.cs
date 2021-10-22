@@ -18,7 +18,7 @@ namespace Chocolate_Factory_Management_System
         public Enquiry()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
         }
 
         private void textBoxPhoneNo_TextChanged(object sender, EventArgs e)
@@ -58,6 +58,7 @@ namespace Chocolate_Factory_Management_System
             textBoxName.Clear();
             textBoxPhoneNo.Clear();
             comboBoxProduct.ResetText();
+            textBoxSEARCH.Clear();
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,6 +66,28 @@ namespace Chocolate_Factory_Management_System
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
+        }
+
+        private void buttonSEARCH_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand c1 = new OleDbCommand("select CustomerName,Address,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
+            c1.Parameters.AddWithValue("@parm1", textBoxSEARCH.Text);
+            OleDbDataReader reader1;
+            reader1 = c1.ExecuteReader();
+            if (reader1.Read())
+            {
+                textBoxName.Text = reader1["CustomerName"].ToString();
+                textBoxAddress.Text = reader1["Address"].ToString();
+                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
+                textBoxEmail.Text = reader1["Email"].ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("No Data Found");
+            }
+            connection.Close();
         }
     }
 }

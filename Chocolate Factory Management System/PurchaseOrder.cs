@@ -20,7 +20,7 @@ namespace Chocolate_Factory_Management_System
         public PurchaseOrder()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory.accdb;Persist Security Info=False;";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
         }
 
         double qty, price, dis, tot, a, b;
@@ -33,9 +33,9 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update PurchaseOrder set SupplierID='"+textBoxSID.Text+"',PurchaseDate='"+dateTimePickerOrderDate.Value.Date+"'," +
-                    "ProductName='" + comboBoxProductName.Text + "',PQuantity='"+textBoxQuantitykg.Text + "'," +
-                    "PDiscount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',PTotal='" + textBoxTotal.Text + "'," +
+                string query = "update PurchaseOrder set PhoneNo='"+textBoxPhoneNo.Text+"',PurchaseDate='"+dateTimePickerOrderDate.Value.Date+"'," +
+                    "ProductName='" + comboBoxProductName.Text + "',Quantity='"+textBoxQuantitykg.Text + "'," +
+                    "Discount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "'," +
                     "Paid='"+textBoxPaid.Text+"',Balance='"+textBoxBalance.Text+"',DueDate='"+dateTimePickerDueDate.Value.Date+"' where POrderNo=" + textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
@@ -56,9 +56,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into PurchaseOrder(SupplierID,PurchaseDate,ProductName,PQuantity,PDiscount,UnitPrice,PTotal,Paid,Balance,DueDate) " +
-                    "values(@sid,@pdate,@productname,@qty,@dis,@unitprice,@ptotal,@paid,@balance,@duedate)", connection);
-                command.Parameters.AddWithValue("@sid", textBoxSID.Text);
+                command = new OleDbCommand("insert into PurchaseOrder(PhoneNo,PurchaseDate,ProductName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
+                    "values(@phoneno,@pdate,@productname,@qty,@dis,@unitprice,@ptotal,@paid,@balance,@duedate)", connection);
+                command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@pdate", dateTimePickerOrderDate.Text);
                 command.Parameters.AddWithValue("@productname", comboBoxProductName.Text);
                 command.Parameters.AddWithValue("@qty", textBoxQuantitykg.Text);
@@ -88,9 +88,9 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update PurchaseOrder set SupplierID='" + textBoxSID.Text + "',PurchaseDate='" + dateTimePickerOrderDate.Value.Date + "'," +
-                    "ProductName='" + comboBoxProductName.Text + "',PQuantity='" + textBoxQuantitykg.Text + "'," +
-                    "PDiscount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',PTotal='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"'," +
+                string query = "update PurchaseOrder set PhoneNo='" + textBoxPhoneNo.Text + "',PurchaseDate='" + dateTimePickerOrderDate.Value.Date + "'," +
+                    "ProductName='" + comboBoxProductName.Text + "',Quantity='" + textBoxQuantitykg.Text + "'," +
+                    "Discount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"'," +
                     "Balance='"+textBoxBalance.Text+"',DueDate='"+dateTimePickerDueDate.Value.Date+"' where POrderNo=" + textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
@@ -132,7 +132,7 @@ namespace Chocolate_Factory_Management_System
 
             textBoxQuantitykg.Clear();
             textBoxSearch.Clear();
-            textBoxSID.Clear();
+            textBoxPhoneNo.Clear();
             textBoxTotal.Clear();
             textBoxUnitPrice.Clear();
             textBoxDiscount.Clear();
@@ -183,19 +183,19 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select SupplierID,PurchaseDate,ProductName,PQuantity,PDiscount,UnitPrice,PTotal,Paid,Balance,DueDate from PurchaseOrder where POrderNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select PhoneNo,PurchaseDate,ProductName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate from PurchaseOrder where POrderNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
-                textBoxSID.Text = reader1["SupplierID"].ToString();
+                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 dateTimePickerOrderDate.Text = reader1["PurchaseDate"].ToString();
                 comboBoxProductName.Text = reader1["ProductName"].ToString();
-                textBoxQuantitykg.Text = reader1["PQuantity"].ToString();
-                textBoxDiscount.Text = reader1["PDiscount"].ToString();
+                textBoxQuantitykg.Text = reader1["Quantity"].ToString();
+                textBoxDiscount.Text = reader1["Discount"].ToString();
                 textBoxUnitPrice.Text = reader1["UnitPrice"].ToString();
-                textBoxTotal.Text = reader1["PTotal"].ToString();
+                textBoxTotal.Text = reader1["Total"].ToString();
                 textBoxPaid.Text = reader1["Paid"].ToString();
                 textBoxBalance.Text = reader1["Balance"].ToString();
                 dateTimePickerDueDate.Text = reader1["DueDate"].ToString();

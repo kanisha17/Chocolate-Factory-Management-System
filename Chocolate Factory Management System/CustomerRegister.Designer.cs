@@ -57,6 +57,7 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelToSearch = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@ namespace Chocolate_Factory_Management_System
             // labelCustomerName
             // 
             this.labelCustomerName.AutoSize = true;
-            this.labelCustomerName.Location = new System.Drawing.Point(36, 125);
+            this.labelCustomerName.Location = new System.Drawing.Point(36, 139);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(124, 20);
             this.labelCustomerName.TabIndex = 1;
@@ -87,7 +88,7 @@ namespace Chocolate_Factory_Management_System
             // labelDOB
             // 
             this.labelDOB.AutoSize = true;
-            this.labelDOB.Location = new System.Drawing.Point(36, 182);
+            this.labelDOB.Location = new System.Drawing.Point(36, 193);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Size = new System.Drawing.Size(102, 20);
             this.labelDOB.TabIndex = 3;
@@ -96,7 +97,7 @@ namespace Chocolate_Factory_Management_System
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(36, 232);
+            this.labelAddress.Location = new System.Drawing.Point(36, 243);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(68, 20);
             this.labelAddress.TabIndex = 5;
@@ -146,14 +147,14 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxcAddress
             // 
-            this.textBoxcAddress.Location = new System.Drawing.Point(229, 223);
+            this.textBoxcAddress.Location = new System.Drawing.Point(229, 234);
             this.textBoxcAddress.Name = "textBoxcAddress";
             this.textBoxcAddress.Size = new System.Drawing.Size(280, 26);
             this.textBoxcAddress.TabIndex = 10;
             // 
             // textBoxCustomerName
             // 
-            this.textBoxCustomerName.Location = new System.Drawing.Point(229, 125);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(229, 139);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(283, 26);
             this.textBoxCustomerName.TabIndex = 25;
@@ -191,7 +192,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickercDOB
             // 
-            this.dateTimePickercDOB.Location = new System.Drawing.Point(232, 171);
+            this.dateTimePickercDOB.Location = new System.Drawing.Point(232, 182);
             this.dateTimePickercDOB.Name = "dateTimePickercDOB";
             this.dateTimePickercDOB.Size = new System.Drawing.Size(280, 26);
             this.dateTimePickercDOB.TabIndex = 20;
@@ -250,21 +251,21 @@ namespace Chocolate_Factory_Management_System
             // aDDToolStripMenuItem1
             // 
             this.aDDToolStripMenuItem1.Name = "aDDToolStripMenuItem1";
-            this.aDDToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.aDDToolStripMenuItem1.Size = new System.Drawing.Size(171, 34);
             this.aDDToolStripMenuItem1.Text = "ADD";
             this.aDDToolStripMenuItem1.Click += new System.EventHandler(this.aDDToolStripMenuItem1_Click_1);
             // 
             // eDITToolStripMenuItem1
             // 
             this.eDITToolStripMenuItem1.Name = "eDITToolStripMenuItem1";
-            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(171, 34);
             this.eDITToolStripMenuItem1.Text = "EDIT";
             this.eDITToolStripMenuItem1.Click += new System.EventHandler(this.eDITToolStripMenuItem1_Click);
             // 
             // dELETEToolStripMenuItem1
             // 
             this.dELETEToolStripMenuItem1.Name = "dELETEToolStripMenuItem1";
-            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(171, 34);
             this.dELETEToolStripMenuItem1.Text = "DELETE";
             this.dELETEToolStripMenuItem1.Click += new System.EventHandler(this.dELETEToolStripMenuItem1_Click);
             // 
@@ -282,11 +283,21 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click_1);
             // 
+            // labelToSearch
+            // 
+            this.labelToSearch.AutoSize = true;
+            this.labelToSearch.Location = new System.Drawing.Point(228, 99);
+            this.labelToSearch.Name = "labelToSearch";
+            this.labelToSearch.Size = new System.Drawing.Size(122, 20);
+            this.labelToSearch.TabIndex = 27;
+            this.labelToSearch.Text = "Enter Phone No";
+            // 
             // CustomerRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 607);
+            this.Controls.Add(this.labelToSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label1);
@@ -345,5 +356,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+        private System.Windows.Forms.Label labelToSearch;
     }
 }
