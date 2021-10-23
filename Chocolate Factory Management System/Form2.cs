@@ -164,12 +164,40 @@ namespace Chocolate_Factory_Management_System
 
         private void proftAndLossToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void feedbackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerFeedback f1 = new CustomerFeedback();
+            f1.ShowDialog();
+        }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerComplaints c1 = new CustomerComplaints();
+            c1.ShowDialog();
+        }
+
+        private void productsDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stockMaintenanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockMaintenance s1 = new StockMaintenance();
+            s1.ShowDialog();
         }
     }
 }

@@ -60,6 +60,12 @@
     <Compile Include="Adminprofile.Designer.cs">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerComplaints.Designer.cs">
+      <DependentUpon>CustomerComplaints.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockMaintenance.Designer.cs">
+      <DependentUpon>StockMaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="SupplierRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="Adminprofile.resx">
       <DependentUpon>Adminprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerComplaints.resx">
+      <DependentUpon>CustomerComplaints.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerFeedback.resx">
       <DependentUpon>CustomerFeedback.cs</DependentUpon>
@@ -207,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockMaintenance.resx">
+      <DependentUpon>StockMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierRegister.resx">
       <DependentUpon>SupplierRegister.cs</DependentUpon>

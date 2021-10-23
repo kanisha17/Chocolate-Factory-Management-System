@@ -188,12 +188,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification from EmployeeDetails where EID=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification from EmployeeDetails where EID=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
+                textBoxEID.Text = reader1["EID"].ToString();
                 textBoxEmployeeName.Text = reader1["EmployeeName"].ToString();
                 comboBoxDepartment.Text = reader1["Department"].ToString();
                 dateTimePickerDOB.Text = reader1["DOB"].ToString();
