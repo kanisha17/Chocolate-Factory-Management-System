@@ -146,6 +146,33 @@ namespace Chocolate_Factory_Management_System
 
         }
 
+        private void lOADTABLEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from PurchaseOrder";
+                //MessageBox.Show(query);
+                command.CommandText = query;
+
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridViewPurchaseOrder.DataSource = dt;
+
+
+
+                connection.Close();
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+        }
+
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
@@ -211,29 +238,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonLoadTable_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select *from PurchaseOrder";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                OleDbDataAdapter da = new OleDbDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridViewPurchaseOrder.DataSource = dt;
-
-
-
-                connection.Close();
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
+           
         }
     }
 }

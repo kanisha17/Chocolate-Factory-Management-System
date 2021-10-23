@@ -101,12 +101,12 @@ namespace Chocolate_Factory_Management_System
             this.groupBoxUserLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBoxUserLogin.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxUserLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.groupBoxUserLogin.Location = new System.Drawing.Point(600, 255);
+            this.groupBoxUserLogin.Location = new System.Drawing.Point(529, 237);
             this.groupBoxUserLogin.Name = "groupBoxUserLogin";
             this.groupBoxUserLogin.Size = new System.Drawing.Size(847, 457);
             this.groupBoxUserLogin.TabIndex = 6;
             this.groupBoxUserLogin.TabStop = false;
-            this.groupBoxUserLogin.Text = "User Login";
+            this.groupBoxUserLogin.Text = "Admin Login";
             this.groupBoxUserLogin.Enter += new System.EventHandler(this.groupBoxUserLogin_Enter);
             // 
             // Form1
@@ -115,9 +115,10 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.e1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.ClientSize = new System.Drawing.Size(1401, 627);
             this.Controls.Add(this.groupBoxUserLogin);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxUserLogin.ResumeLayout(false);

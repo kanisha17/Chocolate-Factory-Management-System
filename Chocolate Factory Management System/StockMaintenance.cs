@@ -22,7 +22,7 @@ namespace Chocolate_Factory_Management_System
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
-
+        double inward, outward, netstock;
         private void buttonSerach_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -51,8 +51,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into ProductStock(SDate,StockInward,StockOutward,NetStock) values(@dob,@inward,@outward,@net)", connection);
-
+                command = new OleDbCommand("insert into ProductStock(ProductID,SDate,StockInward,StockOutward,NetStock) " +
+                    "values(@prodid,@dob,@inward,@outward,@net)", connection);
+                command.Parameters.AddWithValue("@prodid", textBoxProductID.Text);
                 command.Parameters.AddWithValue("@dob", dateTimePickerDate.Text);
                 command.Parameters.AddWithValue("@inward", textBoxStockInward.Text);
                 command.Parameters.AddWithValue("@outward", textBoxStockOutward.Text);
@@ -77,7 +78,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update ProductStock set SDate='" + dateTimePickerDate.Text + "',StockInward='"+textBoxStockInward.Text+"'," +
+                string query = "update ProductStock set ProductID='"+textBoxProductID.Text+"',SDate='" + dateTimePickerDate.Text + "',StockInward='"+textBoxStockInward.Text+"'," +
                     "StockOutward='" + textBoxStockOutward.Text+ "',NetStock='" + textBoxNetStock.Text + "' where StockNo=" +textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
@@ -129,6 +130,23 @@ namespace Chocolate_Factory_Management_System
             f2.Show();
             this.Hide();
 
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            inward = int.Parse(textBoxStockInward.Text);
+            outward = int.Parse(textBoxStockOutward.Text);
+          
+
+            if (inward >= 0 && outward >= 0)
+            {
+                netstock= inward -outward;
+                textBoxNetStock.Text = netstock.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid input");
+            }
         }
     }
 }

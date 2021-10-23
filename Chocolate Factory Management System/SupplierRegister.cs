@@ -209,5 +209,10 @@ namespace Chocolate_Factory_Management_System
             }
             connection.Close();
         }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

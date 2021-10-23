@@ -356,5 +356,83 @@
   <ItemGroup>
     <None Include="Resources\a11.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splah1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Color11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Color12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b51.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b52.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b8.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a11.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brown.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a12.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bb12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

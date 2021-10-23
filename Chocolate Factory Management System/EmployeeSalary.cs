@@ -104,6 +104,16 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
+        private void textBoxEmployeeName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSalarySlip_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void dELETEToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try

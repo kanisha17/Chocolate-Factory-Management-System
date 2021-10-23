@@ -164,7 +164,8 @@ namespace Chocolate_Factory_Management_System
 
         private void proftAndLossToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            StockMaintenance s1 = new StockMaintenance();
+            s1.ShowDialog();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -196,8 +197,16 @@ namespace Chocolate_Factory_Management_System
 
         private void productToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StockMaintenance s1 = new StockMaintenance();
-            s1.ShowDialog();
+        }
+
+        private void rawMaterialStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

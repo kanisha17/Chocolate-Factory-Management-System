@@ -90,5 +90,10 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void CustomerComplaints_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

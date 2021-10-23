@@ -26,7 +26,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Close();
+           
         }
 
 
@@ -124,11 +124,11 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
+                string query = "update EmployeeDetails set EID='"+textBoxEID.Text+"',EmployeeName='" + textBoxEmployeeName.Text + "'," +
                     "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
                     "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
                     "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
-                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" + textBoxEID.Text + "";
+                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" +textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -144,8 +144,8 @@ namespace Chocolate_Factory_Management_System
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxSearch.Clear();
             textBoxEID.Clear();
+            textBoxSearch.Clear();
             textBoxEmployeeName.Clear();
             comboBoxDepartment.ResetText();
             textBoxAddress.Clear();
@@ -179,9 +179,7 @@ namespace Chocolate_Factory_Management_System
 
         private void vIEWToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
-            this.Hide();
+           
             
         }
 
@@ -217,6 +215,11 @@ namespace Chocolate_Factory_Management_System
         private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Employee1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
