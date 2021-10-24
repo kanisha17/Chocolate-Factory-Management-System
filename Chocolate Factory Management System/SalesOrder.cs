@@ -41,13 +41,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select PhoneNo,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate from SalesOrder where SOrderNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CustomerID,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate from SalesOrder where SOrderNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
-                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
+                textBoxCID.Text = reader1["CustomerID"].ToString();
                 dateTimePickerSDate.Text = reader1["SalesDate"].ToString();
                 comboBoxItemName.Text = reader1["ItemName"].ToString();
                 textBoxQuantity.Text = reader1["Quantity"].ToString();
@@ -149,9 +149,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into SalesOrder(PhoneNo,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
-                    "values(@phoneno,@salesdate,@itemname,@qty,@dis,@unitprice,@stotal,@paid,@balance,@duedate)", connection);
-                command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
+                command = new OleDbCommand("insert into SalesOrder(CustomerID,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
+                    "values(@cid,@salesdate,@itemname,@qty,@dis,@unitprice,@stotal,@paid,@balance,@duedate)", connection);
+                command.Parameters.AddWithValue("@cid", textBoxCID.Text);
                 command.Parameters.AddWithValue("@salesdate", dateTimePickerSDate.Text);
                 command.Parameters.AddWithValue("@itemname", comboBoxItemName.Text);
                 command.Parameters.AddWithValue("@qty", textBoxQuantity.Text);
@@ -183,7 +183,7 @@ namespace Chocolate_Factory_Management_System
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxBalance.Clear();
-            textBoxPhoneNo.Clear();
+            textBoxCID.Clear();
             textBoxDiscount.Clear();
             textBoxQuantity.Clear();
             textBoxSearch.Clear();
@@ -202,7 +202,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update SalesOrder set PhoneNo='"+textBoxPhoneNo.Text+"',SalesDate='" +dateTimePickerSDate.Value.Date + "'," +
+                string query = "update SalesOrder set CustomerID='"+textBoxCID.Text+"',SalesDate='" +dateTimePickerSDate.Value.Date + "'," +
                     "ItemName='" +comboBoxItemName.Text + "',Quantity='" + textBoxQuantity.Text + "',Discount='"+textBoxDiscount.Text+"'," +
                     "UnitPrice='" +textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"',Balance='"+textBoxBalance.Text+"'," +
                     "DueDate='"+dateTimePickerDueDate.Value.Date+"' where SOrderNo=" + textBoxSearch.Text + "";

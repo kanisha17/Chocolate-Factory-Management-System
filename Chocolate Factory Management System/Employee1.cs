@@ -40,7 +40,7 @@ namespace Chocolate_Factory_Management_System
         {
             e.Graphics.DrawString("EMPLOYEE SUMMARY", new Font("Lucida Bright", 24, FontStyle.Bold), Brushes.Red, new Point(250));
 
-            e.Graphics.DrawString("Employee ID: " + textBoxEID.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 120));
+           // e.Graphics.DrawString("Employee ID: " + textBoxEID.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 120));
             e.Graphics.DrawString("Employee Name: " + textBoxEmployeeName.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 170));
             e.Graphics.DrawString("Employee Department: " + comboBoxDepartment.Text, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 220));
             e.Graphics.DrawString("Employee DOB: " + dateTimePickerDOB.Value.Date, new Font("Lucida Bright", 18, FontStyle.Bold), Brushes.Blue, new Point(30, 270));
@@ -69,7 +69,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "delete from EmployeeDetails where EID=" + textBoxEID.Text + "";
+                string query = "delete from EmployeeDetails where EID=" + textBoxSearch.Text+ "";
                 //MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -88,9 +88,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into EmployeeDetails(EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification,DateOfJoining) " +
-                    "values(@eid,@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
-                command.Parameters.AddWithValue("@eid", textBoxEID.Text);
+                command = new OleDbCommand("insert into EmployeeDetails(EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification,DateOfJoining) " +
+                    "values(@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
+               // command.Parameters.AddWithValue("@eid", textBoxEID.Text);
                 command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
                 command.Parameters.AddWithValue("@department",comboBoxDepartment.Text);
                 command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
@@ -124,7 +124,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update EmployeeDetails set EID='"+textBoxEID.Text+"',EmployeeName='" + textBoxEmployeeName.Text + "'," +
+                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
                     "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
                     "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
                     "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
@@ -144,7 +144,6 @@ namespace Chocolate_Factory_Management_System
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxEID.Clear();
             textBoxSearch.Clear();
             textBoxEmployeeName.Clear();
             comboBoxDepartment.ResetText();
@@ -186,13 +185,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification from EmployeeDetails where EID=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification from EmployeeDetails where EID=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
-                textBoxEID.Text = reader1["EID"].ToString();
+                //textBoxEID.Text = reader1["EID"].ToString();
                 textBoxEmployeeName.Text = reader1["EmployeeName"].ToString();
                 comboBoxDepartment.Text = reader1["Department"].ToString();
                 dateTimePickerDOB.Text = reader1["DOB"].ToString();

@@ -58,7 +58,7 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
                 command.Parameters.AddWithValue("@description", textBoxDescription.Text);
                 command.Parameters.AddWithValue("@price",textBoxPrice.Text);
-                command.Parameters.AddWithValue("@review", textBoxReview.Text);
+                command.Parameters.AddWithValue("@review", comboBoxreview.Text);
                 command.Parameters.AddWithValue("@productimage", path);
 
                 Image a = pictureBoxProductDetail.Image;
@@ -101,7 +101,7 @@ namespace Chocolate_Factory_Management_System
                     textBoxProductName.Text = rd.GetValue(1).ToString();
                     textBoxDescription.Text = rd.GetValue(2).ToString();
                     textBoxPrice.Text = rd.GetValue(3).ToString();
-                    textBoxReview.Text = rd.GetValue(4).ToString();
+                    comboBoxreview.Text = rd.GetValue(4).ToString();
 
                     string path = Path.Combine(rd.GetValue(5).ToString());
                     pictureBoxProductDetail.Image = Image.FromFile(path);
@@ -125,7 +125,7 @@ namespace Chocolate_Factory_Management_System
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 string query = "update ProductDetails set ProductName='" + textBoxProductName.Text + "',Description='" + textBoxDescription.Text + "'," +
-                    "Price='" + textBoxPrice.Text + "',Review='" + textBoxReview.Text + "' where ProductID=" + textBoxSEARCH.Text + "";
+                    "Price='" + textBoxPrice.Text + "',Review='" + comboBoxreview.Text + "' where ProductID=" + textBoxSEARCH.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -164,7 +164,7 @@ namespace Chocolate_Factory_Management_System
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxSEARCH.Clear();
-            textBoxReview.Clear();
+            comboBoxreview.ResetText();
             textBoxProductName.Clear();
             textBoxPrice.Clear();
             textBoxDescription.Clear();

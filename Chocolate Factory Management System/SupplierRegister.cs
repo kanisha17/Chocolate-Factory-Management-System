@@ -30,6 +30,7 @@ namespace Chocolate_Factory_Management_System
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            textBoxSID.Clear();
             textBoxAddress.Clear();
             textBoxBankAccountNo.Clear();
             textBoxBankAddress.Clear();
@@ -179,12 +180,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress from Supplier where SPhoneNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select SupplierID,SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress from Supplier where SPhoneNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
+                textBoxSID.Text = reader1["SupplierID"].ToString();
                 textBoxSupplierName.Text = reader1["SupplierName"].ToString();
                 textBoxCompanyName.Text = reader1["CompanyName"].ToString();
                 textBoxBusinessType.Text = reader1["BusinessType"].ToString();

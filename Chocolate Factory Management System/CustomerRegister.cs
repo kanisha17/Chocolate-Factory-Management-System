@@ -35,12 +35,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CustomerName,DOB,Address,City,Pincode,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,DOB,Address,City,Pincode,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
+                textBoxCID.Text = reader1["CustomerID"].ToString();
                 textBoxCustomerName.Text = reader1["CustomerName"].ToString();
                 dateTimePickercDOB.Text = reader1["DOB"].ToString();
                 textBoxcAddress.Text = reader1["Address"].ToString();
@@ -117,6 +118,7 @@ namespace Chocolate_Factory_Management_System
 
         private void pRINTToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            textBoxCID.Clear();
             textBoxcAddress.Clear();
             textBoxcCity.Clear();
             textBoxcEmail.Clear();

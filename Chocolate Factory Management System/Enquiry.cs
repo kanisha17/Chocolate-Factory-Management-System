@@ -53,6 +53,7 @@ namespace Chocolate_Factory_Management_System
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            textBoxCID.Clear();
             textBoxAddress.Clear();
             textBoxEmail.Clear();
             textBoxName.Clear();
@@ -71,12 +72,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSEARCH_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CustomerName,Address,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,Address,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSEARCH.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
+                textBoxCID.Text = reader1["CustomerID"].ToString();
                 textBoxName.Text = reader1["CustomerName"].ToString();
                 textBoxAddress.Text = reader1["Address"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();

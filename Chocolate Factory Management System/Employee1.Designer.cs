@@ -30,7 +30,6 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee1));
-            this.labelEID = new System.Windows.Forms.Label();
             this.labelEName = new System.Windows.Forms.Label();
             this.labelDepartment = new System.Windows.Forms.Label();
             this.labelDOB = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
             this.textBoxState = new System.Windows.Forms.TextBox();
             this.textBoxEmployeeName = new System.Windows.Forms.TextBox();
-            this.textBoxEID = new System.Windows.Forms.TextBox();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxPincode = new System.Windows.Forms.TextBox();
@@ -73,24 +71,13 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelEID
-            // 
-            this.labelEID.BackColor = System.Drawing.Color.Transparent;
-            this.labelEID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEID.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelEID.Location = new System.Drawing.Point(15, 171);
-            this.labelEID.Name = "labelEID";
-            this.labelEID.Size = new System.Drawing.Size(211, 31);
-            this.labelEID.TabIndex = 42;
-            this.labelEID.Text = "Employee ID";
-            // 
             // labelEName
             // 
             this.labelEName.AutoSize = true;
             this.labelEName.BackColor = System.Drawing.Color.Transparent;
             this.labelEName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelEName.Location = new System.Drawing.Point(15, 231);
+            this.labelEName.Location = new System.Drawing.Point(25, 167);
             this.labelEName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEName.Name = "labelEName";
             this.labelEName.Size = new System.Drawing.Size(240, 31);
@@ -103,7 +90,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDepartment.BackColor = System.Drawing.Color.Transparent;
             this.labelDepartment.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDepartment.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelDepartment.Location = new System.Drawing.Point(15, 292);
+            this.labelDepartment.Location = new System.Drawing.Point(25, 228);
             this.labelDepartment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDepartment.Name = "labelDepartment";
             this.labelDepartment.Size = new System.Drawing.Size(178, 31);
@@ -116,7 +103,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDOB.BackColor = System.Drawing.Color.Transparent;
             this.labelDOB.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDOB.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelDOB.Location = new System.Drawing.Point(15, 348);
+            this.labelDOB.Location = new System.Drawing.Point(25, 284);
             this.labelDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Size = new System.Drawing.Size(197, 31);
@@ -129,7 +116,7 @@ namespace Chocolate_Factory_Management_System
             this.labelGender.BackColor = System.Drawing.Color.Transparent;
             this.labelGender.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelGender.Location = new System.Drawing.Point(15, 412);
+            this.labelGender.Location = new System.Drawing.Point(25, 348);
             this.labelGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(116, 31);
@@ -142,7 +129,7 @@ namespace Chocolate_Factory_Management_System
             this.labelAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelAddress.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddress.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAddress.Location = new System.Drawing.Point(15, 470);
+            this.labelAddress.Location = new System.Drawing.Point(25, 406);
             this.labelAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(129, 31);
@@ -155,7 +142,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPincode.BackColor = System.Drawing.Color.Transparent;
             this.labelPincode.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPincode.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelPincode.Location = new System.Drawing.Point(15, 524);
+            this.labelPincode.Location = new System.Drawing.Point(25, 460);
             this.labelPincode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPincode.Name = "labelPincode";
             this.labelPincode.Size = new System.Drawing.Size(124, 31);
@@ -217,7 +204,7 @@ namespace Chocolate_Factory_Management_System
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(279, 346);
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(289, 282);
             this.dateTimePickerDOB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(286, 31);
@@ -234,18 +221,10 @@ namespace Chocolate_Factory_Management_System
             // textBoxEmployeeName
             // 
             this.textBoxEmployeeName.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmployeeName.Location = new System.Drawing.Point(279, 229);
+            this.textBoxEmployeeName.Location = new System.Drawing.Point(289, 165);
             this.textBoxEmployeeName.Name = "textBoxEmployeeName";
             this.textBoxEmployeeName.Size = new System.Drawing.Size(286, 31);
             this.textBoxEmployeeName.TabIndex = 13;
-            // 
-            // textBoxEID
-            // 
-            this.textBoxEID.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEID.Location = new System.Drawing.Point(279, 165);
-            this.textBoxEID.Name = "textBoxEID";
-            this.textBoxEID.Size = new System.Drawing.Size(288, 31);
-            this.textBoxEID.TabIndex = 14;
             // 
             // textBoxCity
             // 
@@ -258,7 +237,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxAddress
             // 
             this.textBoxAddress.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(279, 468);
+            this.textBoxAddress.Location = new System.Drawing.Point(289, 404);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(286, 31);
             this.textBoxAddress.TabIndex = 16;
@@ -266,7 +245,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxPincode
             // 
             this.textBoxPincode.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPincode.Location = new System.Drawing.Point(277, 522);
+            this.textBoxPincode.Location = new System.Drawing.Point(289, 460);
             this.textBoxPincode.Name = "textBoxPincode";
             this.textBoxPincode.Size = new System.Drawing.Size(286, 31);
             this.textBoxPincode.TabIndex = 17;
@@ -295,7 +274,7 @@ namespace Chocolate_Factory_Management_System
             "Production",
             "Quality",
             "Manger"});
-            this.comboBoxDepartment.Location = new System.Drawing.Point(277, 291);
+            this.comboBoxDepartment.Location = new System.Drawing.Point(287, 227);
             this.comboBoxDepartment.Name = "comboBoxDepartment";
             this.comboBoxDepartment.Size = new System.Drawing.Size(286, 31);
             this.comboBoxDepartment.TabIndex = 20;
@@ -308,7 +287,7 @@ namespace Chocolate_Factory_Management_System
             this.comboBoxGender.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.comboBoxGender.Location = new System.Drawing.Point(279, 411);
+            this.comboBoxGender.Location = new System.Drawing.Point(289, 347);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(286, 31);
             this.comboBoxGender.TabIndex = 21;
@@ -518,7 +497,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxPincode);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxCity);
-            this.Controls.Add(this.textBoxEID);
             this.Controls.Add(this.textBoxEmployeeName);
             this.Controls.Add(this.textBoxState);
             this.Controls.Add(this.dateTimePickerDOB);
@@ -532,7 +510,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelDOB);
             this.Controls.Add(this.labelDepartment);
             this.Controls.Add(this.labelEName);
-            this.Controls.Add(this.labelEID);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
@@ -549,8 +526,6 @@ namespace Chocolate_Factory_Management_System
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelEID;
         private System.Windows.Forms.Label labelEName;
         private System.Windows.Forms.Label labelDepartment;
         private System.Windows.Forms.Label labelDOB;
@@ -564,7 +539,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
         private System.Windows.Forms.TextBox textBoxState;
         private System.Windows.Forms.TextBox textBoxEmployeeName;
-        private System.Windows.Forms.TextBox textBoxEID;
         private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxPincode;

@@ -36,8 +36,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQuantitykg = new System.Windows.Forms.TextBox();
             this.textBoxUnitPrice = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
-            this.labelPhoneNo = new System.Windows.Forms.Label();
+            this.textBoxSID = new System.Windows.Forms.TextBox();
+            this.labelSID = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.dateTimePickerOrderDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -149,26 +149,26 @@ namespace Chocolate_Factory_Management_System
             this.textBoxTotal.Size = new System.Drawing.Size(358, 31);
             this.textBoxTotal.TabIndex = 16;
             // 
-            // textBoxPhoneNo
+            // textBoxSID
             // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(902, 125);
-            this.textBoxPhoneNo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(358, 31);
-            this.textBoxPhoneNo.TabIndex = 17;
+            this.textBoxSID.Location = new System.Drawing.Point(990, 121);
+            this.textBoxSID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxSID.Name = "textBoxSID";
+            this.textBoxSID.Size = new System.Drawing.Size(270, 31);
+            this.textBoxSID.TabIndex = 17;
             // 
-            // labelPhoneNo
+            // labelSID
             // 
-            this.labelPhoneNo.AutoSize = true;
-            this.labelPhoneNo.BackColor = System.Drawing.Color.Transparent;
-            this.labelPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPhoneNo.Location = new System.Drawing.Point(665, 121);
-            this.labelPhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPhoneNo.Name = "labelPhoneNo";
-            this.labelPhoneNo.Size = new System.Drawing.Size(149, 31);
-            this.labelPhoneNo.TabIndex = 18;
-            this.labelPhoneNo.Text = "Phone No";
+            this.labelSID.AutoSize = true;
+            this.labelSID.BackColor = System.Drawing.Color.Transparent;
+            this.labelSID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelSID.Location = new System.Drawing.Point(808, 121);
+            this.labelSID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSID.Name = "labelSID";
+            this.labelSID.Size = new System.Drawing.Size(170, 31);
+            this.labelSID.TabIndex = 18;
+            this.labelSID.Text = "Supplier ID";
             // 
             // labelDate
             // 
@@ -176,16 +176,16 @@ namespace Chocolate_Factory_Management_System
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDate.Location = new System.Drawing.Point(674, 180);
+            this.labelDate.Location = new System.Drawing.Point(5, 74);
             this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(78, 31);
+            this.labelDate.Size = new System.Drawing.Size(215, 31);
             this.labelDate.TabIndex = 19;
-            this.labelDate.Text = "Date";
+            this.labelDate.Text = "Purchase Date";
             // 
             // dateTimePickerOrderDate
             // 
-            this.dateTimePickerOrderDate.Location = new System.Drawing.Point(902, 180);
+            this.dateTimePickerOrderDate.Location = new System.Drawing.Point(242, 74);
             this.dateTimePickerOrderDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerOrderDate.Name = "dateTimePickerOrderDate";
             this.dateTimePickerOrderDate.Size = new System.Drawing.Size(358, 31);
@@ -194,7 +194,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(166, 74);
+            this.textBoxSearch.Location = new System.Drawing.Point(986, 193);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(269, 29);
@@ -205,10 +205,10 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonSearch.Location = new System.Drawing.Point(5, 48);
+            this.buttonSearch.Location = new System.Drawing.Point(814, 166);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(153, 56);
+            this.buttonSearch.Size = new System.Drawing.Size(164, 56);
             this.buttonSearch.TabIndex = 28;
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -426,7 +426,7 @@ namespace Chocolate_Factory_Management_System
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(166, 48);
+            this.label1.Location = new System.Drawing.Point(986, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 23);
@@ -439,7 +439,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPO.BackColor = System.Drawing.Color.Transparent;
             this.labelPO.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPO.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPO.Location = new System.Drawing.Point(519, 41);
+            this.labelPO.Location = new System.Drawing.Point(625, 42);
             this.labelPO.Name = "labelPO";
             this.labelPO.Size = new System.Drawing.Size(480, 54);
             this.labelPO.TabIndex = 46;
@@ -469,8 +469,8 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dateTimePickerOrderDate);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.labelPhoneNo);
-            this.Controls.Add(this.textBoxPhoneNo);
+            this.Controls.Add(this.labelSID);
+            this.Controls.Add(this.textBoxSID);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxUnitPrice);
             this.Controls.Add(this.textBoxQuantitykg);
@@ -502,8 +502,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxQuantitykg;
         private System.Windows.Forms.TextBox textBoxUnitPrice;
         private System.Windows.Forms.TextBox textBoxTotal;
-        private System.Windows.Forms.TextBox textBoxPhoneNo;
-        private System.Windows.Forms.Label labelPhoneNo;
+        private System.Windows.Forms.TextBox textBoxSID;
+        private System.Windows.Forms.Label labelSID;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerOrderDate;
         private System.Windows.Forms.TextBox textBoxSearch;

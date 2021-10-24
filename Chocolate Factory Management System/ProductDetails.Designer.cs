@@ -49,6 +49,7 @@ namespace Chocolate_Factory_Management_System
             this.pictureBoxProductDetail = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelPD = new System.Windows.Forms.Label();
+            this.comboBoxreview = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductDetail)).BeginInit();
             this.SuspendLayout();
@@ -267,12 +268,28 @@ namespace Chocolate_Factory_Management_System
             this.labelPD.TabIndex = 17;
             this.labelPD.Text = "PRODUCT DETAILS";
             // 
+            // comboBoxreview
+            // 
+            this.comboBoxreview.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxreview.FormattingEnabled = true;
+            this.comboBoxreview.Items.AddRange(new object[] {
+            "*****",
+            "****",
+            "***",
+            "**",
+            "*"});
+            this.comboBoxreview.Location = new System.Drawing.Point(265, 417);
+            this.comboBoxreview.Name = "comboBoxreview";
+            this.comboBoxreview.Size = new System.Drawing.Size(349, 53);
+            this.comboBoxreview.TabIndex = 18;
+            // 
             // ProductDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b8;
             this.ClientSize = new System.Drawing.Size(1278, 566);
+            this.Controls.Add(this.comboBoxreview);
             this.Controls.Add(this.labelPD);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSEARCH);
@@ -324,5 +341,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonSEARCH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelPD;
+        private System.Windows.Forms.ComboBox comboBoxreview;
     }
 }

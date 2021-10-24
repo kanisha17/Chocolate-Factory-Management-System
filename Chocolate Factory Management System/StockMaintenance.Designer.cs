@@ -190,6 +190,8 @@ namespace Chocolate_Factory_Management_System
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Sienna;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -199,52 +201,64 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1310, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1310, 42);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // mENUToolStripMenuItem
             // 
+            this.mENUToolStripMenuItem.BackColor = System.Drawing.Color.LightCoral;
             this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aDDToolStripMenuItem,
             this.eDITToolStripMenuItem,
             this.dELETEToolStripMenuItem});
+            this.mENUToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.menu2;
             this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(78, 30);
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.mENUToolStripMenuItem.Text = "MENU";
             // 
             // aDDToolStripMenuItem
             // 
+            this.aDDToolStripMenuItem.BackColor = System.Drawing.Color.Salmon;
+            this.aDDToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // eDITToolStripMenuItem
             // 
+            this.eDITToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
+            this.eDITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // dELETEToolStripMenuItem
             // 
+            this.dELETEToolStripMenuItem.BackColor = System.Drawing.Color.Salmon;
+            this.dELETEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.delete2;
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
+            this.cLEARToolStripMenuItem.BackColor = System.Drawing.Color.Salmon;
+            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 30);
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
+            this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 30);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 

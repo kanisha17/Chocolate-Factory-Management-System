@@ -49,6 +49,8 @@ namespace Chocolate_Factory_Management_System
             this.buttonSEARCH = new System.Windows.Forms.Button();
             this.labelToSearch = new System.Windows.Forms.Label();
             this.textBoxSEARCH = new System.Windows.Forms.TextBox();
+            this.textBoxCID = new System.Windows.Forms.TextBox();
+            this.labelCID = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -283,6 +285,26 @@ namespace Chocolate_Factory_Management_System
             this.textBoxSEARCH.TabIndex = 18;
             this.textBoxSEARCH.Text = "90";
             // 
+            // textBoxCID
+            // 
+            this.textBoxCID.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCID.Location = new System.Drawing.Point(172, 581);
+            this.textBoxCID.Name = "textBoxCID";
+            this.textBoxCID.Size = new System.Drawing.Size(100, 29);
+            this.textBoxCID.TabIndex = 19;
+            // 
+            // labelCID
+            // 
+            this.labelCID.AutoSize = true;
+            this.labelCID.BackColor = System.Drawing.Color.Transparent;
+            this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCID.Location = new System.Drawing.Point(1, 583);
+            this.labelCID.Name = "labelCID";
+            this.labelCID.Size = new System.Drawing.Size(165, 27);
+            this.labelCID.TabIndex = 20;
+            this.labelCID.Text = "Customer ID";
+            // 
             // Enquiry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -290,6 +312,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1286, 622);
+            this.Controls.Add(this.labelCID);
+            this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.textBoxSEARCH);
             this.Controls.Add(this.labelToSearch);
             this.Controls.Add(this.buttonSEARCH);
@@ -343,5 +367,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonSEARCH;
         private System.Windows.Forms.Label labelToSearch;
         private System.Windows.Forms.TextBox textBoxSEARCH;
+        private System.Windows.Forms.TextBox textBoxCID;
+        private System.Windows.Forms.Label labelCID;
     }
 }

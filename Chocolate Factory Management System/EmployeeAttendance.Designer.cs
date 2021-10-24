@@ -31,7 +31,6 @@ namespace Chocolate_Factory_Management_System
         {
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentDate = new System.Windows.Forms.Label();
@@ -40,13 +39,12 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEID = new System.Windows.Forms.TextBox();
             this.dateTimePickerCurrentDate = new System.Windows.Forms.DateTimePicker();
             this.labelReason = new System.Windows.Forms.Label();
-            this.labelPermission = new System.Windows.Forms.Label();
             this.textBoxReason = new System.Windows.Forms.TextBox();
-            this.checkedListBoxPermission = new System.Windows.Forms.CheckedListBox();
             this.checkedListBoxMark = new System.Windows.Forms.CheckedListBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labeleattend = new System.Windows.Forms.Label();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +63,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mENUToolStripMenuItem,
             this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -75,15 +72,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // mENUToolStripMenuItem
-            // 
-            this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mENUToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(96, 36);
-            this.mENUToolStripMenuItem.Text = "ADD";
-            this.mENUToolStripMenuItem.Click += new System.EventHandler(this.mENUToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
@@ -107,7 +95,7 @@ namespace Chocolate_Factory_Management_System
             this.labelCurrentDate.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDate.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCurrentDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCurrentDate.Location = new System.Drawing.Point(466, 266);
+            this.labelCurrentDate.Location = new System.Drawing.Point(466, 252);
             this.labelCurrentDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCurrentDate.Name = "labelCurrentDate";
             this.labelCurrentDate.Size = new System.Drawing.Size(225, 36);
@@ -132,7 +120,7 @@ namespace Chocolate_Factory_Management_System
             this.labelMark.BackColor = System.Drawing.Color.Transparent;
             this.labelMark.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMark.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelMark.Location = new System.Drawing.Point(466, 342);
+            this.labelMark.Location = new System.Drawing.Point(466, 317);
             this.labelMark.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMark.Name = "labelMark";
             this.labelMark.Size = new System.Drawing.Size(185, 44);
@@ -149,7 +137,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickerCurrentDate
             // 
-            this.dateTimePickerCurrentDate.Location = new System.Drawing.Point(735, 266);
+            this.dateTimePickerCurrentDate.Location = new System.Drawing.Point(735, 257);
             this.dateTimePickerCurrentDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerCurrentDate.Name = "dateTimePickerCurrentDate";
             this.dateTimePickerCurrentDate.Size = new System.Drawing.Size(355, 31);
@@ -161,45 +149,20 @@ namespace Chocolate_Factory_Management_System
             this.labelReason.BackColor = System.Drawing.Color.Transparent;
             this.labelReason.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReason.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelReason.Location = new System.Drawing.Point(466, 485);
+            this.labelReason.Location = new System.Drawing.Point(466, 396);
             this.labelReason.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReason.Name = "labelReason";
             this.labelReason.Size = new System.Drawing.Size(132, 36);
             this.labelReason.TabIndex = 12;
             this.labelReason.Text = "Reason";
             // 
-            // labelPermission
-            // 
-            this.labelPermission.AutoSize = true;
-            this.labelPermission.BackColor = System.Drawing.Color.Transparent;
-            this.labelPermission.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPermission.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelPermission.Location = new System.Drawing.Point(466, 409);
-            this.labelPermission.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPermission.Name = "labelPermission";
-            this.labelPermission.Size = new System.Drawing.Size(200, 36);
-            this.labelPermission.TabIndex = 13;
-            this.labelPermission.Text = "Permission";
-            // 
             // textBoxReason
             // 
-            this.textBoxReason.Location = new System.Drawing.Point(735, 485);
+            this.textBoxReason.Location = new System.Drawing.Point(735, 401);
             this.textBoxReason.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxReason.Name = "textBoxReason";
             this.textBoxReason.Size = new System.Drawing.Size(355, 31);
             this.textBoxReason.TabIndex = 14;
-            // 
-            // checkedListBoxPermission
-            // 
-            this.checkedListBoxPermission.FormattingEnabled = true;
-            this.checkedListBoxPermission.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.checkedListBoxPermission.Location = new System.Drawing.Point(735, 409);
-            this.checkedListBoxPermission.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkedListBoxPermission.Name = "checkedListBoxPermission";
-            this.checkedListBoxPermission.Size = new System.Drawing.Size(355, 32);
-            this.checkedListBoxPermission.TabIndex = 17;
             // 
             // checkedListBoxMark
             // 
@@ -207,7 +170,7 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxMark.Items.AddRange(new object[] {
             "Absent",
             "Present"});
-            this.checkedListBoxMark.Location = new System.Drawing.Point(735, 342);
+            this.checkedListBoxMark.Location = new System.Drawing.Point(735, 329);
             this.checkedListBoxMark.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkedListBoxMark.Name = "checkedListBoxMark";
             this.checkedListBoxMark.Size = new System.Drawing.Size(355, 32);
@@ -251,19 +214,31 @@ namespace Chocolate_Factory_Management_System
             this.labeleattend.TabIndex = 23;
             this.labeleattend.Text = "EMPLOYEE ATTENDANCE";
             // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.BackColor = System.Drawing.Color.DarkRed;
+            this.buttonSubmit.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSubmit.Location = new System.Drawing.Point(735, 463);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(355, 55);
+            this.buttonSubmit.TabIndex = 24;
+            this.buttonSubmit.Text = "SUBMIT";
+            this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EmployeeAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color12;
             this.ClientSize = new System.Drawing.Size(1314, 565);
+            this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.labeleattend);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.checkedListBoxMark);
-            this.Controls.Add(this.checkedListBoxPermission);
             this.Controls.Add(this.textBoxReason);
-            this.Controls.Add(this.labelPermission);
             this.Controls.Add(this.labelReason);
             this.Controls.Add(this.dateTimePickerCurrentDate);
             this.Controls.Add(this.textBoxEID);
@@ -288,7 +263,6 @@ namespace Chocolate_Factory_Management_System
         #endregion
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelCurrentDate;
@@ -297,12 +271,11 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxEID;
         private System.Windows.Forms.DateTimePicker dateTimePickerCurrentDate;
         private System.Windows.Forms.Label labelReason;
-        private System.Windows.Forms.Label labelPermission;
         private System.Windows.Forms.TextBox textBoxReason;
-        private System.Windows.Forms.CheckedListBox checkedListBoxPermission;
         private System.Windows.Forms.CheckedListBox checkedListBoxMark;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labeleattend;
+        private System.Windows.Forms.Button buttonSubmit;
     }
 }

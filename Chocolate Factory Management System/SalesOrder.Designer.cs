@@ -30,9 +30,7 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.labelQuantity = new System.Windows.Forms.Label();
-            this.labelPhoneNo = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.labelItemName = new System.Windows.Forms.Label();
             this.labelUnitPrice = new System.Windows.Forms.Label();
@@ -59,11 +57,13 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lOADTABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPaid = new System.Windows.Forms.Label();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.labelToSearch = new System.Windows.Forms.Label();
             this.labelSO = new System.Windows.Forms.Label();
-            this.lOADTABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelCID = new System.Windows.Forms.Label();
+            this.textBoxCID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,19 +81,6 @@ namespace Chocolate_Factory_Management_System
             this.labelQuantity.TabIndex = 0;
             this.labelQuantity.Text = "Quantity";
             // 
-            // labelPhoneNo
-            // 
-            this.labelPhoneNo.AutoSize = true;
-            this.labelPhoneNo.BackColor = System.Drawing.Color.Transparent;
-            this.labelPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPhoneNo.Location = new System.Drawing.Point(632, 148);
-            this.labelPhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelPhoneNo.Name = "labelPhoneNo";
-            this.labelPhoneNo.Size = new System.Drawing.Size(149, 31);
-            this.labelPhoneNo.TabIndex = 2;
-            this.labelPhoneNo.Text = "Phone No";
-            // 
             // textBoxQuantity
             // 
             this.textBoxQuantity.Location = new System.Drawing.Point(203, 193);
@@ -101,14 +88,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(300, 31);
             this.textBoxQuantity.TabIndex = 3;
-            // 
-            // textBoxPhoneNo
-            // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(821, 140);
-            this.textBoxPhoneNo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(384, 31);
-            this.textBoxPhoneNo.TabIndex = 5;
             // 
             // textBoxTotal
             // 
@@ -167,10 +146,10 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickerSDate
             // 
-            this.dateTimePickerSDate.Location = new System.Drawing.Point(821, 200);
+            this.dateTimePickerSDate.Location = new System.Drawing.Point(203, 92);
             this.dateTimePickerSDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerSDate.Name = "dateTimePickerSDate";
-            this.dateTimePickerSDate.Size = new System.Drawing.Size(384, 31);
+            this.dateTimePickerSDate.Size = new System.Drawing.Size(300, 31);
             this.dateTimePickerSDate.TabIndex = 13;
             // 
             // dateTimePickerDueDate
@@ -195,7 +174,7 @@ namespace Chocolate_Factory_Management_System
             "Raw Organic Chocolate",
             "Sugar Candy",
             "Sugar And Smiles"});
-            this.comboBoxItemName.Location = new System.Drawing.Point(203, 132);
+            this.comboBoxItemName.Location = new System.Drawing.Point(203, 140);
             this.comboBoxItemName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxItemName.Name = "comboBoxItemName";
             this.comboBoxItemName.Size = new System.Drawing.Size(300, 31);
@@ -220,7 +199,7 @@ namespace Chocolate_Factory_Management_System
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(632, 201);
+            this.label2.Location = new System.Drawing.Point(13, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 31);
@@ -230,10 +209,10 @@ namespace Chocolate_Factory_Management_System
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(181, 78);
+            this.textBoxSearch.Location = new System.Drawing.Point(954, 208);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(243, 29);
+            this.textBoxSearch.Size = new System.Drawing.Size(274, 29);
             this.textBoxSearch.TabIndex = 19;
             // 
             // buttonSearch
@@ -241,10 +220,10 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonSearch.Location = new System.Drawing.Point(13, 52);
+            this.buttonSearch.Location = new System.Drawing.Point(730, 189);
             this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(156, 57);
+            this.buttonSearch.Size = new System.Drawing.Size(183, 57);
             this.buttonSearch.TabIndex = 20;
             this.buttonSearch.Text = "SEARCH";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -364,7 +343,7 @@ namespace Chocolate_Factory_Management_System
             this.aDDToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.aDDToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
@@ -373,7 +352,7 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.eDITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
@@ -382,7 +361,7 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dELETEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.delete2;
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
@@ -403,6 +382,15 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // lOADTABLEToolStripMenuItem
+            // 
+            this.lOADTABLEToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lOADTABLEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.load2;
+            this.lOADTABLEToolStripMenuItem.Name = "lOADTABLEToolStripMenuItem";
+            this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
+            this.lOADTABLEToolStripMenuItem.Text = "LOAD TABLE";
+            this.lOADTABLEToolStripMenuItem.Click += new System.EventHandler(this.lOADTABLEToolStripMenuItem_Click);
             // 
             // labelPaid
             // 
@@ -430,7 +418,7 @@ namespace Chocolate_Factory_Management_System
             this.labelToSearch.AutoSize = true;
             this.labelToSearch.BackColor = System.Drawing.Color.Transparent;
             this.labelToSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelToSearch.Location = new System.Drawing.Point(177, 52);
+            this.labelToSearch.Location = new System.Drawing.Point(950, 180);
             this.labelToSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelToSearch.Name = "labelToSearch";
             this.labelToSearch.Size = new System.Drawing.Size(221, 23);
@@ -449,14 +437,24 @@ namespace Chocolate_Factory_Management_System
             this.labelSO.TabIndex = 39;
             this.labelSO.Text = "SALES ORDER";
             // 
-            // lOADTABLEToolStripMenuItem
+            // labelCID
             // 
-            this.lOADTABLEToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lOADTABLEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.load2;
-            this.lOADTABLEToolStripMenuItem.Name = "lOADTABLEToolStripMenuItem";
-            this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
-            this.lOADTABLEToolStripMenuItem.Text = "LOAD TABLE";
-            this.lOADTABLEToolStripMenuItem.Click += new System.EventHandler(this.lOADTABLEToolStripMenuItem_Click);
+            this.labelCID.AutoSize = true;
+            this.labelCID.BackColor = System.Drawing.Color.Transparent;
+            this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCID.Location = new System.Drawing.Point(724, 130);
+            this.labelCID.Name = "labelCID";
+            this.labelCID.Size = new System.Drawing.Size(191, 31);
+            this.labelCID.TabIndex = 40;
+            this.labelCID.Text = "Customer ID";
+            // 
+            // textBoxCID
+            // 
+            this.textBoxCID.Location = new System.Drawing.Point(954, 130);
+            this.textBoxCID.Name = "textBoxCID";
+            this.textBoxCID.Size = new System.Drawing.Size(274, 31);
+            this.textBoxCID.TabIndex = 41;
             // 
             // SalesOrder
             // 
@@ -465,6 +463,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1275, 649);
+            this.Controls.Add(this.textBoxCID);
+            this.Controls.Add(this.labelCID);
             this.Controls.Add(this.labelSO);
             this.Controls.Add(this.labelToSearch);
             this.Controls.Add(this.textBoxPaid);
@@ -488,9 +488,7 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelUnitPrice);
             this.Controls.Add(this.labelItemName);
             this.Controls.Add(this.textBoxTotal);
-            this.Controls.Add(this.textBoxPhoneNo);
             this.Controls.Add(this.textBoxQuantity);
-            this.Controls.Add(this.labelPhoneNo);
             this.Controls.Add(this.labelQuantity);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -511,9 +509,7 @@ namespace Chocolate_Factory_Management_System
         #endregion
 
         private System.Windows.Forms.Label labelQuantity;
-        private System.Windows.Forms.Label labelPhoneNo;
         private System.Windows.Forms.TextBox textBoxQuantity;
-        private System.Windows.Forms.TextBox textBoxPhoneNo;
         private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.Label labelItemName;
         private System.Windows.Forms.Label labelUnitPrice;
@@ -545,5 +541,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelToSearch;
         private System.Windows.Forms.Label labelSO;
         private System.Windows.Forms.ToolStripMenuItem lOADTABLEToolStripMenuItem;
+        private System.Windows.Forms.Label labelCID;
+        private System.Windows.Forms.TextBox textBoxCID;
     }
 }

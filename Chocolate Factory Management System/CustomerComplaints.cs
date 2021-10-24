@@ -25,12 +25,13 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CustomerName,Email,PhoneNo from Customer where PhoneNo=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,Email,PhoneNo from Customer where PhoneNo=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
+                textBoxCID.Text = reader1["CustomerID"].ToString();
                 textBoxName.Text = reader1["CustomerName"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
@@ -45,6 +46,7 @@ namespace Chocolate_Factory_Management_System
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            textBoxCID.Clear();
             textBoxPhoneNo.Clear();
             textBoxName.Clear();
             textBoxEmail.Clear();
@@ -68,9 +70,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into CustomerComplaint(CustomerName,Email,PhoneNo,ProductID,ComplaintTakenBy,DefectiveInfo,Improvement,Complaint) " +
-                    "values(@customername,@email,@phone,@productid,@takenby,@defective,@improvement,@complaint)", connection);
-
+                command = new OleDbCommand("insert into CustomerComplaint(CustomerID,CustomerName,Email,PhoneNo,ProductID,ComplaintTakenBy,DefectiveInfo,Improvement,Complaint) " +
+                    "values(@cid,@customername,@email,@phone,@productid,@takenby,@defective,@improvement,@complaint)", connection);
+                command.Parameters.AddWithValue("@cid", textBoxCID.Text);
                 command.Parameters.AddWithValue("@customername", textBoxName.Text);
                 command.Parameters.AddWithValue("@email", textBoxEmail.Text);
                 command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);

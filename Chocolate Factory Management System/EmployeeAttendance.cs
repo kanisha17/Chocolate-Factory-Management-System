@@ -35,8 +35,7 @@ namespace Chocolate_Factory_Management_System
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxEID.Clear();
-           checkedListBoxMark.ResetText();
-           checkedListBoxPermission.ResetText();
+            checkedListBoxMark.ResetText();
             textBoxReason.Clear();
             textBoxSearch.Clear();
             
@@ -55,7 +54,7 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click_1(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CurrentDate,Mark,Permission,Reason from EmployeeAttendance where AttendanceID=@parm1", connection);
+            OleDbCommand c1 = new OleDbCommand("select CurrentDate,Mark,Reason from EmployeeAttendance where AttendanceID=@parm1", connection);
             c1.Parameters.AddWithValue("@parm1",textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
@@ -63,7 +62,6 @@ namespace Chocolate_Factory_Management_System
             {
                 dateTimePickerCurrentDate.Text = reader1["CurrentDate"].ToString();
                 checkedListBoxMark.Text = reader1["Mark"].ToString();
-                checkedListBoxPermission.Text = reader1["Permission"].ToString();
                 textBoxReason.Text = reader1["Reason"].ToString();
 
             }
@@ -76,13 +74,23 @@ namespace Chocolate_Factory_Management_System
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
         {
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
             try
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into EmployeeAttendance (EID,CurrentDate,Mark,Permission,Reason) " +
-                    "values('" + textBoxEID.Text + "','" + dateTimePickerCurrentDate.Value.Date + "','" + checkedListBoxMark.Text + "','" + checkedListBoxPermission.Text + "','" + textBoxReason.Text + "')";
+                command.CommandText = "insert into EmployeeAttendance (EID,CurrentDate,Mark,Reason) " +
+                    "values('" + textBoxEID.Text + "','" + dateTimePickerCurrentDate.Value.Date + "','" + checkedListBoxMark.Text + "','" + textBoxReason.Text + "')";
 
 
                 command.ExecuteNonQuery();
@@ -94,11 +102,6 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ee);
             }
             connection.Close();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
 }
