@@ -97,5 +97,10 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Chocolate_Factory_Management_System
 {
-    public partial class EmpSalaryReport : Form
+    public partial class SupplierRegReprt : Form
     {
-        public EmpSalaryReport()
+        public SupplierRegReprt()
         {
             InitializeComponent();
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

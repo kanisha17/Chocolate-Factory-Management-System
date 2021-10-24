@@ -114,6 +114,11 @@ namespace Chocolate_Factory_Management_System
 
         }
 
+        private void rECEIPTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void dELETEToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try
@@ -167,8 +172,7 @@ namespace Chocolate_Factory_Management_System
 
         private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EmpSalaryReport e1 = new EmpSalaryReport();
-            e1.ShowDialog();
+           
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

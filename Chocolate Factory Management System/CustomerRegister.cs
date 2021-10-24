@@ -163,5 +163,11 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesOrder c1 = new SalesOrder();
+            c1.ShowDialog();
+        }
     }
     }

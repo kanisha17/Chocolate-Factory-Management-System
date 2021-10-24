@@ -146,8 +146,7 @@ namespace Chocolate_Factory_Management_System
 
         private void pURCHASEORDERToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            PurchaseOrder p1 = new PurchaseOrder();
-            p1.ShowDialog();
+           
         }
 
         private void eNQUIERYDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,8 +157,7 @@ namespace Chocolate_Factory_Management_System
 
         private void enquiryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SalesOrder s1 = new SalesOrder();
-            s1.ShowDialog();
+           
         }
 
         private void proftAndLossToolStripMenuItem_Click(object sender, EventArgs e)
@@ -170,6 +168,8 @@ namespace Chocolate_Factory_Management_System
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            PurchaseOrderReg p1 = new PurchaseOrderReg();
+            p1.ShowDialog();
 
         }
 
@@ -207,6 +207,104 @@ namespace Chocolate_Factory_Management_System
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void salaryToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            EmployeeSalaryReg e1 = new EmployeeSalaryReg();
+            e1.ShowDialog();
+        }
+
+        private void registrationToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            EmployeeReg r1 = new EmployeeReg();
+            r1.ShowDialog();
+        }
+
+        private void customerRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerRegRep r1 = new CustomerRegRep();
+            r1.ShowDialog();
+        }
+
+        private void lOGOUTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            splash f2 = new splash();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registrationToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            SupplierRegReprt s1 = new SupplierRegReprt();
+            s1.ShowDialog();
+        }
+
+        private void stockMaintenanceToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void customerComplaintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void customerFeedbackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enquiryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CustomerEnquiryReg c1 = new CustomerEnquiryReg();
+            c1.ShowDialog();
+        }
+
+        private void feedbackToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CustomerFeedbackReg c1 = new CustomerFeedbackReg();
+            c1.ShowDialog();
+        }
+
+        private void productDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductDetailsReg p1 = new ProductDetailsReg();
+            p1.ShowDialog();
+        }
+
+        private void complaintsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CustomerComplaintReg c1 = new CustomerComplaintReg();
+            c1.ShowDialog();
+        }
+
+        private void stockMaintenanceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StockMaintenanceReg s1 = new StockMaintenanceReg();
+            s1.ShowDialog();
+        }
+
+        private void salesOrderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SalesOrderReg s1 = new SalesOrderReg();
+            s1.ShowDialog();
+        }
+
+        private void billAndPaymentToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            PurchaseOrderReg p1 = new PurchaseOrderReg();
+            p1.ShowDialog();
+        }
+
+        private void attendanceToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            EmployeeAttendanceReg e1 = new EmployeeAttendanceReg();
+            e1.ShowDialog();
         }
     }
 }

@@ -119,6 +119,12 @@ namespace Chocolate_Factory_Management_System
             }
         }
 
+        private void rECEIPTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerSalesOrder s2 = new CustomerSalesOrder();
+            s2.ShowDialog();
+        }
+
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             price = int.Parse(textBoxUnitPrice.Text);

@@ -16,14 +16,14 @@ namespace Chocolate_Factory_Management_System {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class EmpSalary : ReportClass {
+    public class CustomerEnquiryReport : ReportClass {
         
-        public EmpSalary() {
+        public CustomerEnquiryReport() {
         }
         
         public override string ResourceName {
             get {
-                return "EmpSalary.rpt";
+                return "CustomerEnquiryReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Chocolate_Factory_Management_System {
         
         public override string FullResourceName {
             get {
-                return "Chocolate_Factory_Management_System.EmpSalary.rpt";
+                return "Chocolate_Factory_Management_System.CustomerEnquiryReport.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Chocolate_Factory_Management_System {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedEmpSalary : Component, ICachedReport {
+    public class CachedCustomerEnquiryReport : Component, ICachedReport {
         
-        public CachedEmpSalary() {
+        public CachedCustomerEnquiryReport() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Chocolate_Factory_Management_System {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            EmpSalary rpt = new EmpSalary();
+            CustomerEnquiryReport rpt = new CustomerEnquiryReport();
             rpt.Site = this.Site;
             return rpt;
         }

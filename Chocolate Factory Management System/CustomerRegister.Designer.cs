@@ -60,6 +60,7 @@ namespace Chocolate_Factory_Management_System
             this.labelToSearch = new System.Windows.Forms.Label();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
+            this.oRDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -278,7 +279,8 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem,
             this.pRINTToolStripMenuItem,
-            this.eXITToolStripMenuItem});
+            this.eXITToolStripMenuItem,
+            this.oRDERToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(18, 4, 0, 4);
@@ -303,7 +305,7 @@ namespace Chocolate_Factory_Management_System
             this.aDDToolStripMenuItem1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.aDDToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
             this.aDDToolStripMenuItem1.Name = "aDDToolStripMenuItem1";
-            this.aDDToolStripMenuItem1.Size = new System.Drawing.Size(270, 40);
+            this.aDDToolStripMenuItem1.Size = new System.Drawing.Size(203, 40);
             this.aDDToolStripMenuItem1.Text = "ADD";
             this.aDDToolStripMenuItem1.Click += new System.EventHandler(this.aDDToolStripMenuItem1_Click_1);
             // 
@@ -312,7 +314,7 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.eDITToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
             this.eDITToolStripMenuItem1.Name = "eDITToolStripMenuItem1";
-            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(270, 40);
+            this.eDITToolStripMenuItem1.Size = new System.Drawing.Size(203, 40);
             this.eDITToolStripMenuItem1.Text = "EDIT";
             this.eDITToolStripMenuItem1.Click += new System.EventHandler(this.eDITToolStripMenuItem1_Click);
             // 
@@ -321,7 +323,7 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dELETEToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.delete2;
             this.dELETEToolStripMenuItem1.Name = "dELETEToolStripMenuItem1";
-            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(270, 40);
+            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(203, 40);
             this.dELETEToolStripMenuItem1.Text = "DELETE";
             this.dELETEToolStripMenuItem1.Click += new System.EventHandler(this.dELETEToolStripMenuItem1_Click);
             // 
@@ -373,6 +375,14 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(92, 31);
             this.textBoxCID.TabIndex = 29;
+            // 
+            // oRDERToolStripMenuItem
+            // 
+            this.oRDERToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.sales11;
+            this.oRDERToolStripMenuItem.Name = "oRDERToolStripMenuItem";
+            this.oRDERToolStripMenuItem.Size = new System.Drawing.Size(136, 36);
+            this.oRDERToolStripMenuItem.Text = "ORDER";
+            this.oRDERToolStripMenuItem.Click += new System.EventHandler(this.oRDERToolStripMenuItem_Click);
             // 
             // CustomerRegister
             // 
@@ -448,5 +458,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelToSearch;
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.TextBox textBoxCID;
+        private System.Windows.Forms.ToolStripMenuItem oRDERToolStripMenuItem;
     }
 }

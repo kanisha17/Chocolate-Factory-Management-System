@@ -55,7 +55,6 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rEPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +63,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxCalculateSalary.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -293,7 +293,7 @@ namespace Chocolate_Factory_Management_System
             this.pRINTToolStripMenuItem,
             this.eXITToolStripMenuItem1,
             this.eXITToolStripMenuItem2,
-            this.rEPORTToolStripMenuItem});
+            this.rECEIPTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
@@ -358,13 +358,6 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem2.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem2.Text = "EXIT";
             this.eXITToolStripMenuItem2.Click += new System.EventHandler(this.eXITToolStripMenuItem2_Click);
-            // 
-            // rEPORTToolStripMenuItem
-            // 
-            this.rEPORTToolStripMenuItem.Name = "rEPORTToolStripMenuItem";
-            this.rEPORTToolStripMenuItem.Size = new System.Drawing.Size(123, 36);
-            this.rEPORTToolStripMenuItem.Text = "REPORT";
-            this.rEPORTToolStripMenuItem.Click += new System.EventHandler(this.rEPORTToolStripMenuItem_Click);
             // 
             // aDDToolStripMenuItem
             // 
@@ -435,6 +428,13 @@ namespace Chocolate_Factory_Management_System
             this.label1.TabIndex = 20;
             this.label1.Text = "Enter Salary Slip No";
             // 
+            // rECEIPTToolStripMenuItem
+            // 
+            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
+            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
+            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
+            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
+            // 
             // EmployeeSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -501,10 +501,10 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.ToolStripMenuItem rEPORTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem rECEIPTToolStripMenuItem;
     }
 }

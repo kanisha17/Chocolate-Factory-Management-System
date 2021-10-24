@@ -65,6 +65,7 @@ namespace Chocolate_Factory_Management_System
             this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oRDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelBusinessType = new System.Windows.Forms.Label();
             this.textBoxBusinessType = new System.Windows.Forms.TextBox();
             this.labelLicense = new System.Windows.Forms.Label();
@@ -191,7 +192,7 @@ namespace Chocolate_Factory_Management_System
             this.labelState.BackColor = System.Drawing.Color.Transparent;
             this.labelState.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelState.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelState.Location = new System.Drawing.Point(17, 566);
+            this.labelState.Location = new System.Drawing.Point(16, 600);
             this.labelState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelState.Name = "labelState";
             this.labelState.Size = new System.Drawing.Size(81, 31);
@@ -254,7 +255,7 @@ namespace Chocolate_Factory_Management_System
             this.labelBankAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelBankAddress.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBankAddress.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelBankAddress.Location = new System.Drawing.Point(668, 571);
+            this.labelBankAddress.Location = new System.Drawing.Point(668, 600);
             this.labelBankAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBankAddress.Name = "labelBankAddress";
             this.labelBankAddress.Size = new System.Drawing.Size(207, 31);
@@ -287,7 +288,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxState
             // 
-            this.textBoxState.Location = new System.Drawing.Point(262, 566);
+            this.textBoxState.Location = new System.Drawing.Point(261, 600);
             this.textBoxState.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxState.Name = "textBoxState";
             this.textBoxState.Size = new System.Drawing.Size(337, 31);
@@ -328,7 +329,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(261, 537);
+            this.textBoxCity.Location = new System.Drawing.Point(261, 541);
             this.textBoxCity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(337, 31);
@@ -344,7 +345,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxBankAddress
             // 
-            this.textBoxBankAddress.Location = new System.Drawing.Point(934, 571);
+            this.textBoxBankAddress.Location = new System.Drawing.Point(934, 600);
             this.textBoxBankAddress.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxBankAddress.Name = "textBoxBankAddress";
             this.textBoxBankAddress.Size = new System.Drawing.Size(323, 31);
@@ -369,7 +370,8 @@ namespace Chocolate_Factory_Management_System
             this.rEFRESHToolStripMenuItem,
             this.pRINTToolStripMenuItem,
             this.hOMEToolStripMenuItem,
-            this.eXITToolStripMenuItem});
+            this.eXITToolStripMenuItem,
+            this.oRDERToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
@@ -447,6 +449,14 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // oRDERToolStripMenuItem
+            // 
+            this.oRDERToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.sales12;
+            this.oRDERToolStripMenuItem.Name = "oRDERToolStripMenuItem";
+            this.oRDERToolStripMenuItem.Size = new System.Drawing.Size(136, 36);
+            this.oRDERToolStripMenuItem.Text = "ORDER";
+            this.oRDERToolStripMenuItem.Click += new System.EventHandler(this.oRDERToolStripMenuItem_Click);
             // 
             // labelBusinessType
             // 
@@ -722,5 +732,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelPhoneNo;
         private System.Windows.Forms.Label labelSID;
         private System.Windows.Forms.TextBox textBoxSID;
+        private System.Windows.Forms.ToolStripMenuItem oRDERToolStripMenuItem;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace Chocolate_Factory_Management_System
 {
-    partial class EmpSalaryReport
+    partial class PurchaseOrderReg
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.EmpSalary1 = new Chocolate_Factory_Management_System.EmpSalary();
+            this.PurchaseOrderReport1 = new Chocolate_Factory_Management_System.PurchaseOrderReport();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -41,19 +41,18 @@ namespace Chocolate_Factory_Management_System
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.EmpSalary1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1251, 627);
+            this.crystalReportViewer1.ReportSource = this.PurchaseOrderReport1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1307, 669);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // EmpSalaryReport
+            // PurchaseOrderReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 627);
+            this.ClientSize = new System.Drawing.Size(1307, 669);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "EmpSalaryReport";
-            this.Text = "EmpSalaryReport";
+            this.Name = "PurchaseOrderReg";
+            this.Text = "PurchaseOrderReg";
             this.ResumeLayout(false);
 
         }
@@ -61,6 +60,6 @@ namespace Chocolate_Factory_Management_System
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private EmpSalary EmpSalary1;
+        private PurchaseOrderReport PurchaseOrderReport1;
     }
 }

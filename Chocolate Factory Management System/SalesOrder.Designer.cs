@@ -58,12 +58,14 @@ namespace Chocolate_Factory_Management_System
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOADTABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPaid = new System.Windows.Forms.Label();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.labelToSearch = new System.Windows.Forms.Label();
             this.labelSO = new System.Windows.Forms.Label();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
+            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -318,7 +320,9 @@ namespace Chocolate_Factory_Management_System
             this.mENUToolStripMenuItem,
             this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem,
-            this.lOADTABLEToolStripMenuItem});
+            this.lOADTABLEToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.rECEIPTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
@@ -392,6 +396,11 @@ namespace Chocolate_Factory_Management_System
             this.lOADTABLEToolStripMenuItem.Text = "LOAD TABLE";
             this.lOADTABLEToolStripMenuItem.Click += new System.EventHandler(this.lOADTABLEToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(16, 36);
+            // 
             // labelPaid
             // 
             this.labelPaid.AutoSize = true;
@@ -455,6 +464,13 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(274, 31);
             this.textBoxCID.TabIndex = 41;
+            // 
+            // rECEIPTToolStripMenuItem
+            // 
+            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
+            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
+            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
+            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
             // 
             // SalesOrder
             // 
@@ -543,5 +559,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem lOADTABLEToolStripMenuItem;
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.TextBox textBoxCID;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem rECEIPTToolStripMenuItem;
     }
 }
