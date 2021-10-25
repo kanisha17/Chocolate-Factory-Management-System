@@ -44,6 +44,11 @@ namespace Chocolate_Factory_Management_System
             this.crystalReportViewer1.ReportSource = this.SalesOrderReport1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1304, 659);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            // 
+            // SalesOrderReport1
+            // 
+            this.SalesOrderReport1.InitReport += new System.EventHandler(this.SalesOrderReport1_InitReport);
             // 
             // SalesOrderReg
             // 

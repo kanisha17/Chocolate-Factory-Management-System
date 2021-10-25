@@ -168,8 +168,7 @@ namespace Chocolate_Factory_Management_System
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            PurchaseOrderReg p1 = new PurchaseOrderReg();
-            p1.ShowDialog();
+           
 
         }
 
@@ -305,6 +304,11 @@ namespace Chocolate_Factory_Management_System
         {
             EmployeeAttendanceReg e1 = new EmployeeAttendanceReg();
             e1.ShowDialog();
+        }
+
+        private void billAndPaymentToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

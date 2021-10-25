@@ -55,6 +55,7 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +64,6 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxCalculateSalary.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -352,12 +352,21 @@ namespace Chocolate_Factory_Management_System
             // 
             // eXITToolStripMenuItem2
             // 
-            this.eXITToolStripMenuItem2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.eXITToolStripMenuItem2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.eXITToolStripMenuItem2.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem2.Name = "eXITToolStripMenuItem2";
             this.eXITToolStripMenuItem2.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem2.Text = "EXIT";
             this.eXITToolStripMenuItem2.Click += new System.EventHandler(this.eXITToolStripMenuItem2_Click);
+            // 
+            // rECEIPTToolStripMenuItem
+            // 
+            this.rECEIPTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
+            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
+            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
+            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
+            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
             // 
             // aDDToolStripMenuItem
             // 
@@ -427,13 +436,6 @@ namespace Chocolate_Factory_Management_System
             this.label1.Size = new System.Drawing.Size(208, 23);
             this.label1.TabIndex = 20;
             this.label1.Text = "Enter Salary Slip No";
-            // 
-            // rECEIPTToolStripMenuItem
-            // 
-            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
-            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
-            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
-            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
             // 
             // EmployeeSalary
             // 

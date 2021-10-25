@@ -47,10 +47,9 @@ namespace Chocolate_Factory_Management_System
 
         private void aDDToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try
-            {
+           
                 connection.Open();
-                string location = "C:\\Users\\hp\\source\\ProductImages";
+                string location = "C:\\Users\\hp\\source\\ProdImages";
                 string path = Path.Combine(location,textBoxProductName.Text+".jpg");
                 command = new OleDbCommand("insert into ProductDetails(ProductName,Description,Price,Review,ProductImage) " +
                     "values(@productname,description,price,review,productimage)", connection);
@@ -67,11 +66,7 @@ namespace Chocolate_Factory_Management_System
                 a.Save(path);
                 connection.Close();
                 MessageBox.Show("Saved Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+           
         }
 
         private void pictureBoxProductDetail_Click(object sender, EventArgs e)

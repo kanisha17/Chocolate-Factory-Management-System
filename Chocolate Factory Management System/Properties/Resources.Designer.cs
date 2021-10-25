@@ -83,6 +83,16 @@ namespace Chocolate_Factory_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a101 {
+            get {
+                object obj = ResourceManager.GetObject("a101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a11 {
             get {
                 object obj = ResourceManager.GetObject("a11", resourceCulture);
@@ -113,9 +123,39 @@ namespace Chocolate_Factory_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a131 {
+            get {
+                object obj = ResourceManager.GetObject("a131", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a2 {
             get {
                 object obj = ResourceManager.GetObject("a2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aaa {
+            get {
+                object obj = ResourceManager.GetObject("aaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aaaaaa {
+            get {
+                object obj = ResourceManager.GetObject("aaaaaa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +346,16 @@ namespace Chocolate_Factory_Management_System.Properties {
         internal static System.Drawing.Bitmap bb12 {
             get {
                 object obj = ResourceManager.GetObject("bb12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_star {
+            get {
+                object obj = ResourceManager.GetObject("blue star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +593,16 @@ namespace Chocolate_Factory_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap load2 {
             get {
                 object obj = ResourceManager.GetObject("load2", resourceCulture);
@@ -616,6 +676,16 @@ namespace Chocolate_Factory_Management_System.Properties {
         internal static System.Drawing.Bitmap purchase1 {
             get {
                 object obj = ResourceManager.GetObject("purchase1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receipt {
+            get {
+                object obj = ResourceManager.GetObject("receipt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -726,6 +796,26 @@ namespace Chocolate_Factory_Management_System.Properties {
         internal static System.Drawing.Bitmap stock {
             get {
                 object obj = ResourceManager.GetObject("stock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_star {
+            get {
+                object obj = ResourceManager.GetObject("yellow star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_star1 {
+            get {
+                object obj = ResourceManager.GetObject("yellow star1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

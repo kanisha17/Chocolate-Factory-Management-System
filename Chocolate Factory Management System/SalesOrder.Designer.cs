@@ -59,13 +59,13 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOADTABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPaid = new System.Windows.Forms.Label();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.labelToSearch = new System.Windows.Forms.Label();
             this.labelSO = new System.Windows.Forms.Label();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
-            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -401,6 +401,15 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(16, 36);
             // 
+            // rECEIPTToolStripMenuItem
+            // 
+            this.rECEIPTToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
+            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
+            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
+            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
+            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
+            // 
             // labelPaid
             // 
             this.labelPaid.AutoSize = true;
@@ -464,13 +473,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(274, 31);
             this.textBoxCID.TabIndex = 41;
-            // 
-            // rECEIPTToolStripMenuItem
-            // 
-            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
-            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
-            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
-            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
             // 
             // SalesOrder
             // 

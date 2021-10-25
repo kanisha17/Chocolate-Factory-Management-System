@@ -139,11 +139,11 @@ namespace Chocolate_Factory_Management_System
             {
 
                 connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from Supplier where SPhoneNo=" + textBoxSearch.Text + "";
+                OleDbCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "delete from Supplier where SPhoneNo=" + textBoxSearch.Text + "";
                 //MessageBox.Show(query);
-                command.CommandText = query;
+
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
@@ -153,6 +153,9 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
+
+
+          
         }
       
         private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)

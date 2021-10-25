@@ -62,7 +62,6 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oRDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -368,7 +367,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem,
             this.rEFRESHToolStripMenuItem,
-            this.pRINTToolStripMenuItem,
             this.hOMEToolStripMenuItem,
             this.eXITToolStripMenuItem,
             this.oRDERToolStripMenuItem});
@@ -397,7 +395,7 @@ namespace Chocolate_Factory_Management_System
             this.aDDToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.aDDToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
@@ -406,7 +404,7 @@ namespace Chocolate_Factory_Management_System
             this.eDITToolStripMenuItem.BackColor = System.Drawing.Color.LightGray;
             this.eDITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
             this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
+            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.eDITToolStripMenuItem.Text = "EDIT";
             this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
@@ -415,7 +413,7 @@ namespace Chocolate_Factory_Management_System
             this.dELETEToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.dELETEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.delete2;
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
@@ -423,14 +421,6 @@ namespace Chocolate_Factory_Management_System
             // 
             this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
             this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(16, 36);
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // hOMEToolStripMenuItem
             // 
@@ -714,7 +704,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.Label labelBusinessType;
         private System.Windows.Forms.TextBox textBoxBusinessType;

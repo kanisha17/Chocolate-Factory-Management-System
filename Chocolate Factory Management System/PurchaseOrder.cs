@@ -132,7 +132,7 @@ namespace Chocolate_Factory_Management_System
 
             textBoxQuantitykg.Clear();
             textBoxSearch.Clear();
-            textBoxSID.Clear();
+           
             textBoxTotal.Clear();
             textBoxUnitPrice.Clear();
             textBoxDiscount.Clear();

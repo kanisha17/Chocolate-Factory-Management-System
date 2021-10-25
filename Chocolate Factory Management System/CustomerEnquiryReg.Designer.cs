@@ -31,6 +31,7 @@ namespace Chocolate_Factory_Management_System
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.CustomerEnquiryReport1 = new Chocolate_Factory_Management_System.CustomerEnquiryReport();
+            this.CustomerEnquiryReport2 = new Chocolate_Factory_Management_System.CustomerEnquiryReport();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -41,9 +42,10 @@ namespace Chocolate_Factory_Management_System
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.CustomerEnquiryReport1;
+            this.crystalReportViewer1.ReportSource = this.CustomerEnquiryReport2;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1307, 660);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // CustomerEnquiryReg
             // 
@@ -61,5 +63,6 @@ namespace Chocolate_Factory_Management_System
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private CustomerEnquiryReport CustomerEnquiryReport1;
+        private CustomerEnquiryReport CustomerEnquiryReport2;
     }
 }

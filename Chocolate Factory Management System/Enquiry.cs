@@ -31,9 +31,10 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Enquiry(FullName,Address,PhoneNo,Email,Product,EDate) " +
-                    "values(@fullname,@address,@phoneno,@email,@product,@edate)", connection);
+                command = new OleDbCommand("insert into Enquiry(FullName,CustomerID,Address,PhoneNo,Email,Product,EDate) " +
+                    "values(@fullname,@cid,@address,@phoneno,@email,@product,@edate)", connection);
                 command.Parameters.AddWithValue("@fullname", textBoxName.Text);
+                command.Parameters.AddWithValue("@cid",textBoxCID.Text);
                 command.Parameters.AddWithValue("@address", textBoxAddress.Text);
                 command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@email", textBoxEmail.Text);

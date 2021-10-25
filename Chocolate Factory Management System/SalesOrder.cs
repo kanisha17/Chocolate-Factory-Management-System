@@ -189,7 +189,7 @@ namespace Chocolate_Factory_Management_System
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxBalance.Clear();
-            textBoxCID.Clear();
+           
             textBoxDiscount.Clear();
             textBoxQuantity.Clear();
             textBoxSearch.Clear();

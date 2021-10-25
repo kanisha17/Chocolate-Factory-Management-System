@@ -674,5 +674,32 @@
   <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaaaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

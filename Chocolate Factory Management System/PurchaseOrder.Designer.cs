@@ -63,6 +63,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelPO = new System.Windows.Forms.Label();
+            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -283,7 +284,8 @@ namespace Chocolate_Factory_Management_System
             this.mENUToolStripMenuItem,
             this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem,
-            this.lOADTABLEToolStripMenuItem});
+            this.lOADTABLEToolStripMenuItem,
+            this.rECEIPTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
@@ -341,7 +343,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // eXITToolStripMenuItem
             // 
-            this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.LightGray;
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.DarkGray;
             this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
@@ -350,7 +352,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // lOADTABLEToolStripMenuItem
             // 
-            this.lOADTABLEToolStripMenuItem.BackColor = System.Drawing.Color.Gainsboro;
+            this.lOADTABLEToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
             this.lOADTABLEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.load2;
             this.lOADTABLEToolStripMenuItem.Name = "lOADTABLEToolStripMenuItem";
             this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
@@ -445,6 +447,13 @@ namespace Chocolate_Factory_Management_System
             this.labelPO.TabIndex = 46;
             this.labelPO.Text = "PURCHASE ORDER";
             // 
+            // rECEIPTToolStripMenuItem
+            // 
+            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
+            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
+            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
+            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -529,5 +538,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelPO;
         private System.Windows.Forms.ToolStripMenuItem lOADTABLEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rECEIPTToolStripMenuItem;
     }
 }

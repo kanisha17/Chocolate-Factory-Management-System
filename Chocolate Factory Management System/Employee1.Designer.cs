@@ -68,6 +68,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.labeltosearch = new System.Windows.Forms.Label();
+            this.labelEID = new System.Windows.Forms.Label();
+            this.textBoxEID = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -368,8 +370,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // pRINTToolStripMenuItem
             // 
+            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(87, 32);
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(111, 32);
             this.pRINTToolStripMenuItem.Text = "PRINT";
             this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click_1);
             // 
@@ -475,6 +478,25 @@ namespace Chocolate_Factory_Management_System
             this.labeltosearch.TabIndex = 43;
             this.labeltosearch.Text = "Enter Employee ID";
             // 
+            // labelEID
+            // 
+            this.labelEID.AutoSize = true;
+            this.labelEID.BackColor = System.Drawing.Color.Transparent;
+            this.labelEID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelEID.Location = new System.Drawing.Point(923, 531);
+            this.labelEID.Name = "labelEID";
+            this.labelEID.Size = new System.Drawing.Size(192, 31);
+            this.labelEID.TabIndex = 44;
+            this.labelEID.Text = "Employee ID";
+            // 
+            // textBoxEID
+            // 
+            this.textBoxEID.Location = new System.Drawing.Point(1109, 536);
+            this.textBoxEID.Name = "textBoxEID";
+            this.textBoxEID.Size = new System.Drawing.Size(159, 26);
+            this.textBoxEID.TabIndex = 45;
+            // 
             // Employee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -482,6 +504,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 571);
+            this.Controls.Add(this.textBoxEID);
+            this.Controls.Add(this.labelEID);
             this.Controls.Add(this.labeltosearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
@@ -564,5 +588,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label labeltosearch;
+        private System.Windows.Forms.Label labelEID;
+        private System.Windows.Forms.TextBox textBoxEID;
     }
 }

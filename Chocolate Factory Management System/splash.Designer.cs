@@ -33,6 +33,7 @@ namespace Chocolate_Factory_Management_System
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.labelCFMS = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -53,12 +54,24 @@ namespace Chocolate_Factory_Management_System
             this.labelCFMS.BackColor = System.Drawing.Color.Transparent;
             this.labelCFMS.Font = new System.Drawing.Font("Microsoft Uighur", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCFMS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCFMS.Location = new System.Drawing.Point(449, 448);
+            this.labelCFMS.Location = new System.Drawing.Point(713, 437);
             this.labelCFMS.Name = "labelCFMS";
-            this.labelCFMS.Size = new System.Drawing.Size(1214, 85);
+            this.labelCFMS.Size = new System.Drawing.Size(624, 85);
             this.labelCFMS.TabIndex = 2;
-            this.labelCFMS.Text = "CHOCOLATE FACTORY MANAGEMENT SYSTEM";
+            this.labelCFMS.Text = "CHOCOLATE  FACTORY";
             this.labelCFMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(699, 510);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(638, 85);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "MANAGEMENT  SYSTEM";
             // 
             // splash
             // 
@@ -68,6 +81,7 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.splash1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1412, 568);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelCFMS);
             this.Controls.Add(this.progressBar1);
             this.DoubleBuffered = true;
@@ -84,5 +98,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label labelCFMS;
+        private System.Windows.Forms.Label label1;
     }
 }

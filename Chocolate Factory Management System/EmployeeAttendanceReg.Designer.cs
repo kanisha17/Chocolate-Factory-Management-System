@@ -44,6 +44,7 @@ namespace Chocolate_Factory_Management_System
             this.crystalReportViewer1.ReportSource = this.EmployeeAttendanceReport1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1301, 661);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // EmployeeAttendanceReg
             // 
