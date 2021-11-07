@@ -26,5 +26,10 @@ namespace Chocolate_Factory_Management_System
             crystalReportViewer1.Refresh();
             cryst.Refresh();
         }
+
+        private void EmployeeSalaryReport1_InitReport(object sender, EventArgs e)
+        {
+
+        }
     }
 }

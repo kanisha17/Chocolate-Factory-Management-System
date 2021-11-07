@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Chocolate_Factory_Management_System
 {
@@ -59,6 +61,47 @@ namespace Chocolate_Factory_Management_System
 
         private void aDDToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void eDITToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBoxEmployeeName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSalarySlip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rECEIPTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            EmployeeSalaryReceipt e1 = new EmployeeSalaryReceipt();
+            e1.ShowDialog();
+
+            EmployeeSalaryReceiptReport r1 = new EmployeeSalaryReceiptReport();
+
+            TextObject eid = (TextObject)r1.ReportDefinition.Sections["Section2"].ReportObjects["EID"];
+            eid.Text = textBoxEID.Text;
+            TextObject empname = (TextObject)r1.ReportDefinition.Sections["Section2"].ReportObjects["EmployeeName"];
+            empname.Text = textBoxEmployeeName.Text;
+
+            e1.crystalReportViewer1.ReportSource = r1;
+                e1.Show();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
             try
             {
                 connection.Open();
@@ -80,7 +123,7 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void eDITToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -104,22 +147,7 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void textBoxEmployeeName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelSalarySlip_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rECEIPTToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dELETEToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -139,6 +167,11 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
+        }
+
+        private void dELETEToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
         }
 
        

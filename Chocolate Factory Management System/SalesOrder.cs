@@ -72,24 +72,7 @@ namespace Chocolate_Factory_Management_System
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from SalesOrder where SOrderNo=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+          
         }
 
         private void lOADTABLEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,6 +108,82 @@ namespace Chocolate_Factory_Management_System
             s2.ShowDialog();
         }
 
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into SalesOrder(CustomerID,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
+                    "values(@cid,@salesdate,@itemname,@qty,@dis,@unitprice,@stotal,@paid,@balance,@duedate)", connection);
+                command.Parameters.AddWithValue("@cid", textBoxCID.Text);
+                command.Parameters.AddWithValue("@salesdate", dateTimePickerSDate.Text);
+                command.Parameters.AddWithValue("@itemname", comboBoxItemName.Text);
+                command.Parameters.AddWithValue("@qty", textBoxQuantity.Text);
+                command.Parameters.AddWithValue("@dis", textBoxDiscount.Text);
+                command.Parameters.AddWithValue("@unitprice", textBoxUnitPrice.Text);
+                command.Parameters.AddWithValue("@stotal", textBoxTotal.Text);
+                command.Parameters.AddWithValue("@paid", textBoxPaid.Text);
+                command.Parameters.AddWithValue("@balance", textBoxBalance.Text);
+                command.Parameters.AddWithValue("@duedate", dateTimePickerDueDate.Text);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+                MessageBox.Show("Saved Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonEDIT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "update SalesOrder set CustomerID='" + textBoxCID.Text + "',SalesDate='" + dateTimePickerSDate.Value.Date + "'," +
+                    "ItemName='" + comboBoxItemName.Text + "',Quantity='" + textBoxQuantity.Text + "',Discount='" + textBoxDiscount.Text + "'," +
+                    "UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='" + textBoxPaid.Text + "',Balance='" + textBoxBalance.Text + "'," +
+                    "DueDate='" + dateTimePickerDueDate.Value.Date + "' where SOrderNo=" + textBoxSearch.Text + "";
+                MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Edited Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
+        }
+
+        private void buttonDELETE_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "delete from SalesOrder where SOrderNo=" + textBoxSearch.Text + "";
+                //MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Deleted Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
+        }
+
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             price = int.Parse(textBoxUnitPrice.Text);
@@ -152,31 +211,7 @@ namespace Chocolate_Factory_Management_System
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into SalesOrder(CustomerID,SalesDate,ItemName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
-                    "values(@cid,@salesdate,@itemname,@qty,@dis,@unitprice,@stotal,@paid,@balance,@duedate)", connection);
-                command.Parameters.AddWithValue("@cid", textBoxCID.Text);
-                command.Parameters.AddWithValue("@salesdate", dateTimePickerSDate.Text);
-                command.Parameters.AddWithValue("@itemname", comboBoxItemName.Text);
-                command.Parameters.AddWithValue("@qty", textBoxQuantity.Text);
-                command.Parameters.AddWithValue("@dis",textBoxDiscount.Text);
-                command.Parameters.AddWithValue("@unitprice", textBoxUnitPrice.Text);
-                command.Parameters.AddWithValue("@stotal", textBoxTotal.Text);
-                command.Parameters.AddWithValue("@paid",textBoxPaid.Text);
-                command.Parameters.AddWithValue("@balance", textBoxBalance.Text);
-                command.Parameters.AddWithValue("@duedate", dateTimePickerDueDate.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Saved Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+           
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -202,27 +237,7 @@ namespace Chocolate_Factory_Management_System
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update SalesOrder set CustomerID='"+textBoxCID.Text+"',SalesDate='" +dateTimePickerSDate.Value.Date + "'," +
-                    "ItemName='" +comboBoxItemName.Text + "',Quantity='" + textBoxQuantity.Text + "',Discount='"+textBoxDiscount.Text+"'," +
-                    "UnitPrice='" +textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"',Balance='"+textBoxBalance.Text+"'," +
-                    "DueDate='"+dateTimePickerDueDate.Value.Date+"' where SOrderNo=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+           
         }
     }
 }

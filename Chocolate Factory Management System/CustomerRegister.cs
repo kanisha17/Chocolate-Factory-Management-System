@@ -64,54 +64,11 @@ namespace Chocolate_Factory_Management_System
 
         private void aDDToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into Customer(CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
-              
-                command.Parameters.AddWithValue("@customername", textBoxCustomerName.Text);
-                command.Parameters.AddWithValue("@dob", dateTimePickercDOB.Text);
-                command.Parameters.AddWithValue("@address", textBoxcAddress.Text);
-                command.Parameters.AddWithValue("@city", textBoxcCity.Text);
-               
-                command.Parameters.AddWithValue("@pincode", textBoxcPincode.Text);
-                command.Parameters.AddWithValue("@phone", textBoxcPhone.Text);
-                command.Parameters.AddWithValue("@email", textBoxcEmail.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Saved Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
         }
 
         private void eDITToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update Customer set CustomerName='" +textBoxCustomerName.Text + "',DOB='"+dateTimePickercDOB.Value.Date+"'," +
-                    "Address='"+textBoxcAddress.Text+"',City='"+textBoxcCity.Text+"',Pincode='"+textBoxcPincode.Text+"'," +
-                    "PhoneNo='"+textBoxcPhone.Text+"',Email='"+textBoxcEmail.Text+"' where PhoneNo="+textBoxSearch.Text+"";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
-            
+           
         }
 
 
@@ -139,24 +96,7 @@ namespace Chocolate_Factory_Management_System
 
         private void dELETEToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.Text;
-                command.CommandText= "delete from Customer where PhoneNo=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+           
         }
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
@@ -168,6 +108,55 @@ namespace Chocolate_Factory_Management_System
         {
             SalesOrder c1 = new SalesOrder();
             c1.ShowDialog();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into Customer(CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
+
+                command.Parameters.AddWithValue("@customername", textBoxCustomerName.Text);
+                command.Parameters.AddWithValue("@dob", dateTimePickercDOB.Text);
+                command.Parameters.AddWithValue("@address", textBoxcAddress.Text);
+                command.Parameters.AddWithValue("@city", textBoxcCity.Text);
+
+                command.Parameters.AddWithValue("@pincode", textBoxcPincode.Text);
+                command.Parameters.AddWithValue("@phone", textBoxcPhone.Text);
+                command.Parameters.AddWithValue("@email", textBoxcEmail.Text);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+                MessageBox.Show("Saved Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "update Customer set CustomerName='" + textBoxCustomerName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
+                    "Address='" + textBoxcAddress.Text + "',City='" + textBoxcCity.Text + "',Pincode='" + textBoxcPincode.Text + "'," +
+                    "PhoneNo='" + textBoxcPhone.Text + "',Email='" + textBoxcEmail.Text + "' where PhoneNo=" + textBoxSearch.Text + "";
+                command.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Data Updated Successfully");
+
+           
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

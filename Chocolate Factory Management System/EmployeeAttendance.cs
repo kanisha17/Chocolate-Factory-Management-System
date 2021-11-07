@@ -37,7 +37,7 @@ namespace Chocolate_Factory_Management_System
             textBoxEID.Clear();
             checkedListBoxMark.ResetText();
             textBoxReason.Clear();
-            textBoxSearch.Clear();
+            
             
         }
 
@@ -53,24 +53,7 @@ namespace Chocolate_Factory_Management_System
        
         private void buttonSearch_Click_1(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select EID,CurrentDate,Mark,Reason from EmployeeAttendance where AttendanceID=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1",textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxEID.Text = reader1["EID"].ToString();
-                dateTimePickerCurrentDate.Text = reader1["CurrentDate"].ToString();
-                checkedListBoxMark.Text = reader1["Mark"].ToString();
-                textBoxReason.Text = reader1["Reason"].ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("No Data Found");
-            }
-            connection.Close();
+          
         }
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)

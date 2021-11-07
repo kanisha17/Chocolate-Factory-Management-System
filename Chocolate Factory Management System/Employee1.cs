@@ -63,83 +63,17 @@ namespace Chocolate_Factory_Management_System
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from EmployeeDetails where EID=" + textBoxSearch.Text+ "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+            
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into EmployeeDetails(EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification,DateOfJoining) " +
-                    "values(@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
-               // command.Parameters.AddWithValue("@eid", textBoxEID.Text);
-                command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
-                command.Parameters.AddWithValue("@department",comboBoxDepartment.Text);
-                command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
-                command.Parameters.AddWithValue("@gender", comboBoxGender.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@city", textBoxCity.Text);
-                command.Parameters.AddWithValue("@state", textBoxState.Text);
-                command.Parameters.AddWithValue("@phone",textBoxPhone.Text);
-                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
-                command.Parameters.AddWithValue("@qualification", textBoxQualification.Text);
-                command.Parameters.AddWithValue("@joiningdate",dateTimePickerJoining.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Saved Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
             
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
-                    "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
-                    "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
-                    "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
-                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" +textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+          
         }
 
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -198,7 +132,7 @@ namespace Chocolate_Factory_Management_System
                 textBoxEmployeeName.Text = reader1["EmployeeName"].ToString();
                 comboBoxDepartment.Text = reader1["Department"].ToString();
                 dateTimePickerDOB.Text = reader1["DOB"].ToString();
-                comboBoxDepartment.Text = reader1["Gender"].ToString();
+                comboBoxGender.Text = reader1["Gender"].ToString();
                 textBoxAddress.Text = reader1["Address"].ToString();
                 textBoxPincode.Text = reader1["Pincode"].ToString();
                 textBoxCity.Text = reader1["City"].ToString();
@@ -222,6 +156,87 @@ namespace Chocolate_Factory_Management_System
         private void Employee1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into EmployeeDetails(EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification,DateOfJoining) " +
+                    "values(@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
+                // command.Parameters.AddWithValue("@eid", textBoxEID.Text);
+                command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
+                command.Parameters.AddWithValue("@department", comboBoxDepartment.Text);
+                command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
+                command.Parameters.AddWithValue("@gender", comboBoxGender.Text);
+                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                command.Parameters.AddWithValue("@city", textBoxCity.Text);
+                command.Parameters.AddWithValue("@state", textBoxState.Text);
+                command.Parameters.AddWithValue("@phone", textBoxPhone.Text);
+                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
+                command.Parameters.AddWithValue("@qualification", textBoxQualification.Text);
+                command.Parameters.AddWithValue("@joiningdate", dateTimePickerJoining.Text);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+                MessageBox.Show("Saved Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonEDIT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
+                    "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
+                    "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
+                    "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
+                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" + textBoxSearch.Text + "";
+                MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Edited Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
+        }
+
+        private void buttonDELETE_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "delete from EmployeeDetails where EID=" + textBoxSearch.Text + "";
+                //MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Deleted Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
         }
     }
 }

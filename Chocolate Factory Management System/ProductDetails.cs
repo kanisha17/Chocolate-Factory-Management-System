@@ -48,24 +48,7 @@ namespace Chocolate_Factory_Management_System
         private void aDDToolStripMenuItem1_Click(object sender, EventArgs e)
         {
            
-                connection.Open();
-                string location = "C:\\Users\\hp\\source\\ProdImages";
-                string path = Path.Combine(location,textBoxProductName.Text+".jpg");
-                command = new OleDbCommand("insert into ProductDetails(ProductName,Description,Price,Review,ProductImage) " +
-                    "values(@productname,description,price,review,productimage)", connection);
-
-                command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
-                command.Parameters.AddWithValue("@description", textBoxDescription.Text);
-                command.Parameters.AddWithValue("@price",textBoxPrice.Text);
-                command.Parameters.AddWithValue("@review", comboBoxreview.Text);
-                command.Parameters.AddWithValue("@productimage", path);
-
-                Image a = pictureBoxProductDetail.Image;
-      
-                command.ExecuteNonQuery();
-                a.Save(path);
-                connection.Close();
-                MessageBox.Show("Saved Successfully");
+               
            
         }
 
@@ -113,6 +96,47 @@ namespace Chocolate_Factory_Management_System
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxSEARCH.Clear();
+            comboBoxreview.ResetText();
+            textBoxProductName.Clear();
+            textBoxPrice.Clear();
+            textBoxDescription.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string location = "C:\\Users\\hp\\source\\ProdImages";
+            string path = Path.Combine(location, textBoxProductName.Text + ".jpg");
+            command = new OleDbCommand("insert into ProductDetails(ProductName,Description,Price,Review,ProductImage) " +
+                "values(@productname,description,price,review,productimage)", connection);
+
+            command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
+            command.Parameters.AddWithValue("@description", textBoxDescription.Text);
+            command.Parameters.AddWithValue("@price", textBoxPrice.Text);
+            command.Parameters.AddWithValue("@review", comboBoxreview.Text);
+            command.Parameters.AddWithValue("@productimage", path);
+
+            Image a = pictureBoxProductDetail.Image;
+
+            command.ExecuteNonQuery();
+            a.Save(path);
+            connection.Close();
+            MessageBox.Show("Saved Successfully");
+        }
+
+        private void buttonEDIT_Click(object sender, EventArgs e)
+        {
             try
             {
 
@@ -134,7 +158,7 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -154,15 +178,6 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
-        }
-
-        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            textBoxSEARCH.Clear();
-            comboBoxreview.ResetText();
-            textBoxProductName.Clear();
-            textBoxPrice.Clear();
-            textBoxDescription.Clear();
         }
     }
 }

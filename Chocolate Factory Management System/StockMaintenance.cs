@@ -48,6 +48,30 @@ namespace Chocolate_Factory_Management_System
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxNetStock.Clear();
+            textBoxProductID.Clear();
+            textBoxSearch.Clear();
+            textBoxStockInward.Clear();
+            textBoxStockOutward.Clear();
+        }
+
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
             try
             {
                 connection.Open();
@@ -70,7 +94,7 @@ namespace Chocolate_Factory_Management_System
             }
         }
 
-        private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonEDIT_Click(object sender, EventArgs e)
         {
             try
             {
@@ -78,8 +102,8 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update ProductStock set ProductID='"+textBoxProductID.Text+"',SDate='" + dateTimePickerDate.Text + "',StockInward='"+textBoxStockInward.Text+"'," +
-                    "StockOutward='" + textBoxStockOutward.Text+ "',NetStock='" + textBoxNetStock.Text + "' where StockNo=" +textBoxSearch.Text + "";
+                string query = "update ProductStock set ProductID='" + textBoxProductID.Text + "',SDate='" + dateTimePickerDate.Text + "',StockInward='" + textBoxStockInward.Text + "'," +
+                    "StockOutward='" + textBoxStockOutward.Text + "',NetStock='" + textBoxNetStock.Text + "' where StockNo=" + textBoxSearch.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -93,7 +117,7 @@ namespace Chocolate_Factory_Management_System
             connection.Close();
         }
 
-        private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonDELETE_Click(object sender, EventArgs e)
         {
             try
             {
@@ -113,15 +137,6 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Error" + ef);
             }
             connection.Close();
-        }
-
-        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            textBoxNetStock.Clear();
-            textBoxProductID.Clear();
-            textBoxSearch.Clear();
-            textBoxStockInward.Clear();
-            textBoxStockOutward.Clear();
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)

@@ -379,7 +379,7 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b51;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1303, 570);
+            this.ClientSize = new System.Drawing.Size(1303, 571);
             this.Controls.Add(this.labelCID);
             this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.labelCC);

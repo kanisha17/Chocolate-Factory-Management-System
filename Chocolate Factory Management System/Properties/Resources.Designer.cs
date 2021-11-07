@@ -133,6 +133,26 @@ namespace Chocolate_Factory_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a132 {
+            get {
+                object obj = ResourceManager.GetObject("a132", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a133 {
+            get {
+                object obj = ResourceManager.GetObject("a133", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a2 {
             get {
                 object obj = ResourceManager.GetObject("a2", resourceCulture);
@@ -656,6 +676,26 @@ namespace Chocolate_Factory_Management_System.Properties {
         internal static System.Drawing.Bitmap pay11 {
             get {
                 object obj = ResourceManager.GetObject("pay11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pro2 {
+            get {
+                object obj = ResourceManager.GetObject("pro2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap process {
+            get {
+                object obj = ResourceManager.GetObject("process", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

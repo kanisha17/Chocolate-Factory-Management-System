@@ -50,14 +50,10 @@ namespace Chocolate_Factory_Management_System
             this.labelFirstname = new System.Windows.Forms.Label();
             this.label2Lastname = new System.Windows.Forms.Label();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelAdminID = new System.Windows.Forms.Label();
+            this.buttonEDIT = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -284,22 +280,13 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonSearch.Location = new System.Drawing.Point(27, 84);
+            this.buttonSearch.Location = new System.Drawing.Point(57, 311);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(155, 59);
             this.buttonSearch.TabIndex = 31;
-            this.buttonSearch.Text = "SEARCH";
+            this.buttonSearch.Text = "REFRESH";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(193, 114);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(230, 29);
-            this.textBoxSearch.TabIndex = 32;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // menuStrip1
             // 
@@ -308,7 +295,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mENUToolStripMenuItem,
             this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -317,36 +303,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1249, 42);
             this.menuStrip1.TabIndex = 35;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mENUToolStripMenuItem
-            // 
-            this.mENUToolStripMenuItem.BackColor = System.Drawing.Color.Red;
-            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aDDToolStripMenuItem,
-            this.eDITToolStripMenuItem});
-            this.mENUToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mENUToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.menu2;
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.mENUToolStripMenuItem.Text = "MENU";
-            // 
-            // aDDToolStripMenuItem
-            // 
-            this.aDDToolStripMenuItem.BackColor = System.Drawing.Color.SandyBrown;
-            this.aDDToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
-            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
-            this.aDDToolStripMenuItem.Text = "ADD";
-            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
-            // 
-            // eDITToolStripMenuItem
-            // 
-            this.eDITToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
-            this.eDITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
-            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
-            this.eDITToolStripMenuItem.Text = "EDIT";
-            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
@@ -368,17 +324,15 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
-            // labelAdminID
+            // buttonEDIT
             // 
-            this.labelAdminID.AutoSize = true;
-            this.labelAdminID.BackColor = System.Drawing.Color.Transparent;
-            this.labelAdminID.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdminID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelAdminID.Location = new System.Drawing.Point(199, 84);
-            this.labelAdminID.Name = "labelAdminID";
-            this.labelAdminID.Size = new System.Drawing.Size(198, 27);
-            this.labelAdminID.TabIndex = 36;
-            this.labelAdminID.Text = "Enter Admin ID";
+            this.buttonEDIT.Location = new System.Drawing.Point(57, 406);
+            this.buttonEDIT.Name = "buttonEDIT";
+            this.buttonEDIT.Size = new System.Drawing.Size(155, 61);
+            this.buttonEDIT.TabIndex = 37;
+            this.buttonEDIT.Text = "EDIT";
+            this.buttonEDIT.UseVisualStyleBackColor = true;
+            this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
             // 
             // Adminprofile
             // 
@@ -388,8 +342,7 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.s21;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1249, 697);
-            this.Controls.Add(this.labelAdminID);
-            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.buttonEDIT);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label2Lastname);
             this.Controls.Add(this.labelFirstname);
@@ -448,13 +401,9 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelFirstname;
         private System.Windows.Forms.Label label2Lastname;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
-        private System.Windows.Forms.Label labelAdminID;
+        private System.Windows.Forms.Button buttonEDIT;
     }
 }

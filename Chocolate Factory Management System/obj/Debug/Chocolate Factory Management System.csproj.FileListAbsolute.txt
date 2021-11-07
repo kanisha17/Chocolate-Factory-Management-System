@@ -20,7 +20,6 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Form1.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Form2.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Properties.Resources.resources
-C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.splash.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.csproj.GenerateResource.cache
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.csproj.CoreCompileInputs.cache
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.exe
@@ -44,7 +43,6 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\stdole.dll
-C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate Factory Management System.csproj.CopyComplete
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.SalesOrder.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Enquiry.resources
@@ -70,3 +68,12 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.DeliveryProcess.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.EmployeeBoard.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.EmployeeSalaryReceipt.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.ManufacturingProcess.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.Package.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.RawMaterial.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.SelectRawMaterial.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.CustomerInReport.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.QualityTesting.resources

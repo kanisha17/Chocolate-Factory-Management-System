@@ -151,8 +151,7 @@ namespace Chocolate_Factory_Management_System
 
         private void eNQUIERYDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductDetails p1 = new ProductDetails();
-            p1.ShowDialog();
+           
         }
 
         private void enquiryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -228,7 +227,8 @@ namespace Chocolate_Factory_Management_System
 
         private void lOGOUTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            splash f2 = new splash();
+
+            Form1 f2 = new Form1();
             f2.Show();
             this.Hide();
         }
@@ -309,6 +309,53 @@ namespace Chocolate_Factory_Management_System
         private void billAndPaymentToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void processToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void rawMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RawMaterial r1 = new RawMaterial();
+            r1.ShowDialog();
+        }
+
+        private void finishedProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductDetails p1 = new ProductDetails();
+            p1.ShowDialog();
+        }
+
+        private void cartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectRawMaterial s1 = new SelectRawMaterial();
+            s1.ShowDialog();
+        }
+
+        private void machineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManufacturingProcess m1 = new ManufacturingProcess();
+            m1.ShowDialog();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QualityTesting q1 = new QualityTesting();
+            q1.ShowDialog();
+        }
+
+        private void packToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Package p1 = new Package();
+            p1.ShowDialog();
+        }
+
+        private void deliveryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeliveryProcess d1 = new DeliveryProcess();
+            d1.ShowDialog();
         }
     }
 }

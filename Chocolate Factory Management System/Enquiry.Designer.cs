@@ -48,9 +48,9 @@ namespace Chocolate_Factory_Management_System
             this.labelEnquiryForm = new System.Windows.Forms.Label();
             this.buttonSEARCH = new System.Windows.Forms.Button();
             this.labelToSearch = new System.Windows.Forms.Label();
-            this.textBoxSEARCH = new System.Windows.Forms.TextBox();
             this.textBoxCID = new System.Windows.Forms.TextBox();
             this.labelCID = new System.Windows.Forms.Label();
+            this.textBoxsearch = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -276,15 +276,6 @@ namespace Chocolate_Factory_Management_System
             this.labelToSearch.TabIndex = 17;
             this.labelToSearch.Text = "Enter Phone No";
             // 
-            // textBoxSEARCH
-            // 
-            this.textBoxSEARCH.Location = new System.Drawing.Point(200, 125);
-            this.textBoxSEARCH.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxSEARCH.Name = "textBoxSEARCH";
-            this.textBoxSEARCH.Size = new System.Drawing.Size(203, 31);
-            this.textBoxSEARCH.TabIndex = 18;
-            this.textBoxSEARCH.Text = "90";
-            // 
             // textBoxCID
             // 
             this.textBoxCID.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,6 +296,13 @@ namespace Chocolate_Factory_Management_System
             this.labelCID.TabIndex = 20;
             this.labelCID.Text = "Customer ID";
             // 
+            // textBoxsearch
+            // 
+            this.textBoxsearch.Location = new System.Drawing.Point(200, 125);
+            this.textBoxsearch.Name = "textBoxsearch";
+            this.textBoxsearch.Size = new System.Drawing.Size(162, 31);
+            this.textBoxsearch.TabIndex = 21;
+            // 
             // Enquiry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -312,9 +310,9 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1286, 622);
+            this.Controls.Add(this.textBoxsearch);
             this.Controls.Add(this.labelCID);
             this.Controls.Add(this.textBoxCID);
-            this.Controls.Add(this.textBoxSEARCH);
             this.Controls.Add(this.labelToSearch);
             this.Controls.Add(this.buttonSEARCH);
             this.Controls.Add(this.labelEnquiryForm);
@@ -366,8 +364,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelEnquiryForm;
         private System.Windows.Forms.Button buttonSEARCH;
         private System.Windows.Forms.Label labelToSearch;
-        private System.Windows.Forms.TextBox textBoxSEARCH;
         private System.Windows.Forms.TextBox textBoxCID;
         private System.Windows.Forms.Label labelCID;
+        private System.Windows.Forms.TextBox textBoxsearch;
     }
 }

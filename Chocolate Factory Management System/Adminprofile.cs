@@ -34,8 +34,8 @@ namespace Chocolate_Factory_Management_System
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select FirstName,LastName,DOB,Address,City,State,Pincode,PhoneNo,Email from Admin where AdminID=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
+            OleDbCommand c1 = new OleDbCommand("select FirstName,LastName,DOB,Address,City,State,Pincode,PhoneNo,Email from Admin where AdminID=1", connection);
+            //c1.Parameters.AddWithValue("1", textBoxSearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
@@ -66,55 +66,12 @@ namespace Chocolate_Factory_Management_System
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into Admin(FirstName,LastName,DOB,Address,City,State,Pincode,PhoneNo,Email) " +
-                    "values(@firstname,@lastname,@dob,@address,@city,@state,@pincode,@phoneno,@email)", connection);
-
-                command.Parameters.AddWithValue("@firstname", textBoxFirstName.Text);
-                command.Parameters.AddWithValue("@lastname", textBoxLastName.Text);
-                command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@city", textBoxCity.Text);
-                command.Parameters.AddWithValue("@state", textBoxState.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
-                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Saved Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+           
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update Admin set FirstName='" + textBoxFirstName.Text + "', LastName='" + textBoxLastName.Text + "'," +
-                    "DOB='" + dateTimePickerDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "'," +
-                    "Pincode='" + textBoxPincode.Text + "', PhoneNo='" + textBoxPhoneNo.Text + "',Email='" + textBoxEmail.Text + "' where AdminID=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+           
         }
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,13 +83,37 @@ namespace Chocolate_Factory_Management_System
             textBoxLastName.Clear();
             textBoxPhoneNo.Clear();
             textBoxPincode.Clear();
-            textBoxSearch.Clear();
+           // textBoxSearch.Clear();
             textBoxState.Clear();
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonEDIT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "update Admin set FirstName='" + textBoxFirstName.Text + "', LastName='" + textBoxLastName.Text + "'," +
+                    "DOB='" + dateTimePickerDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "'," +
+                    "Pincode='" + textBoxPincode.Text + "', PhoneNo='" + textBoxPhoneNo.Text + "',Email='" + textBoxEmail.Text + "' where AdminID=1";
+                MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Edited Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
         }
     }
 }

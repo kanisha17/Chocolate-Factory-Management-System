@@ -48,13 +48,10 @@ namespace Chocolate_Factory_Management_System
             this.labelDiscount = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOADTABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.labelPaid = new System.Windows.Forms.Label();
             this.dateTimePickerDueDate = new System.Windows.Forms.DateTimePicker();
@@ -63,7 +60,9 @@ namespace Chocolate_Factory_Management_System
             this.textBoxBalance = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelPO = new System.Windows.Forms.Label();
-            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonDELETE = new System.Windows.Forms.Button();
+            this.buttonEDIT = new System.Windows.Forms.Button();
+            this.buttonADD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -220,10 +219,10 @@ namespace Chocolate_Factory_Management_System
             this.buttonCALCULATE.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonCALCULATE.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCALCULATE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonCALCULATE.Location = new System.Drawing.Point(53, 557);
+            this.buttonCALCULATE.Location = new System.Drawing.Point(13, 557);
             this.buttonCALCULATE.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCALCULATE.Name = "buttonCALCULATE";
-            this.buttonCALCULATE.Size = new System.Drawing.Size(358, 59);
+            this.buttonCALCULATE.Size = new System.Drawing.Size(243, 59);
             this.buttonCALCULATE.TabIndex = 27;
             this.buttonCALCULATE.Text = "CALCULATE";
             this.buttonCALCULATE.UseVisualStyleBackColor = false;
@@ -281,7 +280,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mENUToolStripMenuItem,
             this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem,
             this.lOADTABLEToolStripMenuItem,
@@ -292,45 +290,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1305, 42);
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mENUToolStripMenuItem
-            // 
-            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aDDToolStripMenuItem,
-            this.eDITToolStripMenuItem,
-            this.dELETEToolStripMenuItem});
-            this.mENUToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mENUToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.menu2;
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.mENUToolStripMenuItem.Text = "MENU";
-            // 
-            // aDDToolStripMenuItem
-            // 
-            this.aDDToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.aDDToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.add2;
-            this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
-            this.aDDToolStripMenuItem.Text = "ADD";
-            this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
-            // 
-            // eDITToolStripMenuItem
-            // 
-            this.eDITToolStripMenuItem.BackColor = System.Drawing.Color.LightGray;
-            this.eDITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.edit2;
-            this.eDITToolStripMenuItem.Name = "eDITToolStripMenuItem";
-            this.eDITToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
-            this.eDITToolStripMenuItem.Text = "EDIT";
-            this.eDITToolStripMenuItem.Click += new System.EventHandler(this.eDITToolStripMenuItem_Click);
-            // 
-            // dELETEToolStripMenuItem
-            // 
-            this.dELETEToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
-            this.dELETEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.delete2;
-            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
-            this.dELETEToolStripMenuItem.Text = "DELETE";
-            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
             // cLEARToolStripMenuItem
             // 
@@ -358,6 +317,13 @@ namespace Chocolate_Factory_Management_System
             this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
             this.lOADTABLEToolStripMenuItem.Text = "LOAD TABLE";
             this.lOADTABLEToolStripMenuItem.Click += new System.EventHandler(this.lOADTABLEToolStripMenuItem_Click);
+            // 
+            // rECEIPTToolStripMenuItem
+            // 
+            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
+            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
+            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
+            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
             // 
             // textBoxPaid
             // 
@@ -447,12 +413,35 @@ namespace Chocolate_Factory_Management_System
             this.labelPO.TabIndex = 46;
             this.labelPO.Text = "PURCHASE ORDER";
             // 
-            // rECEIPTToolStripMenuItem
+            // buttonDELETE
             // 
-            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
-            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
-            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
-            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
+            this.buttonDELETE.Location = new System.Drawing.Point(525, 557);
+            this.buttonDELETE.Name = "buttonDELETE";
+            this.buttonDELETE.Size = new System.Drawing.Size(102, 47);
+            this.buttonDELETE.TabIndex = 47;
+            this.buttonDELETE.Text = "DELETE";
+            this.buttonDELETE.UseVisualStyleBackColor = true;
+            this.buttonDELETE.Click += new System.EventHandler(this.buttonDELETE_Click);
+            // 
+            // buttonEDIT
+            // 
+            this.buttonEDIT.Location = new System.Drawing.Point(411, 557);
+            this.buttonEDIT.Name = "buttonEDIT";
+            this.buttonEDIT.Size = new System.Drawing.Size(105, 47);
+            this.buttonEDIT.TabIndex = 48;
+            this.buttonEDIT.Text = "EDIT";
+            this.buttonEDIT.UseVisualStyleBackColor = true;
+            this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click_1);
+            // 
+            // buttonADD
+            // 
+            this.buttonADD.Location = new System.Drawing.Point(278, 557);
+            this.buttonADD.Name = "buttonADD";
+            this.buttonADD.Size = new System.Drawing.Size(114, 47);
+            this.buttonADD.TabIndex = 49;
+            this.buttonADD.Text = "ADD";
+            this.buttonADD.UseVisualStyleBackColor = true;
+            this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click);
             // 
             // PurchaseOrder
             // 
@@ -461,6 +450,9 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.grey1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1305, 628);
+            this.Controls.Add(this.buttonADD);
+            this.Controls.Add(this.buttonEDIT);
+            this.Controls.Add(this.buttonDELETE);
             this.Controls.Add(this.labelPO);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxBalance);
@@ -523,10 +515,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.TextBox textBoxDiscount;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aDDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eDITToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxPaid;
@@ -539,5 +527,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelPO;
         private System.Windows.Forms.ToolStripMenuItem lOADTABLEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rECEIPTToolStripMenuItem;
+        private System.Windows.Forms.Button buttonDELETE;
+        private System.Windows.Forms.Button buttonEDIT;
+        private System.Windows.Forms.Button buttonADD;
     }
 }

@@ -53,78 +53,16 @@ namespace Chocolate_Factory_Management_System
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into PurchaseOrder(SupplierID,PurchaseDate,ProductName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
-                    "values(@phoneno,@pdate,@productname,@qty,@dis,@unitprice,@ptotal,@paid,@balance,@duedate)", connection);
-                command.Parameters.AddWithValue("@phoneno", textBoxSID.Text);
-                command.Parameters.AddWithValue("@pdate", dateTimePickerOrderDate.Text);
-                command.Parameters.AddWithValue("@productname", comboBoxProductName.Text);
-                command.Parameters.AddWithValue("@qty", textBoxQuantitykg.Text);
-                command.Parameters.AddWithValue("@dis", textBoxDiscount.Text);
-                command.Parameters.AddWithValue("@unitprice", textBoxUnitPrice.Text);
-                command.Parameters.AddWithValue("@ptotal", textBoxTotal.Text);
-                command.Parameters.AddWithValue("@paid", textBoxPaid.Text);
-                command.Parameters.AddWithValue("@balance", textBoxBalance.Text);
-                command.Parameters.AddWithValue("@duedate", dateTimePickerDueDate.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Saved Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update PurchaseOrder set SupplierID='" + textBoxSID.Text + "',PurchaseDate='" + dateTimePickerOrderDate.Value.Date + "'," +
-                    "ProductName='" + comboBoxProductName.Text + "',Quantity='" + textBoxQuantitykg.Text + "'," +
-                    "Discount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='"+textBoxPaid.Text+"'," +
-                    "Balance='"+textBoxBalance.Text+"',DueDate='"+dateTimePickerDueDate.Value.Date+"' where POrderNo=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+            
         }
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from PurchaseOrder where POrderNo=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
         }
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,6 +109,83 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show("Error" + ef);
             }
+        }
+
+        private void buttonADD_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into PurchaseOrder(SupplierID,PurchaseDate,ProductName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
+                    "values(@phoneno,@pdate,@productname,@qty,@dis,@unitprice,@ptotal,@paid,@balance,@duedate)", connection);
+                command.Parameters.AddWithValue("@phoneno", textBoxSID.Text);
+                command.Parameters.AddWithValue("@pdate", dateTimePickerOrderDate.Text);
+                command.Parameters.AddWithValue("@productname", comboBoxProductName.Text);
+                command.Parameters.AddWithValue("@qty", textBoxQuantitykg.Text);
+                command.Parameters.AddWithValue("@dis", textBoxDiscount.Text);
+                command.Parameters.AddWithValue("@unitprice", textBoxUnitPrice.Text);
+                command.Parameters.AddWithValue("@ptotal", textBoxTotal.Text);
+                command.Parameters.AddWithValue("@paid", textBoxPaid.Text);
+                command.Parameters.AddWithValue("@balance", textBoxBalance.Text);
+                command.Parameters.AddWithValue("@duedate", dateTimePickerDueDate.Text);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+                MessageBox.Show("Saved Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonEDIT_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "update PurchaseOrder set SupplierID='" + textBoxSID.Text + "',PurchaseDate='" + dateTimePickerOrderDate.Value.Date + "'," +
+                    "ProductName='" + comboBoxProductName.Text + "',Quantity='" + textBoxQuantitykg.Text + "'," +
+                    "Discount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='" + textBoxPaid.Text + "'," +
+                    "Balance='" + textBoxBalance.Text + "',DueDate='" + dateTimePickerDueDate.Value.Date + "' where POrderNo=" + textBoxSearch.Text + "";
+                MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Edited Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
+        }
+
+        private void buttonDELETE_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "delete from PurchaseOrder where POrderNo=" + textBoxSearch.Text + "";
+                //MessageBox.Show(query);
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data Deleted Successfully");
+            }
+            catch (Exception ef)
+            {
+                MessageBox.Show("Error" + ef);
+            }
+            connection.Close();
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)

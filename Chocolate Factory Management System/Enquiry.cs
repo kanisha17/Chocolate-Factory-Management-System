@@ -60,7 +60,7 @@ namespace Chocolate_Factory_Management_System
             textBoxName.Clear();
             textBoxPhoneNo.Clear();
             comboBoxProduct.ResetText();
-            textBoxSEARCH.Clear();
+            textBoxsearch.Clear();
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace Chocolate_Factory_Management_System
         {
             connection.Open();
             OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,Address,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSEARCH.Text);
+            c1.Parameters.AddWithValue("@parm1", textBoxsearch.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
@@ -91,6 +91,11 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("No Data Found");
             }
             connection.Close();
+        }
+
+        private void textBoxSEARCH_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
