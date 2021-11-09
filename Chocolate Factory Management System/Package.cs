@@ -7,37 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Chocolate_Factory_Management_System
 {
-    public partial class QualityTesting : Form
+    public partial class Package : Form
     {
-        public QualityTesting()
+        private OleDbConnection connection = new OleDbConnection();
+        OleDbCommand command;
+        public Package()
         {
             InitializeComponent();
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
 
-        private void labelFinalConclusionTest_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelTestedBy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxFinalConclusion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxTestedBy_TextChanged(object sender, EventArgs e)
+        private void Package_Load(object sender, EventArgs e)
         {
 
         }

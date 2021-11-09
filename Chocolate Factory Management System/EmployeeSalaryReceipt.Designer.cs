@@ -42,7 +42,7 @@ namespace Chocolate_Factory_Management_System
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ReportSource = this.EmployeeSalaryReceiptReport1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1347, 651);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1305, 641);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
@@ -50,7 +50,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1347, 651);
+            this.ClientSize = new System.Drawing.Size(1305, 641);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "EmployeeSalaryReceipt";
             this.Text = "EmployeeSalaryReceipt";

@@ -88,9 +88,9 @@ namespace Chocolate_Factory_Management_System
                 connection.Close();
                // MessageBox.Show("Product Details Found");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Product Details Not Found" +ex);
+                MessageBox.Show("Product Details Not Found");
             }
         }
 
@@ -111,28 +111,36 @@ namespace Chocolate_Factory_Management_System
             textBoxProductName.Clear();
             textBoxPrice.Clear();
             textBoxDescription.Clear();
+            MessageBox.Show("Data Cleared");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            string location = "C:\\Users\\hp\\source\\ProdImages";
-            string path = Path.Combine(location, textBoxProductName.Text + ".jpg");
-            command = new OleDbCommand("insert into ProductDetails(ProductName,Description,Price,Review,ProductImage) " +
-                "values(@productname,description,price,review,productimage)", connection);
+            try
+            {
+                connection.Open();
+                string location = "C:\\Users\\hp\\source\\ProdImages";
+                string path = Path.Combine(location, textBoxProductName.Text + ".jpg");
+                command = new OleDbCommand("insert into ProductDetails(ProductName,Description,Price,Review,ProductImage) " +
+                    "values(@productname,description,price,review,productimage)", connection);
 
-            command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
-            command.Parameters.AddWithValue("@description", textBoxDescription.Text);
-            command.Parameters.AddWithValue("@price", textBoxPrice.Text);
-            command.Parameters.AddWithValue("@review", comboBoxreview.Text);
-            command.Parameters.AddWithValue("@productimage", path);
+                command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
+                command.Parameters.AddWithValue("@description", textBoxDescription.Text);
+                command.Parameters.AddWithValue("@price", textBoxPrice.Text);
+                command.Parameters.AddWithValue("@review", comboBoxreview.Text);
+                command.Parameters.AddWithValue("@productimage", path);
 
-            Image a = pictureBoxProductDetail.Image;
+                Image a = pictureBoxProductDetail.Image;
 
-            command.ExecuteNonQuery();
-            a.Save(path);
-            connection.Close();
-            MessageBox.Show("Saved Successfully");
+                command.ExecuteNonQuery();
+                a.Save(path);
+                connection.Close();
+                MessageBox.Show("Data Saved Successfully");
+            }
+            catch 
+            {
+                MessageBox.Show("Data Not Saved");
+            }
         }
 
         private void buttonEDIT_Click(object sender, EventArgs e)
@@ -149,11 +157,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }
@@ -173,9 +181,9 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Deleted");
             }
             connection.Close();
         }

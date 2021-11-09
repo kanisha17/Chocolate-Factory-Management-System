@@ -41,6 +41,7 @@ namespace Chocolate_Factory_Management_System
             textBoxQ2.Clear();
             checkedListBoxQ1.ResetText();
             checkedListBoxReview.ResetText();
+            MessageBox.Show("Data Cleared");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,11 +63,11 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
@@ -83,11 +84,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxName.Text = reader1["CustomerName"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }

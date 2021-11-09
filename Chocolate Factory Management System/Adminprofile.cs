@@ -49,6 +49,7 @@ namespace Chocolate_Factory_Management_System
                 textBoxPincode.Text = reader1["Pincode"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
+                MessageBox.Show("Data Found");
             }
             else
             {
@@ -85,6 +86,7 @@ namespace Chocolate_Factory_Management_System
             textBoxPincode.Clear();
            // textBoxSearch.Clear();
             textBoxState.Clear();
+            MessageBox.Show("Data Cleared");
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -107,11 +109,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }

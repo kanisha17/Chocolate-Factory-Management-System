@@ -198,11 +198,11 @@
     <Compile Include="ManufacturingProcess.Designer.cs">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Package.cs">
+    <Compile Include="QualityTesting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Package.Designer.cs">
-      <DependentUpon>Package.cs</DependentUpon>
+    <Compile Include="QualityTesting.Designer.cs">
+      <DependentUpon>QualityTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductDetailsReg.cs">
       <SubType>Form</SubType>
@@ -228,11 +228,11 @@
       <DependentUpon>PurchaseOrderReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="QualityTesting.cs">
+    <Compile Include="Package.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QualityTesting.Designer.cs">
-      <DependentUpon>QualityTesting.cs</DependentUpon>
+    <Compile Include="Package.Designer.cs">
+      <DependentUpon>Package.cs</DependentUpon>
     </Compile>
     <Compile Include="RawMaterial.cs">
       <SubType>Form</SubType>
@@ -442,8 +442,8 @@
     <EmbeddedResource Include="ManufacturingProcess.resx">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Package.resx">
-      <DependentUpon>Package.cs</DependentUpon>
+    <EmbeddedResource Include="QualityTesting.resx">
+      <DependentUpon>QualityTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductDetailsReg.resx">
       <DependentUpon>ProductDetailsReg.cs</DependentUpon>
@@ -459,8 +459,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PurchaseOrderReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="QualityTesting.resx">
-      <DependentUpon>QualityTesting.cs</DependentUpon>
+    <EmbeddedResource Include="Package.resx">
+      <DependentUpon>Package.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RawMaterial.resx">
       <DependentUpon>RawMaterial.cs</DependentUpon>
@@ -794,6 +794,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peacch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finished.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

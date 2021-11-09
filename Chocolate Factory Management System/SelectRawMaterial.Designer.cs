@@ -49,6 +49,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.textBoxToCart = new System.Windows.Forms.TextBox();
             this.labelToCart = new System.Windows.Forms.Label();
+            this.labelRawMaterial = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,15 +57,18 @@ namespace Chocolate_Factory_Management_System
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(516, 136);
+            this.dataGridView1.Location = new System.Drawing.Point(646, 242);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(778, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(609, 351);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -73,158 +77,222 @@ namespace Chocolate_Factory_Management_System
             this.lOADTABLEToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1306, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1288, 42);
             this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Text = "menuStripRawMaterial";
             // 
             // cLEARToolStripMenuItem
             // 
+            this.cLEARToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             // 
             // eXITToolStripMenuItem
             // 
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             // 
             // lOADTABLEToolStripMenuItem
             // 
+            this.lOADTABLEToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lOADTABLEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.load2;
             this.lOADTABLEToolStripMenuItem.Name = "lOADTABLEToolStripMenuItem";
-            this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
+            this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
             this.lOADTABLEToolStripMenuItem.Text = "LOAD TABLE";
             this.lOADTABLEToolStripMenuItem.Click += new System.EventHandler(this.lOADTABLEToolStripMenuItem_Click);
             // 
             // labelRawMaterialName
             // 
             this.labelRawMaterialName.AutoSize = true;
-            this.labelRawMaterialName.Location = new System.Drawing.Point(75, 183);
+            this.labelRawMaterialName.BackColor = System.Drawing.Color.Transparent;
+            this.labelRawMaterialName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRawMaterialName.ForeColor = System.Drawing.Color.Maroon;
+            this.labelRawMaterialName.Location = new System.Drawing.Point(22, 274);
+            this.labelRawMaterialName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRawMaterialName.Name = "labelRawMaterialName";
-            this.labelRawMaterialName.Size = new System.Drawing.Size(147, 20);
+            this.labelRawMaterialName.Size = new System.Drawing.Size(286, 31);
             this.labelRawMaterialName.TabIndex = 2;
             this.labelRawMaterialName.Text = "Raw Material Name";
             // 
             // labelGodown
             // 
             this.labelGodown.AutoSize = true;
-            this.labelGodown.Location = new System.Drawing.Point(926, 90);
+            this.labelGodown.BackColor = System.Drawing.Color.Transparent;
+            this.labelGodown.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGodown.ForeColor = System.Drawing.Color.Maroon;
+            this.labelGodown.Location = new System.Drawing.Point(779, 161);
+            this.labelGodown.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGodown.Name = "labelGodown";
-            this.labelGodown.Size = new System.Drawing.Size(138, 20);
+            this.labelGodown.Size = new System.Drawing.Size(232, 27);
             this.labelGodown.TabIndex = 3;
             this.labelGodown.Text = "Added to Godown";
             // 
             // labelAvailableStock
             // 
             this.labelAvailableStock.AutoSize = true;
-            this.labelAvailableStock.Location = new System.Drawing.Point(75, 240);
+            this.labelAvailableStock.BackColor = System.Drawing.Color.Transparent;
+            this.labelAvailableStock.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAvailableStock.ForeColor = System.Drawing.Color.Maroon;
+            this.labelAvailableStock.Location = new System.Drawing.Point(22, 340);
+            this.labelAvailableStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAvailableStock.Name = "labelAvailableStock";
-            this.labelAvailableStock.Size = new System.Drawing.Size(117, 20);
+            this.labelAvailableStock.Size = new System.Drawing.Size(229, 31);
             this.labelAvailableStock.TabIndex = 4;
             this.labelAvailableStock.Text = "Available Stock";
             // 
             // textBoxRawMaterialName
             // 
-            this.textBoxRawMaterialName.Location = new System.Drawing.Point(234, 177);
+            this.textBoxRawMaterialName.Location = new System.Drawing.Point(326, 274);
+            this.textBoxRawMaterialName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxRawMaterialName.Name = "textBoxRawMaterialName";
-            this.textBoxRawMaterialName.Size = new System.Drawing.Size(199, 26);
+            this.textBoxRawMaterialName.Size = new System.Drawing.Size(286, 31);
             this.textBoxRawMaterialName.TabIndex = 5;
             // 
             // textBoxToGodown
             // 
-            this.textBoxToGodown.Location = new System.Drawing.Point(1085, 84);
+            this.textBoxToGodown.Location = new System.Drawing.Point(1035, 161);
+            this.textBoxToGodown.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxToGodown.Name = "textBoxToGodown";
-            this.textBoxToGodown.Size = new System.Drawing.Size(199, 26);
+            this.textBoxToGodown.Size = new System.Drawing.Size(220, 31);
             this.textBoxToGodown.TabIndex = 6;
             // 
             // textBoxAvailableStock
             // 
-            this.textBoxAvailableStock.Location = new System.Drawing.Point(234, 234);
+            this.textBoxAvailableStock.Location = new System.Drawing.Point(326, 344);
+            this.textBoxAvailableStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxAvailableStock.Name = "textBoxAvailableStock";
-            this.textBoxAvailableStock.Size = new System.Drawing.Size(199, 26);
+            this.textBoxAvailableStock.Size = new System.Drawing.Size(286, 31);
             this.textBoxAvailableStock.TabIndex = 7;
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(234, 110);
+            this.textBoxSearch.Location = new System.Drawing.Point(218, 187);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(199, 26);
+            this.textBoxSearch.Size = new System.Drawing.Size(286, 31);
             this.textBoxSearch.TabIndex = 8;
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(79, 103);
+            this.buttonSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonSearch.Location = new System.Drawing.Point(18, 161);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(122, 40);
+            this.buttonSearch.Size = new System.Drawing.Size(176, 57);
             this.buttonSearch.TabIndex = 9;
             this.buttonSearch.Text = "SEARCH";
-            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonAddToCart
             // 
-            this.buttonAddToCart.Location = new System.Drawing.Point(316, 462);
+            this.buttonAddToCart.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAddToCart.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddToCart.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonAddToCart.Location = new System.Drawing.Point(354, 513);
+            this.buttonAddToCart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAddToCart.Name = "buttonAddToCart";
-            this.buttonAddToCart.Size = new System.Drawing.Size(150, 47);
+            this.buttonAddToCart.Size = new System.Drawing.Size(258, 54);
             this.buttonAddToCart.TabIndex = 10;
             this.buttonAddToCart.Text = "ADD TO CART";
-            this.buttonAddToCart.UseVisualStyleBackColor = true;
+            this.buttonAddToCart.UseVisualStyleBackColor = false;
             // 
             // labelRawMaterialID
             // 
             this.labelRawMaterialID.AutoSize = true;
-            this.labelRawMaterialID.Location = new System.Drawing.Point(242, 87);
+            this.labelRawMaterialID.BackColor = System.Drawing.Color.Transparent;
+            this.labelRawMaterialID.ForeColor = System.Drawing.Color.Maroon;
+            this.labelRawMaterialID.Location = new System.Drawing.Point(230, 161);
+            this.labelRawMaterialID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRawMaterialID.Name = "labelRawMaterialID";
-            this.labelRawMaterialID.Size = new System.Drawing.Size(165, 20);
+            this.labelRawMaterialID.Size = new System.Drawing.Size(227, 23);
             this.labelRawMaterialID.TabIndex = 12;
             this.labelRawMaterialID.Text = "Enter Raw Material ID";
             // 
             // button
             // 
-            this.button.Location = new System.Drawing.Point(64, 462);
+            this.button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button.ForeColor = System.Drawing.Color.Maroon;
+            this.button.Location = new System.Drawing.Point(28, 513);
+            this.button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(158, 47);
+            this.button.Size = new System.Drawing.Size(297, 54);
             this.button.TabIndex = 13;
             this.button.Text = "ADD TO GODOWN";
-            this.button.UseVisualStyleBackColor = true;
+            this.button.UseVisualStyleBackColor = false;
             // 
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(75, 297);
+            this.labelQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.labelQuantity.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuantity.ForeColor = System.Drawing.Color.Maroon;
+            this.labelQuantity.Location = new System.Drawing.Point(22, 406);
+            this.labelQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(68, 20);
+            this.labelQuantity.Size = new System.Drawing.Size(135, 31);
             this.labelQuantity.TabIndex = 14;
             this.labelQuantity.Text = "Quantity";
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(234, 297);
+            this.textBoxQuantity.Location = new System.Drawing.Point(326, 410);
+            this.textBoxQuantity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(199, 26);
+            this.textBoxQuantity.Size = new System.Drawing.Size(286, 31);
             this.textBoxQuantity.TabIndex = 15;
             // 
             // textBoxToCart
             // 
-            this.textBoxToCart.Location = new System.Drawing.Point(654, 87);
+            this.textBoxToCart.Location = new System.Drawing.Point(1035, 201);
+            this.textBoxToCart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxToCart.Name = "textBoxToCart";
-            this.textBoxToCart.Size = new System.Drawing.Size(199, 26);
+            this.textBoxToCart.Size = new System.Drawing.Size(220, 31);
             this.textBoxToCart.TabIndex = 16;
             // 
             // labelToCart
             // 
             this.labelToCart.AutoSize = true;
-            this.labelToCart.Location = new System.Drawing.Point(531, 90);
+            this.labelToCart.BackColor = System.Drawing.Color.Transparent;
+            this.labelToCart.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelToCart.ForeColor = System.Drawing.Color.Maroon;
+            this.labelToCart.Location = new System.Drawing.Point(783, 205);
+            this.labelToCart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelToCart.Name = "labelToCart";
-            this.labelToCart.Size = new System.Drawing.Size(108, 20);
+            this.labelToCart.Size = new System.Drawing.Size(182, 27);
             this.labelToCart.TabIndex = 17;
             this.labelToCart.Text = "Added to Cart";
             // 
+            // labelRawMaterial
+            // 
+            this.labelRawMaterial.AutoSize = true;
+            this.labelRawMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.labelRawMaterial.Font = new System.Drawing.Font("Lucida Bright", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRawMaterial.ForeColor = System.Drawing.Color.Maroon;
+            this.labelRawMaterial.Location = new System.Drawing.Point(262, 58);
+            this.labelRawMaterial.Name = "labelRawMaterial";
+            this.labelRawMaterial.Size = new System.Drawing.Size(867, 50);
+            this.labelRawMaterial.TabIndex = 18;
+            this.labelRawMaterial.Text = "RAW MATERIAL SELECTION PROCESS";
+            this.labelRawMaterial.Click += new System.EventHandler(this.label1_Click);
+            // 
             // SelectRawMaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 586);
+            this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.peacch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1288, 605);
+            this.Controls.Add(this.labelRawMaterial);
             this.Controls.Add(this.labelToCart);
             this.Controls.Add(this.textBoxToCart);
             this.Controls.Add(this.textBoxQuantity);
@@ -242,8 +310,12 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelRawMaterialName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "SelectRawMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectRawMaterial";
             this.Load += new System.EventHandler(this.SelectRawMaterial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -276,5 +348,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.TextBox textBoxToCart;
         private System.Windows.Forms.Label labelToCart;
+        private System.Windows.Forms.Label labelRawMaterial;
     }
 }

@@ -57,7 +57,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxBankAddress = new System.Windows.Forms.TextBox();
             this.dateTimePickersDOB = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.rEFRESHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oRDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -364,7 +363,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rEFRESHToolStripMenuItem,
             this.hOMEToolStripMenuItem,
             this.eXITToolStripMenuItem,
             this.oRDERToolStripMenuItem});
@@ -374,11 +372,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1308, 42);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // rEFRESHToolStripMenuItem
-            // 
-            this.rEFRESHToolStripMenuItem.Name = "rEFRESHToolStripMenuItem";
-            this.rEFRESHToolStripMenuItem.Size = new System.Drawing.Size(16, 36);
             // 
             // hOMEToolStripMenuItem
             // 
@@ -690,7 +683,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxBankAddress;
         private System.Windows.Forms.DateTimePicker dateTimePickersDOB;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem rEFRESHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.Label labelBusinessType;
         private System.Windows.Forms.TextBox textBoxBusinessType;

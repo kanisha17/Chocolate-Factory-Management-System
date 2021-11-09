@@ -89,6 +89,7 @@ namespace Chocolate_Factory_Management_System
             textBoxPhone.Clear();
             textBoxEmail.Clear();
             textBoxQualification.Clear();
+            MessageBox.Show("Data Cleared");
         }
     
 
@@ -140,10 +141,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxPhone.Text = reader1["Phone"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
                 textBoxQualification.Text = reader1["Qualification"].ToString();
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
@@ -183,11 +185,11 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
@@ -208,11 +210,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }
@@ -232,9 +234,9 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Deleted");
             }
             connection.Close();
         }

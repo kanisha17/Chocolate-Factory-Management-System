@@ -57,10 +57,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxPaid.Text = reader1["Paid"].ToString();
                 textBoxBalance.Text = reader1["Balance"].ToString();
                 dateTimePickerDueDate.Text = reader1["DueDate"].ToString();
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
@@ -79,7 +80,6 @@ namespace Chocolate_Factory_Management_System
         {
             try
             {
-
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
@@ -91,14 +91,12 @@ namespace Chocolate_Factory_Management_System
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridViewSaleOrder.DataSource = dt;
-
-
-
                 connection.Close();
+                MessageBox.Show("Table Loaded");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Table Not Loaded");
             }
         }
 
@@ -129,11 +127,11 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
@@ -153,11 +151,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }
@@ -177,9 +175,9 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Deleted");
             }
             connection.Close();
         }
@@ -200,6 +198,7 @@ namespace Chocolate_Factory_Management_System
 
                 tot = a - b;
                 textBoxTotal.Text = tot.ToString();
+                MessageBox.Show("Total:"+tot.ToString());
             }
             else
             {
@@ -224,7 +223,6 @@ namespace Chocolate_Factory_Management_System
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxBalance.Clear();
-           
             textBoxDiscount.Clear();
             textBoxQuantity.Clear();
             textBoxSearch.Clear();
@@ -232,7 +230,7 @@ namespace Chocolate_Factory_Management_System
             textBoxUnitPrice.Clear();
             textBoxPaid.Clear();
             comboBoxItemName.ResetText();
-          
+            MessageBox.Show("Data Cleared");
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)

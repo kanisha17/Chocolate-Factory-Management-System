@@ -36,6 +36,7 @@ namespace Chocolate_Factory_Management_System
             textBoxPrice.Clear();
             textBoxDescription.Clear();
             comboBoxRawMaterial.ResetText();
+            MessageBox.Show("Data Cleared");
         }
 
         private void pictureBoxRawMaterial_Click(object sender, EventArgs e)
@@ -69,37 +70,44 @@ namespace Chocolate_Factory_Management_System
 
                     string path = Path.Combine(rd.GetValue(5).ToString());
                     pictureBoxRawMaterial.Image = Image.FromFile(path);
-                    MessageBox.Show("Product Details Found");
+                    MessageBox.Show("Raw Material Details Found");
                 }
                 connection.Close();
                 // MessageBox.Show("Product Details Found");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("Product Details Not Found" + ex);
+                MessageBox.Show("Raw Material Details Not Found");
             }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            string location = "C:\\Users\\hp\\source\\RawMaterial";
-            string path = Path.Combine(location, textBoxRawMaterialName.Text + ".jpg");
-            command = new OleDbCommand("insert into RawMaterialDetails(RawMaterialName,Description,Price,Review,RawMaterialImage) " +
-                "values(@productname,description,price,review,productimage)", connection);
+            try
+            {
+                connection.Open();
+                string location = "C:\\Users\\hp\\source\\RawMaterial";
+                string path = Path.Combine(location, textBoxRawMaterialName.Text + ".jpg");
+                command = new OleDbCommand("insert into RawMaterialDetails(RawMaterialName,Description,Price,Review,RawMaterialImage) " +
+                    "values(@productname,description,price,review,productimage)", connection);
 
-            command.Parameters.AddWithValue("@productname", textBoxRawMaterialName.Text);
-            command.Parameters.AddWithValue("@description", textBoxDescription.Text);
-            command.Parameters.AddWithValue("@price", textBoxPrice.Text);
-            command.Parameters.AddWithValue("@review", comboBoxRawMaterial.Text);
-            command.Parameters.AddWithValue("@productimage", path);
+                command.Parameters.AddWithValue("@productname", textBoxRawMaterialName.Text);
+                command.Parameters.AddWithValue("@description", textBoxDescription.Text);
+                command.Parameters.AddWithValue("@price", textBoxPrice.Text);
+                command.Parameters.AddWithValue("@review", comboBoxRawMaterial.Text);
+                command.Parameters.AddWithValue("@productimage", path);
 
-            Image a = pictureBoxRawMaterial.Image;
+                Image a = pictureBoxRawMaterial.Image;
 
-            command.ExecuteNonQuery();
-            a.Save(path);
-            connection.Close();
-            MessageBox.Show("Saved Successfully");
+                command.ExecuteNonQuery();
+                a.Save(path);
+                connection.Close();
+                MessageBox.Show("Data Saved Successfully");
+            }
+            catch
+            {
+                MessageBox.Show("Data Not Saved");
+            }
         }
 
         private void buttonEDIT_Click(object sender, EventArgs e)
@@ -116,11 +124,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }
@@ -140,11 +148,16 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Deleted");
             }
             connection.Close();
+        }
+
+        private void RawMaterial_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

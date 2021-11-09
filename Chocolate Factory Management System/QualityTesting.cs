@@ -10,11 +10,46 @@ using System.Windows.Forms;
 
 namespace Chocolate_Factory_Management_System
 {
-    public partial class Package : Form
+    public partial class QualityTesting : Form
     {
-        public Package()
+        public QualityTesting()
         {
             InitializeComponent();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelFinalConclusionTest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTestedBy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxFinalConclusion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTestedBy_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNonCompliance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QualityTesting_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

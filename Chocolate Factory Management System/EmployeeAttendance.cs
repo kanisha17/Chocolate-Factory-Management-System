@@ -37,7 +37,7 @@ namespace Chocolate_Factory_Management_System
             textBoxEID.Clear();
             checkedListBoxMark.ResetText();
             textBoxReason.Clear();
-            
+            MessageBox.Show("Data Cleared");
             
         }
 
@@ -81,9 +81,9 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Data Saved Successfully");
 
             }
-            catch (Exception ee)
+            catch 
             {
-                MessageBox.Show("Error" + ee);
+                MessageBox.Show("Data Not Saved");
             }
             connection.Close();
         }

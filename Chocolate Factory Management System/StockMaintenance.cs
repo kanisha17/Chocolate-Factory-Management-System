@@ -37,11 +37,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxStockInward.Text = reader1["StockInward"].ToString();
                 textBoxStockOutward.Text = reader1["StockOutward"].ToString();
                 textBoxNetStock.Text = reader1["NetStock"].ToString();
-               
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
@@ -68,6 +68,7 @@ namespace Chocolate_Factory_Management_System
             textBoxSearch.Clear();
             textBoxStockInward.Clear();
             textBoxStockOutward.Clear();
+            MessageBox.Show("Data Cleared");
         }
 
         private void buttonADD_Click(object sender, EventArgs e)
@@ -82,15 +83,13 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@inward", textBoxStockInward.Text);
                 command.Parameters.AddWithValue("@outward", textBoxStockOutward.Text);
                 command.Parameters.AddWithValue("@net", textBoxNetStock.Text);
-
                 command.ExecuteNonQuery();
-
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
@@ -108,11 +107,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }
@@ -128,13 +127,12 @@ namespace Chocolate_Factory_Management_System
                 string query = "delete from ProductStock where StockNo=" + textBoxSearch.Text + "";
                 //MessageBox.Show(query);
                 command.CommandText = query;
-
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Deleted");
             }
             connection.Close();
         }
@@ -157,6 +155,7 @@ namespace Chocolate_Factory_Management_System
             {
                 netstock= inward -outward;
                 textBoxNetStock.Text = netstock.ToString();
+                MessageBox.Show("Net Stock:"+netstock.ToString());
             }
             else
             {

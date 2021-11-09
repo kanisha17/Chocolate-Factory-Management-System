@@ -57,7 +57,6 @@ namespace Chocolate_Factory_Management_System
             this.labelToSearch = new System.Windows.Forms.Label();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -343,34 +342,28 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Size = new System.Drawing.Size(92, 31);
             this.textBoxCID.TabIndex = 29;
             // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Location = new System.Drawing.Point(455, 514);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(146, 56);
-            this.buttonDelete.TabIndex = 30;
-            this.buttonDelete.Text = "DELETE";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(243, 514);
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEdit.Location = new System.Drawing.Point(689, 502);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(150, 56);
             this.buttonEdit.TabIndex = 31;
             this.buttonEdit.Text = "EDIT";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(33, 514);
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAdd.Location = new System.Drawing.Point(479, 502);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(147, 56);
             this.buttonAdd.TabIndex = 32;
             this.buttonAdd.Text = "ADD";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // CustomerRegister
@@ -382,7 +375,6 @@ namespace Chocolate_Factory_Management_System
             this.ClientSize = new System.Drawing.Size(1314, 594);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.labelCID);
             this.Controls.Add(this.labelToSearch);
@@ -447,7 +439,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.TextBox textBoxCID;
         private System.Windows.Forms.ToolStripMenuItem oRDERToolStripMenuItem;
-        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonAdd;
     }

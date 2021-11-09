@@ -51,7 +51,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,10 +59,14 @@ namespace Chocolate_Factory_Management_System
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonPrint = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonReceipt = new System.Windows.Forms.Button();
+            this.textBoxDepartment = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
+            this.labelPhoneNo = new System.Windows.Forms.Label();
+            this.labelDepartment = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
             this.groupBoxCalculateSalary.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +90,7 @@ namespace Chocolate_Factory_Management_System
             this.labelSalaryDate.BackColor = System.Drawing.Color.Transparent;
             this.labelSalaryDate.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSalaryDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelSalaryDate.Location = new System.Drawing.Point(16, 355);
+            this.labelSalaryDate.Location = new System.Drawing.Point(658, 129);
             this.labelSalaryDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSalaryDate.Name = "labelSalaryDate";
             this.labelSalaryDate.Size = new System.Drawing.Size(173, 31);
@@ -100,7 +103,7 @@ namespace Chocolate_Factory_Management_System
             this.labelEID.BackColor = System.Drawing.Color.Transparent;
             this.labelEID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelEID.Location = new System.Drawing.Point(16, 222);
+            this.labelEID.Location = new System.Drawing.Point(16, 180);
             this.labelEID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEID.Name = "labelEID";
             this.labelEID.Size = new System.Drawing.Size(63, 31);
@@ -123,11 +126,11 @@ namespace Chocolate_Factory_Management_System
             this.groupBoxCalculateSalary.Controls.Add(this.labelDA);
             this.groupBoxCalculateSalary.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCalculateSalary.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.groupBoxCalculateSalary.Location = new System.Drawing.Point(623, 124);
+            this.groupBoxCalculateSalary.Location = new System.Drawing.Point(649, 226);
             this.groupBoxCalculateSalary.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBoxCalculateSalary.Name = "groupBoxCalculateSalary";
             this.groupBoxCalculateSalary.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBoxCalculateSalary.Size = new System.Drawing.Size(615, 446);
+            this.groupBoxCalculateSalary.Size = new System.Drawing.Size(568, 351);
             this.groupBoxCalculateSalary.TabIndex = 5;
             this.groupBoxCalculateSalary.TabStop = false;
             this.groupBoxCalculateSalary.Text = "Calculate Salary";
@@ -135,7 +138,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxPF
             // 
             this.textBoxPF.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPF.Location = new System.Drawing.Point(279, 250);
+            this.textBoxPF.Location = new System.Drawing.Point(279, 198);
             this.textBoxPF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxPF.Name = "textBoxPF";
             this.textBoxPF.Size = new System.Drawing.Size(278, 31);
@@ -144,7 +147,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxNetSalary
             // 
             this.textBoxNetSalary.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNetSalary.Location = new System.Drawing.Point(279, 310);
+            this.textBoxNetSalary.Location = new System.Drawing.Point(279, 238);
             this.textBoxNetSalary.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxNetSalary.Name = "textBoxNetSalary";
             this.textBoxNetSalary.Size = new System.Drawing.Size(278, 31);
@@ -153,7 +156,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxGrossSalary
             // 
             this.textBoxGrossSalary.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGrossSalary.Location = new System.Drawing.Point(279, 185);
+            this.textBoxGrossSalary.Location = new System.Drawing.Point(279, 150);
             this.textBoxGrossSalary.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxGrossSalary.Name = "textBoxGrossSalary";
             this.textBoxGrossSalary.Size = new System.Drawing.Size(278, 31);
@@ -171,7 +174,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxHRA
             // 
             this.textBoxHRA.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHRA.Location = new System.Drawing.Point(279, 122);
+            this.textBoxHRA.Location = new System.Drawing.Point(279, 102);
             this.textBoxHRA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxHRA.Name = "textBoxHRA";
             this.textBoxHRA.Size = new System.Drawing.Size(278, 31);
@@ -182,7 +185,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonCalculate.BackColor = System.Drawing.Color.DarkGray;
             this.buttonCalculate.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalculate.ForeColor = System.Drawing.Color.Black;
-            this.buttonCalculate.Location = new System.Drawing.Point(279, 367);
+            this.buttonCalculate.Location = new System.Drawing.Point(182, 280);
             this.buttonCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(278, 57);
@@ -195,7 +198,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelNetSalary.AutoSize = true;
             this.labelNetSalary.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelNetSalary.Location = new System.Drawing.Point(68, 303);
+            this.labelNetSalary.Location = new System.Drawing.Point(71, 231);
             this.labelNetSalary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNetSalary.Name = "labelNetSalary";
             this.labelNetSalary.Size = new System.Drawing.Size(157, 31);
@@ -206,7 +209,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelHRA.AutoSize = true;
             this.labelHRA.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelHRA.Location = new System.Drawing.Point(68, 122);
+            this.labelHRA.Location = new System.Drawing.Point(68, 102);
             this.labelHRA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHRA.Name = "labelHRA";
             this.labelHRA.Size = new System.Drawing.Size(92, 31);
@@ -217,7 +220,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelPF.AutoSize = true;
             this.labelPF.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelPF.Location = new System.Drawing.Point(64, 243);
+            this.labelPF.Location = new System.Drawing.Point(64, 191);
             this.labelPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPF.Name = "labelPF";
             this.labelPF.Size = new System.Drawing.Size(56, 31);
@@ -228,7 +231,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelGrossSalary.AutoSize = true;
             this.labelGrossSalary.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelGrossSalary.Location = new System.Drawing.Point(63, 185);
+            this.labelGrossSalary.Location = new System.Drawing.Point(63, 150);
             this.labelGrossSalary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGrossSalary.Name = "labelGrossSalary";
             this.labelGrossSalary.Size = new System.Drawing.Size(190, 31);
@@ -252,7 +255,7 @@ namespace Chocolate_Factory_Management_System
             this.labelBasicSalary.BackColor = System.Drawing.Color.Transparent;
             this.labelBasicSalary.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBasicSalary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelBasicSalary.Location = new System.Drawing.Point(16, 426);
+            this.labelBasicSalary.Location = new System.Drawing.Point(658, 180);
             this.labelBasicSalary.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBasicSalary.Name = "labelBasicSalary";
             this.labelBasicSalary.Size = new System.Drawing.Size(180, 31);
@@ -261,7 +264,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxBasicSalary
             // 
-            this.textBoxBasicSalary.Location = new System.Drawing.Point(262, 430);
+            this.textBoxBasicSalary.Location = new System.Drawing.Point(904, 184);
             this.textBoxBasicSalary.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxBasicSalary.Name = "textBoxBasicSalary";
             this.textBoxBasicSalary.Size = new System.Drawing.Size(317, 31);
@@ -269,7 +272,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxEID
             // 
-            this.textBoxEID.Location = new System.Drawing.Point(262, 226);
+            this.textBoxEID.Location = new System.Drawing.Point(262, 184);
             this.textBoxEID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(317, 31);
@@ -277,7 +280,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickerSalaryDate
             // 
-            this.dateTimePickerSalaryDate.Location = new System.Drawing.Point(262, 359);
+            this.dateTimePickerSalaryDate.Location = new System.Drawing.Point(904, 133);
             this.dateTimePickerSalaryDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerSalaryDate.Name = "dateTimePickerSalaryDate";
             this.dateTimePickerSalaryDate.Size = new System.Drawing.Size(317, 31);
@@ -291,8 +294,7 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eXITToolStripMenuItem1,
-            this.eXITToolStripMenuItem2,
-            this.rECEIPTToolStripMenuItem});
+            this.eXITToolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
@@ -318,15 +320,6 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem2.Text = "EXIT";
             this.eXITToolStripMenuItem2.Click += new System.EventHandler(this.eXITToolStripMenuItem2_Click);
             // 
-            // rECEIPTToolStripMenuItem
-            // 
-            this.rECEIPTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
-            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
-            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
-            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
-            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
-            // 
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
@@ -348,7 +341,7 @@ namespace Chocolate_Factory_Management_System
             this.labelEmployeeName.BackColor = System.Drawing.Color.Transparent;
             this.labelEmployeeName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmployeeName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelEmployeeName.Location = new System.Drawing.Point(16, 290);
+            this.labelEmployeeName.Location = new System.Drawing.Point(16, 226);
             this.labelEmployeeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmployeeName.Name = "labelEmployeeName";
             this.labelEmployeeName.Size = new System.Drawing.Size(240, 31);
@@ -357,7 +350,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxEmployeeName
             // 
-            this.textBoxEmployeeName.Location = new System.Drawing.Point(262, 294);
+            this.textBoxEmployeeName.Location = new System.Drawing.Point(262, 230);
             this.textBoxEmployeeName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxEmployeeName.Name = "textBoxEmployeeName";
             this.textBoxEmployeeName.Size = new System.Drawing.Size(317, 31);
@@ -392,49 +385,80 @@ namespace Chocolate_Factory_Management_System
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(258, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 23);
+            this.label1.Size = new System.Drawing.Size(205, 23);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Enter Salary Slip No";
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Location = new System.Drawing.Point(469, 491);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(136, 56);
-            this.buttonPrint.TabIndex = 21;
-            this.buttonPrint.Text = "PRINT";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Location = new System.Drawing.Point(323, 491);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(126, 56);
-            this.buttonDelete.TabIndex = 22;
-            this.buttonDelete.Text = "DELETE";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
-            // buttonEdit
-            // 
-            this.buttonEdit.Location = new System.Drawing.Point(176, 491);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(126, 57);
-            this.buttonEdit.TabIndex = 23;
-            this.buttonEdit.Text = "EDIT";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.label1.Text = "Enter  Employee ID";
             // 
             // buttonAdd
             // 
+            this.buttonAdd.BackColor = System.Drawing.Color.Brown;
+            this.buttonAdd.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAdd.Location = new System.Drawing.Point(13, 494);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(139, 54);
             this.buttonAdd.TabIndex = 24;
             this.buttonAdd.Text = "ADD";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonReceipt
+            // 
+            this.buttonReceipt.Location = new System.Drawing.Point(313, 494);
+            this.buttonReceipt.Name = "buttonReceipt";
+            this.buttonReceipt.Size = new System.Drawing.Size(134, 54);
+            this.buttonReceipt.TabIndex = 25;
+            this.buttonReceipt.Text = "RECEIPT";
+            this.buttonReceipt.UseVisualStyleBackColor = true;
+            this.buttonReceipt.Click += new System.EventHandler(this.buttonReceipt_Click);
+            // 
+            // textBoxDepartment
+            // 
+            this.textBoxDepartment.Location = new System.Drawing.Point(262, 274);
+            this.textBoxDepartment.Name = "textBoxDepartment";
+            this.textBoxDepartment.Size = new System.Drawing.Size(317, 31);
+            this.textBoxDepartment.TabIndex = 26;
+            // 
+            // textBoxPhoneNo
+            // 
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(262, 328);
+            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(317, 31);
+            this.textBoxPhoneNo.TabIndex = 27;
+            // 
+            // labelPhoneNo
+            // 
+            this.labelPhoneNo.AutoSize = true;
+            this.labelPhoneNo.Location = new System.Drawing.Point(18, 338);
+            this.labelPhoneNo.Name = "labelPhoneNo";
+            this.labelPhoneNo.Size = new System.Drawing.Size(107, 23);
+            this.labelPhoneNo.TabIndex = 28;
+            this.labelPhoneNo.Text = "Phone No";
+            // 
+            // labelDepartment
+            // 
+            this.labelDepartment.AutoSize = true;
+            this.labelDepartment.Location = new System.Drawing.Point(18, 282);
+            this.labelDepartment.Name = "labelDepartment";
+            this.labelDepartment.Size = new System.Drawing.Size(130, 23);
+            this.labelDepartment.TabIndex = 29;
+            this.labelDepartment.Text = "Department";
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Location = new System.Drawing.Point(18, 388);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(51, 23);
+            this.labelCity.TabIndex = 30;
+            this.labelCity.Text = "City";
+            // 
+            // textBoxCity
+            // 
+            this.textBoxCity.Location = new System.Drawing.Point(262, 380);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.Size = new System.Drawing.Size(317, 31);
+            this.textBoxCity.TabIndex = 31;
             // 
             // EmployeeSalary
             // 
@@ -442,10 +466,14 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color1;
             this.ClientSize = new System.Drawing.Size(1280, 609);
+            this.Controls.Add(this.textBoxCity);
+            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelDepartment);
+            this.Controls.Add(this.labelPhoneNo);
+            this.Controls.Add(this.textBoxPhoneNo);
+            this.Controls.Add(this.textBoxDepartment);
+            this.Controls.Add(this.buttonReceipt);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.buttonSearch);
@@ -506,10 +534,13 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem rECEIPTToolStripMenuItem;
-        private System.Windows.Forms.Button buttonPrint;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonReceipt;
+        private System.Windows.Forms.TextBox textBoxDepartment;
+        private System.Windows.Forms.TextBox textBoxPhoneNo;
+        private System.Windows.Forms.Label labelPhoneNo;
+        private System.Windows.Forms.Label labelDepartment;
+        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.TextBox textBoxCity;
     }
 }

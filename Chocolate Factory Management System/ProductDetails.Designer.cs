@@ -165,7 +165,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // eXITToolStripMenuItem
             // 
-            this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.GreenYellow;
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen;
             this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
@@ -237,32 +237,41 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonADD
             // 
+            this.buttonADD.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonADD.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonADD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonADD.Location = new System.Drawing.Point(34, 497);
             this.buttonADD.Name = "buttonADD";
             this.buttonADD.Size = new System.Drawing.Size(149, 57);
             this.buttonADD.TabIndex = 19;
             this.buttonADD.Text = "ADD";
-            this.buttonADD.UseVisualStyleBackColor = true;
+            this.buttonADD.UseVisualStyleBackColor = false;
             this.buttonADD.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonEDIT
             // 
+            this.buttonEDIT.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEDIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonEDIT.Location = new System.Drawing.Point(216, 497);
             this.buttonEDIT.Name = "buttonEDIT";
             this.buttonEDIT.Size = new System.Drawing.Size(153, 57);
             this.buttonEDIT.TabIndex = 20;
             this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = true;
+            this.buttonEDIT.UseVisualStyleBackColor = false;
             this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
             // 
             // buttonDelete
             // 
+            this.buttonDelete.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonDelete.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonDelete.Location = new System.Drawing.Point(414, 497);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(137, 57);
             this.buttonDelete.TabIndex = 21;
             this.buttonDelete.Text = "DELETE";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // label2

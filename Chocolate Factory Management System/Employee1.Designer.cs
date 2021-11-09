@@ -323,7 +323,7 @@ namespace Chocolate_Factory_Management_System
             this.vIEWToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1280, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1280, 38);
             this.menuStrip1.TabIndex = 31;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -331,7 +331,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(111, 32);
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(111, 34);
             this.pRINTToolStripMenuItem.Text = "PRINT";
             this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click_1);
             // 
@@ -340,7 +340,7 @@ namespace Chocolate_Factory_Management_System
             this.hOMEToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.hOMEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
             this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(112, 32);
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(112, 34);
             this.hOMEToolStripMenuItem.Text = "CLEAR";
             this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
@@ -348,7 +348,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.vIEWToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
-            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(94, 32);
+            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(94, 34);
             this.vIEWToolStripMenuItem.Text = "EXIT";
             this.vIEWToolStripMenuItem.Click += new System.EventHandler(this.vIEWToolStripMenuItem_Click);
             // 
@@ -458,32 +458,41 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonADD
             // 
-            this.buttonADD.Location = new System.Drawing.Point(12, 516);
+            this.buttonADD.BackColor = System.Drawing.Color.Brown;
+            this.buttonADD.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonADD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonADD.Location = new System.Drawing.Point(357, 516);
             this.buttonADD.Name = "buttonADD";
             this.buttonADD.Size = new System.Drawing.Size(160, 43);
             this.buttonADD.TabIndex = 46;
             this.buttonADD.Text = "ADD";
-            this.buttonADD.UseVisualStyleBackColor = true;
+            this.buttonADD.UseVisualStyleBackColor = false;
             this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click);
             // 
             // buttonDELETE
             // 
-            this.buttonDELETE.Location = new System.Drawing.Point(372, 516);
+            this.buttonDELETE.BackColor = System.Drawing.Color.Brown;
+            this.buttonDELETE.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDELETE.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDELETE.Location = new System.Drawing.Point(717, 516);
             this.buttonDELETE.Name = "buttonDELETE";
             this.buttonDELETE.Size = new System.Drawing.Size(148, 43);
             this.buttonDELETE.TabIndex = 47;
             this.buttonDELETE.Text = "DELETE";
-            this.buttonDELETE.UseVisualStyleBackColor = true;
+            this.buttonDELETE.UseVisualStyleBackColor = false;
             this.buttonDELETE.Click += new System.EventHandler(this.buttonDELETE_Click);
             // 
             // buttonEDIT
             // 
-            this.buttonEDIT.Location = new System.Drawing.Point(199, 516);
+            this.buttonEDIT.BackColor = System.Drawing.Color.Brown;
+            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEDIT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEDIT.Location = new System.Drawing.Point(544, 516);
             this.buttonEDIT.Name = "buttonEDIT";
             this.buttonEDIT.Size = new System.Drawing.Size(144, 43);
             this.buttonEDIT.TabIndex = 48;
             this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = true;
+            this.buttonEDIT.UseVisualStyleBackColor = false;
             this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
             // 
             // Employee1

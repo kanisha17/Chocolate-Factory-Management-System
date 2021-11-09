@@ -73,5 +73,10 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

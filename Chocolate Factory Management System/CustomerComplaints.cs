@@ -35,7 +35,7 @@ namespace Chocolate_Factory_Management_System
                 textBoxName.Text = reader1["CustomerName"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-
+                MessageBox.Show("Data Found");
             }
             else
             {
@@ -56,6 +56,7 @@ namespace Chocolate_Factory_Management_System
             textBoximprovement.Clear();
             textBoxProductID.Clear();
             textBoxtakenby.Clear();
+            MessageBox.Show("Data Cleared");
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,7 +86,7 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
             catch (Exception ex)
             {

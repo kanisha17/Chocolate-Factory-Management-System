@@ -47,7 +47,7 @@ namespace Chocolate_Factory_Management_System
            textBoxSupplierName.Clear();
            checkedListBoxInsured.ResetText();
            checkedListBoxLicensed.ResetText();
-            
+            MessageBox.Show("Data Cleared");
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,11 +123,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxBankName.Text = reader1["BankName"].ToString();
                 textBoxBankAccountNo.Text = reader1["BankAccountNo"].ToString();
                 textBoxBankAddress.Text = reader1["BankAddress"].ToString();
-           
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
@@ -148,7 +148,6 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-
                 command = new OleDbCommand("insert into Supplier(SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
                     "values(@suppliername,@companyname,@businesstype,@dob,@address,@pincode,@city,@state,@phoneno,@email,@insured,@licensed,@licenseno,@bankname,@bankaccountno,@bankaddress)", connection);
                 command.Parameters.AddWithValue("@suppliername", textBoxSupplierName.Text);
@@ -168,15 +167,13 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@bankaccountno", textBoxBankAccountNo.Text);
                 command.Parameters.AddWithValue("@bankaddress", textBoxBankAddress.Text);
 
-
                 command.ExecuteNonQuery();
-
                 connection.Close();
-                MessageBox.Show("Data Added Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
@@ -209,11 +206,11 @@ namespace Chocolate_Factory_Management_System
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
+                MessageBox.Show("Data Updated Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Updated");
             }
             connection.Close();
         }
@@ -222,23 +219,19 @@ namespace Chocolate_Factory_Management_System
         {
             try
             {
-
                 connection.Open();
                 OleDbCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
                 command.CommandText = "delete from Supplier where SPhoneNo=" + textBoxSearch.Text + "";
                 //MessageBox.Show(query);
-
-
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully");
             }
-            catch (Exception ef)
+            catch 
             {
-                MessageBox.Show("Error" + ef);
+                MessageBox.Show("Data Not Deleted");
             }
             connection.Close();
-
         }
     }
 }

@@ -23,6 +23,12 @@ namespace Chocolate_Factory_Management_System
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
+
+        public EmployeeSalary(string text)
+        {
+            Text = text;
+        }
+
         double basicsalary, da, hra, grossalary, pf, netsalary;
 
 
@@ -37,7 +43,7 @@ namespace Chocolate_Factory_Management_System
             textBoxNetSalary.Clear();
             textBoxSearch.Clear();
             textBoxEmployeeName.Clear();
-           
+            MessageBox.Show("Data Cleared");
             
         }
 
@@ -86,18 +92,8 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            EmployeeSalaryReceipt e1 = new EmployeeSalaryReceipt();
-            e1.ShowDialog();
-
-            EmployeeSalaryReceiptReport r1 = new EmployeeSalaryReceiptReport();
-
-            TextObject eid = (TextObject)r1.ReportDefinition.Sections["Section2"].ReportObjects["EID"];
-            eid.Text = textBoxEID.Text;
-            TextObject empname = (TextObject)r1.ReportDefinition.Sections["Section2"].ReportObjects["EmployeeName"];
-            empname.Text = textBoxEmployeeName.Text;
-
-            e1.crystalReportViewer1.ReportSource = r1;
-                e1.Show();
+           
+            
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -116,57 +112,53 @@ namespace Chocolate_Factory_Management_System
                 MessageBox.Show("Data Saved Successfully");
 
             }
-            catch (Exception ee)
+            catch 
             {
-                MessageBox.Show("Error" + ee);
+                MessageBox.Show("Data Not Saved");
             }
             connection.Close();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update EmployeeSalary set EmployeeName='" + textBoxEmployeeName.Text + "',BasicSalary='" + textBoxBasicSalary.Text + "'," +
-                    "DA='" + textBoxDA.Text + "',HRA='" + textBoxHRA.Text + "',GrossSalary='" + textBoxGrossSalary.Text + "'," +
-                    "ProvidentFund='" + textBoxPF.Text + "',NetSalary='" + textBoxNetSalary.Text + "' where SID=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+           
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            try
-            {
+           
+        }
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from EmployeeSalary where SID=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
+        private void buttonReceipt_Click(object sender, EventArgs e)
+        {
+            EmployeeSalaryReceipt s1 = new EmployeeSalaryReceipt();
+            EmployeeSalaryReceiptReport s2 = new EmployeeSalaryReceiptReport();
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
+            TextObject a = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text2"];
+            a.Text = textBoxEID.Text;
+            TextObject b = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text4"];
+            b.Text = textBoxEmployeeName.Text;
+            TextObject c = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text11"];
+            c.Text = textBoxDepartment.Text;
+            TextObject d = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text13"];
+            d.Text =textBoxCity.Text;
+            TextObject e1 = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text15"];
+            e1.Text = textBoxPhoneNo.Text;
+            TextObject f = (TextObject)s2.ReportDefinition.Sections["Section3"].ReportObjects["Text17"];
+            f.Text = textBoxBasicSalary.Text;
+            TextObject g = (TextObject)s2.ReportDefinition.Sections["Section3"].ReportObjects["Text20"];
+            g.Text = textBoxDA.Text;
+            TextObject h = (TextObject)s2.ReportDefinition.Sections["Section3"].ReportObjects["Text21"];
+            h.Text = textBoxHRA.Text;
+            TextObject i = (TextObject)s2.ReportDefinition.Sections["Section3"].ReportObjects["Text23"];
+            i.Text = textBoxGrossSalary.Text;
+            TextObject j = (TextObject)s2.ReportDefinition.Sections["Section3"].ReportObjects["Text25"];
+            j.Text = textBoxPF.Text;
+            TextObject k = (TextObject)s2.ReportDefinition.Sections["Section4"].ReportObjects["Text27"];
+            k.Text = textBoxNetSalary.Text;
+
+            s1.crystalReportViewer1.ReportSource = s2;
+            s1.Show();
         }
 
         private void dELETEToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -194,11 +186,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxGrossSalary.Text = reader1["GrossSalary"].ToString();
                 textBoxPF.Text = reader1["ProvidentFund"].ToString();
                 textBoxNetSalary.Text = reader1["NetSalary"].ToString();
-
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
@@ -233,6 +225,7 @@ namespace Chocolate_Factory_Management_System
 
                 netsalary = grossalary - pf;
                 textBoxNetSalary.Text = netsalary.ToString();
+                MessageBox.Show("Net Salary:" +netsalary.ToString());
             }
             else
             {

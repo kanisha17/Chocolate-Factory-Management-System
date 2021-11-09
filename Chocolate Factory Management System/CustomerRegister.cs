@@ -50,11 +50,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxcPincode.Text = reader1["Pincode"].ToString();
                 textBoxcPhone.Text = reader1["PhoneNo"].ToString();
                 textBoxcEmail.Text = reader1["Email"].ToString();
-
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
@@ -83,6 +83,7 @@ namespace Chocolate_Factory_Management_System
             textBoxcPincode.Clear();
             textBoxCustomerName.Clear();
             textBoxSearch.Clear();
+            MessageBox.Show("Data Cleared");
         }
 
       
@@ -130,27 +131,32 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Successfully");
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand command = connection.CreateCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = "update Customer set CustomerName='" + textBoxCustomerName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
-                    "Address='" + textBoxcAddress.Text + "',City='" + textBoxcCity.Text + "',Pincode='" + textBoxcPincode.Text + "'," +
-                    "PhoneNo='" + textBoxcPhone.Text + "',Email='" + textBoxcEmail.Text + "' where PhoneNo=" + textBoxSearch.Text + "";
+            try
+            {
+                connection.Open();
+                OleDbCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "update Customer set CustomerName='" + textBoxCustomerName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
+                        "Address='" + textBoxcAddress.Text + "',City='" + textBoxcCity.Text + "',Pincode='" + textBoxcPincode.Text + "'," +
+                        "PhoneNo='" + textBoxcPhone.Text + "',Email='" + textBoxcEmail.Text + "' where PhoneNo=" + textBoxSearch.Text + "";
                 command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Data Updated Successfully");
-
-           
+                connection.Close();
+                MessageBox.Show("Data Updated Successfully");
+            }
+            catch 
+            {
+                MessageBox.Show("Data Not Updated");
+            }
 
         }
 

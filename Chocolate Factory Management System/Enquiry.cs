@@ -44,11 +44,11 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
 
                 connection.Close();
-                MessageBox.Show("Saved Successfully");
+                MessageBox.Show("Data Saved Sucessfully");
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 
@@ -61,6 +61,7 @@ namespace Chocolate_Factory_Management_System
             textBoxPhoneNo.Clear();
             comboBoxProduct.ResetText();
             textBoxsearch.Clear();
+            MessageBox.Show("Data Cleared");
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,11 +85,11 @@ namespace Chocolate_Factory_Management_System
                 textBoxAddress.Text = reader1["Address"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
-
+                MessageBox.Show("Data Found");
             }
             else
             {
-                MessageBox.Show("No Data Found");
+                MessageBox.Show("Data Not Found");
             }
             connection.Close();
         }
