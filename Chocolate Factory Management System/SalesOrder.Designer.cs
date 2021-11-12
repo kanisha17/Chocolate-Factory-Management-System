@@ -31,40 +31,37 @@ namespace Chocolate_Factory_Management_System
         {
             this.labelQuantity = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.textBoxSubTotal = new System.Windows.Forms.TextBox();
             this.labelItemName = new System.Windows.Forms.Label();
             this.labelUnitPrice = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
+            this.labelSubTotal = new System.Windows.Forms.Label();
             this.textBoxUnitPrice = new System.Windows.Forms.TextBox();
-            this.dateTimePickerSDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDueDate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxItemName = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonCalculate = new System.Windows.Forms.Button();
             this.buttonPAY = new System.Windows.Forms.Button();
             this.dataGridViewSaleOrder = new System.Windows.Forms.DataGridView();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.textBoxDiscount = new System.Windows.Forms.TextBox();
-            this.textBoxBalance = new System.Windows.Forms.TextBox();
-            this.labelBalance = new System.Windows.Forms.Label();
+            this.textBoxChange = new System.Windows.Forms.TextBox();
+            this.labelChange = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lOADTABLEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.rECEIPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPaid = new System.Windows.Forms.Label();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
-            this.labelToSearch = new System.Windows.Forms.Label();
             this.labelSO = new System.Windows.Forms.Label();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
-            this.buttonDELETE = new System.Windows.Forms.Button();
-            this.buttonEDIT = new System.Windows.Forms.Button();
+            this.labelFinalCost = new System.Windows.Forms.Label();
+            this.labelTotalCost = new System.Windows.Forms.Label();
+            this.textBoxFinalCost = new System.Windows.Forms.TextBox();
+            this.textBoxTotalCost = new System.Windows.Forms.TextBox();
+            this.textBoxTax = new System.Windows.Forms.TextBox();
+            this.labelTax = new System.Windows.Forms.Label();
+            this.textBoxInvoiceNo = new System.Windows.Forms.TextBox();
+            this.labelInvoiceNo = new System.Windows.Forms.Label();
             this.buttonADD = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.buttonClearTable = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +72,7 @@ namespace Chocolate_Factory_Management_System
             this.labelQuantity.BackColor = System.Drawing.Color.Transparent;
             this.labelQuantity.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelQuantity.Location = new System.Drawing.Point(13, 193);
+            this.labelQuantity.Location = new System.Drawing.Point(13, 311);
             this.labelQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(135, 31);
@@ -84,19 +81,22 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(203, 193);
+            this.textBoxQuantity.Enabled = false;
+            this.textBoxQuantity.Location = new System.Drawing.Point(292, 311);
             this.textBoxQuantity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(300, 31);
-            this.textBoxQuantity.TabIndex = 3;
+            this.textBoxQuantity.TabIndex = 1;
+            this.textBoxQuantity.TextChanged += new System.EventHandler(this.textBoxQuantity_TextChanged);
             // 
-            // textBoxTotal
+            // textBoxSubTotal
             // 
-            this.textBoxTotal.Location = new System.Drawing.Point(203, 371);
-            this.textBoxTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(300, 31);
-            this.textBoxTotal.TabIndex = 6;
+            this.textBoxSubTotal.Location = new System.Drawing.Point(292, 371);
+            this.textBoxSubTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxSubTotal.Name = "textBoxSubTotal";
+            this.textBoxSubTotal.Size = new System.Drawing.Size(300, 31);
+            this.textBoxSubTotal.TabIndex = 4;
+            this.textBoxSubTotal.TextChanged += new System.EventHandler(this.textBoxSubTotal_TextChanged);
             // 
             // labelItemName
             // 
@@ -117,132 +117,43 @@ namespace Chocolate_Factory_Management_System
             this.labelUnitPrice.BackColor = System.Drawing.Color.Transparent;
             this.labelUnitPrice.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUnitPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelUnitPrice.Location = new System.Drawing.Point(13, 311);
+            this.labelUnitPrice.Location = new System.Drawing.Point(13, 191);
             this.labelUnitPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUnitPrice.Name = "labelUnitPrice";
             this.labelUnitPrice.Size = new System.Drawing.Size(149, 31);
             this.labelUnitPrice.TabIndex = 9;
             this.labelUnitPrice.Text = "Unit Price";
             // 
-            // labelTotal
+            // labelSubTotal
             // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotal.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTotal.Location = new System.Drawing.Point(13, 371);
-            this.labelTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(85, 31);
-            this.labelTotal.TabIndex = 10;
-            this.labelTotal.Text = "Total";
+            this.labelSubTotal.AutoSize = true;
+            this.labelSubTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelSubTotal.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelSubTotal.Location = new System.Drawing.Point(12, 371);
+            this.labelSubTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSubTotal.Name = "labelSubTotal";
+            this.labelSubTotal.Size = new System.Drawing.Size(146, 31);
+            this.labelSubTotal.TabIndex = 10;
+            this.labelSubTotal.Text = "Sub Total";
             // 
             // textBoxUnitPrice
             // 
-            this.textBoxUnitPrice.Location = new System.Drawing.Point(203, 311);
+            this.textBoxUnitPrice.Location = new System.Drawing.Point(292, 197);
             this.textBoxUnitPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxUnitPrice.Name = "textBoxUnitPrice";
             this.textBoxUnitPrice.Size = new System.Drawing.Size(300, 31);
-            this.textBoxUnitPrice.TabIndex = 12;
-            // 
-            // dateTimePickerSDate
-            // 
-            this.dateTimePickerSDate.Location = new System.Drawing.Point(203, 92);
-            this.dateTimePickerSDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePickerSDate.Name = "dateTimePickerSDate";
-            this.dateTimePickerSDate.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePickerSDate.TabIndex = 13;
-            // 
-            // dateTimePickerDueDate
-            // 
-            this.dateTimePickerDueDate.Location = new System.Drawing.Point(203, 549);
-            this.dateTimePickerDueDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePickerDueDate.Name = "dateTimePickerDueDate";
-            this.dateTimePickerDueDate.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePickerDueDate.TabIndex = 14;
+            this.textBoxUnitPrice.TabIndex = 3;
             // 
             // comboBoxItemName
             // 
             this.comboBoxItemName.FormattingEnabled = true;
-            this.comboBoxItemName.Items.AddRange(new object[] {
-            "Choco Charms",
-            "Chocolate Mockup",
-            "DryFruit Chocolate",
-            "Heart Candy",
-            "Jelly Candy",
-            "Lolipops",
-            "Milk Chocolate",
-            "Raw Organic Chocolate",
-            "Sugar Candy",
-            "Sugar And Smiles"});
-            this.comboBoxItemName.Location = new System.Drawing.Point(203, 140);
+            this.comboBoxItemName.Location = new System.Drawing.Point(292, 140);
             this.comboBoxItemName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxItemName.Name = "comboBoxItemName";
             this.comboBoxItemName.Size = new System.Drawing.Size(300, 31);
-            this.comboBoxItemName.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(13, 549);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 31);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Due Date";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(13, 92);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 31);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Sales Date";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(954, 208);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(274, 29);
-            this.textBoxSearch.TabIndex = 19;
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonSearch.Location = new System.Drawing.Point(730, 189);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(183, 57);
-            this.buttonSearch.TabIndex = 20;
-            this.buttonSearch.Text = "SEARCH";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // buttonCalculate
-            // 
-            this.buttonCalculate.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonCalculate.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonCalculate.Location = new System.Drawing.Point(13, 591);
-            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(229, 46);
-            this.buttonCalculate.TabIndex = 24;
-            this.buttonCalculate.Text = "CALCULATE";
-            this.buttonCalculate.UseVisualStyleBackColor = false;
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            this.comboBoxItemName.TabIndex = 0;
+            this.comboBoxItemName.SelectedIndexChanged += new System.EventHandler(this.comboBoxItemName_SelectedIndexChanged);
             // 
             // buttonPAY
             // 
@@ -256,13 +167,14 @@ namespace Chocolate_Factory_Management_System
             // 
             // dataGridViewSaleOrder
             // 
+            this.dataGridViewSaleOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSaleOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSaleOrder.Location = new System.Drawing.Point(626, 252);
+            this.dataGridViewSaleOrder.Location = new System.Drawing.Point(19, 479);
             this.dataGridViewSaleOrder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewSaleOrder.Name = "dataGridViewSaleOrder";
             this.dataGridViewSaleOrder.RowHeadersWidth = 62;
             this.dataGridViewSaleOrder.RowTemplate.Height = 28;
-            this.dataGridViewSaleOrder.Size = new System.Drawing.Size(602, 385);
+            this.dataGridViewSaleOrder.Size = new System.Drawing.Size(1243, 158);
             this.dataGridViewSaleOrder.TabIndex = 26;
             this.dataGridViewSaleOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSaleOrder_CellContentClick);
             // 
@@ -272,42 +184,42 @@ namespace Chocolate_Factory_Management_System
             this.labelDiscount.BackColor = System.Drawing.Color.Transparent;
             this.labelDiscount.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDiscount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDiscount.Location = new System.Drawing.Point(13, 252);
+            this.labelDiscount.Location = new System.Drawing.Point(13, 248);
             this.labelDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDiscount.Name = "labelDiscount";
-            this.labelDiscount.Size = new System.Drawing.Size(137, 31);
+            this.labelDiscount.Size = new System.Drawing.Size(262, 31);
             this.labelDiscount.TabIndex = 28;
-            this.labelDiscount.Text = "Discount";
+            this.labelDiscount.Text = "Discount per item";
             // 
             // textBoxDiscount
             // 
-            this.textBoxDiscount.Location = new System.Drawing.Point(203, 252);
+            this.textBoxDiscount.Location = new System.Drawing.Point(292, 254);
             this.textBoxDiscount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(300, 31);
-            this.textBoxDiscount.TabIndex = 29;
+            this.textBoxDiscount.TabIndex = 2;
             // 
-            // textBoxBalance
+            // textBoxChange
             // 
-            this.textBoxBalance.Location = new System.Drawing.Point(203, 488);
-            this.textBoxBalance.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxBalance.Name = "textBoxBalance";
-            this.textBoxBalance.Size = new System.Drawing.Size(300, 31);
-            this.textBoxBalance.TabIndex = 30;
-            this.textBoxBalance.TextChanged += new System.EventHandler(this.textBoxBalance_TextChanged);
+            this.textBoxChange.Location = new System.Drawing.Point(919, 311);
+            this.textBoxChange.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxChange.Name = "textBoxChange";
+            this.textBoxChange.Size = new System.Drawing.Size(300, 31);
+            this.textBoxChange.TabIndex = 9;
+            this.textBoxChange.TextChanged += new System.EventHandler(this.textBoxBalance_TextChanged);
             // 
-            // labelBalance
+            // labelChange
             // 
-            this.labelBalance.AutoSize = true;
-            this.labelBalance.BackColor = System.Drawing.Color.Transparent;
-            this.labelBalance.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBalance.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelBalance.Location = new System.Drawing.Point(13, 488);
-            this.labelBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(120, 31);
-            this.labelBalance.TabIndex = 32;
-            this.labelBalance.Text = "Balance";
+            this.labelChange.AutoSize = true;
+            this.labelChange.BackColor = System.Drawing.Color.Transparent;
+            this.labelChange.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChange.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelChange.Location = new System.Drawing.Point(729, 312);
+            this.labelChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelChange.Name = "labelChange";
+            this.labelChange.Size = new System.Drawing.Size(117, 31);
+            this.labelChange.TabIndex = 32;
+            this.labelChange.Text = "Change";
             // 
             // menuStrip1
             // 
@@ -316,26 +228,13 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cLEARToolStripMenuItem,
-            this.eXITToolStripMenuItem,
-            this.lOADTABLEToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.rECEIPTToolStripMenuItem});
+            this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
             this.menuStrip1.Size = new System.Drawing.Size(1275, 42);
             this.menuStrip1.TabIndex = 35;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cLEARToolStripMenuItem
-            // 
-            this.cLEARToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.cLEARToolStripMenuItem.Text = "CLEAR";
-            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -346,36 +245,13 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
-            // lOADTABLEToolStripMenuItem
-            // 
-            this.lOADTABLEToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lOADTABLEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.load2;
-            this.lOADTABLEToolStripMenuItem.Name = "lOADTABLEToolStripMenuItem";
-            this.lOADTABLEToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
-            this.lOADTABLEToolStripMenuItem.Text = "LOAD TABLE";
-            this.lOADTABLEToolStripMenuItem.Click += new System.EventHandler(this.lOADTABLEToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(16, 36);
-            // 
-            // rECEIPTToolStripMenuItem
-            // 
-            this.rECEIPTToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rECEIPTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.receipt;
-            this.rECEIPTToolStripMenuItem.Name = "rECEIPTToolStripMenuItem";
-            this.rECEIPTToolStripMenuItem.Size = new System.Drawing.Size(149, 36);
-            this.rECEIPTToolStripMenuItem.Text = "RECEIPT";
-            this.rECEIPTToolStripMenuItem.Click += new System.EventHandler(this.rECEIPTToolStripMenuItem_Click);
-            // 
             // labelPaid
             // 
             this.labelPaid.AutoSize = true;
             this.labelPaid.BackColor = System.Drawing.Color.Transparent;
             this.labelPaid.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPaid.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPaid.Location = new System.Drawing.Point(13, 430);
+            this.labelPaid.Location = new System.Drawing.Point(729, 254);
             this.labelPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPaid.Name = "labelPaid";
             this.labelPaid.Size = new System.Drawing.Size(74, 31);
@@ -384,23 +260,12 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxPaid
             // 
-            this.textBoxPaid.Location = new System.Drawing.Point(203, 430);
+            this.textBoxPaid.Location = new System.Drawing.Point(919, 254);
             this.textBoxPaid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxPaid.Name = "textBoxPaid";
             this.textBoxPaid.Size = new System.Drawing.Size(300, 31);
-            this.textBoxPaid.TabIndex = 37;
-            // 
-            // labelToSearch
-            // 
-            this.labelToSearch.AutoSize = true;
-            this.labelToSearch.BackColor = System.Drawing.Color.Transparent;
-            this.labelToSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelToSearch.Location = new System.Drawing.Point(950, 180);
-            this.labelToSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelToSearch.Name = "labelToSearch";
-            this.labelToSearch.Size = new System.Drawing.Size(221, 23);
-            this.labelToSearch.TabIndex = 38;
-            this.labelToSearch.Text = "Enter Sales Order No";
+            this.textBoxPaid.TabIndex = 8;
+            this.textBoxPaid.TextChanged += new System.EventHandler(this.textBoxPaid_TextChanged);
             // 
             // labelSO
             // 
@@ -408,7 +273,7 @@ namespace Chocolate_Factory_Management_System
             this.labelSO.BackColor = System.Drawing.Color.Transparent;
             this.labelSO.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSO.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelSO.Location = new System.Drawing.Point(549, 46);
+            this.labelSO.Location = new System.Drawing.Point(451, 50);
             this.labelSO.Name = "labelSO";
             this.labelSO.Size = new System.Drawing.Size(364, 54);
             this.labelSO.TabIndex = 39;
@@ -420,48 +285,134 @@ namespace Chocolate_Factory_Management_System
             this.labelCID.BackColor = System.Drawing.Color.Transparent;
             this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCID.Location = new System.Drawing.Point(724, 130);
+            this.labelCID.Location = new System.Drawing.Point(1036, 50);
             this.labelCID.Name = "labelCID";
-            this.labelCID.Size = new System.Drawing.Size(191, 31);
+            this.labelCID.Size = new System.Drawing.Size(66, 31);
             this.labelCID.TabIndex = 40;
-            this.labelCID.Text = "Customer ID";
+            this.labelCID.Text = "CID";
             // 
             // textBoxCID
             // 
-            this.textBoxCID.Location = new System.Drawing.Point(954, 130);
+            this.textBoxCID.Location = new System.Drawing.Point(1119, 50);
             this.textBoxCID.Name = "textBoxCID";
-            this.textBoxCID.Size = new System.Drawing.Size(274, 31);
+            this.textBoxCID.Size = new System.Drawing.Size(143, 31);
             this.textBoxCID.TabIndex = 41;
             // 
-            // buttonDELETE
+            // labelFinalCost
             // 
-            this.buttonDELETE.Location = new System.Drawing.Point(504, 591);
-            this.buttonDELETE.Name = "buttonDELETE";
-            this.buttonDELETE.Size = new System.Drawing.Size(105, 39);
-            this.buttonDELETE.TabIndex = 42;
-            this.buttonDELETE.Text = "DELETE";
-            this.buttonDELETE.UseVisualStyleBackColor = true;
-            this.buttonDELETE.Click += new System.EventHandler(this.buttonDELETE_Click);
+            this.labelFinalCost.AutoSize = true;
+            this.labelFinalCost.BackColor = System.Drawing.Color.Transparent;
+            this.labelFinalCost.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFinalCost.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelFinalCost.Location = new System.Drawing.Point(729, 197);
+            this.labelFinalCost.Name = "labelFinalCost";
+            this.labelFinalCost.Size = new System.Drawing.Size(151, 31);
+            this.labelFinalCost.TabIndex = 45;
+            this.labelFinalCost.Text = "Final Cost";
             // 
-            // buttonEDIT
+            // labelTotalCost
             // 
-            this.buttonEDIT.Location = new System.Drawing.Point(383, 591);
-            this.buttonEDIT.Name = "buttonEDIT";
-            this.buttonEDIT.Size = new System.Drawing.Size(99, 39);
-            this.buttonEDIT.TabIndex = 43;
-            this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = true;
-            this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
+            this.labelTotalCost.AutoSize = true;
+            this.labelTotalCost.BackColor = System.Drawing.Color.Transparent;
+            this.labelTotalCost.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalCost.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTotalCost.Location = new System.Drawing.Point(729, 140);
+            this.labelTotalCost.Name = "labelTotalCost";
+            this.labelTotalCost.Size = new System.Drawing.Size(156, 31);
+            this.labelTotalCost.TabIndex = 46;
+            this.labelTotalCost.Text = "Total Cost";
+            // 
+            // textBoxFinalCost
+            // 
+            this.textBoxFinalCost.Location = new System.Drawing.Point(919, 195);
+            this.textBoxFinalCost.Name = "textBoxFinalCost";
+            this.textBoxFinalCost.Size = new System.Drawing.Size(300, 31);
+            this.textBoxFinalCost.TabIndex = 7;
+            // 
+            // textBoxTotalCost
+            // 
+            this.textBoxTotalCost.Location = new System.Drawing.Point(919, 140);
+            this.textBoxTotalCost.Name = "textBoxTotalCost";
+            this.textBoxTotalCost.Size = new System.Drawing.Size(300, 31);
+            this.textBoxTotalCost.TabIndex = 6;
+            // 
+            // textBoxTax
+            // 
+            this.textBoxTax.Location = new System.Drawing.Point(292, 429);
+            this.textBoxTax.Name = "textBoxTax";
+            this.textBoxTax.Size = new System.Drawing.Size(300, 31);
+            this.textBoxTax.TabIndex = 5;
+            this.textBoxTax.TextChanged += new System.EventHandler(this.textBoxTax_TextChanged);
+            // 
+            // labelTax
+            // 
+            this.labelTax.AutoSize = true;
+            this.labelTax.BackColor = System.Drawing.Color.Transparent;
+            this.labelTax.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTax.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTax.Location = new System.Drawing.Point(13, 429);
+            this.labelTax.Name = "labelTax";
+            this.labelTax.Size = new System.Drawing.Size(66, 31);
+            this.labelTax.TabIndex = 50;
+            this.labelTax.Text = "Tax";
+            // 
+            // textBoxInvoiceNo
+            // 
+            this.textBoxInvoiceNo.Location = new System.Drawing.Point(164, 57);
+            this.textBoxInvoiceNo.Name = "textBoxInvoiceNo";
+            this.textBoxInvoiceNo.Size = new System.Drawing.Size(184, 31);
+            this.textBoxInvoiceNo.TabIndex = 51;
+            // 
+            // labelInvoiceNo
+            // 
+            this.labelInvoiceNo.AutoSize = true;
+            this.labelInvoiceNo.BackColor = System.Drawing.Color.Transparent;
+            this.labelInvoiceNo.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInvoiceNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelInvoiceNo.Location = new System.Drawing.Point(12, 57);
+            this.labelInvoiceNo.Name = "labelInvoiceNo";
+            this.labelInvoiceNo.Size = new System.Drawing.Size(156, 31);
+            this.labelInvoiceNo.TabIndex = 52;
+            this.labelInvoiceNo.Text = "InvoiceNo";
             // 
             // buttonADD
             // 
-            this.buttonADD.Location = new System.Drawing.Point(249, 591);
+            this.buttonADD.Location = new System.Drawing.Point(715, 361);
             this.buttonADD.Name = "buttonADD";
-            this.buttonADD.Size = new System.Drawing.Size(115, 39);
-            this.buttonADD.TabIndex = 44;
+            this.buttonADD.Size = new System.Drawing.Size(147, 49);
+            this.buttonADD.TabIndex = 53;
             this.buttonADD.Text = "ADD";
             this.buttonADD.UseVisualStyleBackColor = true;
-            this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click);
+            this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click_1);
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.Location = new System.Drawing.Point(912, 361);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(162, 49);
+            this.buttonReset.TabIndex = 54;
+            this.buttonReset.Text = "RESET";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // buttonClearTable
+            // 
+            this.buttonClearTable.Location = new System.Drawing.Point(1110, 361);
+            this.buttonClearTable.Name = "buttonClearTable";
+            this.buttonClearTable.Size = new System.Drawing.Size(152, 49);
+            this.buttonClearTable.TabIndex = 55;
+            this.buttonClearTable.Text = "Clear Table";
+            this.buttonClearTable.UseVisualStyleBackColor = true;
+            this.buttonClearTable.Click += new System.EventHandler(this.buttonClearTable_Click);
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(912, 427);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(162, 46);
+            this.buttonPrint.TabIndex = 56;
+            this.buttonPrint.Text = "PRINT";
+            this.buttonPrint.UseVisualStyleBackColor = true;
             // 
             // SalesOrder
             // 
@@ -470,34 +421,35 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1275, 649);
+            this.Controls.Add(this.buttonPrint);
+            this.Controls.Add(this.buttonClearTable);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonADD);
-            this.Controls.Add(this.buttonEDIT);
-            this.Controls.Add(this.buttonDELETE);
+            this.Controls.Add(this.labelInvoiceNo);
+            this.Controls.Add(this.textBoxInvoiceNo);
+            this.Controls.Add(this.labelTax);
+            this.Controls.Add(this.textBoxTax);
+            this.Controls.Add(this.textBoxTotalCost);
+            this.Controls.Add(this.textBoxFinalCost);
+            this.Controls.Add(this.labelTotalCost);
+            this.Controls.Add(this.labelFinalCost);
             this.Controls.Add(this.textBoxCID);
             this.Controls.Add(this.labelCID);
             this.Controls.Add(this.labelSO);
-            this.Controls.Add(this.labelToSearch);
             this.Controls.Add(this.textBoxPaid);
             this.Controls.Add(this.labelPaid);
-            this.Controls.Add(this.labelBalance);
-            this.Controls.Add(this.textBoxBalance);
+            this.Controls.Add(this.labelChange);
+            this.Controls.Add(this.textBoxChange);
             this.Controls.Add(this.textBoxDiscount);
             this.Controls.Add(this.labelDiscount);
             this.Controls.Add(this.dataGridViewSaleOrder);
             this.Controls.Add(this.buttonPAY);
-            this.Controls.Add(this.buttonCalculate);
-            this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxItemName);
-            this.Controls.Add(this.dateTimePickerDueDate);
-            this.Controls.Add(this.dateTimePickerSDate);
             this.Controls.Add(this.textBoxUnitPrice);
-            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.labelSubTotal);
             this.Controls.Add(this.labelUnitPrice);
             this.Controls.Add(this.labelItemName);
-            this.Controls.Add(this.textBoxTotal);
+            this.Controls.Add(this.textBoxSubTotal);
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.labelQuantity);
             this.Controls.Add(this.menuStrip1);
@@ -520,39 +472,36 @@ namespace Chocolate_Factory_Management_System
 
         private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.TextBox textBoxQuantity;
-        private System.Windows.Forms.TextBox textBoxTotal;
+        private System.Windows.Forms.TextBox textBoxSubTotal;
         private System.Windows.Forms.Label labelItemName;
         private System.Windows.Forms.Label labelUnitPrice;
-        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label labelSubTotal;
         private System.Windows.Forms.TextBox textBoxUnitPrice;
-        private System.Windows.Forms.DateTimePicker dateTimePickerSDate;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDueDate;
         private System.Windows.Forms.ComboBox comboBoxItemName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Button buttonPAY;
         private System.Windows.Forms.DataGridView dataGridViewSaleOrder;
         private System.Windows.Forms.Label labelDiscount;
         private System.Windows.Forms.TextBox textBoxDiscount;
-        private System.Windows.Forms.TextBox textBoxBalance;
-        private System.Windows.Forms.Label labelBalance;
+        private System.Windows.Forms.TextBox textBoxChange;
+        private System.Windows.Forms.Label labelChange;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelPaid;
         private System.Windows.Forms.TextBox textBoxPaid;
-        private System.Windows.Forms.Label labelToSearch;
         private System.Windows.Forms.Label labelSO;
-        private System.Windows.Forms.ToolStripMenuItem lOADTABLEToolStripMenuItem;
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.TextBox textBoxCID;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem rECEIPTToolStripMenuItem;
-        private System.Windows.Forms.Button buttonDELETE;
-        private System.Windows.Forms.Button buttonEDIT;
+        private System.Windows.Forms.Label labelFinalCost;
+        private System.Windows.Forms.Label labelTotalCost;
+        private System.Windows.Forms.TextBox textBoxFinalCost;
+        private System.Windows.Forms.TextBox textBoxTotalCost;
+        private System.Windows.Forms.TextBox textBoxTax;
+        private System.Windows.Forms.Label labelTax;
+        private System.Windows.Forms.TextBox textBoxInvoiceNo;
+        private System.Windows.Forms.Label labelInvoiceNo;
         private System.Windows.Forms.Button buttonADD;
+        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.Button buttonClearTable;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

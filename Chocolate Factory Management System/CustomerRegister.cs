@@ -34,29 +34,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,DOB,Address,City,Pincode,PhoneNo,Email from Customer where PhoneNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxCID.Text = reader1["CustomerID"].ToString();
-                textBoxCustomerName.Text = reader1["CustomerName"].ToString();
-                dateTimePickercDOB.Text = reader1["DOB"].ToString();
-                textBoxcAddress.Text = reader1["Address"].ToString();
-                textBoxcCity.Text = reader1["City"].ToString();
-              
-                textBoxcPincode.Text = reader1["Pincode"].ToString();
-                textBoxcPhone.Text = reader1["PhoneNo"].ToString();
-                textBoxcEmail.Text = reader1["Email"].ToString();
-                MessageBox.Show("Data Found");
-            }
-            else
-            {
-                MessageBox.Show("Data Not Found");
-            }
-            connection.Close();
+            
         }
 
       
@@ -82,7 +60,7 @@ namespace Chocolate_Factory_Management_System
             textBoxcPhone.Clear();
             textBoxcPincode.Clear();
             textBoxCustomerName.Clear();
-            textBoxSearch.Clear();
+           
             MessageBox.Show("Data Cleared");
         }
 
@@ -90,7 +68,7 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            CustomerSearch f2 = new CustomerSearch();
             f2.Show();
             this.Hide();
         }
@@ -107,8 +85,7 @@ namespace Chocolate_Factory_Management_System
 
         private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SalesOrder c1 = new SalesOrder();
-            c1.ShowDialog();
+           
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -141,22 +118,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                OleDbCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.Text;
-                command.CommandText = "update Customer set CustomerName='" + textBoxCustomerName.Text + "',DOB='" + dateTimePickercDOB.Value.Date + "'," +
-                        "Address='" + textBoxcAddress.Text + "',City='" + textBoxcCity.Text + "',Pincode='" + textBoxcPincode.Text + "'," +
-                        "PhoneNo='" + textBoxcPhone.Text + "',Email='" + textBoxcEmail.Text + "' where PhoneNo=" + textBoxSearch.Text + "";
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Data Updated Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Updated");
-            }
+           
 
         }
 

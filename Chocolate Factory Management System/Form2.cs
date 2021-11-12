@@ -128,8 +128,8 @@ namespace Chocolate_Factory_Management_System
 
         private void rEGISTRATIONToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CustomerRegister c1 = new CustomerRegister();
-            c1.ShowDialog();
+            CustomerSearch s1 = new CustomerSearch();
+            s1.ShowDialog();
         }
 
         private void sALESORDERToolStripMenuItem_Click_1(object sender, EventArgs e)

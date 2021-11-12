@@ -64,6 +64,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonSubmit.TabIndex = 0;
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // label1
             // 
@@ -272,6 +273,7 @@ namespace Chocolate_Factory_Management_System
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
             this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
+            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -280,6 +282,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // QualityTesting
             // 

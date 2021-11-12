@@ -48,7 +48,7 @@ namespace Chocolate_Factory_Management_System
             this.checkBoxCash = new System.Windows.Forms.CheckBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.labelReceiptNo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxReceiptNo = new System.Windows.Forms.TextBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.labelSearch = new System.Windows.Forms.Label();
@@ -266,12 +266,12 @@ namespace Chocolate_Factory_Management_System
             this.labelReceiptNo.TabIndex = 23;
             this.labelReceiptNo.Text = "Receipt No";
             // 
-            // textBox1
+            // textBoxReceiptNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(923, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 31);
-            this.textBox1.TabIndex = 24;
+            this.textBoxReceiptNo.Location = new System.Drawing.Point(923, 171);
+            this.textBoxReceiptNo.Name = "textBoxReceiptNo";
+            this.textBoxReceiptNo.Size = new System.Drawing.Size(287, 31);
+            this.textBoxReceiptNo.TabIndex = 24;
             // 
             // textBoxSearch
             // 
@@ -327,6 +327,7 @@ namespace Chocolate_Factory_Management_System
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
             this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
+            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -335,6 +336,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // DeliveryProcess
             // 
@@ -346,7 +348,7 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxReceiptNo);
             this.Controls.Add(this.labelReceiptNo);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.checkBoxCash);
@@ -402,7 +404,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.CheckBox checkBoxCash;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Label labelReceiptNo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxReceiptNo;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label labelSearch;

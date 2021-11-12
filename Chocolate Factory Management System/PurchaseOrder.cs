@@ -102,7 +102,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Close();
                 MessageBox.Show("Table Loaded");
             }
-            catch (Exception ef)
+            catch 
             {
                 MessageBox.Show("Table Not Loaded");
             }

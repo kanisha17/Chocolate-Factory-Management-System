@@ -26,5 +26,40 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into Packaging(NewStock,PackagingDate) values(@newstock,@packdate)", connection);
+
+
+                command.Parameters.AddWithValue("@newstock", textBoxNewStock.Text);
+                command.Parameters.AddWithValue("@packdate", dateTimePickerPackage.Text);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+                MessageBox.Show("Data Saved Successfully");
+            }
+            catch
+            {
+                MessageBox.Show("Data Not Saved".ToString());
+            }
+        }
+
+        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxNewStock.Clear();
+            textBoxProductID.Clear();
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
     }
 }
