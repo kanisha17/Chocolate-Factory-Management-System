@@ -14,12 +14,13 @@ namespace Chocolate_Factory_Management_System
     public partial class SalesOrder : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
-
+         OleDbCommand command;
+       
         
-        public SalesOrder()
+        public SalesOrder(string str_value)
         {
             InitializeComponent();
+            getInvoiceID();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
             dataGridViewSaleOrder.ColumnCount = 8;
             dataGridViewSaleOrder.Columns[0].Name ="Sr No";
@@ -29,7 +30,9 @@ namespace Chocolate_Factory_Management_System
             dataGridViewSaleOrder.Columns[4].Name ="Discount";
             dataGridViewSaleOrder.Columns[5].Name="Sub Total";
             dataGridViewSaleOrder.Columns[6].Name="Tax";
-            dataGridViewSaleOrder.Columns[7].Name="Total Cost";  
+            dataGridViewSaleOrder.Columns[7].Name="Total Cost";
+
+            textBoxName.Text = str_value;
         }
 
         int finalcost = 0;
@@ -53,7 +56,7 @@ namespace Chocolate_Factory_Management_System
             }
             catch
             {
-                MessageBox.Show("HI");
+                MessageBox.Show("Error");
             }
         }
 
@@ -128,19 +131,6 @@ namespace Chocolate_Factory_Management_System
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxChange.Clear();
-            textBoxDiscount.Clear();
-            textBoxQuantity.Clear();
-            textBoxSubTotal.Clear();
-            textBoxUnitPrice.Clear();
-            textBoxPaid.Clear();
-            textBoxChange.Clear();
-            textBoxTax.Clear();
-            textBoxTotalCost.Clear();
-            textBoxFinalCost.Clear();
-            textBoxInvoiceNo.Clear();
-
-            MessageBox.Show("Data Cleared");
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -277,10 +267,10 @@ namespace Chocolate_Factory_Management_System
             textBoxTax.Clear();
             textBoxTotalCost.Clear();
             textBoxFinalCost.Clear();
-            textBoxInvoiceNo.Clear();
+          //  textBoxInvoiceNo.Clear();
             textBoxQuantity.Enabled = false;
 
-        //  MessageBox.Show("Item Added");
+         MessageBox.Show("Item Added");
         }
         void calculateFinalCost()
         {
@@ -319,6 +309,51 @@ namespace Chocolate_Factory_Management_System
         {
             dataGridViewSaleOrder.Rows.Clear();
             SrNo = 0;
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        void getInvoiceID()
+        {
+            try
+            {
+                connection.Open();
+                OleDbCommand command= new OleDbCommand();
+                command.Connection = connection;
+                string query = "select InvoiceID from SalesOrder";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                OleDbDataAdapter da = new OleDbDataAdapter(query,connection);
+                DataTable data = new DataTable();
+                da.Fill(data);
+                if (data.Rows.Count < 1)
+                {
+                    textBoxInvoiceNo.Text = "1";
+                }
+                else 
+                {
+                    MessageBox.Show("a");
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("b");
+            }
+        
+        }
+
+        private void textBoxTotalCost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxFinalCost_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

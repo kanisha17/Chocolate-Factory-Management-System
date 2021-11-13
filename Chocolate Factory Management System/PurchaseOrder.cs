@@ -17,37 +17,29 @@ namespace Chocolate_Factory_Management_System
         OleDbCommand command;
 
 
-        public PurchaseOrder()
+        public PurchaseOrder(string str_value)
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
+            dataGridViewPurchaseOrder.ColumnCount = 8;
+            dataGridViewPurchaseOrder.Columns[0].Name = "Sr No";
+            dataGridViewPurchaseOrder.Columns[1].Name = "Item Name";
+            dataGridViewPurchaseOrder.Columns[2].Name = "Unit Price";
+            dataGridViewPurchaseOrder.Columns[3].Name = "Quantity";
+            dataGridViewPurchaseOrder.Columns[4].Name = "Discount";
+            dataGridViewPurchaseOrder.Columns[5].Name = "Sub Total";
+            dataGridViewPurchaseOrder.Columns[6].Name = "Tax";
+            dataGridViewPurchaseOrder.Columns[7].Name = "Total Cost";
+
+            textBoxName.Text = str_value;
         }
 
-        double qty, price, dis, tot, a, b;
+        int finalcost = 0;
+        int SrNo = 0;
+        int t = 0;
 
         private void buttonEDIT_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update PurchaseOrder set SupplierID='"+textBoxSID.Text+"',PurchaseDate='"+dateTimePickerOrderDate.Value.Date+"'," +
-                    "ProductName='" + comboBoxProductName.Text + "',Quantity='"+textBoxQuantitykg.Text + "'," +
-                    "Discount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "'," +
-                    "Paid='"+textBoxPaid.Text+"',Balance='"+textBoxBalance.Text+"',DueDate='"+dateTimePickerDueDate.Value.Date+"' where POrderNo=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Edited Successfully");
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
-            connection.Close();
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,15 +59,7 @@ namespace Chocolate_Factory_Management_System
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxQuantitykg.Clear();
-            textBoxSearch.Clear();
-            textBoxTotal.Clear();
-            textBoxUnitPrice.Clear();
-            textBoxDiscount.Clear();
-            comboBoxProductName.ResetText();
-            textBoxPaid.Clear();
-            textBoxBalance.Clear();
-            MessageBox.Show("Data Cleared");
+         
         }
 
         private void labelPaid_Click(object sender, EventArgs e)
@@ -85,104 +69,57 @@ namespace Chocolate_Factory_Management_System
 
         private void lOADTABLEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select *from PurchaseOrder";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                OleDbDataAdapter da = new OleDbDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridViewPurchaseOrder.DataSource = dt;
-                connection.Close();
-                MessageBox.Show("Table Loaded");
-            }
-            catch 
-            {
-                MessageBox.Show("Table Not Loaded");
-            }
+          
         }
 
         private void buttonADD_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into PurchaseOrder(SupplierID,PurchaseDate,ProductName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate) " +
-                    "values(@phoneno,@pdate,@productname,@qty,@dis,@unitprice,@ptotal,@paid,@balance,@duedate)", connection);
-                command.Parameters.AddWithValue("@phoneno", textBoxSID.Text);
-                command.Parameters.AddWithValue("@pdate", dateTimePickerOrderDate.Text);
-                command.Parameters.AddWithValue("@productname", comboBoxProductName.Text);
-                command.Parameters.AddWithValue("@qty", textBoxQuantitykg.Text);
-                command.Parameters.AddWithValue("@dis", textBoxDiscount.Text);
-                command.Parameters.AddWithValue("@unitprice", textBoxUnitPrice.Text);
-                command.Parameters.AddWithValue("@ptotal", textBoxTotal.Text);
-                command.Parameters.AddWithValue("@paid", textBoxPaid.Text);
-                command.Parameters.AddWithValue("@balance", textBoxBalance.Text);
-                command.Parameters.AddWithValue("@duedate", dateTimePickerDueDate.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Data Saved Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Saved".ToString());
-            }
+           
+          
         }
 
         private void buttonEDIT_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update PurchaseOrder set SupplierID='" + textBoxSID.Text + "',PurchaseDate='" + dateTimePickerOrderDate.Value.Date + "'," +
-                    "ProductName='" + comboBoxProductName.Text + "',Quantity='" + textBoxQuantitykg.Text + "'," +
-                    "Discount='" + textBoxDiscount.Text + "',UnitPrice='" + textBoxUnitPrice.Text + "',Total='" + textBoxTotal.Text + "',Paid='" + textBoxPaid.Text + "'," +
-                    "Balance='" + textBoxBalance.Text + "',DueDate='" + dateTimePickerDueDate.Value.Date + "' where POrderNo=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Updated Successfully");
-            }
-            catch
-            {
-                MessageBox.Show("Data Not Updated");
-            }
-            connection.Close();
+          
         }
 
         private void buttonDELETE_Click(object sender, EventArgs e)
         {
 
-            try
+           
+        }
+
+        private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxProductName.SelectedItem == null)
             {
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from PurchaseOrder where POrderNo=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
             }
-            catch 
+            else
             {
-                MessageBox.Show("Data Not Deleted");
+                try
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "select Price,Discount from RawMaterialDetails where RawMaterialName='" + comboBoxProductName.Text + "';";
+                    command.CommandText = query;
+                    OleDbDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string p = (string)reader["Price"].ToString();
+                        textBoxUnitPrice.Text = p;
+                        string dis = (string)reader["Discount"].ToString();
+                        textBoxDiscount.Text = dis;
+                    }
+                    connection.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Error");
+                }
             }
-            connection.Close();
+            textBoxQuantitykg.Enabled = true;
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -193,65 +130,175 @@ namespace Chocolate_Factory_Management_System
         }
         private void PurchaseOrder_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from RawMaterialDetails";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxProductName.Items.Add(reader["RawMaterialName"].ToString());
+                }
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void buttonCALCULATE_Click(object sender, EventArgs e)
         {
-            price = int.Parse(textBoxUnitPrice.Text);   
-            qty = int.Parse(textBoxQuantitykg.Text);
-            dis = int.Parse(textBoxDiscount.Text);
-
-            if (qty>=0 && price>=0)
-            {
-                a = qty * price;
-                textBoxTotal.Text = a.ToString();
-
-                b = a *dis /100;
-                textBoxTotal.Text = b.ToString();
-
-                tot = a - b;
-                textBoxTotal.Text = tot.ToString();
-                MessageBox.Show("Total:"+tot.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Enter a valid input");
-            }
+          
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select SupplierID,PurchaseDate,ProductName,Quantity,Discount,UnitPrice,Total,Paid,Balance,DueDate from PurchaseOrder where POrderNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxSID.Text = reader1["SupplierID"].ToString();
-                dateTimePickerOrderDate.Text = reader1["PurchaseDate"].ToString();
-                comboBoxProductName.Text = reader1["ProductName"].ToString();
-                textBoxQuantitykg.Text = reader1["Quantity"].ToString();
-                textBoxDiscount.Text = reader1["Discount"].ToString();
-                textBoxUnitPrice.Text = reader1["UnitPrice"].ToString();
-                textBoxTotal.Text = reader1["Total"].ToString();
-                textBoxPaid.Text = reader1["Paid"].ToString();
-                textBoxBalance.Text = reader1["Balance"].ToString();
-                dateTimePickerDueDate.Text = reader1["DueDate"].ToString();
-                MessageBox.Show("Data Found");
-            }
-        
-            else
-            {
-                MessageBox.Show("No Data Found");
-            }
-            connection.Close();
+                
         }
 
         private void buttonLoadTable_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void textBoxQuantitykg_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxQuantitykg.Text) == true)
+            {
+
+            }
+            else
+            {
+
+                int price = Convert.ToInt32(textBoxUnitPrice.Text);
+                int discount = Convert.ToInt32(textBoxDiscount.Text);
+                int quantity = Convert.ToInt32(textBoxQuantitykg.Text);
+                int subtotal = price * quantity;
+                subtotal = subtotal - discount * quantity;
+                textBoxSubTotal.Text = subtotal.ToString();
+            }
+        }
+
+        private void textBoxTax_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxTax.Text) == true)
+            {
+
+            }
+            else
+            {
+                int subtotal = Convert.ToInt32(textBoxSubTotal.Text);
+                int tax = Convert.ToInt32(textBoxTax.Text);
+                int totalcost = subtotal + tax;
+                textBoxTotalCost.Text = totalcost.ToString();
+            }
+        }
+
+        private void textBoxSubTotal_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxSubTotal.Text) == true)
+            {
+
+            }
+            else
+            {
+                int subtotal = Convert.ToInt32(textBoxSubTotal.Text);
+                if (subtotal >= 10000)
+                {
+                    t = (int)(subtotal * 0.15);
+                    textBoxTax.Text = t.ToString();
+                }
+                else if (subtotal >= 6000)
+                {
+                    t = (int)(subtotal * 0.10);
+                    textBoxTax.Text = t.ToString();
+                }
+                else if (subtotal >= 3000)
+                {
+                    t = (int)(subtotal * 0.06);
+                    textBoxTax.Text = t.ToString();
+                }
+                if (subtotal >= 1000)
+                {
+                    t = (int)(subtotal * 0.04);
+                    textBoxTax.Text = t.ToString();
+                }
+                else
+                {
+                    t = (int)(subtotal * 0.02);
+                    textBoxTax.Text = t.ToString();
+                }
+            }
+        }
+
+        private void textBoxPaid_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxPaid.Text) == true)
+            {
+
+            }
+            else
+            {
+                int amtpaid = Convert.ToInt32(textBoxPaid.Text);
+                int fcost = Convert.ToInt32(textBoxFinalCost.Text);
+                int change = amtpaid - fcost;
+                textBoxChange.Text = change.ToString();
+            }
+        }
+        void calculateFinalCost()
+        {
+
+            finalcost = 0;
+            for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+            {
+                finalcost = finalcost + Convert.ToInt32(dataGridViewPurchaseOrder.Rows[i].Cells[7].Value);
+
+            }
+            textBoxFinalCost.Text = finalcost.ToString();
+
+        }
+        void resetControls()
+        {
+            textBoxChange.Clear();
+            textBoxDiscount.Clear();
+            textBoxFinalCost.Clear();
+            
+            textBoxPaid.Clear();
+            textBoxQuantitykg.Clear();
+            textBoxSubTotal.Clear();
+            textBoxTax.Clear();
+            textBoxTotalCost.Clear();
+            textBoxUnitPrice.Clear();
+
+            textBoxQuantitykg.Enabled = false;
+            
+        }
+        private void buttonAdd_Click_1(object sender, EventArgs e)
+        {
+            addDataToGridView((++SrNo).ToString(), comboBoxProductName.SelectedItem.ToString(), textBoxUnitPrice.Text, textBoxQuantitykg.Text, textBoxDiscount.Text, textBoxSubTotal.Text, textBoxTax.Text, textBoxTotalCost.Text);
+            resetControls();
+            calculateFinalCost();
+        }
+        void addDataToGridView(string Sr_No, string Item_Name, string Unit_Price, string Quantity, string Discount, string Sub_Total, string Tax, string Total_Cost)
+        {
+            string[] row = { Sr_No, Item_Name, Unit_Price, Quantity, Discount, Sub_Total, Tax, Total_Cost };
+            dataGridViewPurchaseOrder.Rows.Add(row);
+
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            resetControls();
+        }
+
+        private void buttonClearTable_Click(object sender, EventArgs e)
+        {
+            dataGridViewPurchaseOrder.Rows.Clear();
+            SrNo = 0;
         }
     }
 }

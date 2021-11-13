@@ -42,7 +42,6 @@ namespace Chocolate_Factory_Management_System
            textBoxLicenseNo.Clear();
            textBoxPhoneNo.Clear();
            textBoxPincode.Clear();
-           textBoxSearch.Clear();
            textBoxState.Clear();
            textBoxSupplierName.Clear();
            checkedListBoxInsured.ResetText();
@@ -99,37 +98,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select SupplierID,SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress from Supplier where SPhoneNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxSID.Text = reader1["SupplierID"].ToString();
-                textBoxSupplierName.Text = reader1["SupplierName"].ToString();
-                textBoxCompanyName.Text = reader1["CompanyName"].ToString();
-                textBoxBusinessType.Text = reader1["BusinessType"].ToString();
-                dateTimePickersDOB.Text = reader1["DOB"].ToString();
-                textBoxAddress.Text = reader1["Address"].ToString();
-                textBoxPincode.Text = reader1["Pincode"].ToString();
-                textBoxCity.Text = reader1["City"].ToString();
-                textBoxState.Text = reader1["State"].ToString();
-                textBoxPhoneNo.Text = reader1["SPhoneNo"].ToString();
-                textBoxEmail.Text = reader1["Email"].ToString();
-                checkedListBoxInsured.Text = reader1["Insured"].ToString();
-                checkedListBoxLicensed.Text = reader1["Licensed"].ToString();
-                textBoxLicenseNo.Text = reader1["LicenseNo"].ToString();
-                textBoxBankName.Text = reader1["BankName"].ToString();
-                textBoxBankAccountNo.Text = reader1["BankAccountNo"].ToString();
-                textBoxBankAddress.Text = reader1["BankAddress"].ToString();
-                MessageBox.Show("Data Found");
-            }
-            else
-            {
-                MessageBox.Show("Data Not Found");
-            }
-            connection.Close();
+            
         }
 
         private void textBoxEmail_TextChanged(object sender, EventArgs e)
@@ -139,8 +108,7 @@ namespace Chocolate_Factory_Management_System
 
         private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PurchaseOrder p1 = new PurchaseOrder();
-            p1.ShowDialog();
+          
         }
 
         private void buttonADD_Click(object sender, EventArgs e)
@@ -170,6 +138,10 @@ namespace Chocolate_Factory_Management_System
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Data Saved Successfully");
+
+                SupplierSearch f2 = new SupplierSearch();
+                f2.Show();
+                this.Hide();
             }
             catch 
             {
@@ -179,59 +151,12 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonEDIT_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-
-                string query = "update Supplier set SupplierName='" + textBoxSupplierName.Text + "'," +
-                    "CompanyName='" + textBoxCompanyName.Text + "'," +
-                    "BusinessType='" + textBoxBusinessType.Text + "'," +
-                    "DOB='" + dateTimePickersDOB.Value.Date + "'," +
-                    "Address='" + textBoxAddress.Text + "'," +
-                    "Pincode='" + textBoxPincode.Text + "'," +
-                    "City='" + textBoxCity.Text + "'," +
-                    "State='" + textBoxState.Text + "'," +
-                    "SPhoneNo='" + textBoxPhoneNo.Text + "'," +
-                    "Email='" + textBoxEmail.Text + "'," +
-                    "Insured='" + checkedListBoxInsured.Text + "'," +
-                    "Licensed='" + checkedListBoxLicensed.Text + "'," +
-                    "LicenseNo='" + textBoxLicenseNo.Text + "'," +
-                    "BankName='" + textBoxBankName.Text + "'," +
-                    "BankAccountNo='" + textBoxBankAccountNo.Text + "'," +
-                    "BankAddress='" + textBoxBankAddress.Text + "' where SPhoneNo=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Updated Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Updated");
-            }
-            connection.Close();
+        
         }
 
         private void buttonDELETE_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                OleDbCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.Text;
-                command.CommandText = "delete from Supplier where SPhoneNo=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Deleted");
-            }
-            connection.Close();
+           
         }
     }
 }

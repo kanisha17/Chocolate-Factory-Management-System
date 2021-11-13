@@ -30,44 +30,46 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
+            this.labelPhoneNo = new System.Windows.Forms.Label();
             this.labelCustomer = new System.Windows.Forms.Label();
             this.linkLabelNewRegister = new System.Windows.Forms.LinkLabel();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(417, 234);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSearch.Location = new System.Drawing.Point(643, 380);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(276, 75);
+            this.buttonSearch.Size = new System.Drawing.Size(239, 62);
             this.buttonSearch.TabIndex = 0;
-            this.buttonSearch.Text = "SEARCH";
+            this.buttonSearch.Text = "SUBMIT";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // textBoxSearch
+            // textBoxPhoneNo
             // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(717, 273);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(344, 36);
-            this.textBoxSearch.TabIndex = 5;
+            this.textBoxPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(643, 273);
+            this.textBoxPhoneNo.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(344, 36);
+            this.textBoxPhoneNo.TabIndex = 5;
             // 
-            // label3
+            // labelPhoneNo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(724, 234);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(272, 23);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Enter Customer Phone No";
+            this.labelPhoneNo.AutoSize = true;
+            this.labelPhoneNo.BackColor = System.Drawing.Color.Transparent;
+            this.labelPhoneNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPhoneNo.Location = new System.Drawing.Point(499, 286);
+            this.labelPhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPhoneNo.Name = "labelPhoneNo";
+            this.labelPhoneNo.Size = new System.Drawing.Size(107, 23);
+            this.labelPhoneNo.TabIndex = 6;
+            this.labelPhoneNo.Text = "Phone No";
             // 
             // labelCustomer
             // 
@@ -86,14 +88,32 @@ namespace Chocolate_Factory_Management_System
             // 
             this.linkLabelNewRegister.AutoSize = true;
             this.linkLabelNewRegister.BackColor = System.Drawing.Color.White;
-            this.linkLabelNewRegister.Location = new System.Drawing.Point(617, 407);
+            this.linkLabelNewRegister.Location = new System.Drawing.Point(639, 490);
             this.linkLabelNewRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelNewRegister.Name = "linkLabelNewRegister";
-            this.linkLabelNewRegister.Size = new System.Drawing.Size(305, 23);
+            this.linkLabelNewRegister.Size = new System.Drawing.Size(321, 23);
             this.linkLabelNewRegister.TabIndex = 8;
             this.linkLabelNewRegister.TabStop = true;
-            this.linkLabelNewRegister.Text = "New Customer Register Here";
+            this.linkLabelNewRegister.Text = "Not Registered Yet? Click Here";
             this.linkLabelNewRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNewRegister_LinkClicked);
+            // 
+            // labelFullName
+            // 
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.BackColor = System.Drawing.Color.Transparent;
+            this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelFullName.Location = new System.Drawing.Point(499, 224);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(111, 23);
+            this.labelFullName.TabIndex = 9;
+            this.labelFullName.Text = "Full Name";
+            // 
+            // textBoxFullName
+            // 
+            this.textBoxFullName.Location = new System.Drawing.Point(643, 216);
+            this.textBoxFullName.Name = "textBoxFullName";
+            this.textBoxFullName.Size = new System.Drawing.Size(344, 31);
+            this.textBoxFullName.TabIndex = 10;
             // 
             // CustomerSearch
             // 
@@ -102,13 +122,15 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1307, 610);
+            this.Controls.Add(this.textBoxFullName);
+            this.Controls.Add(this.labelFullName);
             this.Controls.Add(this.linkLabelNewRegister);
             this.Controls.Add(this.labelCustomer);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxSearch);
+            this.Controls.Add(this.labelPhoneNo);
+            this.Controls.Add(this.textBoxPhoneNo);
             this.Controls.Add(this.buttonSearch);
             this.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerSearch";
             this.Text = "CustomerSearch";
             this.ResumeLayout(false);
@@ -119,9 +141,11 @@ namespace Chocolate_Factory_Management_System
         #endregion
 
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxPhoneNo;
+        private System.Windows.Forms.Label labelPhoneNo;
         private System.Windows.Forms.Label labelCustomer;
         private System.Windows.Forms.LinkLabel linkLabelNewRegister;
+        private System.Windows.Forms.Label labelFullName;
+        private System.Windows.Forms.TextBox textBoxFullName;
     }
 }

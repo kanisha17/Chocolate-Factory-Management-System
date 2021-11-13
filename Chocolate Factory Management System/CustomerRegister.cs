@@ -109,6 +109,10 @@ namespace Chocolate_Factory_Management_System
 
                 connection.Close();
                 MessageBox.Show("Data Saved Successfully");
+
+                CustomerSearch f2 = new CustomerSearch();
+                f2.Show();
+                this.Hide();
             }
             catch
             {

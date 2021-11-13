@@ -140,7 +140,7 @@ namespace Chocolate_Factory_Management_System
 
         private void rEGISTRATIONToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            SupplierRegister s1 = new SupplierRegister();
+            SupplierSearch s1 = new SupplierSearch();
             s1.ShowDialog();
         }
 

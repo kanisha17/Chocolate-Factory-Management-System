@@ -48,8 +48,8 @@ namespace Chocolate_Factory_Management_System
             this.labelPaid = new System.Windows.Forms.Label();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.labelSO = new System.Windows.Forms.Label();
-            this.labelCID = new System.Windows.Forms.Label();
-            this.textBoxCID = new System.Windows.Forms.TextBox();
+            this.labelCustomerName = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelFinalCost = new System.Windows.Forms.Label();
             this.labelTotalCost = new System.Windows.Forms.Label();
             this.textBoxFinalCost = new System.Windows.Forms.TextBox();
@@ -279,24 +279,25 @@ namespace Chocolate_Factory_Management_System
             this.labelSO.TabIndex = 39;
             this.labelSO.Text = "SALES ORDER";
             // 
-            // labelCID
+            // labelCustomerName
             // 
-            this.labelCID.AutoSize = true;
-            this.labelCID.BackColor = System.Drawing.Color.Transparent;
-            this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCID.Location = new System.Drawing.Point(1036, 50);
-            this.labelCID.Name = "labelCID";
-            this.labelCID.Size = new System.Drawing.Size(66, 31);
-            this.labelCID.TabIndex = 40;
-            this.labelCID.Text = "CID";
+            this.labelCustomerName.AutoSize = true;
+            this.labelCustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.labelCustomerName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomerName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelCustomerName.Location = new System.Drawing.Point(13, 100);
+            this.labelCustomerName.Name = "labelCustomerName";
+            this.labelCustomerName.Size = new System.Drawing.Size(239, 31);
+            this.labelCustomerName.TabIndex = 40;
+            this.labelCustomerName.Text = "Customer Name";
             // 
-            // textBoxCID
+            // textBoxName
             // 
-            this.textBoxCID.Location = new System.Drawing.Point(1119, 50);
-            this.textBoxCID.Name = "textBoxCID";
-            this.textBoxCID.Size = new System.Drawing.Size(143, 31);
-            this.textBoxCID.TabIndex = 41;
+            this.textBoxName.Location = new System.Drawing.Point(292, 100);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(300, 31);
+            this.textBoxName.TabIndex = 41;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelFinalCost
             // 
@@ -328,6 +329,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxFinalCost.Name = "textBoxFinalCost";
             this.textBoxFinalCost.Size = new System.Drawing.Size(300, 31);
             this.textBoxFinalCost.TabIndex = 7;
+            this.textBoxFinalCost.TextChanged += new System.EventHandler(this.textBoxFinalCost_TextChanged);
             // 
             // textBoxTotalCost
             // 
@@ -335,6 +337,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxTotalCost.Name = "textBoxTotalCost";
             this.textBoxTotalCost.Size = new System.Drawing.Size(300, 31);
             this.textBoxTotalCost.TabIndex = 6;
+            this.textBoxTotalCost.TextChanged += new System.EventHandler(this.textBoxTotalCost_TextChanged);
             // 
             // textBoxTax
             // 
@@ -433,8 +436,8 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxFinalCost);
             this.Controls.Add(this.labelTotalCost);
             this.Controls.Add(this.labelFinalCost);
-            this.Controls.Add(this.textBoxCID);
-            this.Controls.Add(this.labelCID);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.labelCustomerName);
             this.Controls.Add(this.labelSO);
             this.Controls.Add(this.textBoxPaid);
             this.Controls.Add(this.labelPaid);
@@ -489,8 +492,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelPaid;
         private System.Windows.Forms.TextBox textBoxPaid;
         private System.Windows.Forms.Label labelSO;
-        private System.Windows.Forms.Label labelCID;
-        private System.Windows.Forms.TextBox textBoxCID;
+        private System.Windows.Forms.Label labelCustomerName;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelFinalCost;
         private System.Windows.Forms.Label labelTotalCost;
         private System.Windows.Forms.TextBox textBoxFinalCost;

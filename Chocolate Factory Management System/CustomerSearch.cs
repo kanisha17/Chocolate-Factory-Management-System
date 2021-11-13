@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+
 namespace Chocolate_Factory_Management_System
 {
     public partial class CustomerSearch : Form
@@ -25,24 +26,32 @@ namespace Chocolate_Factory_Management_System
         {
             connection.Open();
             OleDbCommand c1 = new OleDbCommand("select PhoneNo from Customer where PhoneNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
+            c1.Parameters.AddWithValue("@parm1", textBoxPhoneNo.Text);
             OleDbDataReader reader1;
             reader1 = c1.ExecuteReader();
             if (reader1.Read())
             {
-                textBoxSearch.Text = reader1["PhoneNo"].ToString();
+                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 MessageBox.Show("Data Found");
 
-                SalesOrder s1 = new SalesOrder();
+                SalesOrder s1 = new SalesOrder(textBoxFullName.Text);
                 s1.ShowDialog();
+
             }
             else
             {
                 MessageBox.Show("Data Not Found");
             }
             connection.Close();
+
+            resetControls();
         }
 
+        void resetControls()
+        {
+            textBoxFullName.Clear();
+            textBoxPhoneNo.Clear();
+        }
         private void labelRegister_Click(object sender, EventArgs e)
         {
 
