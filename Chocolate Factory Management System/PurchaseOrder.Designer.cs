@@ -29,6 +29,7 @@ namespace Chocolate_Factory_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseOrder));
             this.labelSubTotal = new System.Windows.Forms.Label();
             this.labelUnitPrice = new System.Windows.Forms.Label();
             this.labelQuantitykg = new System.Windows.Forms.Label();
@@ -62,6 +63,8 @@ namespace Chocolate_Factory_Management_System
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonClearTable = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -191,6 +194,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dataGridViewPurchaseOrder
             // 
+            this.dataGridViewPurchaseOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPurchaseOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPurchaseOrder.Location = new System.Drawing.Point(16, 439);
             this.dataGridViewPurchaseOrder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -199,6 +203,7 @@ namespace Chocolate_Factory_Management_System
             this.dataGridViewPurchaseOrder.RowTemplate.Height = 28;
             this.dataGridViewPurchaseOrder.Size = new System.Drawing.Size(1276, 177);
             this.dataGridViewPurchaseOrder.TabIndex = 31;
+            this.dataGridViewPurchaseOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPurchaseOrder_CellContentClick);
             // 
             // labelDiscount
             // 
@@ -359,12 +364,12 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(1162, 344);
+            this.buttonPrint.Location = new System.Drawing.Point(1155, 344);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(130, 38);
-            this.buttonPrint.TabIndex = 58;
+            this.buttonPrint.Size = new System.Drawing.Size(137, 38);
+            this.buttonPrint.TabIndex = 63;
             this.buttonPrint.Text = "PRINT";
-            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonInsert
             // 
@@ -374,6 +379,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonInsert.TabIndex = 59;
             this.buttonInsert.Text = "INSERT";
             this.buttonInsert.UseVisualStyleBackColor = true;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonReset
             // 
@@ -404,6 +410,20 @@ namespace Chocolate_Factory_Management_System
             this.buttonClearTable.Text = "ClearTable";
             this.buttonClearTable.UseVisualStyleBackColor = true;
             this.buttonClearTable.Click += new System.EventHandler(this.buttonClearTable_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // PurchaseOrder
             // 
@@ -493,5 +513,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonClearTable;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

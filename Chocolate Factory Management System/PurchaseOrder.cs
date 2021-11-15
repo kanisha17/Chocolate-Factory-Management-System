@@ -148,6 +148,7 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show("Error");
             }
+            getInvoiceID();
         }
 
         private void buttonCALCULATE_Click(object sender, EventArgs e)
@@ -263,25 +264,26 @@ namespace Chocolate_Factory_Management_System
         }
         void resetControls()
         {
-            textBoxChange.Clear();
             textBoxDiscount.Clear();
-            textBoxFinalCost.Clear();
-            
-            textBoxPaid.Clear();
             textBoxQuantitykg.Clear();
             textBoxSubTotal.Clear();
             textBoxTax.Clear();
             textBoxTotalCost.Clear();
             textBoxUnitPrice.Clear();
-
             textBoxQuantitykg.Enabled = false;
-            
         }
         private void buttonAdd_Click_1(object sender, EventArgs e)
         {
-            addDataToGridView((++SrNo).ToString(), comboBoxProductName.SelectedItem.ToString(), textBoxUnitPrice.Text, textBoxQuantitykg.Text, textBoxDiscount.Text, textBoxSubTotal.Text, textBoxTax.Text, textBoxTotalCost.Text);
-            resetControls();
-            calculateFinalCost();
+            if (comboBoxProductName.SelectedItem != null)
+            {
+                addDataToGridView((++SrNo).ToString(), comboBoxProductName.SelectedItem.ToString(), textBoxUnitPrice.Text, textBoxQuantitykg.Text, textBoxDiscount.Text, textBoxSubTotal.Text, textBoxTax.Text, textBoxTotalCost.Text);
+                resetControls();
+                calculateFinalCost();
+            }
+            else
+            {
+                MessageBox.Show("Please Select An Item");
+            }
         }
         void addDataToGridView(string Sr_No, string Item_Name, string Unit_Price, string Quantity, string Discount, string Sub_Total, string Tax, string Total_Cost)
         {
@@ -292,7 +294,9 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            resetControls();
+            textBoxChange.Clear();
+            textBoxPaid.Clear();
+            textBoxFinalCost.Clear();
         }
 
         private void buttonClearTable_Click(object sender, EventArgs e)
@@ -300,5 +304,186 @@ namespace Chocolate_Factory_Management_System
             dataGridViewPurchaseOrder.Rows.Clear();
             SrNo = 0;
         }
+        void getInvoiceID()
+        {
+
+            // command.connection.Open();
+            string sql;
+            string query = "select InvoiceID from PurchaseOrder order by InvoiceID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
+            connection.Close();
+            textBoxInvoiceID.Text = sql.ToString();
+
+        }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                OleDbCommand command;
+
+                connection.Open();
+                command = new OleDbCommand("insert into PurchaseOrder(InvoiceID,ProductName,PDate,FinalCost) " +
+                    "values(@invoiceid,@name,@date,@finalcost)", connection);
+
+                command.Parameters.AddWithValue("@invoiceid", textBoxInvoiceID.Text);
+                command.Parameters.AddWithValue("@name", textBoxName.Text);
+                command.Parameters.AddWithValue("@date", DateTime.Now.ToString());
+                command.Parameters.AddWithValue("@finalcost", textBoxFinalCost.Text);
+                //int a= command.ExecuteNonQuery();
+
+                command.ExecuteNonQuery();
+
+                resetControls();
+                connection.Close();
+                MessageBox.Show("Inserted Successfully");
+                getInvoiceID();
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Insertion Failed");
+            }
+        }
+
+        private void dataGridViewPurchaseOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("PURCHASE INVOICE", new Font("Lucida Bright", 30, FontStyle.Bold), Brushes.Blue, new Point(200, 50));
+            e.Graphics.DrawString("Invoice ID : " + textBoxInvoiceID.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 150));
+            e.Graphics.DrawString("Name : " + textBoxName.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
+            e.Graphics.DrawString("Date : " + DateTime.Now.ToShortDateString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
+            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 280));
+            e.Graphics.DrawString("ITEM NAME", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 300));
+            e.Graphics.DrawString("QUANTITY", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(270, 300));
+            e.Graphics.DrawString("DISCOUNT", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(450, 300));
+            e.Graphics.DrawString("UNIT PRICE", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 300));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 320));
+
+            int gap = 350;
+            if (dataGridViewPurchaseOrder.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+                {
+                    try
+                    {
+                        e.Graphics.DrawString(dataGridViewPurchaseOrder.Rows[i].Cells[1].Value.ToString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, gap));
+                        gap = gap + 30;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+            }
+
+            int gap1 = 350;
+            if (dataGridViewPurchaseOrder.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+                {
+                    try
+                    {
+                        e.Graphics.DrawString(dataGridViewPurchaseOrder.Rows[i].Cells[3].Value.ToString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(330, gap1));
+                        gap1 = gap1 + 30;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+            }
+
+            int gap2 = 350;
+            if (dataGridViewPurchaseOrder.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+                {
+                    try
+                    {
+                        e.Graphics.DrawString(dataGridViewPurchaseOrder.Rows[i].Cells[4].Value.ToString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(480, gap2));
+                        gap2 = gap2 + 30;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+            }
+
+            int gap3 = 350;
+            if (dataGridViewPurchaseOrder.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+                {
+                    try
+                    {
+                        e.Graphics.DrawString(dataGridViewPurchaseOrder.Rows[i].Cells[2].Value.ToString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(670, gap3));
+                        gap3 = gap3 + 30;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+            }
+            int SubTotalPrint = 0;
+            for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+            {
+                SubTotalPrint = SubTotalPrint + Convert.ToInt32(dataGridViewPurchaseOrder.Rows[i].Cells[5].Value);
+
+            }
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 800));
+            e.Graphics.DrawString("Sub Total : " + SubTotalPrint.ToString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 900));
+            int TaxPrint = 0;
+            for (int i = 0; i < dataGridViewPurchaseOrder.Rows.Count; i++)
+            {
+                TaxPrint = TaxPrint + Convert.ToInt32(dataGridViewPurchaseOrder.Rows[i].Cells[6].Value);
+
+            }
+            e.Graphics.DrawString("Tax : " + TaxPrint.ToString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 930));
+            e.Graphics.DrawString("Final Amount : " + textBoxFinalCost.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 960));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 980));
+            e.Graphics.DrawString("Amount Paid : " + textBoxPaid.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 1000));
+            e.Graphics.DrawString("Change : " + textBoxChange.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 1030));
+            //e.Graphics.DrawString("Final Cost", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 960));
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+    
     }
 }
