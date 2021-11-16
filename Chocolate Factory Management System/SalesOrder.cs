@@ -32,7 +32,7 @@ namespace Chocolate_Factory_Management_System
             dataGridViewSaleOrder.Columns[6].Name = "Tax";
             dataGridViewSaleOrder.Columns[7].Name = "Total Cost";
 
-            textBoxName.Text = str_value;
+            textBoxPhoneNo.Text = str_value;
         }
 
         int finalcost = 0;
@@ -40,6 +40,7 @@ namespace Chocolate_Factory_Management_System
         int t = 0;
         private void SalesOrder_Load(object sender, EventArgs e)
         {
+            getInvoiceID();
             try
             {
                 connection.Open();
@@ -58,7 +59,27 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show("Error");
             }
-            getInvoiceID();
+
+            try
+            {
+                connection.Open();
+                OleDbCommand c1 = new OleDbCommand("select CustomerName from Customer where PhoneNo=@param", connection);
+                c1.Parameters.AddWithValue("@param", textBoxPhoneNo.Text);
+                OleDbDataReader reader1;
+                reader1 = c1.ExecuteReader();
+                if (reader1.Read())
+                {
+                    textBoxName.Text = reader1["CustomerName"].ToString();
+                  
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
+                }
+                connection.Close();
+            }
+            catch
+            { }
         }
 
         private void dataGridViewSaleOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -265,7 +286,6 @@ namespace Chocolate_Factory_Management_System
         }
         void resetControls()
         {
-            textBoxChange.Clear();
             textBoxDiscount.Clear();
             textBoxQuantity.Clear();
             textBoxSubTotal.Clear();
@@ -507,6 +527,11 @@ namespace Chocolate_Factory_Management_System
         }
 
         private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInvoiceNo_TextChanged(object sender, EventArgs e)
         {
 
         }

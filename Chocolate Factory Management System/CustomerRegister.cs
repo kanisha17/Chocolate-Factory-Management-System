@@ -24,7 +24,7 @@ namespace Chocolate_Factory_Management_System
 
         private void CustomerRegister_Load(object sender, EventArgs e)
         {
-
+            getCustomerID();
         }
       
         private void buttonClose_Click(object sender, EventArgs e)
@@ -53,15 +53,7 @@ namespace Chocolate_Factory_Management_System
 
         private void pRINTToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            textBoxCID.Clear();
-            textBoxcAddress.Clear();
-            textBoxcCity.Clear();
-            textBoxcEmail.Clear();
-            textBoxcPhone.Clear();
-            textBoxcPincode.Clear();
-            textBoxCustomerName.Clear();
            
-            MessageBox.Show("Data Cleared");
         }
 
       
@@ -90,33 +82,32 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            
 
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Customer(CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
-
+                command = new OleDbCommand("insert into Customer(CustomerID,CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customerID,@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
+                command.Parameters.AddWithValue("@customerID", textBoxCID.Text);
                 command.Parameters.AddWithValue("@customername", textBoxCustomerName.Text);
                 command.Parameters.AddWithValue("@dob", dateTimePickercDOB.Text);
                 command.Parameters.AddWithValue("@address", textBoxcAddress.Text);
                 command.Parameters.AddWithValue("@city", textBoxcCity.Text);
-
                 command.Parameters.AddWithValue("@pincode", textBoxcPincode.Text);
                 command.Parameters.AddWithValue("@phone", textBoxcPhone.Text);
                 command.Parameters.AddWithValue("@email", textBoxcEmail.Text);
-
                 command.ExecuteNonQuery();
-
+                resetControls();
                 connection.Close();
-                MessageBox.Show("Data Saved Successfully");
+               
+                MessageBox.Show("Registered Successfully");
 
-                CustomerSearch f2 = new CustomerSearch();
-                f2.Show();
-                this.Hide();
+                CustomerSearch s1 = new CustomerSearch();
+                s1.ShowDialog();
             }
             catch
             {
-                MessageBox.Show("Data Not Saved".ToString());
+                MessageBox.Show("Registration Failed");
             }
         }
 
@@ -130,5 +121,53 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        void getCustomerID()
+        {
+            string sql;
+            string query = "select CustomerID from Customer order by CustomerID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
+            connection.Close();
+            textBoxCID.Text = sql.ToString();
+
+     }
+        void resetControls()
+        {
+            textBoxcAddress.Clear();
+            textBoxcCity.Clear();
+            textBoxcEmail.Clear();
+            textBoxcPhone.Clear();
+            textBoxcPincode.Clear();
+            textBoxCustomerName.Clear();
+        }
+
+        private void textBoxcPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxcPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
     }
-    }
+}

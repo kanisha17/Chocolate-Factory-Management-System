@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class PurchaseOrder : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+       // OleDbCommand command;
 
 
         public PurchaseOrder(string str_value)

@@ -138,12 +138,6 @@
       <DependentUpon>CustomerReportREG.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomerSalesOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerSalesOrder.Designer.cs">
-      <DependentUpon>CustomerSalesOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomerSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +191,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeSalaryReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmployeeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeSearch.Designer.cs">
+      <DependentUpon>EmployeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeUpdate.Designer.cs">
+      <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="ManufacturingProcess.cs">
       <SubType>Form</SubType>
@@ -421,9 +427,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CustomerReportREG.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerSalesOrder.resx">
-      <DependentUpon>CustomerSalesOrder.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerSearch.resx">
       <DependentUpon>CustomerSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -453,6 +456,12 @@
     <EmbeddedResource Include="EmployeeSalaryReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EmployeeSalaryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeSearch.resx">
+      <DependentUpon>EmployeeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUpdate.resx">
+      <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManufacturingProcess.resx">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>

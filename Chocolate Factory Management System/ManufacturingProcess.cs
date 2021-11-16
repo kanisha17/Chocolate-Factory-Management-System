@@ -15,7 +15,7 @@ namespace Chocolate_Factory_Management_System
     public partial class ManufacturingProcess : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+      //  OleDbCommand command;
 
         public ManufacturingProcess()
         {

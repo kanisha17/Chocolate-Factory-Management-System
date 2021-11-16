@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class DeliveryProcess : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+       // OleDbCommand command;
         public DeliveryProcess()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Chocolate_Factory_Management_System
 
         private void DeliveryProcess_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void labelDeliveryProcess_Click(object sender, EventArgs e)
@@ -34,32 +34,29 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("insert into DeliveryProcess(DeliverTo,Address,City,Pincode,PhoneNo,ReceiptNo) " +
-                    "values(@deliverto,@address,@city,@pincode,@phoneno,@receiptno)", connection);
 
-
-                command.Parameters.AddWithValue("@deliverto", textBoxDeliverTo.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@city", textBoxCity.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
-                command.Parameters.AddWithValue("@receiptno", textBoxReceiptNo.Text);
-             
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Data Saved Successfully");
-            }
-            catch
-            {
-                MessageBox.Show("Data Not Saved".ToString());
-            }
+           
         }
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+            
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+        void resetControls()
         {
             textBoxAddress.Clear();
             textBoxCity.Clear();
@@ -70,14 +67,6 @@ namespace Chocolate_Factory_Management_System
             textBoxSearch.Clear();
             textBoxReceiptNo.Clear();
             checkBoxCash.ResetText();
-            
-        }
-
-        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 f2 = new Form2();
-            f2.Show();
-            this.Hide();
         }
     }
 }

@@ -43,14 +43,10 @@ namespace Chocolate_Factory_Management_System
             this.labelDate = new System.Windows.Forms.Label();
             this.buttonSUBMIT = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelEnquiryForm = new System.Windows.Forms.Label();
-            this.buttonSEARCH = new System.Windows.Forms.Button();
-            this.labelToSearch = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
             this.labelCID = new System.Windows.Forms.Label();
-            this.textBoxsearch = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,19 +159,12 @@ namespace Chocolate_Factory_Management_System
             // comboBoxProduct
             // 
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Items.AddRange(new object[] {
-            "Choco Bar",
-            "Choco Charms",
-            "Choco Delight",
-            "King Candy",
-            "Milky Goodness",
-            "Sugar Candy",
-            "Sugar And Smiles"});
             this.comboBoxProduct.Location = new System.Drawing.Point(705, 429);
             this.comboBoxProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxProduct.Name = "comboBoxProduct";
             this.comboBoxProduct.Size = new System.Drawing.Size(403, 31);
             this.comboBoxProduct.TabIndex = 11;
+            this.comboBoxProduct.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduct_SelectedIndexChanged);
             // 
             // labelDate
             // 
@@ -210,7 +199,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -218,15 +206,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1286, 42);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cLEARToolStripMenuItem
-            // 
-            this.cLEARToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.cLEARToolStripMenuItem.Text = "CLEAR";
-            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -251,35 +230,10 @@ namespace Chocolate_Factory_Management_System
             this.labelEnquiryForm.TabIndex = 15;
             this.labelEnquiryForm.Text = "ENQUIRY FORM";
             // 
-            // buttonSEARCH
-            // 
-            this.buttonSEARCH.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.buttonSEARCH.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSEARCH.Location = new System.Drawing.Point(17, 94);
-            this.buttonSEARCH.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonSEARCH.Name = "buttonSEARCH";
-            this.buttonSEARCH.Size = new System.Drawing.Size(166, 62);
-            this.buttonSEARCH.TabIndex = 16;
-            this.buttonSEARCH.Text = "SEARCH";
-            this.buttonSEARCH.UseVisualStyleBackColor = false;
-            this.buttonSEARCH.Click += new System.EventHandler(this.buttonSEARCH_Click);
-            // 
-            // labelToSearch
-            // 
-            this.labelToSearch.AutoSize = true;
-            this.labelToSearch.BackColor = System.Drawing.Color.Transparent;
-            this.labelToSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelToSearch.Location = new System.Drawing.Point(196, 99);
-            this.labelToSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelToSearch.Name = "labelToSearch";
-            this.labelToSearch.Size = new System.Drawing.Size(166, 23);
-            this.labelToSearch.TabIndex = 17;
-            this.labelToSearch.Text = "Enter Phone No";
-            // 
             // textBoxCID
             // 
             this.textBoxCID.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCID.Location = new System.Drawing.Point(172, 581);
+            this.textBoxCID.Location = new System.Drawing.Point(239, 216);
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(100, 29);
             this.textBoxCID.TabIndex = 19;
@@ -290,18 +244,11 @@ namespace Chocolate_Factory_Management_System
             this.labelCID.BackColor = System.Drawing.Color.Transparent;
             this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCID.Location = new System.Drawing.Point(1, 583);
+            this.labelCID.Location = new System.Drawing.Point(68, 218);
             this.labelCID.Name = "labelCID";
             this.labelCID.Size = new System.Drawing.Size(165, 27);
             this.labelCID.TabIndex = 20;
             this.labelCID.Text = "Customer ID";
-            // 
-            // textBoxsearch
-            // 
-            this.textBoxsearch.Location = new System.Drawing.Point(200, 125);
-            this.textBoxsearch.Name = "textBoxsearch";
-            this.textBoxsearch.Size = new System.Drawing.Size(162, 31);
-            this.textBoxsearch.TabIndex = 21;
             // 
             // Enquiry
             // 
@@ -310,11 +257,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1286, 622);
-            this.Controls.Add(this.textBoxsearch);
             this.Controls.Add(this.labelCID);
             this.Controls.Add(this.textBoxCID);
-            this.Controls.Add(this.labelToSearch);
-            this.Controls.Add(this.buttonSEARCH);
             this.Controls.Add(this.labelEnquiryForm);
             this.Controls.Add(this.buttonSUBMIT);
             this.Controls.Add(this.labelDate);
@@ -336,6 +280,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "Enquiry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enquiry";
+            this.Load += new System.EventHandler(this.Enquiry_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -359,13 +304,9 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Button buttonSUBMIT;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelEnquiryForm;
-        private System.Windows.Forms.Button buttonSEARCH;
-        private System.Windows.Forms.Label labelToSearch;
         private System.Windows.Forms.TextBox textBoxCID;
         private System.Windows.Forms.Label labelCID;
-        private System.Windows.Forms.TextBox textBoxsearch;
     }
 }

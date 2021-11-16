@@ -30,7 +30,6 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentDate = new System.Windows.Forms.Label();
             this.labelEID = new System.Windows.Forms.Label();
@@ -42,6 +41,8 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxMark = new System.Windows.Forms.CheckedListBox();
             this.labeleattend = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
+            this.labelEmpName = new System.Windows.Forms.Label();
+            this.textBoxEmpName = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -61,14 +61,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // cLEARToolStripMenuItem
-            // 
-            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.cLEARToolStripMenuItem.Text = "CLEAR";
-            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -97,7 +89,7 @@ namespace Chocolate_Factory_Management_System
             this.labelEID.BackColor = System.Drawing.Color.Transparent;
             this.labelEID.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelEID.Location = new System.Drawing.Point(406, 194);
+            this.labelEID.Location = new System.Drawing.Point(406, 140);
             this.labelEID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEID.Name = "labelEID";
             this.labelEID.Size = new System.Drawing.Size(225, 36);
@@ -118,7 +110,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxEID
             // 
-            this.textBoxEID.Location = new System.Drawing.Point(675, 194);
+            this.textBoxEID.Location = new System.Drawing.Point(675, 140);
             this.textBoxEID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(355, 31);
@@ -191,12 +183,30 @@ namespace Chocolate_Factory_Management_System
             this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labelEmpName
+            // 
+            this.labelEmpName.AutoSize = true;
+            this.labelEmpName.Location = new System.Drawing.Point(408, 204);
+            this.labelEmpName.Name = "labelEmpName";
+            this.labelEmpName.Size = new System.Drawing.Size(175, 23);
+            this.labelEmpName.TabIndex = 25;
+            this.labelEmpName.Text = "Employee Name";
+            // 
+            // textBoxEmpName
+            // 
+            this.textBoxEmpName.Location = new System.Drawing.Point(675, 196);
+            this.textBoxEmpName.Name = "textBoxEmpName";
+            this.textBoxEmpName.Size = new System.Drawing.Size(355, 31);
+            this.textBoxEmpName.TabIndex = 26;
+            // 
             // EmployeeAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color12;
             this.ClientSize = new System.Drawing.Size(1314, 565);
+            this.Controls.Add(this.textBoxEmpName);
+            this.Controls.Add(this.labelEmpName);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.labeleattend);
             this.Controls.Add(this.checkedListBoxMark);
@@ -214,6 +224,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "EmployeeAttendance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeAttendance";
+            this.Load += new System.EventHandler(this.EmployeeAttendance_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -223,7 +234,6 @@ namespace Chocolate_Factory_Management_System
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelCurrentDate;
         private System.Windows.Forms.Label labelEID;
@@ -235,5 +245,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.CheckedListBox checkedListBoxMark;
         private System.Windows.Forms.Label labeleattend;
         private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Label labelEmpName;
+        private System.Windows.Forms.TextBox textBoxEmpName;
     }
 }

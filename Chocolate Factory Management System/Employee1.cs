@@ -20,7 +20,7 @@ namespace Chocolate_Factory_Management_System
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
-
+          
         }
 
 
@@ -75,30 +75,16 @@ namespace Chocolate_Factory_Management_System
         {
           
         }
-
+      
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxEID.Clear();
-            textBoxSearch.Clear();
-            textBoxEmployeeName.Clear();
-            comboBoxDepartment.ResetText();
-            textBoxAddress.Clear();
-            textBoxPincode.Clear();
-            textBoxCity.Clear();
-            textBoxState.Clear();
-            textBoxPhone.Clear();
-            textBoxEmail.Clear();
-            textBoxQualification.Clear();
-            MessageBox.Show("Data Cleared");
+            
         }
     
 
         private void pRINTToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
-            {
-                printDocument1.Print();
-            }
+         
         }
 
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,7 +100,7 @@ namespace Chocolate_Factory_Management_System
 
         private void vIEWToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+          EmployeeSearch f2 = new EmployeeSearch();
             f2.Show();
             this.Hide();
 
@@ -122,42 +108,43 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification from EmployeeDetails where EID=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxEID.Text = reader1["EID"].ToString();
-                textBoxEmployeeName.Text = reader1["EmployeeName"].ToString();
-                comboBoxDepartment.Text = reader1["Department"].ToString();
-                dateTimePickerDOB.Text = reader1["DOB"].ToString();
-                comboBoxGender.Text = reader1["Gender"].ToString();
-                textBoxAddress.Text = reader1["Address"].ToString();
-                textBoxPincode.Text = reader1["Pincode"].ToString();
-                textBoxCity.Text = reader1["City"].ToString();
-                textBoxState.Text = reader1["State"].ToString();
-                textBoxPhone.Text = reader1["Phone"].ToString();
-                textBoxEmail.Text = reader1["Email"].ToString();
-                textBoxQualification.Text = reader1["Qualification"].ToString();
-                MessageBox.Show("Data Found");
-            }
-            else
-            {
-                MessageBox.Show("Data Not Found");
-            }
-            connection.Close();
+           
         }
 
         private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
         }
+        void getEmployeeID()
+        {
+            string sql;
+            string query = "select EID from EmployeeDetails order by EID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
 
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
+            connection.Close();
+            textBoxEID.Text = sql.ToString();
+        }
         private void Employee1_Load(object sender, EventArgs e)
         {
-
+            getEmployeeID();
         }
 
         private void buttonADD_Click(object sender, EventArgs e)
@@ -166,9 +153,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into EmployeeDetails(EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,Phone,Email,Qualification,DateOfJoining) " +
-                    "values(@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
-                // command.Parameters.AddWithValue("@eid", textBoxEID.Text);
+                command = new OleDbCommand("insert into EmployeeDetails(EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,PhoneNo,Email,Qualification,DateOfJoining) " +
+                    "values(@eid,@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
+                command.Parameters.AddWithValue("@eid", textBoxEID.Text);
                 command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
                 command.Parameters.AddWithValue("@department", comboBoxDepartment.Text);
                 command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
@@ -183,8 +170,9 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@joiningdate", dateTimePickerJoining.Text);
 
                 command.ExecuteNonQuery();
-
+               
                 connection.Close();
+                
                 MessageBox.Show("Data Saved Successfully");
             }
             catch 
@@ -195,50 +183,20 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonEDIT_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
-                    "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
-                    "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
-                    "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',Phone='" + textBoxPhone.Text + "'," +
-                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" + textBoxSearch.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Updated Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Updated");
-            }
-            connection.Close();
+           
         }
 
         private void buttonDELETE_Click(object sender, EventArgs e)
         {
-            try
-            {
+          
+        }
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from EmployeeDetails where EID=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch 
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Data Not Deleted");
+                printDocument1.Print();
             }
-            connection.Close();
         }
     }
 }

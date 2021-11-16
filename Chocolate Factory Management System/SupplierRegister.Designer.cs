@@ -56,7 +56,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxBankAddress = new System.Windows.Forms.TextBox();
             this.dateTimePickersDOB = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelBusinessType = new System.Windows.Forms.Label();
             this.textBoxBusinessType = new System.Windows.Forms.TextBox();
@@ -346,7 +345,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hOMEToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -354,15 +352,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1308, 42);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // hOMEToolStripMenuItem
-            // 
-            this.hOMEToolStripMenuItem.BackColor = System.Drawing.Color.LightGray;
-            this.hOMEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.hOMEToolStripMenuItem.Text = "CLEAR";
-            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -610,7 +599,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxBankAddress;
         private System.Windows.Forms.DateTimePicker dateTimePickersDOB;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.Label labelBusinessType;
         private System.Windows.Forms.TextBox textBoxBusinessType;
         private System.Windows.Forms.Label labelLicense;

@@ -26,27 +26,59 @@ namespace Chocolate_Factory_Management_System
         {
             Close();
         }
-      
 
+        void resetControls()
+        {
+           
+            textBoxAddress.Clear();
+            textBoxBankAccountNo.Clear();
+            textBoxBankAddress.Clear();
+            textBoxBankName.Clear();
+            textBoxBusinessType.Clear();
+            textBoxCity.Clear();
+            textBoxCompanyName.Clear();
+            textBoxEmail.Clear();
+            textBoxLicenseNo.Clear();
+            textBoxPhoneNo.Clear();
+            textBoxPincode.Clear();
+            textBoxState.Clear();
+            textBoxSupplierName.Clear();
+            checkedListBoxInsured.ResetText();
+            checkedListBoxLicensed.ResetText();
+            
+        }
+
+        void getSupplierID()
+        {
+            string sql;
+            string query = "select SupplierID from Supplier order by SupplierID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
+            connection.Close();
+            textBoxSID.Text = sql.ToString();
+
+        }
         private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           textBoxSID.Clear();
-           textBoxAddress.Clear();
-           textBoxBankAccountNo.Clear();
-           textBoxBankAddress.Clear();
-           textBoxBankName.Clear();
-           textBoxBusinessType.Clear();
-           textBoxCity.Clear();
-           textBoxCompanyName.Clear();
-           textBoxEmail.Clear();
-           textBoxLicenseNo.Clear();
-           textBoxPhoneNo.Clear();
-           textBoxPincode.Clear();
-           textBoxState.Clear();
-           textBoxSupplierName.Clear();
-           checkedListBoxInsured.ResetText();
-           checkedListBoxLicensed.ResetText();
-            MessageBox.Show("Data Cleared");
+          
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,7 +89,7 @@ namespace Chocolate_Factory_Management_System
 
         private void SupplierRegister_Load(object sender, EventArgs e)
         {
-
+            getSupplierID();
         }
 
      
@@ -91,7 +123,7 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+           SupplierSearch f2 = new SupplierSearch();
             f2.Show();
             this.Hide();
         }
@@ -116,8 +148,9 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Supplier(SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,SPhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
-                    "values(@suppliername,@companyname,@businesstype,@dob,@address,@pincode,@city,@state,@phoneno,@email,@insured,@licensed,@licenseno,@bankname,@bankaccountno,@bankaddress)", connection);
+                command = new OleDbCommand("insert into Supplier(SupplierID,SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,PhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
+                    "values(@sid,@suppliername,@companyname,@businesstype,@dob,@address,@pincode,@city,@state,@phoneno,@email,@insured,@licensed,@licenseno,@bankname,@bankaccountno,@bankaddress)", connection);
+                command.Parameters.AddWithValue("@sid", textBoxSID.Text);
                 command.Parameters.AddWithValue("@suppliername", textBoxSupplierName.Text);
                 command.Parameters.AddWithValue("@companyname", textBoxCompanyName.Text);
                 command.Parameters.AddWithValue("@businesstype", textBoxBusinessType.Text);
@@ -136,6 +169,7 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@bankaddress", textBoxBankAddress.Text);
 
                 command.ExecuteNonQuery();
+                resetControls();
                 connection.Close();
                 MessageBox.Show("Data Saved Successfully");
 

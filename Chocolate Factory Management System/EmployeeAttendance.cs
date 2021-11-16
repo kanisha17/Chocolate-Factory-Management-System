@@ -15,11 +15,11 @@ namespace Chocolate_Factory_Management_System
     {
         private OleDbConnection connection = new OleDbConnection();
         
-        public EmployeeAttendance()
+        public EmployeeAttendance(string str3)
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
-
+            textBoxEID.Text = str3;
         }
 
        
@@ -30,14 +30,18 @@ namespace Chocolate_Factory_Management_System
           
         }
 
-       
+        void resetControls()
+        {
+            textBoxEID.Clear();
+            textBoxEmpName.Clear();
+            checkedListBoxMark.ResetText();
+            textBoxReason.Clear();
+        }
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxEID.Clear();
-            checkedListBoxMark.ResetText();
-            textBoxReason.Clear();
-            MessageBox.Show("Data Cleared");
+            
+           
             
         }
 
@@ -45,7 +49,7 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            EmployeeSearch f2 = new EmployeeSearch();
             f2.Show();
             this.Hide();
         }
@@ -73,17 +77,39 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into EmployeeAttendance (EID,CurrentDate,Mark,Reason) " +
-                    "values('" + textBoxEID.Text + "','" + dateTimePickerCurrentDate.Value.Date + "','" + checkedListBoxMark.Text + "','" + textBoxReason.Text + "')";
+                command.CommandText = "insert into EmployeeAttendance (EID,EmployeeName,CurrentDate,Mark,Reason) " +
+                    "values('" + textBoxEID.Text + "','"+textBoxEmpName.Text+"','" + dateTimePickerCurrentDate.Value.Date + "','" + checkedListBoxMark.Text + "','" + textBoxReason.Text + "')";
 
 
                 command.ExecuteNonQuery();
+                resetControls();
                 MessageBox.Show("Data Saved Successfully");
 
+                EmployeeSearch s1 = new EmployeeSearch();
+                s1.ShowDialog();
             }
             catch 
             {
                 MessageBox.Show("Data Not Saved");
+            }
+            connection.Close();
+        }
+
+        private void EmployeeAttendance_Load(object sender, EventArgs e)
+        {
+            connection.Open();
+            OleDbCommand c1 = new OleDbCommand("select EID,EmployeeName from EmployeeDetails where EID=@param", connection);
+            c1.Parameters.AddWithValue("@param", textBoxEID.Text);
+            OleDbDataReader reader1;
+            reader1 = c1.ExecuteReader();
+            if (reader1.Read())
+            {
+                textBoxEID.Text = reader1["EID"].ToString();
+                textBoxEmpName.Text = reader1["EmployeeName"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("No Data Found");
             }
             connection.Close();
         }

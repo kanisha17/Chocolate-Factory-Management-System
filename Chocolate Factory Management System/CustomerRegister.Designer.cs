@@ -49,7 +49,6 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickercDOB = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCID = new System.Windows.Forms.TextBox();
@@ -199,6 +198,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcPhone.Name = "textBoxcPhone";
             this.textBoxcPhone.Size = new System.Drawing.Size(359, 31);
             this.textBoxcPhone.TabIndex = 16;
+            this.textBoxcPhone.TextChanged += new System.EventHandler(this.textBoxcPhone_TextChanged);
+            this.textBoxcPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxcPhone_KeyPress);
             // 
             // textBoxcEmail
             // 
@@ -249,7 +250,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pRINTToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -257,14 +257,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1314, 44);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.pRINTToolStripMenuItem.Text = "CLEAR";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click_1);
             // 
             // eXITToolStripMenuItem
             // 
@@ -280,7 +272,7 @@ namespace Chocolate_Factory_Management_System
             this.labelCID.BackColor = System.Drawing.Color.Transparent;
             this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCID.Location = new System.Drawing.Point(1039, 527);
+            this.labelCID.Location = new System.Drawing.Point(44, 110);
             this.labelCID.Name = "labelCID";
             this.labelCID.Size = new System.Drawing.Size(165, 27);
             this.labelCID.TabIndex = 28;
@@ -289,7 +281,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxCID
             // 
             this.textBoxCID.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCID.Location = new System.Drawing.Point(1210, 527);
+            this.textBoxCID.Location = new System.Drawing.Point(215, 98);
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(92, 31);
             this.textBoxCID.TabIndex = 29;
@@ -367,7 +359,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.DateTimePicker dateTimePickercDOB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelCID;
         private System.Windows.Forms.TextBox textBoxCID;

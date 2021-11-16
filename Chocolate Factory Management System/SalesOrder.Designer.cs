@@ -66,6 +66,8 @@ namespace Chocolate_Factory_Management_System
             this.buttonInsert = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.labelPhoneNo = new System.Windows.Forms.Label();
+            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -277,7 +279,7 @@ namespace Chocolate_Factory_Management_System
             this.labelSO.BackColor = System.Drawing.Color.Transparent;
             this.labelSO.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSO.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelSO.Location = new System.Drawing.Point(451, 50);
+            this.labelSO.Location = new System.Drawing.Point(394, 43);
             this.labelSO.Name = "labelSO";
             this.labelSO.Size = new System.Drawing.Size(364, 54);
             this.labelSO.TabIndex = 39;
@@ -369,6 +371,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxInvoiceNo.Name = "textBoxInvoiceNo";
             this.textBoxInvoiceNo.Size = new System.Drawing.Size(184, 31);
             this.textBoxInvoiceNo.TabIndex = 51;
+            this.textBoxInvoiceNo.TextChanged += new System.EventHandler(this.textBoxInvoiceNo_TextChanged);
             // 
             // labelInvoiceNo
             // 
@@ -447,6 +450,22 @@ namespace Chocolate_Factory_Management_System
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // labelPhoneNo
+            // 
+            this.labelPhoneNo.AutoSize = true;
+            this.labelPhoneNo.Location = new System.Drawing.Point(824, 81);
+            this.labelPhoneNo.Name = "labelPhoneNo";
+            this.labelPhoneNo.Size = new System.Drawing.Size(101, 23);
+            this.labelPhoneNo.TabIndex = 58;
+            this.labelPhoneNo.Text = "PhoneNo";
+            // 
+            // textBoxPhoneNo
+            // 
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(948, 73);
+            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(315, 31);
+            this.textBoxPhoneNo.TabIndex = 59;
+            // 
             // SalesOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -454,6 +473,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1275, 649);
+            this.Controls.Add(this.textBoxPhoneNo);
+            this.Controls.Add(this.labelPhoneNo);
             this.Controls.Add(this.buttonInsert);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonClearTable);
@@ -540,5 +561,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label labelPhoneNo;
+        private System.Windows.Forms.TextBox textBoxPhoneNo;
     }
 }

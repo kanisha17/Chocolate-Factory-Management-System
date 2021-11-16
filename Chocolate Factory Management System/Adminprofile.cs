@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class Adminprofile : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+       // OleDbCommand command;
         public Adminprofile()
         {
             InitializeComponent();
@@ -22,16 +22,6 @@ namespace Chocolate_Factory_Management_System
 
         }
         private void Adminprofile_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
         {
             connection.Open();
             OleDbCommand c1 = new OleDbCommand("select FirstName,LastName,DOB,Address,City,State,Pincode,PhoneNo,Email from Admin where AdminID=1", connection);
@@ -49,13 +39,23 @@ namespace Chocolate_Factory_Management_System
                 textBoxPincode.Text = reader1["Pincode"].ToString();
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 textBoxEmail.Text = reader1["Email"].ToString();
-                MessageBox.Show("Data Found");
+              
             }
             else
             {
                 MessageBox.Show("No Data Found");
             }
             connection.Close();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,16 +77,7 @@ namespace Chocolate_Factory_Management_System
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxAddress.Clear();
-            textBoxCity.Clear();
-            textBoxEmail.Clear();
-            textBoxFirstName.Clear();
-            textBoxLastName.Clear();
-            textBoxPhoneNo.Clear();
-            textBoxPincode.Clear();
-           // textBoxSearch.Clear();
-            textBoxState.Clear();
-            MessageBox.Show("Data Cleared");
+        
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class SupplierSearch : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+     //   OleDbCommand command;
         public SupplierSearch()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace Chocolate_Factory_Management_System
                 textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
                 MessageBox.Show("Data Found");
 
-                PurchaseOrder s1 = new PurchaseOrder(textBoxFullName.Text);
+                SupplierSearch s1 = new SupplierSearch(tex.Text);
                 s1.ShowDialog();
 
             }

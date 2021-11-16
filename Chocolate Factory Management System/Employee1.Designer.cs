@@ -53,22 +53,16 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelEmpDetails = new System.Windows.Forms.Label();
             this.labelDateOfJoining = new System.Windows.Forms.Label();
             this.dateTimePickerJoining = new System.Windows.Forms.DateTimePicker();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.labeltosearch = new System.Windows.Forms.Label();
             this.labelEID = new System.Windows.Forms.Label();
             this.textBoxEID = new System.Windows.Forms.TextBox();
             this.buttonADD = new System.Windows.Forms.Button();
-            this.buttonDELETE = new System.Windows.Forms.Button();
-            this.buttonEDIT = new System.Windows.Forms.Button();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -318,31 +312,12 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pRINTToolStripMenuItem,
-            this.hOMEToolStripMenuItem,
             this.vIEWToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1280, 38);
             this.menuStrip1.TabIndex = 31;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(111, 34);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click_1);
-            // 
-            // hOMEToolStripMenuItem
-            // 
-            this.hOMEToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.hOMEToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
-            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(112, 34);
-            this.hOMEToolStripMenuItem.Text = "CLEAR";
-            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // vIEWToolStripMenuItem
             // 
@@ -405,45 +380,13 @@ namespace Chocolate_Factory_Management_System
             this.labelEmail.TabIndex = 36;
             this.labelEmail.Text = "Email";
             // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(169, 101);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(200, 29);
-            this.textBoxSearch.TabIndex = 38;
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.BackColor = System.Drawing.Color.Brown;
-            this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonSearch.Location = new System.Drawing.Point(11, 78);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(152, 51);
-            this.buttonSearch.TabIndex = 39;
-            this.buttonSearch.Text = "SEARCH";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // labeltosearch
-            // 
-            this.labeltosearch.AutoSize = true;
-            this.labeltosearch.BackColor = System.Drawing.Color.Transparent;
-            this.labeltosearch.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltosearch.Location = new System.Drawing.Point(169, 78);
-            this.labeltosearch.Name = "labeltosearch";
-            this.labeltosearch.Size = new System.Drawing.Size(183, 20);
-            this.labeltosearch.TabIndex = 43;
-            this.labeltosearch.Text = "Enter Employee ID";
-            // 
             // labelEID
             // 
             this.labelEID.AutoSize = true;
             this.labelEID.BackColor = System.Drawing.Color.Transparent;
             this.labelEID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelEID.Location = new System.Drawing.Point(923, 531);
+            this.labelEID.Location = new System.Drawing.Point(28, 119);
             this.labelEID.Name = "labelEID";
             this.labelEID.Size = new System.Drawing.Size(192, 31);
             this.labelEID.TabIndex = 44;
@@ -451,9 +394,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxEID
             // 
-            this.textBoxEID.Location = new System.Drawing.Point(1109, 536);
+            this.textBoxEID.Location = new System.Drawing.Point(287, 119);
             this.textBoxEID.Name = "textBoxEID";
-            this.textBoxEID.Size = new System.Drawing.Size(159, 26);
+            this.textBoxEID.Size = new System.Drawing.Size(288, 26);
             this.textBoxEID.TabIndex = 45;
             // 
             // buttonADD
@@ -469,31 +412,15 @@ namespace Chocolate_Factory_Management_System
             this.buttonADD.UseVisualStyleBackColor = false;
             this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click);
             // 
-            // buttonDELETE
+            // buttonPrint
             // 
-            this.buttonDELETE.BackColor = System.Drawing.Color.Brown;
-            this.buttonDELETE.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDELETE.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonDELETE.Location = new System.Drawing.Point(717, 516);
-            this.buttonDELETE.Name = "buttonDELETE";
-            this.buttonDELETE.Size = new System.Drawing.Size(148, 43);
-            this.buttonDELETE.TabIndex = 47;
-            this.buttonDELETE.Text = "DELETE";
-            this.buttonDELETE.UseVisualStyleBackColor = false;
-            this.buttonDELETE.Click += new System.EventHandler(this.buttonDELETE_Click);
-            // 
-            // buttonEDIT
-            // 
-            this.buttonEDIT.BackColor = System.Drawing.Color.Brown;
-            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEDIT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEDIT.Location = new System.Drawing.Point(544, 516);
-            this.buttonEDIT.Name = "buttonEDIT";
-            this.buttonEDIT.Size = new System.Drawing.Size(144, 43);
-            this.buttonEDIT.TabIndex = 48;
-            this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = false;
-            this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
+            this.buttonPrint.Location = new System.Drawing.Point(711, 516);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(145, 43);
+            this.buttonPrint.TabIndex = 49;
+            this.buttonPrint.Text = "PRINT ";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // Employee1
             // 
@@ -502,14 +429,10 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 571);
-            this.Controls.Add(this.buttonEDIT);
-            this.Controls.Add(this.buttonDELETE);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonADD);
             this.Controls.Add(this.textBoxEID);
             this.Controls.Add(this.labelEID);
-            this.Controls.Add(this.labeltosearch);
-            this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.dateTimePickerJoining);
@@ -574,21 +497,15 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem pRINTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.Label labelEmpDetails;
         private System.Windows.Forms.Label labelDateOfJoining;
         private System.Windows.Forms.DateTimePicker dateTimePickerJoining;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.ToolStripMenuItem vIEWToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Label labeltosearch;
         private System.Windows.Forms.Label labelEID;
         private System.Windows.Forms.TextBox textBoxEID;
         private System.Windows.Forms.Button buttonADD;
-        private System.Windows.Forms.Button buttonDELETE;
-        private System.Windows.Forms.Button buttonEDIT;
+        private System.Windows.Forms.Button buttonPrint;
     }
 }

@@ -15,48 +15,34 @@ namespace Chocolate_Factory_Management_System
     {
         private OleDbConnection connection = new OleDbConnection();
         OleDbCommand command;
-        public CustomerComplaints()
+        public CustomerComplaints(string str_value)
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
-
+            textBoxPhoneNo.Text = str_value;
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,Email,PhoneNo from Customer where PhoneNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxCID.Text = reader1["CustomerID"].ToString();
-                textBoxName.Text = reader1["CustomerName"].ToString();
-                textBoxEmail.Text = reader1["Email"].ToString();
-                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-                MessageBox.Show("Data Found");
-            }
-            else
-            {
-                MessageBox.Show("No Data Found");
-            }
-            connection.Close();
+          
         }
 
-        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        void resetControls()
         {
             textBoxCID.Clear();
             textBoxPhoneNo.Clear();
             textBoxName.Clear();
             textBoxEmail.Clear();
-            textBoxSearch.Clear();
             checkedListBoxapprcomplaint.ResetText();
             textBoxDefectmsg.Clear();
             textBoximprovement.Clear();
-            textBoxProductID.Clear();
+            comboBoxProductName.ResetText();
             textBoxtakenby.Clear();
-            MessageBox.Show("Data Cleared");
+        }
+
+        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +54,8 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
+
+
             try
             {
                 connection.Open();
@@ -77,16 +65,20 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@customername", textBoxName.Text);
                 command.Parameters.AddWithValue("@email", textBoxEmail.Text);
                 command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
-                command.Parameters.AddWithValue("@productid",textBoxProductID.Text);
+                command.Parameters.AddWithValue("@productid",comboBoxProductName.Text);
                 command.Parameters.AddWithValue("@takenby", textBoxtakenby.Text);
                 command.Parameters.AddWithValue("@defective", textBoxDefectmsg.Text);
                 command.Parameters.AddWithValue("@improvement", textBoximprovement.Text);
                 command.Parameters.AddWithValue("@complaint",checkedListBoxapprcomplaint.Text);
 
                 command.ExecuteNonQuery();
-
+                resetControls();
                 connection.Close();
+
                 MessageBox.Show("Data Saved Successfully");
+
+                CustomerSearch c1 = new CustomerSearch();
+                c1.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -96,10 +88,62 @@ namespace Chocolate_Factory_Management_System
 
         private void CustomerComplaints_Load(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from ProductDetails";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxProductName.Items.Add(reader["ProductName"].ToString());
+                }
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
+            try
+            {
+                connection.Open();
+                OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,Email from Customer where PhoneNo=@param", connection);
+                c1.Parameters.AddWithValue("@param", textBoxPhoneNo.Text);
+                OleDbDataReader reader1;
+                reader1 = c1.ExecuteReader();
+                if (reader1.Read())
+                {
+                    textBoxCID.Text = reader1["CustomerID"].ToString();
+                    textBoxName.Text = reader1["CustomerName"].ToString();
+                    textBoxEmail.Text = reader1["Email"].ToString();
+                   
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
+                }
+                connection.Close();
+            }
+            catch
+            {
+            
+            }
         }
 
         private void rEPORTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labeltosearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
 
         }
