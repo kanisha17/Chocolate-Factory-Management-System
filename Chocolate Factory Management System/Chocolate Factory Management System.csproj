@@ -210,6 +210,18 @@
     <Compile Include="ManufacturingProcess.Designer.cs">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSearch.Designer.cs">
+      <DependentUpon>ProductSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductUpdate.Designer.cs">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="QualityTesting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +477,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManufacturingProcess.resx">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSearch.resx">
+      <DependentUpon>ProductSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductUpdate.resx">
+      <DependentUpon>ProductUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QualityTesting.resx">
       <DependentUpon>QualityTesting.cs</DependentUpon>

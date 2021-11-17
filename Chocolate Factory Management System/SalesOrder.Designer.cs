@@ -66,7 +66,6 @@ namespace Chocolate_Factory_Management_System
             this.buttonInsert = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.labelPhoneNo = new System.Windows.Forms.Label();
             this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -450,21 +449,12 @@ namespace Chocolate_Factory_Management_System
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // labelPhoneNo
-            // 
-            this.labelPhoneNo.AutoSize = true;
-            this.labelPhoneNo.Location = new System.Drawing.Point(824, 81);
-            this.labelPhoneNo.Name = "labelPhoneNo";
-            this.labelPhoneNo.Size = new System.Drawing.Size(101, 23);
-            this.labelPhoneNo.TabIndex = 58;
-            this.labelPhoneNo.Text = "PhoneNo";
-            // 
             // textBoxPhoneNo
             // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(948, 73);
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(919, 91);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(315, 31);
-            this.textBoxPhoneNo.TabIndex = 59;
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(300, 31);
+            this.textBoxPhoneNo.TabIndex = 58;
             // 
             // SalesOrder
             // 
@@ -474,7 +464,6 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1275, 649);
             this.Controls.Add(this.textBoxPhoneNo);
-            this.Controls.Add(this.labelPhoneNo);
             this.Controls.Add(this.buttonInsert);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonClearTable);
@@ -561,7 +550,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.Label labelPhoneNo;
         private System.Windows.Forms.TextBox textBoxPhoneNo;
     }
 }

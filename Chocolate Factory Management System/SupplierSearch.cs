@@ -24,33 +24,43 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select PhoneNo from Supplier where PhoneNo=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxPhoneNo.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
+            try
             {
-                textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-                MessageBox.Show("Data Found");
+                connection.Open();
+                OleDbCommand e1 = new OleDbCommand("select PhoneNo from Supplier where PhoneNo=@parm1", connection);
+                e1.Parameters.AddWithValue("@parm1", textBoxPhoneNo.Text);
+                OleDbDataReader reader1;
+                reader1 = e1.ExecuteReader();
+                if (reader1.Read())
+                {
 
-                SupplierSearch s1 = new SupplierSearch(tex.Text);
-                s1.ShowDialog();
+                    textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
 
+                    PurchaseOrder s1 = new PurchaseOrder(textBoxPhoneNo.Text);
+
+                    s1.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Data Not Found");
+                }
+                connection.Close();
+
+                resetControls();
             }
-            else
+            catch
             {
-                MessageBox.Show("Data Not Found");
+                MessageBox.Show("Please Fill The Details");
             }
-            connection.Close();
 
-            resetControls();
+           
         }
 
         void resetControls()
         {
             textBoxPhoneNo.Clear();
-            textBoxFullName.Clear();
+            
         }
 
         private void linkLabelNotRegistered_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

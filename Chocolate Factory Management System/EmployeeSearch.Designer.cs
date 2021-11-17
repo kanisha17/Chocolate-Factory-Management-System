@@ -66,28 +66,28 @@ namespace Chocolate_Factory_Management_System
             this.salaryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1302, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1302, 36);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(169, 29);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(169, 32);
             this.updateToolStripMenuItem.Text = "Update Employee";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // attendanceToolStripMenuItem
             // 
             this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
-            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
+            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(118, 32);
             this.attendanceToolStripMenuItem.Text = "Attendance";
             this.attendanceToolStripMenuItem.Click += new System.EventHandler(this.attendanceToolStripMenuItem_Click);
             // 
             // salaryToolStripMenuItem
             // 
             this.salaryToolStripMenuItem.Name = "salaryToolStripMenuItem";
-            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
+            this.salaryToolStripMenuItem.Size = new System.Drawing.Size(75, 32);
             this.salaryToolStripMenuItem.Text = "Salary";
             this.salaryToolStripMenuItem.Click += new System.EventHandler(this.salaryToolStripMenuItem_Click);
             // 
@@ -124,6 +124,7 @@ namespace Chocolate_Factory_Management_System
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "EmployeeSearch";
             this.Text = "EmployeeSearch";
+            this.Load += new System.EventHandler(this.EmployeeSearch_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

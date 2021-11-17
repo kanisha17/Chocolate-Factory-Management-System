@@ -31,7 +31,7 @@ namespace Chocolate_Factory_Management_System
             dataGridViewPurchaseOrder.Columns[6].Name = "Tax";
             dataGridViewPurchaseOrder.Columns[7].Name = "Total Cost";
 
-            textBoxName.Text = str_value;
+            textBoxPhoneNo.Text = str_value;
         }
 
         int finalcost = 0;
@@ -130,6 +130,7 @@ namespace Chocolate_Factory_Management_System
         }
         private void PurchaseOrder_Load(object sender, EventArgs e)
         {
+            getInvoiceID();
             try
             {
                 connection.Open();
@@ -148,7 +149,26 @@ namespace Chocolate_Factory_Management_System
             {
                 MessageBox.Show("Error");
             }
-            getInvoiceID();
+
+            try
+            {
+                connection.Open();
+                OleDbCommand c1 = new OleDbCommand("select SupplierName from Supplier where PhoneNo=@param", connection);
+                c1.Parameters.AddWithValue("@param", textBoxPhoneNo.Text);
+                OleDbDataReader reader1;
+                reader1 = c1.ExecuteReader();
+                if (reader1.Read())
+                {
+                    textBoxName.Text = reader1["SupplierName"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
+                }
+                connection.Close();
+            }
+            catch
+            { }
         }
 
         private void buttonCALCULATE_Click(object sender, EventArgs e)
@@ -484,6 +504,10 @@ namespace Chocolate_Factory_Management_System
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
         }
-    
+
+        private void textBoxTotalCost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

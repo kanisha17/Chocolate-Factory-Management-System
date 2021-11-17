@@ -48,6 +48,8 @@ namespace Chocolate_Factory_Management_System
             this.comboBoxRawMaterial = new System.Windows.Forms.ComboBox();
             this.pictureBoxRawMaterial = new System.Windows.Forms.PictureBox();
             this.labelRawMaterialID = new System.Windows.Forms.Label();
+            this.labelDiscount = new System.Windows.Forms.Label();
+            this.textBoxDicsount = new System.Windows.Forms.TextBox();
             this.menuStripRawMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRawMaterial)).BeginInit();
             this.SuspendLayout();
@@ -272,12 +274,30 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterialID.TabIndex = 17;
             this.labelRawMaterialID.Text = "Enter Raw Material ID";
             // 
+            // labelDiscount
+            // 
+            this.labelDiscount.AutoSize = true;
+            this.labelDiscount.Location = new System.Drawing.Point(24, 425);
+            this.labelDiscount.Name = "labelDiscount";
+            this.labelDiscount.Size = new System.Drawing.Size(100, 23);
+            this.labelDiscount.TabIndex = 18;
+            this.labelDiscount.Text = "Discount";
+            // 
+            // textBoxDicsount
+            // 
+            this.textBoxDicsount.Location = new System.Drawing.Point(313, 414);
+            this.textBoxDicsount.Name = "textBoxDicsount";
+            this.textBoxDicsount.Size = new System.Drawing.Size(295, 31);
+            this.textBoxDicsount.TabIndex = 19;
+            // 
             // RawMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b8;
             this.ClientSize = new System.Drawing.Size(1295, 581);
+            this.Controls.Add(this.textBoxDicsount);
+            this.Controls.Add(this.labelDiscount);
             this.Controls.Add(this.labelRawMaterialID);
             this.Controls.Add(this.comboBoxRawMaterial);
             this.Controls.Add(this.labelRawMaterailDetails);
@@ -330,5 +350,7 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelRawMaterailDetails;
         private System.Windows.Forms.ComboBox comboBoxRawMaterial;
         private System.Windows.Forms.Label labelRawMaterialID;
+        private System.Windows.Forms.Label labelDiscount;
+        private System.Windows.Forms.TextBox textBoxDicsount;
     }
 }

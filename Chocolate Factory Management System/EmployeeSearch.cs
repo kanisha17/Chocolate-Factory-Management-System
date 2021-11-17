@@ -24,7 +24,7 @@ namespace Chocolate_Factory_Management_System
         void resetControls()
         {
             textBoxEID.Clear();
-            textBoxEmpName.Clear();
+          
         }
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -138,6 +138,11 @@ namespace Chocolate_Factory_Management_System
         {
             Employee1 e1 = new Employee1();
             e1.ShowDialog();
+        }
+
+        private void EmployeeSearch_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

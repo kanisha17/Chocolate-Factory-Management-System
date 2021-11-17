@@ -68,30 +68,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSEARCH_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("select *from ProductDetails where ProductID=@param", connection);
-                command.Parameters.AddWithValue("@param", int.Parse(textBoxSEARCH.Text));
-                OleDbDataReader rd = command.ExecuteReader();
-                while (rd.Read())
-                {
-                    textBoxProductName.Text = rd.GetValue(1).ToString();
-                    textBoxDescription.Text = rd.GetValue(2).ToString();
-                    textBoxPrice.Text = rd.GetValue(3).ToString();
-                    comboBoxreview.Text = rd.GetValue(4).ToString();
-
-                    string path = Path.Combine(rd.GetValue(5).ToString());
-                    pictureBoxProductDetail.Image = Image.FromFile(path);
-                    MessageBox.Show("Product Details Found");
-                }
-                connection.Close();
-               // MessageBox.Show("Product Details Found");
-            }
-            catch 
-            {
-                MessageBox.Show("Product Details Not Found");
-            }
+            
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,27 +80,24 @@ namespace Chocolate_Factory_Management_System
         {
            
         }
-
-        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        void resetControls()
         {
-            textBoxSEARCH.Clear();
             comboBoxreview.ResetText();
             textBoxProductName.Clear();
             textBoxPrice.Clear();
             textBoxDescription.Clear();
-            MessageBox.Show("Data Cleared");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonADD_Click(object sender, EventArgs e)
         {
             try
             {
                 connection.Open();
                 string location = "C:\\Users\\hp\\source\\ProdImages";
                 string path = Path.Combine(location, textBoxProductName.Text + ".jpg");
-                command = new OleDbCommand("insert into ProductDetails(ProductName,Description,Price,Review,ProductImage) " +
-                    "values(@productname,description,price,review,productimage)", connection);
-
+                command = new OleDbCommand("insert into ProductDetails(ProductID,ProductName,Description,Price,Review,ProductImage) " +
+                    "values(@productid,@productname,description,price,review,productimage)", connection);
+                command.Parameters.AddWithValue("@productid", textBoxProductID.Text);
                 command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
                 command.Parameters.AddWithValue("@description", textBoxDescription.Text);
                 command.Parameters.AddWithValue("@price", textBoxPrice.Text);
@@ -136,8 +110,9 @@ namespace Chocolate_Factory_Management_System
                 a.Save(path);
                 connection.Close();
                 MessageBox.Show("Data Saved Successfully");
+                resetControls();
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Data Not Saved");
             }
@@ -145,47 +120,51 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonEDIT_Click(object sender, EventArgs e)
         {
-            try
-            {
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update ProductDetails set ProductName='" + textBoxProductName.Text + "',Description='" + textBoxDescription.Text + "'," +
-                    "Price='" + textBoxPrice.Text + "',Review='" + comboBoxreview.Text + "' where ProductID=" + textBoxSEARCH.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Updated Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Updated");
-            }
-            connection.Close();
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void ProductDetails_Load(object sender, EventArgs e)
         {
-            try
-            {
+            getInvoiceID();
+            
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from ProductDetails where ProductID=" + textBoxSEARCH.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
+        }
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch 
+        void getInvoiceID()
+        {
+
+            // command.connection.Open();
+            string sql;
+            string query = "select ProductID from ProductDetails order by ProductID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+
+            if (dr.Read())
             {
-                MessageBox.Show("Data Not Deleted");
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
             }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
             connection.Close();
+            textBoxProductID.Text = sql.ToString();
+
+        }
+
+        private void textBoxProductID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
+
 }

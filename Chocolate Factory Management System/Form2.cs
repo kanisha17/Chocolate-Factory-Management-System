@@ -148,7 +148,7 @@ namespace Chocolate_Factory_Management_System
 
         private void eNQUIERYDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+          
         }
 
         private void enquiryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -313,14 +313,12 @@ namespace Chocolate_Factory_Management_System
 
         private void rawMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RawMaterial r1 = new RawMaterial();
-            r1.ShowDialog();
+           
         }
 
         private void finishedProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductDetails p1 = new ProductDetails();
-            p1.ShowDialog();
+         
         }
 
         private void cartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -351,6 +349,35 @@ namespace Chocolate_Factory_Management_System
         {
             DeliveryProcess d1 = new DeliveryProcess();
             d1.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            RawMaterial r1 = new RawMaterial();
+            r1.ShowDialog();
+        }
+
+        private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductDetails p1 = new ProductDetails();
+            p1.ShowDialog();
+        }
+
+        private void uPDATEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductUpdate u1 = new ProductUpdate();
+            u1.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductSearch s1 = new ProductSearch();
+            s1.ShowDialog();
         }
     }
 }

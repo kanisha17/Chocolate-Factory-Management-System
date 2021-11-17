@@ -66,9 +66,10 @@ namespace Chocolate_Factory_Management_System
                     textBoxRawMaterialName.Text = rd.GetValue(1).ToString();
                     textBoxDescription.Text = rd.GetValue(2).ToString();
                     textBoxPrice.Text = rd.GetValue(3).ToString();
-                    comboBoxRawMaterial.Text = rd.GetValue(4).ToString();
+                    textBoxDicsount.Text = rd.GetValue(4).ToString();
+                    comboBoxRawMaterial.Text = rd.GetValue(5).ToString();
 
-                    string path = Path.Combine(rd.GetValue(5).ToString());
+                    string path = Path.Combine(rd.GetValue(6).ToString());
                     pictureBoxRawMaterial.Image = Image.FromFile(path);
                     MessageBox.Show("Raw Material Details Found");
                 }
@@ -118,12 +119,15 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
+             
                 string query = "update RawMaterialDetails set RawMaterialName='" +textBoxRawMaterialName.Text + "',Description='" + textBoxDescription.Text + "'," +
-                    "Price='" + textBoxPrice.Text + "',Review='" + comboBoxRawMaterial.Text + "' where RawMaterialID=" + textBoxSearch.Text + "";
+                    "Price='" + textBoxPrice.Text + "',Discount='"+textBoxDicsount.Text+"',Review='" + comboBoxRawMaterial.Text + "' where RawMaterialID=" + textBoxSearch.Text + "";
+               
                 MessageBox.Show(query);
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
+                
                 MessageBox.Show("Data Updated Successfully");
             }
             catch 

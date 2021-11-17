@@ -33,23 +33,19 @@ namespace Chocolate_Factory_Management_System
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelProductName = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.textBoxSEARCH = new System.Windows.Forms.TextBox();
-            this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.labelReview = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonSEARCH = new System.Windows.Forms.Button();
             this.pictureBoxProductDetail = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelPD = new System.Windows.Forms.Label();
             this.comboBoxreview = new System.Windows.Forms.ComboBox();
             this.buttonADD = new System.Windows.Forms.Button();
-            this.buttonEDIT = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxProductID = new System.Windows.Forms.TextBox();
+            this.labelProductID = new System.Windows.Forms.Label();
+            this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductDetail)).BeginInit();
             this.SuspendLayout();
@@ -101,22 +97,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDescription.Size = new System.Drawing.Size(306, 31);
             this.textBoxDescription.TabIndex = 5;
             // 
-            // textBoxSEARCH
-            // 
-            this.textBoxSEARCH.Location = new System.Drawing.Point(194, 117);
-            this.textBoxSEARCH.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxSEARCH.Name = "textBoxSEARCH";
-            this.textBoxSEARCH.Size = new System.Drawing.Size(198, 31);
-            this.textBoxSEARCH.TabIndex = 6;
-            // 
-            // textBoxProductName
-            // 
-            this.textBoxProductName.Location = new System.Drawing.Point(293, 177);
-            this.textBoxProductName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new System.Drawing.Size(306, 31);
-            this.textBoxProductName.TabIndex = 7;
-            // 
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(293, 301);
@@ -145,23 +125,13 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1340, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1313, 42);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cLEARToolStripMenuItem
-            // 
-            this.cLEARToolStripMenuItem.BackColor = System.Drawing.Color.PaleGreen;
-            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.cLEARToolStripMenuItem.Text = "CLEAR";
-            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -171,20 +141,6 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
-            // 
-            // buttonSEARCH
-            // 
-            this.buttonSEARCH.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonSEARCH.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSEARCH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonSEARCH.Location = new System.Drawing.Point(13, 91);
-            this.buttonSEARCH.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonSEARCH.Name = "buttonSEARCH";
-            this.buttonSEARCH.Size = new System.Drawing.Size(173, 57);
-            this.buttonSEARCH.TabIndex = 15;
-            this.buttonSEARCH.Text = "SEARCH";
-            this.buttonSEARCH.UseVisualStyleBackColor = false;
-            this.buttonSEARCH.Click += new System.EventHandler(this.buttonSEARCH_Click);
             // 
             // pictureBoxProductDetail
             // 
@@ -196,17 +152,6 @@ namespace Chocolate_Factory_Management_System
             this.pictureBoxProductDetail.TabIndex = 10;
             this.pictureBoxProductDetail.TabStop = false;
             this.pictureBoxProductDetail.Click += new System.EventHandler(this.pictureBoxProductDetail_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(193, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 23);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Enter Product ID";
             // 
             // labelPD
             // 
@@ -237,42 +182,12 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonADD
             // 
-            this.buttonADD.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonADD.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonADD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonADD.Location = new System.Drawing.Point(34, 497);
+            this.buttonADD.Location = new System.Drawing.Point(325, 499);
             this.buttonADD.Name = "buttonADD";
-            this.buttonADD.Size = new System.Drawing.Size(149, 57);
-            this.buttonADD.TabIndex = 19;
-            this.buttonADD.Text = "ADD";
-            this.buttonADD.UseVisualStyleBackColor = false;
-            this.buttonADD.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonEDIT
-            // 
-            this.buttonEDIT.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEDIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonEDIT.Location = new System.Drawing.Point(216, 497);
-            this.buttonEDIT.Name = "buttonEDIT";
-            this.buttonEDIT.Size = new System.Drawing.Size(153, 57);
-            this.buttonEDIT.TabIndex = 20;
-            this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = false;
-            this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonDelete.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonDelete.Location = new System.Drawing.Point(414, 497);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(137, 57);
-            this.buttonDelete.TabIndex = 21;
-            this.buttonDelete.Text = "DELETE";
-            this.buttonDelete.UseVisualStyleBackColor = false;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.buttonADD.Size = new System.Drawing.Size(208, 43);
+            this.buttonADD.TabIndex = 26;
+            this.buttonADD.Text = "INSERT";
+            this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click);
             // 
             // label2
             // 
@@ -293,26 +208,47 @@ namespace Chocolate_Factory_Management_System
             this.textBox1.Size = new System.Drawing.Size(306, 31);
             this.textBox1.TabIndex = 23;
             // 
+            // textBoxProductID
+            // 
+            this.textBoxProductID.Location = new System.Drawing.Point(293, 117);
+            this.textBoxProductID.Name = "textBoxProductID";
+            this.textBoxProductID.Size = new System.Drawing.Size(306, 31);
+            this.textBoxProductID.TabIndex = 28;
+            this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
+            // 
+            // labelProductID
+            // 
+            this.labelProductID.AutoSize = true;
+            this.labelProductID.Location = new System.Drawing.Point(21, 117);
+            this.labelProductID.Name = "labelProductID";
+            this.labelProductID.Size = new System.Drawing.Size(118, 23);
+            this.labelProductID.TabIndex = 29;
+            this.labelProductID.Text = "Product ID";
+            // 
+            // textBoxProductName
+            // 
+            this.textBoxProductName.Location = new System.Drawing.Point(293, 177);
+            this.textBoxProductName.Name = "textBoxProductName";
+            this.textBoxProductName.Size = new System.Drawing.Size(306, 31);
+            this.textBoxProductName.TabIndex = 30;
+            // 
             // ProductDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b8;
-            this.ClientSize = new System.Drawing.Size(1340, 575);
+            this.ClientSize = new System.Drawing.Size(1313, 575);
+            this.Controls.Add(this.textBoxProductName);
+            this.Controls.Add(this.labelProductID);
+            this.Controls.Add(this.textBoxProductID);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonEDIT);
             this.Controls.Add(this.buttonADD);
             this.Controls.Add(this.comboBoxreview);
             this.Controls.Add(this.labelPD);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonSEARCH);
             this.Controls.Add(this.pictureBoxProductDetail);
             this.Controls.Add(this.labelReview);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxProductName);
-            this.Controls.Add(this.textBoxSEARCH);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.labelProductName);
             this.Controls.Add(this.labelDescription);
@@ -325,6 +261,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "ProductDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductDetails";
+            this.Load += new System.EventHandler(this.ProductDetails_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductDetail)).EndInit();
@@ -339,22 +276,18 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.TextBox textBoxSEARCH;
-        private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label labelReview;
         private System.Windows.Forms.PictureBox pictureBoxProductDetail;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
-        private System.Windows.Forms.Button buttonSEARCH;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelPD;
         private System.Windows.Forms.ComboBox comboBoxreview;
         private System.Windows.Forms.Button buttonADD;
-        private System.Windows.Forms.Button buttonEDIT;
-        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxProductID;
+        private System.Windows.Forms.Label labelProductID;
+        private System.Windows.Forms.TextBox textBoxProductName;
     }
 }

@@ -29,7 +29,7 @@ namespace Chocolate_Factory_Management_System
 
         void resetControls()
         {
-            textBoxFullName.Clear();
+           
             textBoxPhoneNo.Clear();
         }
         private void labelRegister_Click(object sender, EventArgs e)

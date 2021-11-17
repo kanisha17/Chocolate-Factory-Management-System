@@ -37,7 +37,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackBarMachine = new System.Windows.Forms.TrackBar();
             this.labelCracking = new System.Windows.Forms.Label();
             this.labelGrinding = new System.Windows.Forms.Label();
             this.labelTempering = new System.Windows.Forms.Label();
@@ -46,18 +45,28 @@ namespace Chocolate_Factory_Management_System
             this.labelFermenting = new System.Windows.Forms.Label();
             this.labelWrapping = new System.Windows.Forms.Label();
             this.labelMoulding = new System.Windows.Forms.Label();
+            this.textBoxFermenting = new System.Windows.Forms.TextBox();
+            this.textBoxDrying = new System.Windows.Forms.TextBox();
+            this.textBoxGrinding = new System.Windows.Forms.TextBox();
+            this.textBoxRoasting = new System.Windows.Forms.TextBox();
+            this.textBoxCracking = new System.Windows.Forms.TextBox();
+            this.textBoxMoulding = new System.Windows.Forms.TextBox();
+            this.textBoxTempering = new System.Windows.Forms.TextBox();
+            this.textBoxWrapping = new System.Windows.Forms.TextBox();
+            this.textBoxProductName = new System.Windows.Forms.TextBox();
+            this.labelProductName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMachine)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(511, 122);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(760, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(760, 239);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // textBoxSEARCH
             // 
@@ -66,6 +75,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxSEARCH.Name = "textBoxSEARCH";
             this.textBoxSEARCH.Size = new System.Drawing.Size(219, 31);
             this.textBoxSEARCH.TabIndex = 1;
+            this.textBoxSEARCH.Leave += new System.EventHandler(this.textBoxSEARCH_Leave);
             // 
             // buttonSEARCH
             // 
@@ -124,7 +134,7 @@ namespace Chocolate_Factory_Management_System
             this.cLEARToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
             this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
+            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 38);
             this.cLEARToolStripMenuItem.Text = "CLEAR";
             // 
             // eXITToolStripMenuItem
@@ -132,19 +142,8 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 38);
             this.eXITToolStripMenuItem.Text = "EXIT";
-            // 
-            // trackBarMachine
-            // 
-            this.trackBarMachine.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.trackBarMachine.Location = new System.Drawing.Point(15, 446);
-            this.trackBarMachine.Maximum = 50;
-            this.trackBarMachine.Name = "trackBarMachine";
-            this.trackBarMachine.Size = new System.Drawing.Size(1238, 69);
-            this.trackBarMachine.TabIndex = 6;
-            this.trackBarMachine.TickFrequency = 8;
-            this.trackBarMachine.Scroll += new System.EventHandler(this.trackBarMachine_Scroll);
             // 
             // labelCracking
             // 
@@ -212,7 +211,7 @@ namespace Chocolate_Factory_Management_System
             this.labelFermenting.BackColor = System.Drawing.Color.Transparent;
             this.labelFermenting.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFermenting.ForeColor = System.Drawing.Color.Maroon;
-            this.labelFermenting.Location = new System.Drawing.Point(11, 518);
+            this.labelFermenting.Location = new System.Drawing.Point(35, 518);
             this.labelFermenting.Name = "labelFermenting";
             this.labelFermenting.Size = new System.Drawing.Size(100, 20);
             this.labelFermenting.TabIndex = 12;
@@ -243,6 +242,87 @@ namespace Chocolate_Factory_Management_System
             this.labelMoulding.TabIndex = 14;
             this.labelMoulding.Text = "Moulding";
             // 
+            // textBoxFermenting
+            // 
+            this.textBoxFermenting.Location = new System.Drawing.Point(39, 422);
+            this.textBoxFermenting.Name = "textBoxFermenting";
+            this.textBoxFermenting.Size = new System.Drawing.Size(100, 26);
+            this.textBoxFermenting.TabIndex = 15;
+            this.textBoxFermenting.Text = "Fermenting";
+            this.textBoxFermenting.Leave += new System.EventHandler(this.textBoxFermenting_Leave);
+            // 
+            // textBoxDrying
+            // 
+            this.textBoxDrying.Location = new System.Drawing.Point(194, 422);
+            this.textBoxDrying.Name = "textBoxDrying";
+            this.textBoxDrying.Size = new System.Drawing.Size(100, 26);
+            this.textBoxDrying.TabIndex = 16;
+            this.textBoxDrying.Text = "Drying";
+            // 
+            // textBoxGrinding
+            // 
+            this.textBoxGrinding.Location = new System.Drawing.Point(703, 422);
+            this.textBoxGrinding.Name = "textBoxGrinding";
+            this.textBoxGrinding.Size = new System.Drawing.Size(188, 26);
+            this.textBoxGrinding.TabIndex = 17;
+            this.textBoxGrinding.Text = "Grinding and Conching";
+            // 
+            // textBoxRoasting
+            // 
+            this.textBoxRoasting.Location = new System.Drawing.Point(357, 422);
+            this.textBoxRoasting.Name = "textBoxRoasting";
+            this.textBoxRoasting.Size = new System.Drawing.Size(100, 26);
+            this.textBoxRoasting.TabIndex = 18;
+            this.textBoxRoasting.Text = "Roasting";
+            // 
+            // textBoxCracking
+            // 
+            this.textBoxCracking.Location = new System.Drawing.Point(492, 422);
+            this.textBoxCracking.Name = "textBoxCracking";
+            this.textBoxCracking.Size = new System.Drawing.Size(186, 26);
+            this.textBoxCracking.TabIndex = 19;
+            this.textBoxCracking.Text = "Cracking and Winnowing";
+            // 
+            // textBoxMoulding
+            // 
+            this.textBoxMoulding.Location = new System.Drawing.Point(1103, 422);
+            this.textBoxMoulding.Name = "textBoxMoulding";
+            this.textBoxMoulding.Size = new System.Drawing.Size(100, 26);
+            this.textBoxMoulding.TabIndex = 20;
+            this.textBoxMoulding.Text = "Moulding";
+            // 
+            // textBoxTempering
+            // 
+            this.textBoxTempering.Location = new System.Drawing.Point(958, 422);
+            this.textBoxTempering.Name = "textBoxTempering";
+            this.textBoxTempering.Size = new System.Drawing.Size(100, 26);
+            this.textBoxTempering.TabIndex = 21;
+            this.textBoxTempering.Text = "Tempering";
+            // 
+            // textBoxWrapping
+            // 
+            this.textBoxWrapping.Location = new System.Drawing.Point(1171, 381);
+            this.textBoxWrapping.Name = "textBoxWrapping";
+            this.textBoxWrapping.Size = new System.Drawing.Size(100, 26);
+            this.textBoxWrapping.TabIndex = 22;
+            this.textBoxWrapping.Text = "Wrapping";
+            // 
+            // textBoxProductName
+            // 
+            this.textBoxProductName.Location = new System.Drawing.Point(211, 232);
+            this.textBoxProductName.Name = "textBoxProductName";
+            this.textBoxProductName.Size = new System.Drawing.Size(219, 26);
+            this.textBoxProductName.TabIndex = 23;
+            // 
+            // labelProductName
+            // 
+            this.labelProductName.AutoSize = true;
+            this.labelProductName.Location = new System.Drawing.Point(35, 238);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(110, 20);
+            this.labelProductName.TabIndex = 24;
+            this.labelProductName.Text = "Product Name";
+            // 
             // ManufacturingProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -250,6 +330,16 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.peacch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1294, 551);
+            this.Controls.Add(this.labelProductName);
+            this.Controls.Add(this.textBoxProductName);
+            this.Controls.Add(this.textBoxWrapping);
+            this.Controls.Add(this.textBoxTempering);
+            this.Controls.Add(this.textBoxMoulding);
+            this.Controls.Add(this.textBoxCracking);
+            this.Controls.Add(this.textBoxRoasting);
+            this.Controls.Add(this.textBoxGrinding);
+            this.Controls.Add(this.textBoxDrying);
+            this.Controls.Add(this.textBoxFermenting);
             this.Controls.Add(this.labelMoulding);
             this.Controls.Add(this.labelWrapping);
             this.Controls.Add(this.labelFermenting);
@@ -258,7 +348,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelTempering);
             this.Controls.Add(this.labelGrinding);
             this.Controls.Add(this.labelCracking);
-            this.Controls.Add(this.trackBarMachine);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelProductID);
             this.Controls.Add(this.buttonSEARCH);
@@ -274,7 +363,6 @@ namespace Chocolate_Factory_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMachine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,7 +378,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
-        private System.Windows.Forms.TrackBar trackBarMachine;
         private System.Windows.Forms.Label labelCracking;
         private System.Windows.Forms.Label labelGrinding;
         private System.Windows.Forms.Label labelTempering;
@@ -299,5 +386,15 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelFermenting;
         private System.Windows.Forms.Label labelWrapping;
         private System.Windows.Forms.Label labelMoulding;
+        private System.Windows.Forms.TextBox textBoxFermenting;
+        private System.Windows.Forms.TextBox textBoxDrying;
+        private System.Windows.Forms.TextBox textBoxGrinding;
+        private System.Windows.Forms.TextBox textBoxRoasting;
+        private System.Windows.Forms.TextBox textBoxCracking;
+        private System.Windows.Forms.TextBox textBoxMoulding;
+        private System.Windows.Forms.TextBox textBoxTempering;
+        private System.Windows.Forms.TextBox textBoxWrapping;
+        private System.Windows.Forms.TextBox textBoxProductName;
+        private System.Windows.Forms.Label labelProductName;
     }
 }

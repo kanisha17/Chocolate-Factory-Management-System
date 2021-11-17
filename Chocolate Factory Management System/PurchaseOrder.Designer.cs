@@ -65,6 +65,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonClearTable = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -334,6 +335,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxTotalCost.Name = "textBoxTotalCost";
             this.textBoxTotalCost.Size = new System.Drawing.Size(358, 31);
             this.textBoxTotalCost.TabIndex = 53;
+            this.textBoxTotalCost.TextChanged += new System.EventHandler(this.textBoxTotalCost_TextChanged);
             // 
             // labelFinalCost
             // 
@@ -425,6 +427,13 @@ namespace Chocolate_Factory_Management_System
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // textBoxPhoneNo
+            // 
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(658, 394);
+            this.textBoxPhoneNo.Name = "textBoxPhoneNo";
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(300, 31);
+            this.textBoxPhoneNo.TabIndex = 64;
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -432,6 +441,7 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.grey1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1305, 628);
+            this.Controls.Add(this.textBoxPhoneNo);
             this.Controls.Add(this.buttonClearTable);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonReset);
@@ -515,5 +525,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonClearTable;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.TextBox textBoxPhoneNo;
     }
 }
