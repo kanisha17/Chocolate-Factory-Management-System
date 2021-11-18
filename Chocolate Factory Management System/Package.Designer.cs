@@ -38,8 +38,9 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickerPackage = new System.Windows.Forms.DateTimePicker();
             this.labelDate = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelProductName = new System.Windows.Forms.Label();
+            this.textBoxProductName = new System.Windows.Forms.TextBox();
+            this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@ namespace Chocolate_Factory_Management_System
             this.labelNewStock.BackColor = System.Drawing.Color.Transparent;
             this.labelNewStock.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNewStock.ForeColor = System.Drawing.Color.Maroon;
-            this.labelNewStock.Location = new System.Drawing.Point(414, 249);
+            this.labelNewStock.Location = new System.Drawing.Point(414, 302);
             this.labelNewStock.Name = "labelNewStock";
             this.labelNewStock.Size = new System.Drawing.Size(162, 31);
             this.labelNewStock.TabIndex = 2;
@@ -81,16 +82,16 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxProductID
             // 
-            this.textBoxProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProductID.Location = new System.Drawing.Point(609, 183);
+            this.textBoxProductID.Location = new System.Drawing.Point(609, 178);
             this.textBoxProductID.Name = "textBoxProductID";
-            this.textBoxProductID.Size = new System.Drawing.Size(313, 30);
-            this.textBoxProductID.TabIndex = 5;
+            this.textBoxProductID.Size = new System.Drawing.Size(313, 26);
+            this.textBoxProductID.TabIndex = 13;
+            this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
             // 
             // textBoxNewStock
             // 
             this.textBoxNewStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNewStock.Location = new System.Drawing.Point(609, 254);
+            this.textBoxNewStock.Location = new System.Drawing.Point(609, 307);
             this.textBoxNewStock.Name = "textBoxNewStock";
             this.textBoxNewStock.Size = new System.Drawing.Size(313, 30);
             this.textBoxNewStock.TabIndex = 6;
@@ -111,7 +112,7 @@ namespace Chocolate_Factory_Management_System
             // dateTimePickerPackage
             // 
             this.dateTimePickerPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerPackage.Location = new System.Drawing.Point(609, 327);
+            this.dateTimePickerPackage.Location = new System.Drawing.Point(609, 380);
             this.dateTimePickerPackage.Name = "dateTimePickerPackage";
             this.dateTimePickerPackage.Size = new System.Drawing.Size(313, 30);
             this.dateTimePickerPackage.TabIndex = 8;
@@ -122,7 +123,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.Color.Maroon;
-            this.labelDate.Location = new System.Drawing.Point(414, 322);
+            this.labelDate.Location = new System.Drawing.Point(414, 375);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(78, 31);
             this.labelDate.TabIndex = 9;
@@ -133,27 +134,35 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cLEARToolStripMenuItem,
-            this.eXITToolStripMenuItem});
+            this.eXITToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1325, 33);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // cLEARToolStripMenuItem
+            // labelProductName
             // 
-            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
-            this.cLEARToolStripMenuItem.Text = "CLEAR";
-            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
+            this.labelProductName.AutoSize = true;
+            this.labelProductName.Location = new System.Drawing.Point(416, 249);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(110, 20);
+            this.labelProductName.TabIndex = 11;
+            this.labelProductName.Text = "Product Name";
             // 
-            // eXITToolStripMenuItem
+            // textBoxProductName
             // 
-            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.eXITToolStripMenuItem.Text = "EXIT";
-            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            this.textBoxProductName.Location = new System.Drawing.Point(609, 243);
+            this.textBoxProductName.Name = "textBoxProductName";
+            this.textBoxProductName.Size = new System.Drawing.Size(313, 26);
+            this.textBoxProductName.TabIndex = 12;
+            // 
+            // eXITToolStripMenuItem1
+            // 
+            this.eXITToolStripMenuItem1.Name = "eXITToolStripMenuItem1";
+            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(62, 29);
+            this.eXITToolStripMenuItem1.Text = "EXIT";
+            this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click);
             // 
             // Package
             // 
@@ -162,6 +171,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.peacch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1325, 639);
+            this.Controls.Add(this.textBoxProductName);
+            this.Controls.Add(this.labelProductName);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.dateTimePickerPackage);
             this.Controls.Add(this.buttonSubmit);
@@ -195,7 +206,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.DateTimePicker dateTimePickerPackage;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+        private System.Windows.Forms.Label labelProductName;
+        private System.Windows.Forms.TextBox textBoxProductName;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem1;
     }
 }

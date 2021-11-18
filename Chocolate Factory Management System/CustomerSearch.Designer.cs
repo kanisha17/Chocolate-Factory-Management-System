@@ -38,6 +38,7 @@ namespace Chocolate_Factory_Management_System
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.complaintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAnOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deliveryProcessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +97,8 @@ namespace Chocolate_Factory_Management_System
             this.enquiryToolStripMenuItem,
             this.feedbackToolStripMenuItem,
             this.complaintToolStripMenuItem,
-            this.placeAnOrderToolStripMenuItem});
+            this.placeAnOrderToolStripMenuItem,
+            this.deliveryProcessToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1307, 33);
@@ -130,6 +132,13 @@ namespace Chocolate_Factory_Management_System
             this.placeAnOrderToolStripMenuItem.Size = new System.Drawing.Size(146, 29);
             this.placeAnOrderToolStripMenuItem.Text = "Place An Order";
             this.placeAnOrderToolStripMenuItem.Click += new System.EventHandler(this.placeAnOrderToolStripMenuItem_Click);
+            // 
+            // deliveryProcessToolStripMenuItem
+            // 
+            this.deliveryProcessToolStripMenuItem.Name = "deliveryProcessToolStripMenuItem";
+            this.deliveryProcessToolStripMenuItem.Size = new System.Drawing.Size(156, 29);
+            this.deliveryProcessToolStripMenuItem.Text = "Delivery Process";
+            this.deliveryProcessToolStripMenuItem.Click += new System.EventHandler(this.deliveryProcessToolStripMenuItem_Click);
             // 
             // CustomerSearch
             // 
@@ -165,5 +174,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem complaintToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem placeAnOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deliveryProcessToolStripMenuItem;
     }
 }

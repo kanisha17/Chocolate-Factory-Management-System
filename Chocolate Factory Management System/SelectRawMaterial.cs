@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class SelectRawMaterial : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-       // OleDbCommand command;
+        OleDbCommand command;
         public SelectRawMaterial()
         {
             InitializeComponent();
@@ -24,57 +24,59 @@ namespace Chocolate_Factory_Management_System
 
         private void lOADTABLEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select *from PurchaseOrder";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                OleDbDataAdapter da = new OleDbDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-
-
-
-                connection.Close();
-            }
-            catch (Exception ef)
-            {
-                MessageBox.Show("Error" + ef);
-            }
+           
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand c1 = new OleDbCommand("select RawMaterialID,RawMaterialName from RawMaterialDetails where RawMaterialID=@parm1", connection);
-            c1.Parameters.AddWithValue("@parm1", textBoxSearch.Text);
-            OleDbDataReader reader1;
-            reader1 = c1.ExecuteReader();
-            if (reader1.Read())
-            {
-                textBoxSearch.Text = reader1["RawMaterialID"].ToString();
-                textBoxRawMaterialName.Text = reader1["RawMaterialName"].ToString();
-                
-            }
-            else
-            {
-                MessageBox.Show("No Data Found");
-            }
-            connection.Close();
+            
         }
 
         private void SelectRawMaterial_Load(object sender, EventArgs e)
         {
+            void getInvoiceID()
+            {
 
+                // command.connection.Open();
+                string sql;
+                string query = "select DeliveryID from DeliveryProcess order by DeliveryID desc";
+                connection.Open();
+                OleDbCommand command = new OleDbCommand(query, connection);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int id = int.Parse(dr[0].ToString()) + 1;
+                    sql = id.ToString("0");
+
+                }
+                else if (Convert.IsDBNull(dr))
+                {
+                    sql = ("1");
+
+                }
+                else
+                {
+                    sql = ("1");
+                }
+
+                connection.Close();
+                textBoxDelivery.Text = sql.ToString();
+
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -204,6 +204,18 @@
     <Compile Include="EmployeeUpdate.Designer.cs">
       <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinishedProductDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedProductDelete.Designer.cs">
+      <DependentUpon>FinishedProductDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedStockSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishedStockSearch.Designer.cs">
+      <DependentUpon>FinishedStockSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManufacturingProcess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +276,12 @@
     <Compile Include="RawMaterial.Designer.cs">
       <DependentUpon>RawMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="RawMaterialUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialUpdate.Designer.cs">
+      <DependentUpon>RawMaterialUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesOrderReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +299,12 @@
     </Compile>
     <Compile Include="SelectRawMaterial.Designer.cs">
       <DependentUpon>SelectRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockAdd.Designer.cs">
+      <DependentUpon>StockAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="StockMaintenanceReg.cs">
       <SubType>Form</SubType>
@@ -475,6 +499,12 @@
     <EmbeddedResource Include="EmployeeUpdate.resx">
       <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductDelete.resx">
+      <DependentUpon>FinishedProductDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedStockSearch.resx">
+      <DependentUpon>FinishedStockSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManufacturingProcess.resx">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
     </EmbeddedResource>
@@ -507,6 +537,9 @@
     <EmbeddedResource Include="RawMaterial.resx">
       <DependentUpon>RawMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialUpdate.resx">
+      <DependentUpon>RawMaterialUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalesOrderReg.resx">
       <DependentUpon>SalesOrderReg.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelectRawMaterial.resx">
       <DependentUpon>SelectRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockAdd.resx">
+      <DependentUpon>StockAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockMaintenanceReg.resx">
       <DependentUpon>StockMaintenanceReg.cs</DependentUpon>

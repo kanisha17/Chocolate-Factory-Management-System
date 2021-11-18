@@ -14,19 +14,76 @@ namespace Chocolate_Factory_Management_System
     public partial class DeliveryProcess : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-       // OleDbCommand command;
-        public DeliveryProcess()
+        OleDbCommand command;
+        public DeliveryProcess(string str2)
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
-
+            textBoxPhoneNo.Text = str2;
         }
 
         private void DeliveryProcess_Load(object sender, EventArgs e)
         {
-            
-        }
+            getInvoiceID();
 
+            try
+            {
+                connection.Open();
+                OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName,Address,City,Pincode from Customer where PhoneNo=@param", connection);
+                c1.Parameters.AddWithValue("@param", textBoxPhoneNo.Text);
+                OleDbDataReader reader1;
+                reader1 = c1.ExecuteReader();
+                if (reader1.Read())
+                {
+                    textBoxCustomerID.Text = reader1["CustomerID"].ToString();
+                    textBoxDeliverTo.Text = reader1["CustomerName"].ToString();
+                    textBoxAddress.Text = reader1["Address"].ToString();
+                    textBoxCity.Text = reader1["City"].ToString();
+                    textBoxPincode.Text = reader1["Pincode"].ToString();
+                  //  textBoxAddress.Text = reader1["Email"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
+                }
+                connection.Close();
+            }
+            catch
+            {
+
+            }
+        }
+        void getInvoiceID()
+        {
+
+            // command.connection.Open();
+            string sql;
+            string query = "select DeliveryID from DeliveryProcess order by DeliveryID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
+            connection.Close();
+            textBoxDelivery.Text = sql.ToString();
+
+        }
         private void labelDeliveryProcess_Click(object sender, EventArgs e)
         {
 
@@ -53,18 +110,45 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into DeliveryProcess(DeliveryID,DeliverTo,Address,City,Pincode,PhoneNo,ReceiptNo,DeliveryDate,PaymentMode,DeliveredBy) " +
+                    "values(@did,@deliverto,@address,@city,@pincode,@phone,@receipt,@ddate,@paymentmode,@deliverby)", connection);
+                command.Parameters.AddWithValue("@did", textBoxDelivery.Text);
+                command.Parameters.AddWithValue("@deliverto", textBoxDeliverTo.Text);
+                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                command.Parameters.AddWithValue("@city",textBoxCity.Text);
+                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
+                command.Parameters.AddWithValue("@receipt",textBoxReceiptNo.Text);
+                command.Parameters.AddWithValue("@ddate", dateTimePickerDate.Text);
+                command.Parameters.AddWithValue("@paymentmode", checkBoxCash.Text);
+                command.Parameters.AddWithValue("@deliverby",textBoxDeliverBy.Text);
+                command.ExecuteNonQuery();
+                resetControls();
+                connection.Close();
+                
+                MessageBox.Show("Data Saved Successfully");
 
-           
+                getInvoiceID();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
         void resetControls()
         {
+            textBoxCustomerID.Clear();
             textBoxAddress.Clear();
             textBoxCity.Clear();
             textBoxDeliverTo.Clear();
             textBoxPhoneNo.Clear();
             textBoxPincode.Clear();
-            textBoxRecName.Clear();
-            textBoxSearch.Clear();
+            textBoxDeliverBy.Clear();
+            textBoxDelivery.Clear();
             textBoxReceiptNo.Clear();
             checkBoxCash.ResetText();
         }

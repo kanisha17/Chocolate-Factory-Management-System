@@ -97,6 +97,35 @@ namespace Chocolate_Factory_Management_System
             }
             connection.Close();
         }
+
+        private void textBoxProductID_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("select *from ProductDetails where ProductID=@param", connection);
+                command.Parameters.AddWithValue("@param", int.Parse(textBoxProductID.Text));
+                OleDbDataReader rd = command.ExecuteReader();
+                while (rd.Read())
+                {
+                    comboBoxProductName.Text = rd.GetValue(1).ToString();
+                    textBoxDescription.Text = rd.GetValue(2).ToString();
+                    textBoxPrice.Text = rd.GetValue(3).ToString();
+                    textBoxDiscount.Text = rd.GetValue(4).ToString();
+                    comboBoxreview.Text = rd.GetValue(5).ToString();
+
+                    string path = Path.Combine(rd.GetValue(6).ToString());
+                    pictureBoxProductDetail.Image = Image.FromFile(path);
+                    MessageBox.Show("Raw Material Details Found");
+                }
+                connection.Close();
+                // MessageBox.Show("Product Details Found");
+            }
+            catch
+            {
+                MessageBox.Show("Raw Material Details Not Found");
+            }
+        }
     }
 
         

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
+
 namespace Chocolate_Factory_Management_System
 {
     public partial class RawMaterial : Form
@@ -31,12 +32,6 @@ namespace Chocolate_Factory_Management_System
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxSearch.Clear();
-            textBoxRawMaterialName.Clear();
-            textBoxPrice.Clear();
-            textBoxDescription.Clear();
-            comboBoxRawMaterial.ResetText();
-            MessageBox.Show("Data Cleared");
         }
 
         private void pictureBoxRawMaterial_Click(object sender, EventArgs e)
@@ -55,31 +50,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new OleDbCommand("select *from RawMaterialDetails where RawMaterialID=@param", connection);
-                command.Parameters.AddWithValue("@param", int.Parse(textBoxSearch.Text));
-                OleDbDataReader rd = command.ExecuteReader();
-                while (rd.Read())
-                {
-                    textBoxRawMaterialName.Text = rd.GetValue(1).ToString();
-                    textBoxDescription.Text = rd.GetValue(2).ToString();
-                    textBoxPrice.Text = rd.GetValue(3).ToString();
-                    textBoxDicsount.Text = rd.GetValue(4).ToString();
-                    comboBoxRawMaterial.Text = rd.GetValue(5).ToString();
-
-                    string path = Path.Combine(rd.GetValue(6).ToString());
-                    pictureBoxRawMaterial.Image = Image.FromFile(path);
-                    MessageBox.Show("Raw Material Details Found");
-                }
-                connection.Close();
-                // MessageBox.Show("Product Details Found");
-            }
-            catch 
-            {
-                MessageBox.Show("Raw Material Details Not Found");
-            }
+           
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -158,8 +129,102 @@ namespace Chocolate_Factory_Management_System
             }
             connection.Close();
         }
+        void getInvoiceID()
+        {
 
+            // command.connection.Open();
+            string sql;
+            string query = "select RawMaterialID from RawMaterialDetails order by RawMaterialID desc";
+            connection.Open();
+            OleDbCommand command = new OleDbCommand(query, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+
+            if (dr.Read())
+            {
+                int id = int.Parse(dr[0].ToString()) + 1;
+                sql = id.ToString("0");
+
+            }
+            else if (Convert.IsDBNull(dr))
+            {
+                sql = ("1");
+
+            }
+            else
+            {
+                sql = ("1");
+            }
+
+            connection.Close();
+            textBoxSearch.Text = sql.ToString();
+
+        }
         private void RawMaterial_Load(object sender, EventArgs e)
+        {
+            getInvoiceID();
+        }
+
+        private void labelDiscount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRawMaterialID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxRawMaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRawMaterailDetails_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDicsount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelReview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRawMaterialName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDescription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxRawMaterialName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
         {
 
         }

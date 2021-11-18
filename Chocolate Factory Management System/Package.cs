@@ -32,9 +32,10 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Packaging(NewStock,PackagingDate) values(@newstock,@packdate)", connection);
+                command = new OleDbCommand("insert into Packaging(ProductID,ProductName,NewStock,PackagingDate) values(@pid,@pname,@newstock,@packdate)", connection);
 
-
+                command.Parameters.AddWithValue("@pid",textBoxProductID.Text);
+                command.Parameters.AddWithValue("@pname",textBoxProductName.Text);
                 command.Parameters.AddWithValue("@newstock", textBoxNewStock.Text);
                 command.Parameters.AddWithValue("@packdate", dateTimePickerPackage.Text);
 
@@ -42,24 +43,52 @@ namespace Chocolate_Factory_Management_System
 
                 connection.Close();
                 MessageBox.Show("Data Saved Successfully");
+                resetControls();
             }
             catch
             {
-                MessageBox.Show("Data Not Saved".ToString());
+                
             }
         }
-
-        private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
+        void resetControls()
         {
+            textBoxProductName.Clear();
             textBoxNewStock.Clear();
             textBoxProductID.Clear();
         }
 
-        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        private void eXITToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
         }
+
+        private void textBoxProductID_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                OleDbCommand c1 = new OleDbCommand("select ProductName from ProductDetails where ProductID=@param", connection);
+                c1.Parameters.AddWithValue("@param", textBoxProductID.Text);
+                OleDbDataReader reader1;
+                reader1 = c1.ExecuteReader();
+                if (reader1.Read())
+                {
+
+                    textBoxProductName.Text = reader1["ProductName"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
+                }
+                connection.Close();
+            }
+            catch
+            { }
+        }
     }
+
+    
 }

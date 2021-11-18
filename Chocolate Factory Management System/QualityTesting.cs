@@ -54,6 +54,24 @@ namespace Chocolate_Factory_Management_System
 
         private void QualityTesting_Load(object sender, EventArgs e)
         {
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from ProductDetails";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxProductName.Items.Add(reader["ProductName"].ToString());
+                }
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
 
         }
 
@@ -62,7 +80,7 @@ namespace Chocolate_Factory_Management_System
             textBoxFinalConclusion.Clear();
             textBoxLaboratoryTesting.Clear();
             textBoxNonCompliance.Clear();
-            textBoxProductName.Clear();
+           comboBoxProductName.ResetText();
             textBoxSampleDetails.Clear();
             textBoxTestedBy.Clear();
             checkedListBoxResult.ResetText();
@@ -77,30 +95,52 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            try
+          
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxProductName_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBoxProductName.SelectedItem == null)
             {
-                connection.Open();
-                command = new OleDbCommand("insert into QualityTesting(SampleName,TestDate,SampleDetails,LaboratoryTesting,FinalConclusion,NonCompliance,TestedBy,Result) " +
-                    "values(@samplename,@testdate,@sampledetails,@labtest,@final,@noncompliance,@testedby,@result)", connection);
 
-
-                command.Parameters.AddWithValue("@samplename", textBoxProductName.Text);
-                command.Parameters.AddWithValue("@testdate", dateTimePicker1.Text);
-                command.Parameters.AddWithValue("sampledetails", textBoxSampleDetails.Text);
-                command.Parameters.AddWithValue("@labtest", textBoxLaboratoryTesting.Text);
-                command.Parameters.AddWithValue("@final", textBoxFinalConclusion.Text);
-                command.Parameters.AddWithValue("@noncompliance",textBoxNonCompliance.Text);
-                command.Parameters.AddWithValue("@testedby", textBoxTestedBy.Text);
-                command.Parameters.AddWithValue("@result",checkedListBoxResult.Text);
-
-                command.ExecuteNonQuery();
-
-                connection.Close();
-                MessageBox.Show("Data Saved Successfully");
             }
-            catch
+            else
             {
-                MessageBox.Show("Data Not Saved".ToString());
+                try
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "select Decription from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
+                    command.CommandText = query;
+                    OleDbDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string p = (string)reader["Description"].ToString();
+                        textBoxSampleDetails.Text = p;
+                        
+                    }
+                    connection.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Error");
+                }
             }
         }
     }

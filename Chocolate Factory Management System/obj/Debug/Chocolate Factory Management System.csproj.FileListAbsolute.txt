@@ -82,3 +82,7 @@ C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-M
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.EmployeeUpdate.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.ProductSearch.resources
 C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.ProductUpdate.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.StockAdd.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.RawMaterialUpdate.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.FinishedProductDelete.resources
+C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\obj\Debug\Chocolate_Factory_Management_System.FinishedStockSearch.resources

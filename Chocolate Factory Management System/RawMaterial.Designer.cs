@@ -32,9 +32,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEDIT = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.menuStripRawMaterial = new System.Windows.Forms.MenuStrip();
-            this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
@@ -93,19 +91,6 @@ namespace Chocolate_Factory_Management_System
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonSearch
-            // 
-            this.buttonSearch.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonSearch.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(28, 139);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(201, 58);
-            this.buttonSearch.TabIndex = 3;
-            this.buttonSearch.Text = "SEARCH";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
             // menuStripRawMaterial
             // 
             this.menuStripRawMaterial.BackColor = System.Drawing.Color.GreenYellow;
@@ -113,7 +98,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStripRawMaterial.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStripRawMaterial.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripRawMaterial.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cLEARToolStripMenuItem,
             this.eXITToolStripMenuItem});
             this.menuStripRawMaterial.Location = new System.Drawing.Point(0, 0);
             this.menuStripRawMaterial.Name = "menuStripRawMaterial";
@@ -121,15 +105,6 @@ namespace Chocolate_Factory_Management_System
             this.menuStripRawMaterial.Size = new System.Drawing.Size(1295, 44);
             this.menuStripRawMaterial.TabIndex = 4;
             this.menuStripRawMaterial.Text = "menuStripRawMaterial";
-            // 
-            // cLEARToolStripMenuItem
-            // 
-            this.cLEARToolStripMenuItem.BackColor = System.Drawing.Color.PaleGreen;
-            this.cLEARToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.clear;
-            this.cLEARToolStripMenuItem.Name = "cLEARToolStripMenuItem";
-            this.cLEARToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
-            this.cLEARToolStripMenuItem.Text = "CLEAR";
-            this.cLEARToolStripMenuItem.Click += new System.EventHandler(this.cLEARToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
@@ -147,6 +122,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(295, 31);
             this.textBoxPrice.TabIndex = 5;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
             // textBoxDescription
             // 
@@ -155,6 +131,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(295, 31);
             this.textBoxDescription.TabIndex = 6;
+            this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // textBoxRawMaterialName
             // 
@@ -163,14 +140,16 @@ namespace Chocolate_Factory_Management_System
             this.textBoxRawMaterialName.Name = "textBoxRawMaterialName";
             this.textBoxRawMaterialName.Size = new System.Drawing.Size(295, 31);
             this.textBoxRawMaterialName.TabIndex = 7;
+            this.textBoxRawMaterialName.TextChanged += new System.EventHandler(this.textBoxRawMaterialName_TextChanged);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(249, 166);
+            this.textBoxSearch.Location = new System.Drawing.Point(313, 163);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(237, 31);
+            this.textBoxSearch.Size = new System.Drawing.Size(295, 31);
             this.textBoxSearch.TabIndex = 8;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // labelPrice
             // 
@@ -184,6 +163,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPrice.Size = new System.Drawing.Size(84, 31);
             this.labelPrice.TabIndex = 9;
             this.labelPrice.Text = "Price";
+            this.labelPrice.Click += new System.EventHandler(this.labelPrice_Click);
             // 
             // labelDescription
             // 
@@ -197,6 +177,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDescription.Size = new System.Drawing.Size(173, 31);
             this.labelDescription.TabIndex = 10;
             this.labelDescription.Text = "Description";
+            this.labelDescription.Click += new System.EventHandler(this.labelDescription_Click);
             // 
             // labelRawMaterialName
             // 
@@ -210,6 +191,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterialName.Size = new System.Drawing.Size(286, 31);
             this.labelRawMaterialName.TabIndex = 11;
             this.labelRawMaterialName.Text = "Raw Material Name";
+            this.labelRawMaterialName.Click += new System.EventHandler(this.labelRawMaterialName_Click);
             // 
             // labelReview
             // 
@@ -223,6 +205,7 @@ namespace Chocolate_Factory_Management_System
             this.labelReview.Size = new System.Drawing.Size(117, 31);
             this.labelReview.TabIndex = 12;
             this.labelReview.Text = "Review";
+            this.labelReview.Click += new System.EventHandler(this.labelReview_Click);
             // 
             // labelRawMaterailDetails
             // 
@@ -236,6 +219,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterailDetails.Size = new System.Drawing.Size(650, 54);
             this.labelRawMaterailDetails.TabIndex = 15;
             this.labelRawMaterailDetails.Text = "RAW MATERIAL DETAILS";
+            this.labelRawMaterailDetails.Click += new System.EventHandler(this.labelRawMaterailDetails_Click);
             // 
             // comboBoxRawMaterial
             // 
@@ -251,6 +235,7 @@ namespace Chocolate_Factory_Management_System
             this.comboBoxRawMaterial.Name = "comboBoxRawMaterial";
             this.comboBoxRawMaterial.Size = new System.Drawing.Size(295, 31);
             this.comboBoxRawMaterial.TabIndex = 16;
+            this.comboBoxRawMaterial.SelectedIndexChanged += new System.EventHandler(this.comboBoxRawMaterial_SelectedIndexChanged);
             // 
             // pictureBoxRawMaterial
             // 
@@ -268,11 +253,12 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterialID.AutoSize = true;
             this.labelRawMaterialID.BackColor = System.Drawing.Color.Transparent;
             this.labelRawMaterialID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelRawMaterialID.Location = new System.Drawing.Point(245, 139);
+            this.labelRawMaterialID.Location = new System.Drawing.Point(15, 166);
             this.labelRawMaterialID.Name = "labelRawMaterialID";
             this.labelRawMaterialID.Size = new System.Drawing.Size(227, 23);
             this.labelRawMaterialID.TabIndex = 17;
             this.labelRawMaterialID.Text = "Enter Raw Material ID";
+            this.labelRawMaterialID.Click += new System.EventHandler(this.labelRawMaterialID_Click);
             // 
             // labelDiscount
             // 
@@ -282,6 +268,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDiscount.Size = new System.Drawing.Size(100, 23);
             this.labelDiscount.TabIndex = 18;
             this.labelDiscount.Text = "Discount";
+            this.labelDiscount.Click += new System.EventHandler(this.labelDiscount_Click);
             // 
             // textBoxDicsount
             // 
@@ -289,6 +276,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDicsount.Name = "textBoxDicsount";
             this.textBoxDicsount.Size = new System.Drawing.Size(295, 31);
             this.textBoxDicsount.TabIndex = 19;
+            this.textBoxDicsount.TextChanged += new System.EventHandler(this.textBoxDicsount_TextChanged);
             // 
             // RawMaterial
             // 
@@ -310,7 +298,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.textBoxRawMaterialName);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonEDIT);
             this.Controls.Add(this.buttonAdd);
@@ -334,7 +321,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEDIT;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.MenuStrip menuStripRawMaterial;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.TextBox textBoxDescription;
@@ -345,7 +331,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label labelRawMaterialName;
         private System.Windows.Forms.Label labelReview;
         private System.Windows.Forms.PictureBox pictureBoxRawMaterial;
-        private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelRawMaterailDetails;
         private System.Windows.Forms.ComboBox comboBoxRawMaterial;

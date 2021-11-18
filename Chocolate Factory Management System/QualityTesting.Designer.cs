@@ -30,12 +30,9 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.buttonSubmit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.labelSampleName = new System.Windows.Forms.Label();
-            this.textBoxSampleDetails = new System.Windows.Forms.TextBox();
             this.textBoxLaboratoryTesting = new System.Windows.Forms.TextBox();
-            this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelFinalConclusionTest = new System.Windows.Forms.Label();
@@ -50,6 +47,9 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cLEARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxProductName = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxSampleDetails = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,29 +66,18 @@ namespace Chocolate_Factory_Management_System
             this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(21, 277);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sample Details";
-            // 
             // labelDate
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.Color.Maroon;
-            this.labelDate.Location = new System.Drawing.Point(22, 217);
+            this.labelDate.Location = new System.Drawing.Point(22, 309);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(69, 27);
             this.labelDate.TabIndex = 2;
             this.labelDate.Text = "Date";
+            this.labelDate.Click += new System.EventHandler(this.labelDate_Click);
             // 
             // labelSampleName
             // 
@@ -102,15 +91,6 @@ namespace Chocolate_Factory_Management_System
             this.labelSampleName.TabIndex = 3;
             this.labelSampleName.Text = "Sample Name";
             // 
-            // textBoxSampleDetails
-            // 
-            this.textBoxSampleDetails.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSampleDetails.Location = new System.Drawing.Point(255, 277);
-            this.textBoxSampleDetails.Multiline = true;
-            this.textBoxSampleDetails.Name = "textBoxSampleDetails";
-            this.textBoxSampleDetails.Size = new System.Drawing.Size(374, 72);
-            this.textBoxSampleDetails.TabIndex = 4;
-            // 
             // textBoxLaboratoryTesting
             // 
             this.textBoxLaboratoryTesting.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,14 +100,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxLaboratoryTesting.Size = new System.Drawing.Size(374, 134);
             this.textBoxLaboratoryTesting.TabIndex = 5;
             this.textBoxLaboratoryTesting.Text = "Test Condition:\r\n\r\n\r\nResult Of Testing:\r\n\r\n\r\n";
-            // 
-            // textBoxProductName
-            // 
-            this.textBoxProductName.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProductName.Location = new System.Drawing.Point(255, 152);
-            this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new System.Drawing.Size(374, 31);
-            this.textBoxProductName.TabIndex = 6;
             // 
             // label2
             // 
@@ -144,10 +116,11 @@ namespace Chocolate_Factory_Management_System
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(255, 213);
+            this.dateTimePicker1.Location = new System.Drawing.Point(255, 305);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(374, 31);
             this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // labelFinalConclusionTest
             // 
@@ -262,7 +235,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1293, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1293, 42);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -284,6 +257,36 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
+            // comboBoxProductName
+            // 
+            this.comboBoxProductName.FormattingEnabled = true;
+            this.comboBoxProductName.Location = new System.Drawing.Point(255, 152);
+            this.comboBoxProductName.Name = "comboBoxProductName";
+            this.comboBoxProductName.Size = new System.Drawing.Size(374, 28);
+            this.comboBoxProductName.TabIndex = 20;
+            this.comboBoxProductName.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductName_SelectedIndexChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(21, 214);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Sample Details";
+            // 
+            // textBoxSampleDetails
+            // 
+            this.textBoxSampleDetails.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSampleDetails.Location = new System.Drawing.Point(255, 214);
+            this.textBoxSampleDetails.Multiline = true;
+            this.textBoxSampleDetails.Name = "textBoxSampleDetails";
+            this.textBoxSampleDetails.Size = new System.Drawing.Size(374, 72);
+            this.textBoxSampleDetails.TabIndex = 4;
+            // 
             // QualityTesting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -291,6 +294,7 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.peacch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1293, 614);
+            this.Controls.Add(this.comboBoxProductName);
             this.Controls.Add(this.textBoxNonCompliance);
             this.Controls.Add(this.labelNonCompliance);
             this.Controls.Add(this.textBoxTestedBy);
@@ -302,7 +306,6 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelFinalConclusionTest);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxProductName);
             this.Controls.Add(this.textBoxLaboratoryTesting);
             this.Controls.Add(this.textBoxSampleDetails);
             this.Controls.Add(this.labelSampleName);
@@ -325,12 +328,9 @@ namespace Chocolate_Factory_Management_System
         #endregion
 
         private System.Windows.Forms.Button buttonSubmit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelSampleName;
-        private System.Windows.Forms.TextBox textBoxSampleDetails;
         private System.Windows.Forms.TextBox textBoxLaboratoryTesting;
-        private System.Windows.Forms.TextBox textBoxProductName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelFinalConclusionTest;
@@ -345,5 +345,8 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cLEARToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxProductName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSampleDetails;
     }
 }

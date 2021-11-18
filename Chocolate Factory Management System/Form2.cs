@@ -158,8 +158,7 @@ namespace Chocolate_Factory_Management_System
 
         private void proftAndLossToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StockMaintenance s1 = new StockMaintenance();
-            s1.ShowDialog();
+           
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -347,8 +346,7 @@ namespace Chocolate_Factory_Management_System
 
         private void deliveryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeliveryProcess d1 = new DeliveryProcess();
-            d1.ShowDialog();
+           
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -358,8 +356,7 @@ namespace Chocolate_Factory_Management_System
 
         private void toolStripMenuItem16_Click(object sender, EventArgs e)
         {
-            RawMaterial r1 = new RawMaterial();
-            r1.ShowDialog();
+           
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
@@ -378,6 +375,55 @@ namespace Chocolate_Factory_Management_System
         {
             ProductSearch s1 = new ProductSearch();
             s1.ShowDialog();
+        }
+
+        private void aDDToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StockMaintenance m1 = new StockMaintenance();
+            m1.ShowDialog();
+        }
+
+        private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FinishedStockSearch s1 = new FinishedStockSearch();
+            s1.ShowDialog();
+        }
+
+        private void addToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            RawMaterial r1 = new RawMaterial();
+            r1.ShowDialog();
+        }
+
+        private void addToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void addToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void updateToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void updateToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            RawMaterialUpdate r1 = new RawMaterialUpdate();
+            r1.ShowDialog();
         }
     }
 }

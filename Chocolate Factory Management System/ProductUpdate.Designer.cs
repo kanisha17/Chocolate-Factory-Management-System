@@ -58,7 +58,14 @@ namespace Chocolate_Factory_Management_System
             this.labelProductID.Size = new System.Drawing.Size(85, 20);
             this.labelProductID.TabIndex = 44;
             this.labelProductID.Text = "Product ID";
-          
+            // 
+            // textBoxProductID
+            // 
+            this.textBoxProductID.Location = new System.Drawing.Point(300, 137);
+            this.textBoxProductID.Name = "textBoxProductID";
+            this.textBoxProductID.Size = new System.Drawing.Size(306, 26);
+            this.textBoxProductID.TabIndex = 48;
+            this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
             // 
             // textBoxDiscount
             // 
@@ -204,9 +211,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // comboBoxProductName
             // 
-            this.comboBoxProductName.Location = new System.Drawing.Point(313, 199);
+            this.comboBoxProductName.Location = new System.Drawing.Point(300, 199);
             this.comboBoxProductName.Name = "comboBoxProductName";
-            this.comboBoxProductName.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxProductName.Size = new System.Drawing.Size(307, 28);
             this.comboBoxProductName.TabIndex = 0;
             // 
             // pictureBoxProductDetail
