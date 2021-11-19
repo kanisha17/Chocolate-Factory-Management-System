@@ -68,5 +68,12 @@ namespace Chocolate_Factory_Management_System
             SupplierRegister s1 = new SupplierRegister();
             s1.ShowDialog();
         }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
     }
 }

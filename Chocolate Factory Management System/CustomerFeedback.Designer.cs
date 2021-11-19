@@ -56,7 +56,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickerDate
             // 
-            this.dateTimePickerDate.Location = new System.Drawing.Point(290, 397);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(290, 404);
             this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
             this.dateTimePickerDate.Size = new System.Drawing.Size(287, 31);
@@ -69,7 +69,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDate.Location = new System.Drawing.Point(31, 397);
+            this.labelDate.Location = new System.Drawing.Point(31, 404);
             this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(78, 31);
@@ -172,8 +172,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(25, 534);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
@@ -218,7 +219,7 @@ namespace Chocolate_Factory_Management_System
             this.labelQ2.BackColor = System.Drawing.Color.Transparent;
             this.labelQ2.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQ2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelQ2.Location = new System.Drawing.Point(626, 330);
+            this.labelQ2.Location = new System.Drawing.Point(626, 336);
             this.labelQ2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQ2.Name = "labelQ2";
             this.labelQ2.Size = new System.Drawing.Size(728, 23);
@@ -227,7 +228,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxQ2
             // 
-            this.textBoxQ2.Location = new System.Drawing.Point(631, 356);
+            this.textBoxQ2.Location = new System.Drawing.Point(631, 362);
             this.textBoxQ2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxQ2.Multiline = true;
             this.textBoxQ2.Name = "textBoxQ2";
@@ -298,7 +299,7 @@ namespace Chocolate_Factory_Management_System
             // comboBoxProductName
             // 
             this.comboBoxProductName.FormattingEnabled = true;
-            this.comboBoxProductName.Location = new System.Drawing.Point(290, 464);
+            this.comboBoxProductName.Location = new System.Drawing.Point(290, 472);
             this.comboBoxProductName.Name = "comboBoxProductName";
             this.comboBoxProductName.Size = new System.Drawing.Size(287, 31);
             this.comboBoxProductName.TabIndex = 27;
@@ -306,9 +307,12 @@ namespace Chocolate_Factory_Management_System
             // labelProductName
             // 
             this.labelProductName.AutoSize = true;
+            this.labelProductName.BackColor = System.Drawing.Color.Transparent;
+            this.labelProductName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelProductName.Location = new System.Drawing.Point(33, 472);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(147, 23);
+            this.labelProductName.Size = new System.Drawing.Size(205, 31);
             this.labelProductName.TabIndex = 28;
             this.labelProductName.Text = "ProductName";
             // 

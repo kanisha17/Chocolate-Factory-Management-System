@@ -54,12 +54,13 @@ namespace Chocolate_Factory_Management_System
 
         private void QualityTesting_Load(object sender, EventArgs e)
         {
+            getInvoiceID();
             try
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "select *from ProductDetails";
+                string query = "select ProductName from ProductDetails";
                 command.CommandText = query;
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -74,16 +75,42 @@ namespace Chocolate_Factory_Management_System
             }
 
         }
+        void getInvoiceID()
+        {
+            try
+            {
 
+                // command.connection.Open();
+                string sql;
+                string query = "select TestNo from QualityTesting order by TestNo desc";
+                connection.Open();
+                OleDbCommand command = new OleDbCommand(query, connection);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int id = int.Parse(dr[0].ToString()) + 1;
+                    sql = id.ToString("0");
+
+                }
+                else if (Convert.IsDBNull(dr))
+                {
+                    sql = ("1");
+
+                }
+                else
+                {
+                    sql = ("1");
+                }
+
+                connection.Close();
+                textBoxTestNo.Text = sql.ToString();
+            }
+            catch { }
+        }
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBoxFinalConclusion.Clear();
-            textBoxLaboratoryTesting.Clear();
-            textBoxNonCompliance.Clear();
-           comboBoxProductName.ResetText();
-            textBoxSampleDetails.Clear();
-            textBoxTestedBy.Clear();
-            checkedListBoxResult.ResetText();
+           
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,7 +122,46 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-          
+
+            try
+            {
+                connection.Open();
+                command = new OleDbCommand("insert into QualityTesting(TestNo,SampleName,TestDate,SampleDetails,LaboratoryTesting,FinalConclusion,NonCompliance,TestedBy,Result) " +
+                    "values(@testno,@pname,@rdate,@sdetails,@lab,@final,@non,@test,@result)", connection);
+                command.Parameters.AddWithValue("@testno", textBoxTestNo.Text);
+                command.Parameters.AddWithValue("@pname", comboBoxProductName.Text);
+                command.Parameters.AddWithValue("@rdate", dateTimePicker1.Text);
+                command.Parameters.AddWithValue("@sdetails", textBoxSampleDetails.Text);
+                command.Parameters.AddWithValue("@lab", textBoxLaboratoryTesting.Text);
+                command.Parameters.AddWithValue("@final", textBoxFinalConclusion.Text);
+                command.Parameters.AddWithValue("@non", textBoxNonCompliance.Text);
+                command.Parameters.AddWithValue("@test", textBoxTestedBy.Text);
+                command.Parameters.AddWithValue("@result",checkedListBoxResult.Text);
+              
+                command.ExecuteNonQuery();
+              
+                connection.Close();
+
+                MessageBox.Show("Data Saved Successfully");
+
+                resetControls();
+                getInvoiceID();
+            }
+            catch 
+            {
+              
+            }
+        }
+        void resetControls()
+        {
+            comboBoxProductName.ResetText();
+            checkedListBoxResult.ResetText();
+            textBoxFinalConclusion.Clear();
+            textBoxLaboratoryTesting.Clear();
+            textBoxNonCompliance.Clear();
+            textBoxSampleDetails.Clear();
+            textBoxTestedBy.Clear();
+            textBoxTestNo.Clear();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -126,7 +192,7 @@ namespace Chocolate_Factory_Management_System
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    string query = "select Decription from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
+                    string query = "select Description from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
                     command.CommandText = query;
                     OleDbDataReader reader = command.ExecuteReader();
                     while (reader.Read())

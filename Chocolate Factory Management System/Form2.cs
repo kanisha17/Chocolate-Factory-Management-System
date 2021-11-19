@@ -373,8 +373,8 @@ namespace Chocolate_Factory_Management_System
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductSearch s1 = new ProductSearch();
-            s1.ShowDialog();
+            FinalProductDelete f1 = new FinalProductDelete();
+            f1.ShowDialog();
         }
 
         private void aDDToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -385,7 +385,7 @@ namespace Chocolate_Factory_Management_System
 
         private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FinishedStockSearch s1 = new FinishedStockSearch();
+            StockAdd s1 = new StockAdd();
             s1.ShowDialog();
         }
 
@@ -424,6 +424,12 @@ namespace Chocolate_Factory_Management_System
         {
             RawMaterialUpdate r1 = new RawMaterialUpdate();
             r1.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            RawMaterialDelete d1 = new RawMaterialDelete();
+            d1.ShowDialog();
         }
     }
 }

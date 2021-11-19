@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.IO;
+
 
 namespace Chocolate_Factory_Management_System
 {
@@ -54,16 +54,7 @@ namespace Chocolate_Factory_Management_System
 
         private void pictureBoxProductDetail_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            PictureBox p = sender as PictureBox;
-            if (p != null)
-            {
-                open.Filter = "(*.jpg;*.jpeg,*.png) | *.jpg;*.jpeg,*.png";
-                if (open.ShowDialog() == DialogResult.OK)
-                {
-                    p.Image = Image.FromFile(open.FileName);
-                }
-            }
+            
         }
 
         private void buttonSEARCH_Click(object sender, EventArgs e)
@@ -82,6 +73,8 @@ namespace Chocolate_Factory_Management_System
         }
         void resetControls()
         {
+            textBoxDiscount.Clear();
+            textBoxAvailableStock.Clear();
             comboBoxreview.ResetText();
             textBoxProductName.Clear();
             textBoxPrice.Clear();
@@ -93,28 +86,29 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                string location = "C:\\Users\\hp\\source\\ProdImages";
-                string path = Path.Combine(location, textBoxProductName.Text + ".jpg");
-                command = new OleDbCommand("insert into ProductDetails(ProductID,ProductName,Description,Price,Review,ProductImage) " +
-                    "values(@productid,@productname,description,price,review,productimage)", connection);
-                command.Parameters.AddWithValue("@productid", textBoxProductID.Text);
-                command.Parameters.AddWithValue("@productname", textBoxProductName.Text);
-                command.Parameters.AddWithValue("@description", textBoxDescription.Text);
-                command.Parameters.AddWithValue("@price", textBoxPrice.Text);
-                command.Parameters.AddWithValue("@review", comboBoxreview.Text);
-                command.Parameters.AddWithValue("@productimage", path);
+                command = new OleDbCommand("insert into ProductDetails(ProductID,ProductName,Description,Price,Discount,Review) " +
+                    "values(@rid,@materialname,@desc,@price,@dis,@rev)", connection);
 
-                Image a = pictureBoxProductDetail.Image;
+
+                command.Parameters.AddWithValue("@rid",textBoxProductID.Text);
+                command.Parameters.AddWithValue("@materialname", textBoxProductName.Text);
+                command.Parameters.AddWithValue("@desc", textBoxDescription.Text);
+                command.Parameters.AddWithValue("@price", textBoxPrice.Text);
+                command.Parameters.AddWithValue("@dis",textBoxDiscount.Text);
+                command.Parameters.AddWithValue("@rev", comboBoxreview.Text);
+
 
                 command.ExecuteNonQuery();
-                a.Save(path);
-                connection.Close();
-                MessageBox.Show("Data Saved Successfully");
                 resetControls();
+                connection.Close();
+
+                MessageBox.Show("Data Saved Successfully");
+                getInvoiceID();
+
             }
             catch
             {
-                MessageBox.Show("Data Not Saved");
+                MessageBox.Show("Data Not Saved".ToString());
             }
         }
 

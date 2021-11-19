@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class StockAdd : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-       // OleDbCommand command;
+        // OleDbCommand command;
         public StockAdd()
         {
             InitializeComponent();
@@ -23,33 +23,15 @@ namespace Chocolate_Factory_Management_System
 
         private void textBoxProductID_TextChanged(object sender, EventArgs e)
         {
-            
-            try
-            {
-                connection.Open();
-                OleDbCommand c1 = new OleDbCommand("select ProductName from ProductDetails where ProductID=@param", connection);
-                c1.Parameters.AddWithValue("@param", textBoxProductID.Text);
-                OleDbDataReader reader1;
-                reader1 = c1.ExecuteReader();
-                if (reader1.Read())
-                {
 
-                    comboBoxProductName.Text = reader1["ProductName"].ToString();
 
-                }
-                else
-                {
-                    MessageBox.Show("No Data Found");
-                }
-                connection.Close();
-            }
-            catch
-            { }
         }
 
         void resetControls()
         {
-            textBoxAvailableStock.Clear();
+            textBoxNetStock.Clear();
+            textBoxStockInward.Clear();
+            textBoxStockOutward.Clear();
             textBoxProductID.Clear();
             comboBoxProductName.ResetText();
         }
@@ -61,28 +43,29 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update ProductDetails set SDate='" + dateTimePickerDate.Text + "','"+textBoxAvailableStock.Text+"',StockInward='" + textBoxStockInward.Text + "'," +
+                string query = "update ProductDetails set SDate='" + dateTimePickerDate.Text + "',StockInward='" + textBoxStockInward.Text + "'," +
                     "StockOutward='" + textBoxStockOutward.Text + "',NetStock='" + textBoxNetStock.Text + "' where ProductID=" + textBoxProductID.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data Updated Successfully");
+                resetControls();
                 connection.Close();
             }
             catch
             {
                 MessageBox.Show("Data Not Updated");
             }
-           
-         
-        }
-    
 
-        
+
+        }
+
+
+
         private void StockAdd_Load(object sender, EventArgs e)
         {
-          
+
             try
             {
                 connection.Open();
@@ -105,9 +88,56 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FinishedStockSearch f2 = new FinishedStockSearch();
-            f2.Show();
-            this.Hide();
+           
+        }
+
+        private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxProductName.SelectedItem == null)
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "select ProductID from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
+                    command.CommandText = query;
+                    OleDbDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string p = (string)reader["ProductID"].ToString();
+                        textBoxProductID.Text = p;
+
+                    }
+                    connection.Close();
+                }
+                catch
+                {
+                    
+                }
+            }
+        }
+
+        private void textBoxStockOutward_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxStockOutward.Text) == true)
+            {
+
+            }
+            else
+            {
+
+                int price = Convert.ToInt32(textBoxStockInward.Text);
+                int discount = Convert.ToInt32(textBoxStockOutward.Text);
+              
+                int subtotal = price - discount;
+         
+               textBoxNetStock.Text = subtotal.ToString();
+            }
         }
     }
 }

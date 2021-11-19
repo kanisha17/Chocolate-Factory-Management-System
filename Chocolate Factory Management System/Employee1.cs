@@ -193,6 +193,11 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
+        }
+
+        private void pRINTToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();

@@ -37,29 +37,27 @@ namespace Chocolate_Factory_Management_System
             this.labelReview = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBoxProductDetail = new System.Windows.Forms.PictureBox();
             this.labelPD = new System.Windows.Forms.Label();
             this.comboBoxreview = new System.Windows.Forms.ComboBox();
             this.buttonADD = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxProductID = new System.Windows.Forms.TextBox();
             this.labelProductID = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
+            this.labelDiscount = new System.Windows.Forms.Label();
+            this.textBoxDiscount = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
             this.labelPrice.BackColor = System.Drawing.Color.Transparent;
-            this.labelPrice.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPrice.Location = new System.Drawing.Point(9, 296);
+            this.labelPrice.Location = new System.Drawing.Point(404, 297);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(98, 36);
+            this.labelPrice.Size = new System.Drawing.Size(84, 31);
             this.labelPrice.TabIndex = 0;
             this.labelPrice.Text = "Price";
             // 
@@ -67,12 +65,12 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.BackColor = System.Drawing.Color.Transparent;
-            this.labelDescription.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDescription.Location = new System.Drawing.Point(9, 233);
+            this.labelDescription.Location = new System.Drawing.Point(404, 243);
             this.labelDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(207, 36);
+            this.labelDescription.Size = new System.Drawing.Size(173, 31);
             this.labelDescription.TabIndex = 1;
             this.labelDescription.Text = "Description";
             // 
@@ -80,18 +78,18 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelProductName.AutoSize = true;
             this.labelProductName.BackColor = System.Drawing.Color.Transparent;
-            this.labelProductName.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProductName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelProductName.Location = new System.Drawing.Point(9, 172);
+            this.labelProductName.Location = new System.Drawing.Point(404, 191);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(248, 36);
+            this.labelProductName.Size = new System.Drawing.Size(214, 31);
             this.labelProductName.TabIndex = 2;
             this.labelProductName.Text = "Product Name";
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(293, 238);
+            this.textBoxDescription.Location = new System.Drawing.Point(686, 243);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(306, 31);
@@ -99,7 +97,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(293, 301);
+            this.textBoxPrice.Location = new System.Drawing.Point(686, 297);
             this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(306, 31);
@@ -109,12 +107,12 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelReview.AutoSize = true;
             this.labelReview.BackColor = System.Drawing.Color.Transparent;
-            this.labelReview.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReview.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReview.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelReview.Location = new System.Drawing.Point(9, 362);
+            this.labelReview.Location = new System.Drawing.Point(404, 413);
             this.labelReview.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReview.Name = "labelReview";
-            this.labelReview.Size = new System.Drawing.Size(135, 36);
+            this.labelReview.Size = new System.Drawing.Size(117, 31);
             this.labelReview.TabIndex = 9;
             this.labelReview.Text = "Review";
             // 
@@ -142,17 +140,6 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
-            // pictureBoxProductDetail
-            // 
-            this.pictureBoxProductDetail.Location = new System.Drawing.Point(668, 117);
-            this.pictureBoxProductDetail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBoxProductDetail.Name = "pictureBoxProductDetail";
-            this.pictureBoxProductDetail.Size = new System.Drawing.Size(597, 437);
-            this.pictureBoxProductDetail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxProductDetail.TabIndex = 10;
-            this.pictureBoxProductDetail.TabStop = false;
-            this.pictureBoxProductDetail.Click += new System.EventHandler(this.pictureBoxProductDetail_Click);
-            // 
             // labelPD
             // 
             this.labelPD.AutoSize = true;
@@ -175,42 +162,26 @@ namespace Chocolate_Factory_Management_System
             "***",
             "**",
             "*"});
-            this.comboBoxreview.Location = new System.Drawing.Point(293, 362);
+            this.comboBoxreview.Location = new System.Drawing.Point(686, 413);
             this.comboBoxreview.Name = "comboBoxreview";
             this.comboBoxreview.Size = new System.Drawing.Size(306, 53);
             this.comboBoxreview.TabIndex = 18;
             // 
             // buttonADD
             // 
-            this.buttonADD.Location = new System.Drawing.Point(325, 499);
+            this.buttonADD.BackColor = System.Drawing.Color.GreenYellow;
+            this.buttonADD.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonADD.Location = new System.Drawing.Point(686, 494);
             this.buttonADD.Name = "buttonADD";
-            this.buttonADD.Size = new System.Drawing.Size(208, 43);
+            this.buttonADD.Size = new System.Drawing.Size(306, 60);
             this.buttonADD.TabIndex = 26;
-            this.buttonADD.Text = "INSERT";
+            this.buttonADD.Text = "SUBMIT";
+            this.buttonADD.UseVisualStyleBackColor = false;
             this.buttonADD.Click += new System.EventHandler(this.buttonADD_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(7, 433);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 36);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Available Stock";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(293, 438);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 31);
-            this.textBox1.TabIndex = 23;
             // 
             // textBoxProductID
             // 
-            this.textBoxProductID.Location = new System.Drawing.Point(293, 117);
+            this.textBoxProductID.Location = new System.Drawing.Point(686, 133);
             this.textBoxProductID.Name = "textBoxProductID";
             this.textBoxProductID.Size = new System.Drawing.Size(306, 31);
             this.textBoxProductID.TabIndex = 28;
@@ -219,18 +190,40 @@ namespace Chocolate_Factory_Management_System
             // labelProductID
             // 
             this.labelProductID.AutoSize = true;
-            this.labelProductID.Location = new System.Drawing.Point(21, 117);
+            this.labelProductID.BackColor = System.Drawing.Color.Transparent;
+            this.labelProductID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelProductID.Location = new System.Drawing.Point(404, 133);
             this.labelProductID.Name = "labelProductID";
-            this.labelProductID.Size = new System.Drawing.Size(118, 23);
+            this.labelProductID.Size = new System.Drawing.Size(166, 31);
             this.labelProductID.TabIndex = 29;
             this.labelProductID.Text = "Product ID";
             // 
             // textBoxProductName
             // 
-            this.textBoxProductName.Location = new System.Drawing.Point(293, 177);
+            this.textBoxProductName.Location = new System.Drawing.Point(686, 191);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(306, 31);
             this.textBoxProductName.TabIndex = 30;
+            // 
+            // labelDiscount
+            // 
+            this.labelDiscount.AutoSize = true;
+            this.labelDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.labelDiscount.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiscount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelDiscount.Location = new System.Drawing.Point(404, 353);
+            this.labelDiscount.Name = "labelDiscount";
+            this.labelDiscount.Size = new System.Drawing.Size(137, 31);
+            this.labelDiscount.TabIndex = 31;
+            this.labelDiscount.Text = "Discount";
+            // 
+            // textBoxDiscount
+            // 
+            this.textBoxDiscount.Location = new System.Drawing.Point(686, 353);
+            this.textBoxDiscount.Name = "textBoxDiscount";
+            this.textBoxDiscount.Size = new System.Drawing.Size(306, 31);
+            this.textBoxDiscount.TabIndex = 32;
             // 
             // ProductDetails
             // 
@@ -238,15 +231,14 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b8;
             this.ClientSize = new System.Drawing.Size(1313, 575);
+            this.Controls.Add(this.textBoxDiscount);
+            this.Controls.Add(this.labelDiscount);
             this.Controls.Add(this.textBoxProductName);
             this.Controls.Add(this.labelProductID);
             this.Controls.Add(this.textBoxProductID);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonADD);
             this.Controls.Add(this.comboBoxreview);
             this.Controls.Add(this.labelPD);
-            this.Controls.Add(this.pictureBoxProductDetail);
             this.Controls.Add(this.labelReview);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxDescription);
@@ -264,7 +256,6 @@ namespace Chocolate_Factory_Management_System
             this.Load += new System.EventHandler(this.ProductDetails_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,16 +269,15 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label labelReview;
-        private System.Windows.Forms.PictureBox pictureBoxProductDetail;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
         private System.Windows.Forms.Label labelPD;
         private System.Windows.Forms.ComboBox comboBoxreview;
         private System.Windows.Forms.Button buttonADD;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxProductID;
         private System.Windows.Forms.Label labelProductID;
         private System.Windows.Forms.TextBox textBoxProductName;
+        private System.Windows.Forms.Label labelDiscount;
+        private System.Windows.Forms.TextBox textBoxDiscount;
     }
 }

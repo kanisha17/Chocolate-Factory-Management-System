@@ -89,30 +89,7 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            basicsalary = int.Parse(textBoxBasicSalary.Text);
-
-            if (basicsalary >= 0)
-            {
-                da = basicsalary * 10 / 100;
-                textBoxDA.Text = da.ToString();
-
-                hra = basicsalary * 15 / 100;
-                textBoxHRA.Text = hra.ToString();
-
-                grossalary = basicsalary + da + hra;
-                textBoxGrossSalary.Text = grossalary.ToString();
-
-                pf = grossalary * 10 / 100;
-                textBoxPF.Text = pf.ToString();
-
-                netsalary = grossalary - pf;
-                textBoxNetSalary.Text = netsalary.ToString();
-                MessageBox.Show("Net Salary:" + netsalary.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Enter a valid input");
-            }
+           
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -140,18 +117,9 @@ namespace Chocolate_Factory_Management_System
           
         }
 
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void pRINTSLIPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-        }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void buttonReceipt_Click(object sender, EventArgs e)
-        {
             EmployeeSalaryReceipt s1 = new EmployeeSalaryReceipt();
             EmployeeSalaryReceiptReport s2 = new EmployeeSalaryReceiptReport();
 
@@ -164,7 +132,7 @@ namespace Chocolate_Factory_Management_System
             TextObject c = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text11"];
             c.Text = textBoxDepartment.Text;
             TextObject d = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text13"];
-            d.Text =textBoxCity.Text;
+            d.Text = textBoxCity.Text;
             TextObject e1 = (TextObject)s2.ReportDefinition.Sections["Section2"].ReportObjects["Text15"];
             e1.Text = textBoxPhoneNo.Text;
             TextObject f = (TextObject)s2.ReportDefinition.Sections["Section3"].ReportObjects["Text17"];
@@ -182,6 +150,48 @@ namespace Chocolate_Factory_Management_System
 
             s1.crystalReportViewer1.ReportSource = s2;
             s1.Show();
+        }
+
+        private void textBoxBasicSalary_TextChanged(object sender, EventArgs e)
+        {
+            basicsalary = int.Parse(textBoxBasicSalary.Text);
+
+            if (basicsalary >= 0)
+            {
+                da = basicsalary * 10 / 100;
+                textBoxDA.Text = da.ToString();
+
+                hra = basicsalary * 15 / 100;
+                textBoxHRA.Text = hra.ToString();
+
+                grossalary = basicsalary + da + hra;
+                textBoxGrossSalary.Text = grossalary.ToString();
+
+                pf = grossalary * 10 / 100;
+                textBoxPF.Text = pf.ToString();
+
+                netsalary = grossalary - pf;
+                textBoxNetSalary.Text = netsalary.ToString();
+                MessageBox.Show("Net Salary:" + netsalary.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid input");
+            }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonReceipt_Click(object sender, EventArgs e)
+        {
         }
 
         private void EmployeeSalary_Load(object sender, EventArgs e)

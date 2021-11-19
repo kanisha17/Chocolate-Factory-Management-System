@@ -15,32 +15,32 @@ namespace Chocolate_Factory_Management_System
     {
 
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+       // OleDbCommand command;
         public StockMaintenance()
         {
             InitializeComponent();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\hp\source\Access\ChocolateFactory17.accdb;Persist Security Info=False;";
 
         }
-        double inward, outward, netstock;
+      
         private void buttonSerach_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void eDITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void cLEARToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,11 +49,11 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonADD_Click(object sender, EventArgs e)
         {
-          
+
         }
         void resetControls()
         {
-            textBox1.Clear();
+
             textBoxNetStock.Clear();
             textBoxProductID.Clear();
             textBoxStockInward.Clear();
@@ -68,7 +68,7 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update RawMaterialDetails set RDate='" + dateTimePickerDate.Text + "',AvailableStock='" + textBox1.Text + "',StockInward='" + textBoxStockInward.Text + "'," +
+                string query = "update RawMaterialDetails set RDate='" + dateTimePickerDate.Text + "',StockInward='" + textBoxStockInward.Text + "'," +
                     "StockOutward='" + textBoxStockOutward.Text + "',NetStock='" + textBoxNetStock.Text + "' where RawMaterialID=" + textBoxProductID.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
@@ -86,59 +86,107 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonDELETE_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void textBoxProductID_TextChanged(object sender, EventArgs e)
         {
 
-            try
-            {
-                connection.Open();
-                OleDbCommand c1 = new OleDbCommand("select RawMaterialName from RawMaterialDetails where RawMaterialID=@param", connection);
-                c1.Parameters.AddWithValue("@param", textBoxProductID.Text);
-                OleDbDataReader reader1;
-                reader1 = c1.ExecuteReader();
-                if (reader1.Read())
-                {
 
-                    comboBoxRawMaterialName.Text = reader1["RawMaterialName"].ToString();
-                    
-                }
-                else
-                {
-                    
-                }
-                connection.Close();
-            }
-            catch
-            { }
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void eXITToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
-
         }
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            inward = int.Parse(textBoxStockInward.Text);
-            outward = int.Parse(textBoxStockOutward.Text);
+            
+        }
 
-
-            if (inward >= 0 && outward >= 0)
+        private void textBoxStockOutward_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxStockOutward.Text) == true)
             {
-                netstock = inward - outward;
-                textBoxNetStock.Text = netstock.ToString();
-                MessageBox.Show("Net Stock:" + netstock.ToString());
+
             }
             else
             {
-                MessageBox.Show("Enter a valid input");
+
+                int price = Convert.ToInt32(textBoxStockInward.Text);
+                int discount = Convert.ToInt32(textBoxStockOutward.Text);
+
+                int subtotal = price - discount;
+
+                textBoxNetStock.Text = subtotal.ToString();
             }
+        }
+
+        private void StockMaintenance_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select RawMaterialName from RawMaterialDetails";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxRawMaterialName.Items.Add(reader["RawMaterialName"].ToString());
+                }
+                connection.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void comboBoxRawMaterialName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxRawMaterialName.SelectedItem == null)
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "select RawMaterialID from RawMaterialDetails where RawMaterialName='" + comboBoxRawMaterialName.Text + "';";
+                    command.CommandText = query;
+                    OleDbDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string p = (string)reader["RawMaterialID"].ToString();
+                        textBoxProductID.Text = p;
+
+                    }
+                    connection.Close();
+                }
+                catch
+                {
+
+                }
+            }
+
         }
     }
 }

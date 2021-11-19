@@ -45,7 +45,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxPhoneNo
             // 
             this.textBoxPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(594, 184);
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(597, 229);
             this.textBoxPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(344, 36);
@@ -55,13 +55,14 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelPhoneNo.AutoSize = true;
             this.labelPhoneNo.BackColor = System.Drawing.Color.Transparent;
+            this.labelPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPhoneNo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPhoneNo.Location = new System.Drawing.Point(450, 197);
+            this.labelPhoneNo.Location = new System.Drawing.Point(338, 234);
             this.labelPhoneNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhoneNo.Name = "labelPhoneNo";
-            this.labelPhoneNo.Size = new System.Drawing.Size(107, 23);
+            this.labelPhoneNo.Size = new System.Drawing.Size(231, 31);
             this.labelPhoneNo.TabIndex = 6;
-            this.labelPhoneNo.Text = "Phone No";
+            this.labelPhoneNo.Text = "Enter Phone No";
             // 
             // labelCustomer
             // 
@@ -69,7 +70,7 @@ namespace Chocolate_Factory_Management_System
             this.labelCustomer.BackColor = System.Drawing.Color.Transparent;
             this.labelCustomer.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCustomer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCustomer.Location = new System.Drawing.Point(555, 53);
+            this.labelCustomer.Location = new System.Drawing.Point(588, 83);
             this.labelCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCustomer.Name = "labelCustomer";
             this.labelCustomer.Size = new System.Drawing.Size(301, 54);
@@ -80,7 +81,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.linkLabelNewRegister.AutoSize = true;
             this.linkLabelNewRegister.BackColor = System.Drawing.Color.White;
-            this.linkLabelNewRegister.Location = new System.Drawing.Point(606, 278);
+            this.linkLabelNewRegister.Location = new System.Drawing.Point(609, 323);
             this.linkLabelNewRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelNewRegister.Name = "linkLabelNewRegister";
             this.linkLabelNewRegister.Size = new System.Drawing.Size(321, 23);
@@ -91,6 +92,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,42 +103,52 @@ namespace Chocolate_Factory_Management_System
             this.deliveryProcessToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1307, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1307, 40);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // enquiryToolStripMenuItem
             // 
+            this.enquiryToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.enquiryToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.en12;
             this.enquiryToolStripMenuItem.Name = "enquiryToolStripMenuItem";
-            this.enquiryToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
+            this.enquiryToolStripMenuItem.Size = new System.Drawing.Size(144, 36);
             this.enquiryToolStripMenuItem.Text = "Enquiry";
             this.enquiryToolStripMenuItem.Click += new System.EventHandler(this.enquiryToolStripMenuItem_Click);
             // 
             // feedbackToolStripMenuItem
             // 
+            this.feedbackToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.feedbackToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.f2;
             this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(161, 36);
             this.feedbackToolStripMenuItem.Text = "Feedback";
             this.feedbackToolStripMenuItem.Click += new System.EventHandler(this.feedbackToolStripMenuItem_Click);
             // 
             // complaintToolStripMenuItem
             // 
+            this.complaintToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.complaintToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.c10;
             this.complaintToolStripMenuItem.Name = "complaintToolStripMenuItem";
-            this.complaintToolStripMenuItem.Size = new System.Drawing.Size(110, 29);
+            this.complaintToolStripMenuItem.Size = new System.Drawing.Size(173, 36);
             this.complaintToolStripMenuItem.Text = "Complaint";
             this.complaintToolStripMenuItem.Click += new System.EventHandler(this.complaintToolStripMenuItem_Click);
             // 
             // placeAnOrderToolStripMenuItem
             // 
+            this.placeAnOrderToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.placeAnOrderToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.sales1;
             this.placeAnOrderToolStripMenuItem.Name = "placeAnOrderToolStripMenuItem";
-            this.placeAnOrderToolStripMenuItem.Size = new System.Drawing.Size(146, 29);
+            this.placeAnOrderToolStripMenuItem.Size = new System.Drawing.Size(227, 36);
             this.placeAnOrderToolStripMenuItem.Text = "Place An Order";
             this.placeAnOrderToolStripMenuItem.Click += new System.EventHandler(this.placeAnOrderToolStripMenuItem_Click);
             // 
             // deliveryProcessToolStripMenuItem
             // 
+            this.deliveryProcessToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.deliveryProcessToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.d;
             this.deliveryProcessToolStripMenuItem.Name = "deliveryProcessToolStripMenuItem";
-            this.deliveryProcessToolStripMenuItem.Size = new System.Drawing.Size(156, 29);
+            this.deliveryProcessToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
             this.deliveryProcessToolStripMenuItem.Text = "Delivery Process";
             this.deliveryProcessToolStripMenuItem.Click += new System.EventHandler(this.deliveryProcessToolStripMenuItem_Click);
             // 
@@ -146,7 +158,7 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.b5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1307, 610);
+            this.ClientSize = new System.Drawing.Size(1307, 529);
             this.Controls.Add(this.linkLabelNewRegister);
             this.Controls.Add(this.labelCustomer);
             this.Controls.Add(this.labelPhoneNo);

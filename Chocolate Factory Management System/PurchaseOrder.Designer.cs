@@ -151,7 +151,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxName.Location = new System.Drawing.Point(1070, 51);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(190, 31);
+            this.textBoxName.Size = new System.Drawing.Size(222, 31);
             this.textBoxName.TabIndex = 17;
             // 
             // labelName
@@ -331,7 +331,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxTotalCost
             // 
-            this.textBoxTotalCost.Location = new System.Drawing.Point(902, 121);
+            this.textBoxTotalCost.Location = new System.Drawing.Point(902, 129);
             this.textBoxTotalCost.Name = "textBoxTotalCost";
             this.textBoxTotalCost.Size = new System.Drawing.Size(358, 31);
             this.textBoxTotalCost.TabIndex = 53;
@@ -429,9 +429,9 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxPhoneNo
             // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(658, 394);
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(1070, 89);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(300, 31);
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(222, 31);
             this.textBoxPhoneNo.TabIndex = 64;
             // 
             // PurchaseOrder

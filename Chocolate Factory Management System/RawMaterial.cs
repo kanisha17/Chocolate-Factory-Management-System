@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.IO;
+
 
 namespace Chocolate_Factory_Management_System
 {
@@ -36,98 +36,61 @@ namespace Chocolate_Factory_Management_System
 
         private void pictureBoxRawMaterial_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            PictureBox p = sender as PictureBox;
-            if (p != null)
-            {
-                open.Filter = "(*.jpg;*.jpeg,*.png) | *.jpg;*.jpeg,*.png";
-                if (open.ShowDialog() == DialogResult.OK)
-                {
-                    p.Image = Image.FromFile(open.FileName);
-                }
-            }
+            
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
            
         }
-
+        void resetControls()
+        {
+            textBoxRawMaterialName.Clear();
+            textBoxPrice.Clear();
+            textBoxDicsount.Clear();
+            textBoxDescription.Clear();
+            comboBoxRawMaterial.ResetText();
+        }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 connection.Open();
-                string location = "C:\\Users\\hp\\source\\RawMaterial";
-                string path = Path.Combine(location, textBoxRawMaterialName.Text + ".jpg");
-                command = new OleDbCommand("insert into RawMaterialDetails(RawMaterialName,Description,Price,Review,RawMaterialImage) " +
-                    "values(@productname,description,price,review,productimage)", connection);
+                command = new OleDbCommand("insert into RawMaterialDetails(RawMaterialID,RawMaterialName,Description,Price,Discount,Review) " +
+                    "values(@rid,@materialname,@desc,@price,@dis,@rev)", connection);
 
-                command.Parameters.AddWithValue("@productname", textBoxRawMaterialName.Text);
-                command.Parameters.AddWithValue("@description", textBoxDescription.Text);
-                command.Parameters.AddWithValue("@price", textBoxPrice.Text);
-                command.Parameters.AddWithValue("@review", comboBoxRawMaterial.Text);
-                command.Parameters.AddWithValue("@productimage", path);
 
-                Image a = pictureBoxRawMaterial.Image;
+                command.Parameters.AddWithValue("@rid", textBoxSearch.Text);
+                command.Parameters.AddWithValue("@materialname",textBoxRawMaterialName.Text);
+                command.Parameters.AddWithValue("@desc",textBoxDescription.Text);
+                command.Parameters.AddWithValue("@price",textBoxPrice.Text);
+                command.Parameters.AddWithValue("@dis", textBoxDicsount.Text);
+                command.Parameters.AddWithValue("@rev", comboBoxRawMaterial.Text);
+               
 
                 command.ExecuteNonQuery();
-                a.Save(path);
+                resetControls();
                 connection.Close();
+                
                 MessageBox.Show("Data Saved Successfully");
+                getInvoiceID();
+
             }
             catch
             {
-                MessageBox.Show("Data Not Saved");
+                MessageBox.Show("Data Not Saved".ToString());
             }
+          
         }
 
         private void buttonEDIT_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-             
-                string query = "update RawMaterialDetails set RawMaterialName='" +textBoxRawMaterialName.Text + "',Description='" + textBoxDescription.Text + "'," +
-                    "Price='" + textBoxPrice.Text + "',Discount='"+textBoxDicsount.Text+"',Review='" + comboBoxRawMaterial.Text + "' where RawMaterialID=" + textBoxSearch.Text + "";
-               
-                MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                
-                MessageBox.Show("Data Updated Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Updated");
-            }
-            connection.Close();
+          
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "delete from RawMaterialDetails where RawMaterialID=" + textBoxSearch.Text + "";
-                //MessageBox.Show(query);
-                command.CommandText = query;
-
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted Successfully");
-            }
-            catch 
-            {
-                MessageBox.Show("Data Not Deleted");
-            }
-            connection.Close();
+           
         }
         void getInvoiceID()
         {

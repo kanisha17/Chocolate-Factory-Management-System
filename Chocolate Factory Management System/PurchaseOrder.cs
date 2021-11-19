@@ -363,13 +363,17 @@ namespace Chocolate_Factory_Management_System
                 OleDbCommand command;
 
                 connection.Open();
-                command = new OleDbCommand("insert into PurchaseOrder(InvoiceID,ProductName,PDate,FinalCost) " +
-                    "values(@invoiceid,@name,@date,@finalcost)", connection);
+                command = new OleDbCommand("insert into PurchaseOrder(InvoiceID,SupplierName,PhoneNo,ProductName,PDate,FinalCost,Paid,Change) " +
+                    "values(@invoiceid,@sname,@phone,@pname,@date,@finalcost,@paid,@change)", connection);
 
                 command.Parameters.AddWithValue("@invoiceid", textBoxInvoiceID.Text);
-                command.Parameters.AddWithValue("@name", textBoxName.Text);
+                command.Parameters.AddWithValue("@sname", textBoxName.Text);
+                command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
+                command.Parameters.AddWithValue("@pname", comboBoxProductName.Text);
                 command.Parameters.AddWithValue("@date", DateTime.Now.ToString());
                 command.Parameters.AddWithValue("@finalcost", textBoxFinalCost.Text);
+                command.Parameters.AddWithValue("@paid",textBoxPaid.Text);
+                command.Parameters.AddWithValue("@change", textBoxChange.Text);
                 //int a= command.ExecuteNonQuery();
 
                 command.ExecuteNonQuery();

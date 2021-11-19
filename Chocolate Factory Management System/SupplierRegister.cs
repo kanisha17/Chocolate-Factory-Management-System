@@ -31,20 +31,16 @@ namespace Chocolate_Factory_Management_System
         {
            
             textBoxAddress.Clear();
-            textBoxBankAccountNo.Clear();
-            textBoxBankAddress.Clear();
-            textBoxBankName.Clear();
-            textBoxBusinessType.Clear();
+           
             textBoxCity.Clear();
             textBoxCompanyName.Clear();
             textBoxEmail.Clear();
-            textBoxLicenseNo.Clear();
+           
             textBoxPhoneNo.Clear();
             textBoxPincode.Clear();
             textBoxState.Clear();
             textBoxSupplierName.Clear();
-            checkedListBoxInsured.ResetText();
-            checkedListBoxLicensed.ResetText();
+           
             
         }
 
@@ -148,12 +144,12 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into Supplier(SupplierID,SupplierName,CompanyName,BusinessType,DOB,Address,Pincode,City,State,PhoneNo,Email,Insured,Licensed,LicenseNo,BankName,BankAccountNo,BankAddress) " +
-                    "values(@sid,@suppliername,@companyname,@businesstype,@dob,@address,@pincode,@city,@state,@phoneno,@email,@insured,@licensed,@licenseno,@bankname,@bankaccountno,@bankaddress)", connection);
+                command = new OleDbCommand("insert into Supplier(SupplierID,SupplierName,CompanyName,DOB,Address,Pincode,City,State,PhoneNo,Email) " +
+                    "values(@sid,@suppliername,@companyname,@dob,@address,@pincode,@city,@state,@phoneno,@email)", connection);
                 command.Parameters.AddWithValue("@sid", textBoxSID.Text);
                 command.Parameters.AddWithValue("@suppliername", textBoxSupplierName.Text);
                 command.Parameters.AddWithValue("@companyname", textBoxCompanyName.Text);
-                command.Parameters.AddWithValue("@businesstype", textBoxBusinessType.Text);
+               
                 command.Parameters.AddWithValue("@dob", dateTimePickersDOB.Text);
                 command.Parameters.AddWithValue("@address", textBoxAddress.Text);
                 command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
@@ -161,12 +157,7 @@ namespace Chocolate_Factory_Management_System
                 command.Parameters.AddWithValue("@state", textBoxState.Text);
                 command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@email", textBoxEmail.Text);
-                command.Parameters.AddWithValue("@insured", checkedListBoxInsured.Text);
-                command.Parameters.AddWithValue("@licensed", checkedListBoxLicensed.Text);
-                command.Parameters.AddWithValue("@licenseno", textBoxLicenseNo.Text);
-                command.Parameters.AddWithValue("@bankname", textBoxBankName.Text);
-                command.Parameters.AddWithValue("@bankaccountno", textBoxBankAccountNo.Text);
-                command.Parameters.AddWithValue("@bankaddress", textBoxBankAddress.Text);
+               
 
                 command.ExecuteNonQuery();
                 resetControls();

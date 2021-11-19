@@ -162,12 +162,6 @@
       <DependentUpon>EmployeeAttendanceReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EmployeeBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeBoard.Designer.cs">
-      <DependentUpon>EmployeeBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="EmployeeSalaryReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,29 +198,17 @@
     <Compile Include="EmployeeUpdate.Designer.cs">
       <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FinishedProductDelete.cs">
+    <Compile Include="FinalProductDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FinishedProductDelete.Designer.cs">
-      <DependentUpon>FinishedProductDelete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FinishedStockSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FinishedStockSearch.Designer.cs">
-      <DependentUpon>FinishedStockSearch.cs</DependentUpon>
+    <Compile Include="FinalProductDelete.Designer.cs">
+      <DependentUpon>FinalProductDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="ManufacturingProcess.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManufacturingProcess.Designer.cs">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductSearch.Designer.cs">
-      <DependentUpon>ProductSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductUpdate.cs">
       <SubType>Form</SubType>
@@ -275,6 +257,12 @@
     </Compile>
     <Compile Include="RawMaterial.Designer.cs">
       <DependentUpon>RawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialDelete.Designer.cs">
+      <DependentUpon>RawMaterialDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="RawMaterialUpdate.cs">
       <SubType>Form</SubType>
@@ -476,9 +464,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EmployeeAttendanceReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeBoard.resx">
-      <DependentUpon>EmployeeBoard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeSalaryReceipt.resx">
       <DependentUpon>EmployeeSalaryReceipt.cs</DependentUpon>
     </EmbeddedResource>
@@ -499,17 +484,11 @@
     <EmbeddedResource Include="EmployeeUpdate.resx">
       <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FinishedProductDelete.resx">
-      <DependentUpon>FinishedProductDelete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FinishedStockSearch.resx">
-      <DependentUpon>FinishedStockSearch.cs</DependentUpon>
+    <EmbeddedResource Include="FinalProductDelete.resx">
+      <DependentUpon>FinalProductDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManufacturingProcess.resx">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductSearch.resx">
-      <DependentUpon>ProductSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductUpdate.resx">
       <DependentUpon>ProductUpdate.cs</DependentUpon>
@@ -536,6 +515,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RawMaterial.resx">
       <DependentUpon>RawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialDelete.resx">
+      <DependentUpon>RawMaterialDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RawMaterialUpdate.resx">
       <DependentUpon>RawMaterialUpdate.cs</DependentUpon>
@@ -887,6 +869,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\finished.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\en12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emp at1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

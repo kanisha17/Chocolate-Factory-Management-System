@@ -40,7 +40,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonLogin
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.White;
+            this.buttonLogin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLogin.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;

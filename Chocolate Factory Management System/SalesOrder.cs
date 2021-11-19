@@ -82,6 +82,7 @@ namespace Chocolate_Factory_Management_System
             { }
         }
 
+       
         private void dataGridViewSaleOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -382,7 +383,10 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+        
 
+      
+          
         private void buttonInsert_Click(object sender, EventArgs e)
         {
 
@@ -391,20 +395,24 @@ namespace Chocolate_Factory_Management_System
                 OleDbCommand command;
 
                 connection.Open();
-                command = new OleDbCommand("insert into SalesOrder(InvoiceID,ItemName,SalesDate,FinalCost) " +
-                    "values(@invoiceid,@name,@date,@finalcost)", connection);
+                command = new OleDbCommand("insert into SalesOrder(InvoiceID,CustomerName,PhoneNo,SalesDate,FinalCost,Paid,Change) " +
+                    "values(@invoiceid,@name,@phone,@date,@finalcost,@paid,@change)", connection);
 
-                command.Parameters.AddWithValue("@invoiceid", textBoxInvoiceNo.Text);
+               command.Parameters.AddWithValue("@invoiceid", textBoxInvoiceNo.Text);
                 command.Parameters.AddWithValue("@name", textBoxName.Text);
+                command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@date", DateTime.Now.ToString());
                 command.Parameters.AddWithValue("@finalcost", textBoxFinalCost.Text);
+                command.Parameters.AddWithValue("@paid", textBoxPaid.Text);
+                command.Parameters.AddWithValue("@change", textBoxChange.Text);
                 //int a= command.ExecuteNonQuery();
 
                 command.ExecuteNonQuery();
 
                 resetControls();
                 connection.Close();
-                getInvoiceID();
+             
+                
             }
 
             catch

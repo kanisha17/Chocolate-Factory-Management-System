@@ -35,13 +35,10 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductID = new System.Windows.Forms.TextBox();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonEDIT = new System.Windows.Forms.Button();
             this.cachedCustomerComplaintReport1 = new Chocolate_Factory_Management_System.CachedCustomerComplaintReport();
-            this.labelAvailableStock = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelStockInward = new System.Windows.Forms.Label();
             this.labelNetStock = new System.Windows.Forms.Label();
             this.labelStockOutward = new System.Windows.Forms.Label();
@@ -57,7 +54,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDate.AutoSize = true;
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(474, 246);
+            this.labelDate.Location = new System.Drawing.Point(395, 262);
             this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(78, 31);
@@ -69,27 +66,28 @@ namespace Chocolate_Factory_Management_System
             this.labelProductID.AutoSize = true;
             this.labelProductID.BackColor = System.Drawing.Color.Transparent;
             this.labelProductID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductID.Location = new System.Drawing.Point(458, 151);
+            this.labelProductID.Location = new System.Drawing.Point(395, 209);
             this.labelProductID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductID.Name = "labelProductID";
-            this.labelProductID.Size = new System.Drawing.Size(239, 31);
+            this.labelProductID.Size = new System.Drawing.Size(166, 31);
             this.labelProductID.TabIndex = 3;
-            this.labelProductID.Text = "Enter ProductID";
+            this.labelProductID.Text = "Product ID";
             // 
             // labelProductName
             // 
             this.labelProductName.AutoSize = true;
             this.labelProductName.BackColor = System.Drawing.Color.Transparent;
-            this.labelProductName.Location = new System.Drawing.Point(476, 206);
+            this.labelProductName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductName.Location = new System.Drawing.Point(395, 151);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(153, 23);
+            this.labelProductName.Size = new System.Drawing.Size(286, 31);
             this.labelProductName.TabIndex = 4;
-            this.labelProductName.Text = "Product Name";
+            this.labelProductName.Text = "Select Raw Material";
             // 
             // textBoxProductID
             // 
-            this.textBoxProductID.Location = new System.Drawing.Point(715, 151);
+            this.textBoxProductID.Location = new System.Drawing.Point(715, 209);
             this.textBoxProductID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxProductID.Name = "textBoxProductID";
             this.textBoxProductID.Size = new System.Drawing.Size(361, 31);
@@ -98,7 +96,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dateTimePickerDate
             // 
-            this.dateTimePickerDate.Location = new System.Drawing.Point(715, 246);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(715, 262);
             this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
             this.dateTimePickerDate.Size = new System.Drawing.Size(361, 31);
@@ -111,43 +109,30 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eXITToolStripMenuItem});
+            this.eXITToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 3, 0, 3);
             this.menuStrip1.Size = new System.Drawing.Size(1310, 42);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // eXITToolStripMenuItem
+            // eXITToolStripMenuItem1
             // 
-            this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.LightSalmon;
-            this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
-            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
-            this.eXITToolStripMenuItem.Text = "EXIT";
-            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
-            // 
-            // buttonCalculate
-            // 
-            this.buttonCalculate.BackColor = System.Drawing.Color.BurlyWood;
-            this.buttonCalculate.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonCalculate.Location = new System.Drawing.Point(715, 504);
-            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(361, 60);
-            this.buttonCalculate.TabIndex = 14;
-            this.buttonCalculate.Text = "CALCULATE";
-            this.buttonCalculate.UseVisualStyleBackColor = false;
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            this.eXITToolStripMenuItem1.BackColor = System.Drawing.Color.Tan;
+            this.eXITToolStripMenuItem1.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
+            this.eXITToolStripMenuItem1.Name = "eXITToolStripMenuItem1";
+            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(106, 36);
+            this.eXITToolStripMenuItem1.Text = "EXIT";
+            this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 55);
+            this.label1.Location = new System.Drawing.Point(207, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(998, 54);
             this.label1.TabIndex = 15;
@@ -155,36 +140,22 @@ namespace Chocolate_Factory_Management_System
             // 
             // buttonEDIT
             // 
-            this.buttonEDIT.Location = new System.Drawing.Point(159, 516);
+            this.buttonEDIT.BackColor = System.Drawing.Color.Tan;
+            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEDIT.Location = new System.Drawing.Point(715, 481);
             this.buttonEDIT.Name = "buttonEDIT";
-            this.buttonEDIT.Size = new System.Drawing.Size(116, 48);
+            this.buttonEDIT.Size = new System.Drawing.Size(361, 57);
             this.buttonEDIT.TabIndex = 17;
-            this.buttonEDIT.Text = "EDIT";
-            this.buttonEDIT.UseVisualStyleBackColor = true;
+            this.buttonEDIT.Text = "UPDATE";
+            this.buttonEDIT.UseVisualStyleBackColor = false;
             this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
-            // 
-            // labelAvailableStock
-            // 
-            this.labelAvailableStock.AutoSize = true;
-            this.labelAvailableStock.Location = new System.Drawing.Point(482, 299);
-            this.labelAvailableStock.Name = "labelAvailableStock";
-            this.labelAvailableStock.Size = new System.Drawing.Size(164, 23);
-            this.labelAvailableStock.TabIndex = 19;
-            this.labelAvailableStock.Text = "Available Stock";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(715, 299);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 31);
-            this.textBox1.TabIndex = 20;
             // 
             // labelStockInward
             // 
             this.labelStockInward.AutoSize = true;
             this.labelStockInward.BackColor = System.Drawing.Color.Transparent;
             this.labelStockInward.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockInward.Location = new System.Drawing.Point(474, 336);
+            this.labelStockInward.Location = new System.Drawing.Point(395, 318);
             this.labelStockInward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStockInward.Name = "labelStockInward";
             this.labelStockInward.Size = new System.Drawing.Size(198, 31);
@@ -196,7 +167,7 @@ namespace Chocolate_Factory_Management_System
             this.labelNetStock.AutoSize = true;
             this.labelNetStock.BackColor = System.Drawing.Color.Transparent;
             this.labelNetStock.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNetStock.Location = new System.Drawing.Point(474, 435);
+            this.labelNetStock.Location = new System.Drawing.Point(395, 426);
             this.labelNetStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNetStock.Name = "labelNetStock";
             this.labelNetStock.Size = new System.Drawing.Size(147, 31);
@@ -208,7 +179,7 @@ namespace Chocolate_Factory_Management_System
             this.labelStockOutward.AutoSize = true;
             this.labelStockOutward.BackColor = System.Drawing.Color.Transparent;
             this.labelStockOutward.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockOutward.Location = new System.Drawing.Point(474, 384);
+            this.labelStockOutward.Location = new System.Drawing.Point(395, 373);
             this.labelStockOutward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStockOutward.Name = "labelStockOutward";
             this.labelStockOutward.Size = new System.Drawing.Size(223, 31);
@@ -217,7 +188,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxNetStock
             // 
-            this.textBoxNetStock.Location = new System.Drawing.Point(715, 435);
+            this.textBoxNetStock.Location = new System.Drawing.Point(715, 426);
             this.textBoxNetStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxNetStock.Name = "textBoxNetStock";
             this.textBoxNetStock.Size = new System.Drawing.Size(361, 31);
@@ -225,15 +196,16 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxStockOutward
             // 
-            this.textBoxStockOutward.Location = new System.Drawing.Point(715, 384);
+            this.textBoxStockOutward.Location = new System.Drawing.Point(715, 373);
             this.textBoxStockOutward.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxStockOutward.Name = "textBoxStockOutward";
             this.textBoxStockOutward.Size = new System.Drawing.Size(361, 31);
             this.textBoxStockOutward.TabIndex = 8;
+            this.textBoxStockOutward.TextChanged += new System.EventHandler(this.textBoxStockOutward_TextChanged);
             // 
             // textBoxStockInward
             // 
-            this.textBoxStockInward.Location = new System.Drawing.Point(715, 336);
+            this.textBoxStockInward.Location = new System.Drawing.Point(715, 318);
             this.textBoxStockInward.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxStockInward.Name = "textBoxStockInward";
             this.textBoxStockInward.Size = new System.Drawing.Size(361, 31);
@@ -242,10 +214,11 @@ namespace Chocolate_Factory_Management_System
             // comboBoxRawMaterialName
             // 
             this.comboBoxRawMaterialName.FormattingEnabled = true;
-            this.comboBoxRawMaterialName.Location = new System.Drawing.Point(715, 198);
+            this.comboBoxRawMaterialName.Location = new System.Drawing.Point(715, 151);
             this.comboBoxRawMaterialName.Name = "comboBoxRawMaterialName";
             this.comboBoxRawMaterialName.Size = new System.Drawing.Size(361, 31);
             this.comboBoxRawMaterialName.TabIndex = 21;
+            this.comboBoxRawMaterialName.SelectedIndexChanged += new System.EventHandler(this.comboBoxRawMaterialName_SelectedIndexChanged);
             // 
             // StockMaintenance
             // 
@@ -255,11 +228,8 @@ namespace Chocolate_Factory_Management_System
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1310, 574);
             this.Controls.Add(this.comboBoxRawMaterialName);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelAvailableStock);
             this.Controls.Add(this.buttonEDIT);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.dateTimePickerDate);
             this.Controls.Add(this.textBoxProductID);
             this.Controls.Add(this.textBoxStockInward);
@@ -278,6 +248,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "StockMaintenance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockMaintenance";
+            this.Load += new System.EventHandler(this.StockMaintenance_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -292,13 +263,9 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxProductID;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
-        private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonEDIT;
         private CachedCustomerComplaintReport cachedCustomerComplaintReport1;
-        private System.Windows.Forms.Label labelAvailableStock;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelStockInward;
         private System.Windows.Forms.Label labelNetStock;
         private System.Windows.Forms.Label labelStockOutward;
@@ -306,5 +273,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.TextBox textBoxStockOutward;
         private System.Windows.Forms.TextBox textBoxStockInward;
         private System.Windows.Forms.ComboBox comboBoxRawMaterialName;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem1;
     }
 }

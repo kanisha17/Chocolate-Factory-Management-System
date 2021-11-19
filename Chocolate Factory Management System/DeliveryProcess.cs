@@ -152,5 +152,39 @@ namespace Chocolate_Factory_Management_System
             textBoxReceiptNo.Clear();
             checkBoxCash.ResetText();
         }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("DELIVERY INFORMATION", new Font("Lucida Bright", 30, FontStyle.Bold), Brushes.Blue, new Point(200, 50));
+            e.Graphics.DrawString("Delivery No : " +textBoxDelivery.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 150));
+            e.Graphics.DrawString("Date : "+dateTimePickerDate.Value.Date, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
+         //   e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("Deliver To : " + textBoxDeliverTo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 280));
+            e.Graphics.DrawString("Address : " + textBoxAddress.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 310));
+            e.Graphics.DrawString("City : " +textBoxCity.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 340));
+            e.Graphics.DrawString("Pincode : " + textBoxPincode.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 370));
+            e.Graphics.DrawString("Phone No : " +textBoxPhoneNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 400));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 430));
+            e.Graphics.DrawString("Receipt No : " + textBoxReceiptNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 460));
+            e.Graphics.DrawString("Payment Mode: " +checkBoxCash.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 490));
+            e.Graphics.DrawString("Delivererd By : " + textBoxDeliverBy.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 510));
+            e.Graphics.DrawString("Receiving Date : _ _/_ _/_ _ _ _" , new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 540));
+            e.Graphics.DrawString("Signature Of Receiver : _________________", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 570));
+
+
+       
+        }
+
+        private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

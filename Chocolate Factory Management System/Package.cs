@@ -24,7 +24,24 @@ namespace Chocolate_Factory_Management_System
 
         private void Package_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                string query = "select *from ProductDetails";
+                command.CommandText = query;
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxProductName.Items.Add(reader["ProductName"].ToString());
+                }
+                connection.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -34,8 +51,8 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 command = new OleDbCommand("insert into Packaging(ProductID,ProductName,NewStock,PackagingDate) values(@pid,@pname,@newstock,@packdate)", connection);
 
-                command.Parameters.AddWithValue("@pid",textBoxProductID.Text);
-                command.Parameters.AddWithValue("@pname",textBoxProductName.Text);
+                command.Parameters.AddWithValue("@pid", textBoxProductID.Text);
+                command.Parameters.AddWithValue("@pname", comboBoxProductName.Text);
                 command.Parameters.AddWithValue("@newstock", textBoxNewStock.Text);
                 command.Parameters.AddWithValue("@packdate", dateTimePickerPackage.Text);
 
@@ -47,12 +64,12 @@ namespace Chocolate_Factory_Management_System
             }
             catch
             {
-                
+
             }
         }
         void resetControls()
         {
-            textBoxProductName.Clear();
+            comboBoxProductName.ResetText();
             textBoxNewStock.Clear();
             textBoxProductID.Clear();
         }
@@ -76,19 +93,51 @@ namespace Chocolate_Factory_Management_System
                 if (reader1.Read())
                 {
 
-                    textBoxProductName.Text = reader1["ProductName"].ToString();
+                    comboBoxProductName.Text = reader1["ProductName"].ToString();
 
                 }
                 else
                 {
-                    MessageBox.Show("No Data Found");
+
                 }
                 connection.Close();
             }
             catch
             { }
         }
-    }
 
-    
+        private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxProductName.SelectedItem == null)
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "select ProductID from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
+                    command.CommandText = query;
+                    OleDbDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string p = (string)reader["ProductID"].ToString();
+                        textBoxProductID.Text = p;
+
+                    }
+                    connection.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Error");
+                }
+
+            }
+        }
+
+
+    }
 }

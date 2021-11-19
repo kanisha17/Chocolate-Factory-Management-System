@@ -64,6 +64,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // eXITToolStripMenuItem
             // 
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
@@ -76,7 +77,7 @@ namespace Chocolate_Factory_Management_System
             this.labelCurrentDate.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDate.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCurrentDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCurrentDate.Location = new System.Drawing.Point(406, 255);
+            this.labelCurrentDate.Location = new System.Drawing.Point(396, 252);
             this.labelCurrentDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCurrentDate.Name = "labelCurrentDate";
             this.labelCurrentDate.Size = new System.Drawing.Size(225, 36);
@@ -89,7 +90,7 @@ namespace Chocolate_Factory_Management_System
             this.labelEID.BackColor = System.Drawing.Color.Transparent;
             this.labelEID.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelEID.Location = new System.Drawing.Point(406, 140);
+            this.labelEID.Location = new System.Drawing.Point(396, 133);
             this.labelEID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEID.Name = "labelEID";
             this.labelEID.Size = new System.Drawing.Size(225, 36);
@@ -101,27 +102,27 @@ namespace Chocolate_Factory_Management_System
             this.labelMark.BackColor = System.Drawing.Color.Transparent;
             this.labelMark.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMark.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelMark.Location = new System.Drawing.Point(406, 320);
+            this.labelMark.Location = new System.Drawing.Point(396, 310);
             this.labelMark.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMark.Name = "labelMark";
-            this.labelMark.Size = new System.Drawing.Size(185, 44);
+            this.labelMark.Size = new System.Drawing.Size(147, 44);
             this.labelMark.TabIndex = 20;
             this.labelMark.Text = "Mark";
             // 
             // textBoxEID
             // 
-            this.textBoxEID.Location = new System.Drawing.Point(675, 140);
+            this.textBoxEID.Location = new System.Drawing.Point(704, 138);
             this.textBoxEID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxEID.Name = "textBoxEID";
-            this.textBoxEID.Size = new System.Drawing.Size(355, 31);
+            this.textBoxEID.Size = new System.Drawing.Size(317, 31);
             this.textBoxEID.TabIndex = 9;
             // 
             // dateTimePickerCurrentDate
             // 
-            this.dateTimePickerCurrentDate.Location = new System.Drawing.Point(675, 260);
+            this.dateTimePickerCurrentDate.Location = new System.Drawing.Point(704, 262);
             this.dateTimePickerCurrentDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePickerCurrentDate.Name = "dateTimePickerCurrentDate";
-            this.dateTimePickerCurrentDate.Size = new System.Drawing.Size(355, 31);
+            this.dateTimePickerCurrentDate.Size = new System.Drawing.Size(317, 31);
             this.dateTimePickerCurrentDate.TabIndex = 10;
             // 
             // labelReason
@@ -130,7 +131,7 @@ namespace Chocolate_Factory_Management_System
             this.labelReason.BackColor = System.Drawing.Color.Transparent;
             this.labelReason.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReason.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelReason.Location = new System.Drawing.Point(406, 399);
+            this.labelReason.Location = new System.Drawing.Point(396, 384);
             this.labelReason.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReason.Name = "labelReason";
             this.labelReason.Size = new System.Drawing.Size(132, 36);
@@ -139,10 +140,10 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxReason
             // 
-            this.textBoxReason.Location = new System.Drawing.Point(675, 404);
+            this.textBoxReason.Location = new System.Drawing.Point(704, 389);
             this.textBoxReason.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxReason.Name = "textBoxReason";
-            this.textBoxReason.Size = new System.Drawing.Size(355, 31);
+            this.textBoxReason.Size = new System.Drawing.Size(317, 31);
             this.textBoxReason.TabIndex = 14;
             // 
             // checkedListBoxMark
@@ -151,10 +152,10 @@ namespace Chocolate_Factory_Management_System
             this.checkedListBoxMark.Items.AddRange(new object[] {
             "Absent",
             "Present"});
-            this.checkedListBoxMark.Location = new System.Drawing.Point(675, 332);
+            this.checkedListBoxMark.Location = new System.Drawing.Point(704, 327);
             this.checkedListBoxMark.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkedListBoxMark.Name = "checkedListBoxMark";
-            this.checkedListBoxMark.Size = new System.Drawing.Size(355, 32);
+            this.checkedListBoxMark.Size = new System.Drawing.Size(317, 32);
             this.checkedListBoxMark.TabIndex = 18;
             // 
             // labeleattend
@@ -173,11 +174,11 @@ namespace Chocolate_Factory_Management_System
             // buttonSubmit
             // 
             this.buttonSubmit.BackColor = System.Drawing.Color.DarkRed;
-            this.buttonSubmit.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSubmit.Location = new System.Drawing.Point(675, 466);
+            this.buttonSubmit.Location = new System.Drawing.Point(704, 456);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(355, 55);
+            this.buttonSubmit.Size = new System.Drawing.Size(317, 67);
             this.buttonSubmit.TabIndex = 24;
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = false;
@@ -186,17 +187,20 @@ namespace Chocolate_Factory_Management_System
             // labelEmpName
             // 
             this.labelEmpName.AutoSize = true;
-            this.labelEmpName.Location = new System.Drawing.Point(408, 204);
+            this.labelEmpName.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmpName.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmpName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelEmpName.Location = new System.Drawing.Point(396, 193);
             this.labelEmpName.Name = "labelEmpName";
-            this.labelEmpName.Size = new System.Drawing.Size(175, 23);
+            this.labelEmpName.Size = new System.Drawing.Size(280, 36);
             this.labelEmpName.TabIndex = 25;
             this.labelEmpName.Text = "Employee Name";
             // 
             // textBoxEmpName
             // 
-            this.textBoxEmpName.Location = new System.Drawing.Point(675, 196);
+            this.textBoxEmpName.Location = new System.Drawing.Point(704, 198);
             this.textBoxEmpName.Name = "textBoxEmpName";
-            this.textBoxEmpName.Size = new System.Drawing.Size(355, 31);
+            this.textBoxEmpName.Size = new System.Drawing.Size(317, 31);
             this.textBoxEmpName.TabIndex = 26;
             // 
             // EmployeeAttendance
@@ -204,7 +208,7 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color12;
-            this.ClientSize = new System.Drawing.Size(1314, 565);
+            this.ClientSize = new System.Drawing.Size(1314, 535);
             this.Controls.Add(this.textBoxEmpName);
             this.Controls.Add(this.labelEmpName);
             this.Controls.Add(this.buttonSubmit);

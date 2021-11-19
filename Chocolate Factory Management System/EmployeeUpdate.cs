@@ -52,10 +52,7 @@ namespace Chocolate_Factory_Management_System
         private void buttonPrint_Click(object sender, EventArgs e)
         {
 
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
-            {
-                printDocument1.Print();
-            }
+            
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -119,6 +116,14 @@ namespace Chocolate_Factory_Management_System
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
         }
     }
 }

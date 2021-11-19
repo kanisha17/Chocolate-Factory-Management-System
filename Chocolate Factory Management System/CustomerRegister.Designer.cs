@@ -76,7 +76,7 @@ namespace Chocolate_Factory_Management_System
             this.labelCustomerName.AutoSize = true;
             this.labelCustomerName.BackColor = System.Drawing.Color.Transparent;
             this.labelCustomerName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCustomerName.Location = new System.Drawing.Point(6, 169);
+            this.labelCustomerName.Location = new System.Drawing.Point(10, 241);
             this.labelCustomerName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(239, 31);
@@ -88,7 +88,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDOB.AutoSize = true;
             this.labelDOB.BackColor = System.Drawing.Color.Transparent;
             this.labelDOB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDOB.Location = new System.Drawing.Point(6, 236);
+            this.labelDOB.Location = new System.Drawing.Point(10, 308);
             this.labelDOB.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Size = new System.Drawing.Size(197, 31);
@@ -100,7 +100,7 @@ namespace Chocolate_Factory_Management_System
             this.labelAddress.AutoSize = true;
             this.labelAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelAddress.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelAddress.Location = new System.Drawing.Point(6, 310);
+            this.labelAddress.Location = new System.Drawing.Point(10, 382);
             this.labelAddress.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(129, 31);
@@ -111,7 +111,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.labelCity.BackColor = System.Drawing.Color.Transparent;
             this.labelCity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCity.Location = new System.Drawing.Point(6, 378);
+            this.labelCity.Location = new System.Drawing.Point(725, 173);
             this.labelCity.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(102, 31);
@@ -123,7 +123,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPincode.AutoSize = true;
             this.labelPincode.BackColor = System.Drawing.Color.Transparent;
             this.labelPincode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPincode.Location = new System.Drawing.Point(699, 169);
+            this.labelPincode.Location = new System.Drawing.Point(725, 241);
             this.labelPincode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPincode.Name = "labelPincode";
             this.labelPincode.Size = new System.Drawing.Size(124, 31);
@@ -135,7 +135,7 @@ namespace Chocolate_Factory_Management_System
             this.labelEmail.AutoSize = true;
             this.labelEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelEmail.Location = new System.Drawing.Point(699, 310);
+            this.labelEmail.Location = new System.Drawing.Point(725, 382);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(89, 31);
@@ -147,7 +147,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPhone.AutoSize = true;
             this.labelPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelPhone.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPhone.Location = new System.Drawing.Point(699, 237);
+            this.labelPhone.Location = new System.Drawing.Point(725, 309);
             this.labelPhone.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(149, 31);
@@ -157,7 +157,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxcCity
             // 
             this.textBoxcCity.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxcCity.Location = new System.Drawing.Point(267, 378);
+            this.textBoxcCity.Location = new System.Drawing.Point(919, 169);
             this.textBoxcCity.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textBoxcCity.Name = "textBoxcCity";
             this.textBoxcCity.Size = new System.Drawing.Size(359, 31);
@@ -166,7 +166,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxcAddress
             // 
             this.textBoxcAddress.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxcAddress.Location = new System.Drawing.Point(267, 310);
+            this.textBoxcAddress.Location = new System.Drawing.Point(271, 382);
             this.textBoxcAddress.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textBoxcAddress.Name = "textBoxcAddress";
             this.textBoxcAddress.Size = new System.Drawing.Size(359, 31);
@@ -175,7 +175,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxCustomerName
             // 
             this.textBoxCustomerName.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerName.Location = new System.Drawing.Point(267, 169);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(271, 241);
             this.textBoxCustomerName.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(359, 31);
@@ -184,7 +184,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxcPincode
             // 
             this.textBoxcPincode.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxcPincode.Location = new System.Drawing.Point(866, 169);
+            this.textBoxcPincode.Location = new System.Drawing.Point(919, 237);
             this.textBoxcPincode.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textBoxcPincode.Name = "textBoxcPincode";
             this.textBoxcPincode.Size = new System.Drawing.Size(359, 31);
@@ -193,7 +193,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxcPhone
             // 
             this.textBoxcPhone.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxcPhone.Location = new System.Drawing.Point(866, 237);
+            this.textBoxcPhone.Location = new System.Drawing.Point(919, 305);
             this.textBoxcPhone.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textBoxcPhone.Name = "textBoxcPhone";
             this.textBoxcPhone.Size = new System.Drawing.Size(359, 31);
@@ -204,7 +204,7 @@ namespace Chocolate_Factory_Management_System
             // textBoxcEmail
             // 
             this.textBoxcEmail.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxcEmail.Location = new System.Drawing.Point(866, 308);
+            this.textBoxcEmail.Location = new System.Drawing.Point(919, 376);
             this.textBoxcEmail.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.textBoxcEmail.Name = "textBoxcEmail";
             this.textBoxcEmail.Size = new System.Drawing.Size(359, 31);
@@ -224,7 +224,7 @@ namespace Chocolate_Factory_Management_System
             // dateTimePickercDOB
             // 
             this.dateTimePickercDOB.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickercDOB.Location = new System.Drawing.Point(267, 237);
+            this.dateTimePickercDOB.Location = new System.Drawing.Point(271, 309);
             this.dateTimePickercDOB.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.dateTimePickercDOB.Name = "dateTimePickercDOB";
             this.dateTimePickercDOB.Size = new System.Drawing.Size(359, 31);
@@ -236,7 +236,7 @@ namespace Chocolate_Factory_Management_System
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(394, 56);
+            this.label1.Location = new System.Drawing.Point(367, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(745, 57);
@@ -272,7 +272,7 @@ namespace Chocolate_Factory_Management_System
             this.labelCID.BackColor = System.Drawing.Color.Transparent;
             this.labelCID.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCID.Location = new System.Drawing.Point(44, 110);
+            this.labelCID.Location = new System.Drawing.Point(11, 173);
             this.labelCID.Name = "labelCID";
             this.labelCID.Size = new System.Drawing.Size(165, 27);
             this.labelCID.TabIndex = 28;
@@ -281,18 +281,19 @@ namespace Chocolate_Factory_Management_System
             // textBoxCID
             // 
             this.textBoxCID.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCID.Location = new System.Drawing.Point(215, 98);
+            this.textBoxCID.Location = new System.Drawing.Point(271, 173);
             this.textBoxCID.Name = "textBoxCID";
-            this.textBoxCID.Size = new System.Drawing.Size(92, 31);
+            this.textBoxCID.Size = new System.Drawing.Size(359, 31);
             this.textBoxCID.TabIndex = 29;
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSubmit.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSubmit.Location = new System.Drawing.Point(584, 498);
+            this.buttonSubmit.Location = new System.Drawing.Point(540, 488);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(309, 56);
+            this.buttonSubmit.Size = new System.Drawing.Size(309, 72);
             this.buttonSubmit.TabIndex = 32;
             this.buttonSubmit.Text = "SUBMIT";
             this.buttonSubmit.UseVisualStyleBackColor = false;

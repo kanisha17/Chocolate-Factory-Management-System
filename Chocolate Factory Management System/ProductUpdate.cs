@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.IO;
+
 
 namespace Chocolate_Factory_Management_System
 {
@@ -33,48 +33,23 @@ namespace Chocolate_Factory_Management_System
         private void pictureBoxProductDetail_Click(object sender, EventArgs e)
         {
 
-            OpenFileDialog open = new OpenFileDialog();
-            PictureBox p = sender as PictureBox;
-            if (p != null)
-            {
-                open.Filter = "(*.jpg;*.jpeg,*.png) | *.jpg;*.jpeg,*.png";
-                if (open.ShowDialog() == DialogResult.OK)
-                {
-                    p.Image = Image.FromFile(open.FileName);
-                }
-            }
         }
         void resetControls()
         {
+            textBoxProductID.Clear();
             textBoxDiscount.Clear();
             comboBoxreview.ResetText();
-            comboBoxProductName.ResetText();
+            textBoxProductName.Clear();
             textBoxPrice.Clear();
             textBoxDescription.Clear();
         }
         private void ProductUpdate_Load(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "select *from ProductDetails";
-                command.CommandText = query;
-                OleDbDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    comboBoxProductName.Items.Add(reader["ProductName"].ToString());
-                }
-                connection.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Error");
-            }
+          
            
         }
 
+     
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -83,19 +58,25 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update ProductDetails set ProductName='" + comboBoxProductName.Text + "',Description='" + textBoxDescription.Text + "'," +
-                    "Price='" + textBoxPrice.Text + "',Review='" + comboBoxreview.Text + "' where ProductID=" + textBoxProductID.Text + "";
+
+                string query = "update ProductDetails set ProductName='" + textBoxProductName.Text + "',Description='" + textBoxDescription.Text + "'," +
+                    "Price='" + textBoxPrice.Text + "',Discount='" + textBoxDiscount.Text + "',Review='" + comboBoxreview.Text + "' where ProductID=" +textBoxProductID.Text + "";
+
                 MessageBox.Show(query);
                 command.CommandText = query;
 
                 command.ExecuteNonQuery();
+
                 MessageBox.Show("Data Updated Successfully");
+                resetControls();
+                
             }
             catch
             {
                 MessageBox.Show("Data Not Updated");
             }
             connection.Close();
+
         }
 
         private void textBoxProductID_TextChanged(object sender, EventArgs e)
@@ -103,33 +84,58 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("select *from ProductDetails where ProductID=@param", connection);
-                command.Parameters.AddWithValue("@param", int.Parse(textBoxProductID.Text));
-                OleDbDataReader rd = command.ExecuteReader();
-                while (rd.Read())
+                OleDbCommand c1 = new OleDbCommand("select ProductName,Description,Price,Discount,Review from ProductDetails where ProductID=@param", connection);
+                c1.Parameters.AddWithValue("@param", textBoxProductID.Text);
+                OleDbDataReader reader1;
+                reader1 = c1.ExecuteReader();
+                if (reader1.Read())
                 {
-                    comboBoxProductName.Text = rd.GetValue(1).ToString();
-                    textBoxDescription.Text = rd.GetValue(2).ToString();
-                    textBoxPrice.Text = rd.GetValue(3).ToString();
-                    textBoxDiscount.Text = rd.GetValue(4).ToString();
-                    comboBoxreview.Text = rd.GetValue(5).ToString();
 
-                    string path = Path.Combine(rd.GetValue(6).ToString());
-                    pictureBoxProductDetail.Image = Image.FromFile(path);
-                    MessageBox.Show("Raw Material Details Found");
+                    textBoxProductName.Text = reader1["ProductName"].ToString();
+                    textBoxDescription.Text = reader1["Description"].ToString();
+                    textBoxPrice.Text = reader1["Price"].ToString();
+                    textBoxDiscount.Text = reader1["Discount"].ToString();
+                    comboBoxreview.Text = reader1["Review"].ToString();
+                    MessageBox.Show("Product Details Found");
+                }
+                else
+                {
+
                 }
                 connection.Close();
-                // MessageBox.Show("Product Details Found");
             }
             catch
             {
-                MessageBox.Show("Raw Material Details Not Found");
+
             }
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void buttonNew_Click(object sender, EventArgs e)
+        {
+           
+ 
+        }
+
+        private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
+}
 
         
-    }
+    
 
 
 
