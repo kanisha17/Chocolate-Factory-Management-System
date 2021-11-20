@@ -33,6 +33,7 @@ namespace Chocolate_Factory_Management_System
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelRawMaterialName = new System.Windows.Forms.Label();
             this.labelAvailableStock = new System.Windows.Forms.Label();
             this.textBoxAvailableStock = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@ namespace Chocolate_Factory_Management_System
             this.buttonInsert = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@ namespace Chocolate_Factory_Management_System
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(655, 152);
+            this.dataGridView1.Location = new System.Drawing.Point(658, 189);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -89,6 +89,14 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
+            // 
+            // pRINTToolStripMenuItem
+            // 
+            this.pRINTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
+            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
+            this.pRINTToolStripMenuItem.Text = "PRINT";
             // 
             // labelRawMaterialName
             // 
@@ -137,7 +145,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonAddToCart.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAddToCart.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddToCart.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonAddToCart.Location = new System.Drawing.Point(13, 504);
+            this.buttonAddToCart.Location = new System.Drawing.Point(19, 514);
             this.buttonAddToCart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAddToCart.Name = "buttonAddToCart";
             this.buttonAddToCart.Size = new System.Drawing.Size(299, 54);
@@ -179,6 +187,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(286, 31);
             this.textBoxQuantity.TabIndex = 15;
+            this.textBoxQuantity.TextChanged += new System.EventHandler(this.textBoxQuantity_TextChanged);
+            this.textBoxQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxQuantity_KeyPress);
             // 
             // labelRawMaterial
             // 
@@ -186,7 +196,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterial.BackColor = System.Drawing.Color.Transparent;
             this.labelRawMaterial.Font = new System.Drawing.Font("Lucida Bright", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRawMaterial.ForeColor = System.Drawing.Color.Maroon;
-            this.labelRawMaterial.Location = new System.Drawing.Point(262, 58);
+            this.labelRawMaterial.Location = new System.Drawing.Point(252, 53);
             this.labelRawMaterial.Name = "labelRawMaterial";
             this.labelRawMaterial.Size = new System.Drawing.Size(867, 50);
             this.labelRawMaterial.TabIndex = 18;
@@ -207,7 +217,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonClear.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonClear.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonClear.Location = new System.Drawing.Point(1066, 537);
+            this.buttonClear.Location = new System.Drawing.Point(1060, 143);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(198, 40);
             this.buttonClear.TabIndex = 20;
@@ -239,7 +249,7 @@ namespace Chocolate_Factory_Management_System
             this.buttonInsert.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonInsert.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonInsert.Location = new System.Drawing.Point(419, 504);
+            this.buttonInsert.Location = new System.Drawing.Point(419, 514);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(193, 54);
             this.buttonInsert.TabIndex = 24;
@@ -260,14 +270,6 @@ namespace Chocolate_Factory_Management_System
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
             // 
             // SelectRawMaterial
             // 

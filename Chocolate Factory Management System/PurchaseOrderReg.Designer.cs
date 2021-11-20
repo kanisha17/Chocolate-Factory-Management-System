@@ -30,7 +30,7 @@ namespace Chocolate_Factory_Management_System
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.PurchaseOrderReport1 = new Chocolate_Factory_Management_System.PurchaseOrderReport();
+            this.SupPurchaseReport1 = new Chocolate_Factory_Management_System.SupPurchaseReport();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -41,7 +41,7 @@ namespace Chocolate_Factory_Management_System
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.PurchaseOrderReport1;
+            this.crystalReportViewer1.ReportSource = this.SupPurchaseReport1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1288, 668);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
@@ -61,6 +61,6 @@ namespace Chocolate_Factory_Management_System
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private PurchaseOrderReport PurchaseOrderReport1;
+        private SupPurchaseReport SupPurchaseReport1;
     }
 }

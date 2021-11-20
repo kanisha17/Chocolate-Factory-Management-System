@@ -14,7 +14,7 @@ namespace Chocolate_Factory_Management_System
     public partial class RawMaterialUpdate : Form
     {
         private OleDbConnection connection = new OleDbConnection();
-        OleDbCommand command;
+       // OleDbCommand command;
         public RawMaterialUpdate()
         {
             InitializeComponent();
@@ -84,12 +84,13 @@ namespace Chocolate_Factory_Management_System
 
                 MessageBox.Show("Data Updated Successfully");
                 resetControls();
+                connection.Close();
             }
             catch
             {
                 MessageBox.Show("Data Not Updated");
             }
-            connection.Close();
+          
            
         }
         void resetControls()
@@ -164,6 +165,39 @@ namespace Chocolate_Factory_Management_System
         private void labelRawMaterailDetails_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDicsount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxRawMaterialName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
         }
     }
 }

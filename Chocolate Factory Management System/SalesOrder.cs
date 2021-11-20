@@ -63,12 +63,13 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                OleDbCommand c1 = new OleDbCommand("select CustomerName from Customer where PhoneNo=@param", connection);
+                OleDbCommand c1 = new OleDbCommand("select CustomerID,CustomerName from Customer where PhoneNo=@param", connection);
                 c1.Parameters.AddWithValue("@param", textBoxPhoneNo.Text);
                 OleDbDataReader reader1;
                 reader1 = c1.ExecuteReader();
                 if (reader1.Read())
                 {
+                    textBox1.Text = reader1["CustomerID"].ToString();
                     textBoxName.Text = reader1["CustomerName"].ToString();
                   
                 }
@@ -174,7 +175,7 @@ namespace Chocolate_Factory_Management_System
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    string query = "select Price,Discount from ProductDetails where ProductName='" + comboBoxItemName.Text + "';";
+                    string query = "select Price,Discount,NetStock from ProductDetails where ProductName='" + comboBoxItemName.Text + "';";
                     command.CommandText = query;
                     OleDbDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -183,6 +184,8 @@ namespace Chocolate_Factory_Management_System
                         textBoxUnitPrice.Text = p;
                         string dis = (string)reader["Discount"].ToString();
                         textBoxDiscount.Text = dis;
+                        string d = (string)reader["NetStock"].ToString();
+                        textBoxStock.Text = d;
                     }
                     connection.Close();
                 }
@@ -207,9 +210,12 @@ namespace Chocolate_Factory_Management_System
                 int price = Convert.ToInt32(textBoxUnitPrice.Text);
                 int discount = Convert.ToInt32(textBoxDiscount.Text);
                 int quantity = Convert.ToInt32(textBoxQuantity.Text);
+                int a = Convert.ToInt32(textBoxStock.Text);
+                int x = a - quantity;
                 int subtotal = price * quantity;
                 subtotal = subtotal - discount * quantity;
                 textBoxSubTotal.Text = subtotal.ToString();
+                textBoxStock.Text = x.ToString();
             }
         }
 
@@ -274,6 +280,27 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonADD_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+
+                string query = "update ProductDetails set AvailableStock='" + textBoxStock.Text + "' where Price=" + textBoxUnitPrice.Text + "";
+
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+
+
+                connection.Close();
+            }
+            catch
+            {
+
+            }
+
             if (comboBoxItemName.SelectedItem != null)
             {
                 addDataToGridView((++SrNo).ToString(), comboBoxItemName.SelectedItem.ToString(), textBoxUnitPrice.Text, textBoxQuantity.Text, textBoxDiscount.Text, textBoxSubTotal.Text, textBoxTax.Text, textBoxTotalCost.Text);
@@ -395,10 +422,11 @@ namespace Chocolate_Factory_Management_System
                 OleDbCommand command;
 
                 connection.Open();
-                command = new OleDbCommand("insert into SalesOrder(InvoiceID,CustomerName,PhoneNo,SalesDate,FinalCost,Paid,Change) " +
-                    "values(@invoiceid,@name,@phone,@date,@finalcost,@paid,@change)", connection);
+                command = new OleDbCommand("insert into SalesOrder(InvoiceID,CustomerID,CustomerName,PhoneNo,SalesDate,FinalCost,Paid,Change) " +
+                    "values(@invoiceid,@cid,@name,@phone,@date,@finalcost,@paid,@change)", connection);
 
                command.Parameters.AddWithValue("@invoiceid", textBoxInvoiceNo.Text);
+                command.Parameters.AddWithValue("@cid", textBox1.Text);
                 command.Parameters.AddWithValue("@name", textBoxName.Text);
                 command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
                 command.Parameters.AddWithValue("@date", DateTime.Now.ToString());
@@ -423,17 +451,19 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+           
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString("CHOCOLATE FACTORY", new Font("Lucida Bright", 30, FontStyle.Bold), Brushes.Blue, new Point(200, 50));
-            e.Graphics.DrawString("Invoice ID : " + textBoxInvoiceNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 150));
-            e.Graphics.DrawString("Name : " + textBoxName.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
-            e.Graphics.DrawString("Date : " + DateTime.Now.ToShortDateString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
-            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("Invoice ID: " + textBoxInvoiceNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 180));
+            e.Graphics.DrawString("Customer Name : " + textBoxName.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
+            e.Graphics.DrawString("Customer ID: " +textBox1.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("Customer PhoneNo : " + textBoxPhoneNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
+          
+            e.Graphics.DrawString("Date : " + DateTime.Now.ToShortDateString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 210));
+            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 240));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 280));
             e.Graphics.DrawString("ITEM NAME", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 300));
             e.Graphics.DrawString("QUANTITY", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(270, 300));
@@ -542,6 +572,117 @@ namespace Chocolate_Factory_Management_System
         private void textBoxInvoiceNo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxUnitPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDiscount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSubTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxTax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxTotalCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxFinalCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPaid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxChange_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void textBoxStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
         }
     }
 }

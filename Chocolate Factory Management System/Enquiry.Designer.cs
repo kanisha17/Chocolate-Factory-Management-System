@@ -130,6 +130,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(403, 31);
             this.textBoxName.TabIndex = 6;
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxName_KeyPress);
             // 
             // textBoxPhoneNo
             // 
@@ -139,6 +140,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.Size = new System.Drawing.Size(403, 31);
             this.textBoxPhoneNo.TabIndex = 8;
             this.textBoxPhoneNo.TextChanged += new System.EventHandler(this.textBoxPhoneNo_TextChanged);
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // textBoxAddress
             // 
@@ -147,6 +149,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(403, 31);
             this.textBoxAddress.TabIndex = 9;
+            this.textBoxAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAddress_KeyPress);
             // 
             // dateTimePickerDate
             // 
@@ -238,6 +241,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(403, 29);
             this.textBoxCID.TabIndex = 19;
+            this.textBoxCID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCID_KeyPress);
             // 
             // labelCID
             // 

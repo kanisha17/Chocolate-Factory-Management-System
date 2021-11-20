@@ -39,12 +39,12 @@ namespace Chocolate_Factory_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.buttonEDIT = new System.Windows.Forms.Button();
             this.cachedCustomerComplaintReport1 = new Chocolate_Factory_Management_System.CachedCustomerComplaintReport();
-            this.labelStockInward = new System.Windows.Forms.Label();
+            this.labelAStock = new System.Windows.Forms.Label();
             this.labelNetStock = new System.Windows.Forms.Label();
-            this.labelStockOutward = new System.Windows.Forms.Label();
+            this.labelStockInward = new System.Windows.Forms.Label();
             this.textBoxNetStock = new System.Windows.Forms.TextBox();
-            this.textBoxStockOutward = new System.Windows.Forms.TextBox();
             this.textBoxStockInward = new System.Windows.Forms.TextBox();
+            this.textBoxAStock = new System.Windows.Forms.TextBox();
             this.comboBoxRawMaterialName = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductID.Size = new System.Drawing.Size(361, 31);
             this.textBoxProductID.TabIndex = 10;
             this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
+            this.textBoxProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductID_KeyPress);
             // 
             // dateTimePickerDate
             // 
@@ -150,17 +151,17 @@ namespace Chocolate_Factory_Management_System
             this.buttonEDIT.UseVisualStyleBackColor = false;
             this.buttonEDIT.Click += new System.EventHandler(this.buttonEDIT_Click);
             // 
-            // labelStockInward
+            // labelAStock
             // 
-            this.labelStockInward.AutoSize = true;
-            this.labelStockInward.BackColor = System.Drawing.Color.Transparent;
-            this.labelStockInward.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockInward.Location = new System.Drawing.Point(395, 318);
-            this.labelStockInward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelStockInward.Name = "labelStockInward";
-            this.labelStockInward.Size = new System.Drawing.Size(198, 31);
-            this.labelStockInward.TabIndex = 1;
-            this.labelStockInward.Text = "Stock Inward";
+            this.labelAStock.AutoSize = true;
+            this.labelAStock.BackColor = System.Drawing.Color.Transparent;
+            this.labelAStock.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAStock.Location = new System.Drawing.Point(395, 318);
+            this.labelAStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAStock.Name = "labelAStock";
+            this.labelAStock.Size = new System.Drawing.Size(229, 31);
+            this.labelAStock.TabIndex = 1;
+            this.labelAStock.Text = "Available Stock";
             // 
             // labelNetStock
             // 
@@ -174,17 +175,17 @@ namespace Chocolate_Factory_Management_System
             this.labelNetStock.TabIndex = 5;
             this.labelNetStock.Text = "Net Stock";
             // 
-            // labelStockOutward
+            // labelStockInward
             // 
-            this.labelStockOutward.AutoSize = true;
-            this.labelStockOutward.BackColor = System.Drawing.Color.Transparent;
-            this.labelStockOutward.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStockOutward.Location = new System.Drawing.Point(395, 373);
-            this.labelStockOutward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelStockOutward.Name = "labelStockOutward";
-            this.labelStockOutward.Size = new System.Drawing.Size(223, 31);
-            this.labelStockOutward.TabIndex = 6;
-            this.labelStockOutward.Text = "Stock Outward";
+            this.labelStockInward.AutoSize = true;
+            this.labelStockInward.BackColor = System.Drawing.Color.Transparent;
+            this.labelStockInward.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStockInward.Location = new System.Drawing.Point(395, 373);
+            this.labelStockInward.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStockInward.Name = "labelStockInward";
+            this.labelStockInward.Size = new System.Drawing.Size(198, 31);
+            this.labelStockInward.TabIndex = 6;
+            this.labelStockInward.Text = "Stock Inward";
             // 
             // textBoxNetStock
             // 
@@ -193,23 +194,27 @@ namespace Chocolate_Factory_Management_System
             this.textBoxNetStock.Name = "textBoxNetStock";
             this.textBoxNetStock.Size = new System.Drawing.Size(361, 31);
             this.textBoxNetStock.TabIndex = 7;
-            // 
-            // textBoxStockOutward
-            // 
-            this.textBoxStockOutward.Location = new System.Drawing.Point(715, 373);
-            this.textBoxStockOutward.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxStockOutward.Name = "textBoxStockOutward";
-            this.textBoxStockOutward.Size = new System.Drawing.Size(361, 31);
-            this.textBoxStockOutward.TabIndex = 8;
-            this.textBoxStockOutward.TextChanged += new System.EventHandler(this.textBoxStockOutward_TextChanged);
+            this.textBoxNetStock.TextChanged += new System.EventHandler(this.textBoxNetStock_TextChanged);
+            this.textBoxNetStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNetStock_KeyPress);
             // 
             // textBoxStockInward
             // 
-            this.textBoxStockInward.Location = new System.Drawing.Point(715, 318);
+            this.textBoxStockInward.Location = new System.Drawing.Point(715, 373);
             this.textBoxStockInward.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxStockInward.Name = "textBoxStockInward";
             this.textBoxStockInward.Size = new System.Drawing.Size(361, 31);
-            this.textBoxStockInward.TabIndex = 9;
+            this.textBoxStockInward.TabIndex = 8;
+            this.textBoxStockInward.TextChanged += new System.EventHandler(this.textBoxStockOutward_TextChanged);
+            this.textBoxStockInward.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStockOutward_KeyPress);
+            // 
+            // textBoxAStock
+            // 
+            this.textBoxAStock.Location = new System.Drawing.Point(715, 318);
+            this.textBoxAStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxAStock.Name = "textBoxAStock";
+            this.textBoxAStock.Size = new System.Drawing.Size(361, 31);
+            this.textBoxAStock.TabIndex = 9;
+            this.textBoxAStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStockInward_KeyPress);
             // 
             // comboBoxRawMaterialName
             // 
@@ -232,15 +237,15 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerDate);
             this.Controls.Add(this.textBoxProductID);
+            this.Controls.Add(this.textBoxAStock);
             this.Controls.Add(this.textBoxStockInward);
-            this.Controls.Add(this.textBoxStockOutward);
             this.Controls.Add(this.textBoxNetStock);
-            this.Controls.Add(this.labelStockOutward);
+            this.Controls.Add(this.labelStockInward);
             this.Controls.Add(this.labelNetStock);
             this.Controls.Add(this.labelProductName);
             this.Controls.Add(this.labelProductID);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.labelStockInward);
+            this.Controls.Add(this.labelAStock);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
@@ -266,12 +271,12 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonEDIT;
         private CachedCustomerComplaintReport cachedCustomerComplaintReport1;
-        private System.Windows.Forms.Label labelStockInward;
+        private System.Windows.Forms.Label labelAStock;
         private System.Windows.Forms.Label labelNetStock;
-        private System.Windows.Forms.Label labelStockOutward;
+        private System.Windows.Forms.Label labelStockInward;
         private System.Windows.Forms.TextBox textBoxNetStock;
-        private System.Windows.Forms.TextBox textBoxStockOutward;
         private System.Windows.Forms.TextBox textBoxStockInward;
+        private System.Windows.Forms.TextBox textBoxAStock;
         private System.Windows.Forms.ComboBox comboBoxRawMaterialName;
         private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem1;
     }

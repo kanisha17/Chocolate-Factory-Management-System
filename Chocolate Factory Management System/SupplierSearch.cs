@@ -24,36 +24,39 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxPhoneNo.Text.Length == 10)
             {
-                connection.Open();
-                OleDbCommand e1 = new OleDbCommand("select PhoneNo from Supplier where PhoneNo=@parm1", connection);
-                e1.Parameters.AddWithValue("@parm1", textBoxPhoneNo.Text);
-                OleDbDataReader reader1;
-                reader1 = e1.ExecuteReader();
-                if (reader1.Read())
+                try
                 {
+                    connection.Open();
+                    OleDbCommand e1 = new OleDbCommand("select PhoneNo from Supplier where PhoneNo=@parm1", connection);
+                    e1.Parameters.AddWithValue("@parm1", textBoxPhoneNo.Text);
+                    OleDbDataReader reader1;
+                    reader1 = e1.ExecuteReader();
+                    if (reader1.Read())
+                    {
 
-                    textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
+                        textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
 
-                    PurchaseOrder s1 = new PurchaseOrder(textBoxPhoneNo.Text);
+                        PurchaseOrder s1 = new PurchaseOrder(textBoxPhoneNo.Text);
 
-                    s1.ShowDialog();
+                        s1.ShowDialog();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found");
+                    }
+                    connection.Close();
+
+                    resetControls();
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Data Not Found");
+                    MessageBox.Show("Please Fill The Details");
                 }
-                connection.Close();
-
-                resetControls();
             }
-            catch
-            {
-                MessageBox.Show("Please Fill The Details");
-            }
-
+            else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo"); }
            
         }
 
@@ -74,6 +77,15 @@ namespace Chocolate_Factory_Management_System
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
+        }
+
+        private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

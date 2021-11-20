@@ -85,6 +85,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.Size = new System.Drawing.Size(287, 31);
             this.textBoxPhoneNo.TabIndex = 12;
             this.textBoxPhoneNo.TextChanged += new System.EventHandler(this.textBoxPhoneNo_TextChanged);
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // textBoxName
             // 
@@ -94,6 +95,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxName.Size = new System.Drawing.Size(287, 31);
             this.textBoxName.TabIndex = 11;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxName_KeyPress);
             // 
             // textBoxEmail
             // 
@@ -295,6 +297,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(287, 31);
             this.textBoxCID.TabIndex = 25;
+            this.textBoxCID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCID_KeyPress);
             // 
             // comboBoxProductName
             // 

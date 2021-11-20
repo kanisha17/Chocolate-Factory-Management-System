@@ -73,6 +73,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(320, 31);
             this.textBoxEID.TabIndex = 60;
+            this.textBoxEID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEID_KeyPress);
             // 
             // labelEID
             // 
@@ -133,6 +134,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPincode.Name = "textBoxPincode";
             this.textBoxPincode.Size = new System.Drawing.Size(317, 31);
             this.textBoxPincode.TabIndex = 55;
+            this.textBoxPincode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPincode_KeyPress);
             // 
             // textBoxAddress
             // 
@@ -149,6 +151,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEmployeeName.Name = "textBoxEmployeeName";
             this.textBoxEmployeeName.Size = new System.Drawing.Size(317, 31);
             this.textBoxEmployeeName.TabIndex = 53;
+            this.textBoxEmployeeName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEmployeeName_KeyPress);
             // 
             // dateTimePickerDOB
             // 
@@ -285,6 +288,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQualification.Name = "textBoxQualification";
             this.textBoxQualification.Size = new System.Drawing.Size(317, 31);
             this.textBoxQualification.TabIndex = 68;
+            this.textBoxQualification.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxQualification_KeyPress);
             // 
             // textBoxPhone
             // 
@@ -293,6 +297,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(317, 31);
             this.textBoxPhone.TabIndex = 67;
+            this.textBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhone_KeyPress);
             // 
             // textBoxCity
             // 
@@ -301,6 +306,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(317, 31);
             this.textBoxCity.TabIndex = 66;
+            this.textBoxCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCity_KeyPress);
             // 
             // textBoxState
             // 
@@ -309,6 +315,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxState.Name = "textBoxState";
             this.textBoxState.Size = new System.Drawing.Size(317, 31);
             this.textBoxState.TabIndex = 65;
+            this.textBoxState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxState_KeyPress);
             // 
             // labelQualification
             // 

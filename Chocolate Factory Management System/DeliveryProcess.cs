@@ -110,34 +110,37 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxPhoneNo.Text.Length == 10 && textBoxPincode.Text.Length==6)
             {
-                connection.Open();
-                command = new OleDbCommand("insert into DeliveryProcess(DeliveryID,DeliverTo,Address,City,Pincode,PhoneNo,ReceiptNo,DeliveryDate,PaymentMode,DeliveredBy) " +
-                    "values(@did,@deliverto,@address,@city,@pincode,@phone,@receipt,@ddate,@paymentmode,@deliverby)", connection);
-                command.Parameters.AddWithValue("@did", textBoxDelivery.Text);
-                command.Parameters.AddWithValue("@deliverto", textBoxDeliverTo.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@city",textBoxCity.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
-                command.Parameters.AddWithValue("@receipt",textBoxReceiptNo.Text);
-                command.Parameters.AddWithValue("@ddate", dateTimePickerDate.Text);
-                command.Parameters.AddWithValue("@paymentmode", checkBoxCash.Text);
-                command.Parameters.AddWithValue("@deliverby",textBoxDeliverBy.Text);
-                command.ExecuteNonQuery();
-                resetControls();
-                connection.Close();
-                
-                MessageBox.Show("Data Saved Successfully");
+                try
+                {
+                    connection.Open();
+                    command = new OleDbCommand("insert into DeliveryProcess(DeliveryID,DeliverTo,Address,City,Pincode,PhoneNo,ReceiptNo,DeliveryDate,PaymentMode,DeliveredBy) " +
+                        "values(@did,@deliverto,@address,@city,@pincode,@phone,@receipt,@ddate,@paymentmode,@deliverby)", connection);
+                    command.Parameters.AddWithValue("@did", textBoxDelivery.Text);
+                    command.Parameters.AddWithValue("@deliverto", textBoxDeliverTo.Text);
+                    command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                    command.Parameters.AddWithValue("@city", textBoxCity.Text);
+                    command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                    command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
+                    command.Parameters.AddWithValue("@receipt", textBoxReceiptNo.Text);
+                    command.Parameters.AddWithValue("@ddate", dateTimePickerDate.Text);
+                    command.Parameters.AddWithValue("@paymentmode", checkBoxCash.Text);
+                    command.Parameters.AddWithValue("@deliverby", textBoxDeliverBy.Text);
+                    command.ExecuteNonQuery();
+                    resetControls();
+                    connection.Close();
 
-                getInvoiceID();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+                    MessageBox.Show("Data Saved Successfully");
 
+                    getInvoiceID();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode"); }
         }
         void resetControls()
         {
@@ -185,6 +188,60 @@ namespace Chocolate_Factory_Management_System
         {
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
+        }
+
+        private void textBoxCustomerID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPincode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxReceiptNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDeliverTo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxDeliverBy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
         }
     }
 }

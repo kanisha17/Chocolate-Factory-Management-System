@@ -44,12 +44,11 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxPhoneNo
             // 
-            this.textBoxPhoneNo.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(597, 229);
-            this.textBoxPhoneNo.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(613, 234);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(344, 36);
-            this.textBoxPhoneNo.TabIndex = 5;
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(317, 31);
+            this.textBoxPhoneNo.TabIndex = 9;
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // labelPhoneNo
             // 

@@ -52,10 +52,10 @@ namespace Chocolate_Factory_Management_System
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.GreenYellow;
             this.buttonAdd.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(593, 501);
+            this.buttonAdd.Location = new System.Drawing.Point(641, 500);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(348, 51);
+            this.buttonAdd.Size = new System.Drawing.Size(348, 68);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "SUBMIT";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -87,16 +87,17 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(593, 331);
+            this.textBoxPrice.Location = new System.Drawing.Point(641, 330);
             this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(348, 31);
             this.textBoxPrice.TabIndex = 5;
             this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
+            this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KeyPress);
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(593, 270);
+            this.textBoxDescription.Location = new System.Drawing.Point(641, 269);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(348, 31);
@@ -105,21 +106,23 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxRawMaterialName
             // 
-            this.textBoxRawMaterialName.Location = new System.Drawing.Point(593, 211);
+            this.textBoxRawMaterialName.Location = new System.Drawing.Point(641, 210);
             this.textBoxRawMaterialName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRawMaterialName.Name = "textBoxRawMaterialName";
             this.textBoxRawMaterialName.Size = new System.Drawing.Size(348, 31);
             this.textBoxRawMaterialName.TabIndex = 7;
             this.textBoxRawMaterialName.TextChanged += new System.EventHandler(this.textBoxRawMaterialName_TextChanged);
+            this.textBoxRawMaterialName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRawMaterialName_KeyPress);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(593, 142);
+            this.textBoxSearch.Location = new System.Drawing.Point(641, 141);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(348, 31);
             this.textBoxSearch.TabIndex = 8;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSearch_KeyPress);
             // 
             // labelPrice
             // 
@@ -127,7 +130,7 @@ namespace Chocolate_Factory_Management_System
             this.labelPrice.BackColor = System.Drawing.Color.Transparent;
             this.labelPrice.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPrice.Location = new System.Drawing.Point(275, 331);
+            this.labelPrice.Location = new System.Drawing.Point(323, 330);
             this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(84, 31);
@@ -141,7 +144,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelDescription.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDescription.Location = new System.Drawing.Point(275, 270);
+            this.labelDescription.Location = new System.Drawing.Point(323, 269);
             this.labelDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(173, 31);
@@ -155,7 +158,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterialName.BackColor = System.Drawing.Color.Transparent;
             this.labelRawMaterialName.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRawMaterialName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelRawMaterialName.Location = new System.Drawing.Point(275, 211);
+            this.labelRawMaterialName.Location = new System.Drawing.Point(323, 210);
             this.labelRawMaterialName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRawMaterialName.Name = "labelRawMaterialName";
             this.labelRawMaterialName.Size = new System.Drawing.Size(286, 31);
@@ -169,7 +172,7 @@ namespace Chocolate_Factory_Management_System
             this.labelReview.BackColor = System.Drawing.Color.Transparent;
             this.labelReview.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReview.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelReview.Location = new System.Drawing.Point(275, 440);
+            this.labelReview.Location = new System.Drawing.Point(323, 439);
             this.labelReview.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelReview.Name = "labelReview";
             this.labelReview.Size = new System.Drawing.Size(117, 31);
@@ -183,7 +186,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterailDetails.BackColor = System.Drawing.Color.Transparent;
             this.labelRawMaterailDetails.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRawMaterailDetails.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelRawMaterailDetails.Location = new System.Drawing.Point(384, 53);
+            this.labelRawMaterailDetails.Location = new System.Drawing.Point(339, 56);
             this.labelRawMaterailDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRawMaterailDetails.Name = "labelRawMaterailDetails";
             this.labelRawMaterailDetails.Size = new System.Drawing.Size(650, 54);
@@ -200,7 +203,7 @@ namespace Chocolate_Factory_Management_System
             "***",
             "**",
             "*"});
-            this.comboBoxRawMaterial.Location = new System.Drawing.Point(593, 440);
+            this.comboBoxRawMaterial.Location = new System.Drawing.Point(641, 439);
             this.comboBoxRawMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxRawMaterial.Name = "comboBoxRawMaterial";
             this.comboBoxRawMaterial.Size = new System.Drawing.Size(348, 31);
@@ -213,7 +216,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterialID.BackColor = System.Drawing.Color.Transparent;
             this.labelRawMaterialID.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRawMaterialID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelRawMaterialID.Location = new System.Drawing.Point(275, 142);
+            this.labelRawMaterialID.Location = new System.Drawing.Point(323, 141);
             this.labelRawMaterialID.Name = "labelRawMaterialID";
             this.labelRawMaterialID.Size = new System.Drawing.Size(238, 31);
             this.labelRawMaterialID.TabIndex = 17;
@@ -226,7 +229,7 @@ namespace Chocolate_Factory_Management_System
             this.labelDiscount.BackColor = System.Drawing.Color.Transparent;
             this.labelDiscount.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDiscount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelDiscount.Location = new System.Drawing.Point(277, 389);
+            this.labelDiscount.Location = new System.Drawing.Point(325, 388);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(137, 31);
             this.labelDiscount.TabIndex = 18;
@@ -235,11 +238,12 @@ namespace Chocolate_Factory_Management_System
             // 
             // textBoxDicsount
             // 
-            this.textBoxDicsount.Location = new System.Drawing.Point(593, 381);
+            this.textBoxDicsount.Location = new System.Drawing.Point(641, 380);
             this.textBoxDicsount.Name = "textBoxDicsount";
             this.textBoxDicsount.Size = new System.Drawing.Size(348, 31);
             this.textBoxDicsount.TabIndex = 19;
             this.textBoxDicsount.TextChanged += new System.EventHandler(this.textBoxDicsount_TextChanged);
+            this.textBoxDicsount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDicsount_KeyPress);
             // 
             // RawMaterial
             // 

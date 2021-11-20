@@ -82,32 +82,38 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            
-
-            try
+            if (textBoxcPhone.Text.Length == 10 && textBoxcPincode.Text.Length==6)
             {
-                connection.Open();
-                command = new OleDbCommand("insert into Customer(CustomerID,CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customerID,@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
-                command.Parameters.AddWithValue("@customerID", textBoxCID.Text);
-                command.Parameters.AddWithValue("@customername", textBoxCustomerName.Text);
-                command.Parameters.AddWithValue("@dob", dateTimePickercDOB.Text);
-                command.Parameters.AddWithValue("@address", textBoxcAddress.Text);
-                command.Parameters.AddWithValue("@city", textBoxcCity.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxcPincode.Text);
-                command.Parameters.AddWithValue("@phone", textBoxcPhone.Text);
-                command.Parameters.AddWithValue("@email", textBoxcEmail.Text);
-                command.ExecuteNonQuery();
-                resetControls();
-                connection.Close();
-               
-                MessageBox.Show("Registered Successfully");
 
-                CustomerSearch s1 = new CustomerSearch();
-                s1.ShowDialog();
+                try
+                {
+                    connection.Open();
+                    command = new OleDbCommand("insert into Customer(CustomerID,CustomerName,DOB,Address,City,Pincode,PhoneNo,Email) values(@customerID,@customername,@dob,@address,@city,@pincode,@phone,@email)", connection);
+                    command.Parameters.AddWithValue("@customerID", textBoxCID.Text);
+                    command.Parameters.AddWithValue("@customername", textBoxCustomerName.Text);
+                    command.Parameters.AddWithValue("@dob", dateTimePickercDOB.Text);
+                    command.Parameters.AddWithValue("@address", textBoxcAddress.Text);
+                    command.Parameters.AddWithValue("@city", textBoxcCity.Text);
+                    command.Parameters.AddWithValue("@pincode", textBoxcPincode.Text);
+                    command.Parameters.AddWithValue("@phone", textBoxcPhone.Text);
+                    command.Parameters.AddWithValue("@email", textBoxcEmail.Text);
+                    command.ExecuteNonQuery();
+                    resetControls();
+                    connection.Close();
+
+                    MessageBox.Show("Registered Successfully");
+
+                    CustomerSearch s1 = new CustomerSearch();
+                    s1.ShowDialog();
+                }
+                catch
+                {
+                    MessageBox.Show("Registration Failed");
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Registration Failed");
+                MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode");
             }
         }
 
@@ -167,7 +173,41 @@ namespace Chocolate_Factory_Management_System
 
         private void textBoxcPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxCustomerName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxcCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxCID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxcPincode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

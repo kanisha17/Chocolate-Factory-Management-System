@@ -56,8 +56,8 @@ namespace Chocolate_Factory_Management_System
 
             textBoxNetStock.Clear();
             textBoxProductID.Clear();
+            textBoxAStock.Clear();
             textBoxStockInward.Clear();
-            textBoxStockOutward.Clear();
             comboBoxRawMaterialName.ResetText();
         }
         private void buttonEDIT_Click(object sender, EventArgs e)
@@ -68,8 +68,8 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "update RawMaterialDetails set RDate='" + dateTimePickerDate.Text + "',StockInward='" + textBoxStockInward.Text + "'," +
-                    "StockOutward='" + textBoxStockOutward.Text + "',NetStock='" + textBoxNetStock.Text + "' where RawMaterialID=" + textBoxProductID.Text + "";
+                string query = "update RawMaterialDetails set RDate='" + dateTimePickerDate.Text + "',AvailableStock='" + textBoxAStock.Text + "'," +
+                    "StockInward='" + textBoxStockInward.Text + "',NetStock='" + textBoxNetStock.Text + "' where RawMaterialID=" + textBoxProductID.Text + "";
                 MessageBox.Show(query);
                 command.CommandText = query;
 
@@ -119,17 +119,17 @@ namespace Chocolate_Factory_Management_System
 
         private void textBoxStockOutward_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxStockOutward.Text) == true)
+            if (string.IsNullOrEmpty(textBoxStockInward.Text) == true)
             {
 
             }
             else
             {
 
-                int price = Convert.ToInt32(textBoxStockInward.Text);
-                int discount = Convert.ToInt32(textBoxStockOutward.Text);
+                int price = Convert.ToInt32(textBoxAStock.Text);
+                int discount = Convert.ToInt32(textBoxStockInward.Text);
 
-                int subtotal = price - discount;
+                int subtotal = price + discount;
 
                 textBoxNetStock.Text = subtotal.ToString();
             }
@@ -186,6 +186,47 @@ namespace Chocolate_Factory_Management_System
 
                 }
             }
+
+        }
+
+        private void textBoxProductID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxStockInward_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxStockOutward_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNetStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNetStock_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

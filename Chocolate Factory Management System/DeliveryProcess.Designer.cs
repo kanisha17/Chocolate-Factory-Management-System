@@ -52,13 +52,13 @@ namespace Chocolate_Factory_Management_System
             this.textBoxReceiptNo = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxDelivery = new System.Windows.Forms.TextBox();
             this.labelDeliveryNo = new System.Windows.Forms.Label();
             this.labelCID = new System.Windows.Forms.Label();
             this.textBoxCustomerID = new System.Windows.Forms.TextBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,6 +155,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDeliverBy.Name = "textBoxDeliverBy";
             this.textBoxDeliverBy.Size = new System.Drawing.Size(287, 31);
             this.textBoxDeliverBy.TabIndex = 8;
+            this.textBoxDeliverBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeliverBy_KeyPress);
             // 
             // textBoxPincode
             // 
@@ -163,6 +164,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPincode.Name = "textBoxPincode";
             this.textBoxPincode.Size = new System.Drawing.Size(287, 31);
             this.textBoxPincode.TabIndex = 9;
+            this.textBoxPincode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPincode_KeyPress);
             // 
             // textBoxCity
             // 
@@ -171,6 +173,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(287, 31);
             this.textBoxCity.TabIndex = 10;
+            this.textBoxCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCity_KeyPress);
             // 
             // textBoxAddress
             // 
@@ -187,6 +190,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDeliverTo.Name = "textBoxDeliverTo";
             this.textBoxDeliverTo.Size = new System.Drawing.Size(287, 31);
             this.textBoxDeliverTo.TabIndex = 12;
+            this.textBoxDeliverTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDeliverTo_KeyPress);
             // 
             // textBoxPhoneNo
             // 
@@ -195,6 +199,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(287, 31);
             this.textBoxPhoneNo.TabIndex = 14;
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // labelPhoneNo
             // 
@@ -277,6 +282,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxReceiptNo.Name = "textBoxReceiptNo";
             this.textBoxReceiptNo.Size = new System.Drawing.Size(287, 31);
             this.textBoxReceiptNo.TabIndex = 24;
+            this.textBoxReceiptNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxReceiptNo_KeyPress);
             // 
             // menuStrip1
             // 
@@ -289,7 +295,7 @@ namespace Chocolate_Factory_Management_System
             this.pRINTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1294, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1294, 42);
             this.menuStrip1.TabIndex = 28;
             this.menuStrip1.Text = "menuStripDelivery";
             // 
@@ -301,6 +307,15 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // pRINTToolStripMenuItem
+            // 
+            this.pRINTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
+            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
+            this.pRINTToolStripMenuItem.Text = "PRINT";
+            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // textBoxDelivery
             // 
@@ -339,6 +354,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCustomerID.Name = "textBoxCustomerID";
             this.textBoxCustomerID.Size = new System.Drawing.Size(287, 31);
             this.textBoxCustomerID.TabIndex = 30;
+            this.textBoxCustomerID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCustomerID_KeyPress);
             // 
             // printPreviewDialog1
             // 
@@ -353,15 +369,6 @@ namespace Chocolate_Factory_Management_System
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // DeliveryProcess
             // 

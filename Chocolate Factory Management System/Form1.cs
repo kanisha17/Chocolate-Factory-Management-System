@@ -70,5 +70,11 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void textBoxUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
     }
 }

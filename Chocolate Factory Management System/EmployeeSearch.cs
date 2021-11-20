@@ -28,110 +28,117 @@ namespace Chocolate_Factory_Management_System
         }
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxEID.Text.Length == 3)
             {
-                connection.Open();
-                OleDbCommand e1 = new OleDbCommand("select EID from EmployeeDetails where EID=@parm1", connection);
-                e1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
-                OleDbDataReader reader1;
-                reader1 = e1.ExecuteReader();
-                if (reader1.Read())
+                try
                 {
-                 //   textBoxFullName.Text = reader1["CustomerName"].ToString();
-                    textBoxEID.Text = reader1["EID"].ToString();
+                    connection.Open();
+                    OleDbCommand e1 = new OleDbCommand("select EID from EmployeeDetails where EID=@parm1", connection);
+                    e1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
+                    OleDbDataReader reader1;
+                    reader1 = e1.ExecuteReader();
+                    if (reader1.Read())
+                    {
+                        //   textBoxFullName.Text = reader1["CustomerName"].ToString();
+                        textBoxEID.Text = reader1["EID"].ToString();
 
-                 
-                    EmployeeUpdate s1 = new EmployeeUpdate(textBoxEID.Text);
 
-                    s1.ShowDialog();
-                   // MessageBox.Show("Data Found");
+                        EmployeeUpdate s1 = new EmployeeUpdate(textBoxEID.Text);
+
+                        s1.ShowDialog();
+                        // MessageBox.Show("Data Found");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found");
+                    }
+                    connection.Close();
+
+                    resetControls();
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Data Not Found");
+                    MessageBox.Show("Please Fill The Details");
                 }
-                connection.Close();
-
-                resetControls();
             }
-            catch
-            {
-                MessageBox.Show("Please Fill The Details");
-            }
-
-           // EmployeeUpdate e1 = new EmployeeUpdate();
-           // e1.ShowDialog();
-
-         
+            else { MessageBox.Show("Please Enter Only 3 Digit ID"); }
         }
 
         private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxEID.Text.Length == 3)
             {
-                connection.Open();
-                OleDbCommand e1 = new OleDbCommand("select EID from EmployeeDetails where EID=@parm1", connection);
-                e1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
-                OleDbDataReader reader1;
-                reader1 = e1.ExecuteReader();
-                if (reader1.Read())
+                try
                 {
-                    //   textBoxFullName.Text = reader1["CustomerName"].ToString();
-                    textBoxEID.Text = reader1["EID"].ToString();
+                    connection.Open();
+                    OleDbCommand e1 = new OleDbCommand("select EID from EmployeeDetails where EID=@parm1", connection);
+                    e1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
+                    OleDbDataReader reader1;
+                    reader1 = e1.ExecuteReader();
+                    if (reader1.Read())
+                    {
+                        //   textBoxFullName.Text = reader1["CustomerName"].ToString();
+                        textBoxEID.Text = reader1["EID"].ToString();
 
 
-                   EmployeeAttendance s1 = new EmployeeAttendance(textBoxEID.Text);
+                        EmployeeAttendance s1 = new EmployeeAttendance(textBoxEID.Text);
 
-                    s1.ShowDialog();
-                    // MessageBox.Show("Data Found");
+                        s1.ShowDialog();
+                        // MessageBox.Show("Data Found");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found");
+                    }
+                    connection.Close();
+
+                    resetControls();
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Data Not Found");
+                    MessageBox.Show("Please Fill The Details");
                 }
-                connection.Close();
-
-                resetControls();
             }
-            catch
-            {
-                MessageBox.Show("Please Fill The Details");
-            }
-
+            else { MessageBox.Show("Please Enter Only 3 Digit EID"); };
         }
 
         private void salaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxEID.Text.Length == 3)
             {
-                connection.Open();
-                OleDbCommand e1 = new OleDbCommand("select EID from EmployeeDetails where EID=@parm1", connection);
-                e1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
-                OleDbDataReader reader1;
-                reader1 = e1.ExecuteReader();
-                if (reader1.Read())
+                try
                 {
-                    //   textBoxFullName.Text = reader1["CustomerName"].ToString();
-                    textBoxEID.Text = reader1["EID"].ToString();
+                    connection.Open();
+                    OleDbCommand e1 = new OleDbCommand("select EID from EmployeeDetails where EID=@parm1", connection);
+                    e1.Parameters.AddWithValue("@parm1", textBoxEID.Text);
+                    OleDbDataReader reader1;
+                    reader1 = e1.ExecuteReader();
+                    if (reader1.Read())
+                    {
+                        //   textBoxFullName.Text = reader1["CustomerName"].ToString();
+                        textBoxEID.Text = reader1["EID"].ToString();
 
 
-                    EmployeeSalary s1 = new EmployeeSalary(textBoxEID.Text);
+                        EmployeeSalary2 s1 = new EmployeeSalary2(textBoxEID.Text);
 
-                    s1.ShowDialog();
-                    // MessageBox.Show("Data Found");
+                        s1.ShowDialog();
+                        // MessageBox.Show("Data Found");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found");
+                    }
+                    connection.Close();
+
+                    resetControls();
+
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Data Not Found");
+                    MessageBox.Show("Please Fill The Details");
                 }
-                connection.Close();
-
-                resetControls();
             }
-            catch
-            {
-                MessageBox.Show("Please Fill The Details");
-            }
+            else { MessageBox.Show("Please Enter Only 3 Digit EID"); }
         }
 
         private void linkLabelNotRegistered_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -143,6 +150,15 @@ namespace Chocolate_Factory_Management_System
         private void EmployeeSearch_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxEID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

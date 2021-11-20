@@ -126,17 +126,17 @@ namespace Chocolate_Factory_Management_System
             if (dr.Read())
             {
                 int id = int.Parse(dr[0].ToString()) + 1;
-                sql = id.ToString("0");
+                sql = id.ToString("000");
 
             }
             else if (Convert.IsDBNull(dr))
             {
-                sql = ("1");
+                sql = ("101");
 
             }
             else
             {
-                sql = ("1");
+                sql = ("101");
             }
 
             connection.Close();
@@ -149,36 +149,39 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonADD_Click(object sender, EventArgs e)
         {
-
-            try
+            if (textBoxPhone.Text.Length == 10 && textBoxPincode.Text.Length == 6)
             {
-                connection.Open();
-                command = new OleDbCommand("insert into EmployeeDetails(EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,PhoneNo,Email,Qualification,DateOfJoining) " +
-                    "values(@eid,@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
-                command.Parameters.AddWithValue("@eid", textBoxEID.Text);
-                command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
-                command.Parameters.AddWithValue("@department", comboBoxDepartment.Text);
-                command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
-                command.Parameters.AddWithValue("@gender", comboBoxGender.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@city", textBoxCity.Text);
-                command.Parameters.AddWithValue("@state", textBoxState.Text);
-                command.Parameters.AddWithValue("@phone", textBoxPhone.Text);
-                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
-                command.Parameters.AddWithValue("@qualification", textBoxQualification.Text);
-                command.Parameters.AddWithValue("@joiningdate", dateTimePickerJoining.Text);
+                try
+                {
+                    connection.Open();
+                    command = new OleDbCommand("insert into EmployeeDetails(EID,EmployeeName,Department,DOB,Gender,Address,Pincode,City,State,PhoneNo,Email,Qualification,DateOfJoining) " +
+                        "values(@eid,@employeename,@department,@dob,@gender,@address,@pincode,@city,@state,@phone,@email,@qualification,@joiningdate)", connection);
+                    command.Parameters.AddWithValue("@eid", textBoxEID.Text);
+                    command.Parameters.AddWithValue("@employeename", textBoxEmployeeName.Text);
+                    command.Parameters.AddWithValue("@department", comboBoxDepartment.Text);
+                    command.Parameters.AddWithValue("@dob", dateTimePickerDOB.Text);
+                    command.Parameters.AddWithValue("@gender", comboBoxGender.Text);
+                    command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                    command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                    command.Parameters.AddWithValue("@city", textBoxCity.Text);
+                    command.Parameters.AddWithValue("@state", textBoxState.Text);
+                    command.Parameters.AddWithValue("@phone", textBoxPhone.Text);
+                    command.Parameters.AddWithValue("@email", textBoxEmail.Text);
+                    command.Parameters.AddWithValue("@qualification", textBoxQualification.Text);
+                    command.Parameters.AddWithValue("@joiningdate", dateTimePickerJoining.Text);
 
-                command.ExecuteNonQuery();
-               
-                connection.Close();
-                
-                MessageBox.Show("Data Saved Successfully");
+                    command.ExecuteNonQuery();
+
+                    connection.Close();
+
+                    MessageBox.Show("Data Saved Successfully");
+                }
+                catch
+                {
+                    MessageBox.Show("Data Not Saved".ToString());
+                }
             }
-            catch 
-            {
-                MessageBox.Show("Data Not Saved".ToString());
-            }
+            else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode"); }
         }
 
         private void buttonEDIT_Click(object sender, EventArgs e)
@@ -201,6 +204,42 @@ namespace Chocolate_Factory_Management_System
             if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
+            }
+        }
+
+        private void textBoxEmployeeName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxState_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxPincode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
             }
         }
     }

@@ -153,5 +153,15 @@ namespace Chocolate_Factory_Management_System
         {
 
         }
+
+        private void textBoxSEARCH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

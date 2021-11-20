@@ -71,6 +71,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(356, 31);
             this.textBoxPhoneNo.TabIndex = 2;
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // textBoxName
             // 
@@ -79,6 +80,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(356, 31);
             this.textBoxName.TabIndex = 3;
+            this.textBoxName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxName_KeyPress);
             // 
             // labelPhoneNo
             // 
@@ -268,6 +270,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxtakenby.Name = "textBoxtakenby";
             this.textBoxtakenby.Size = new System.Drawing.Size(356, 31);
             this.textBoxtakenby.TabIndex = 22;
+            this.textBoxtakenby.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxtakenby_KeyPress);
             // 
             // checkedListBoxapprcomplaint
             // 
@@ -305,6 +308,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(356, 31);
             this.textBoxCID.TabIndex = 25;
+            this.textBoxCID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCID_KeyPress);
             // 
             // labelCID
             // 

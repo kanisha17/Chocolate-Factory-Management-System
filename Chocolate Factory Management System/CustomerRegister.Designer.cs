@@ -162,6 +162,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcCity.Name = "textBoxcCity";
             this.textBoxcCity.Size = new System.Drawing.Size(359, 31);
             this.textBoxcCity.TabIndex = 9;
+            this.textBoxcCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxcCity_KeyPress);
             // 
             // textBoxcAddress
             // 
@@ -180,6 +181,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(359, 31);
             this.textBoxCustomerName.TabIndex = 25;
+            this.textBoxCustomerName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCustomerName_KeyPress);
             // 
             // textBoxcPincode
             // 
@@ -189,6 +191,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxcPincode.Name = "textBoxcPincode";
             this.textBoxcPincode.Size = new System.Drawing.Size(359, 31);
             this.textBoxcPincode.TabIndex = 15;
+            this.textBoxcPincode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxcPincode_KeyPress);
             // 
             // textBoxcPhone
             // 
@@ -285,6 +288,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCID.Name = "textBoxCID";
             this.textBoxCID.Size = new System.Drawing.Size(359, 31);
             this.textBoxCID.TabIndex = 29;
+            this.textBoxCID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCID_KeyPress);
             // 
             // buttonSubmit
             // 

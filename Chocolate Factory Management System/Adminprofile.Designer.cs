@@ -90,6 +90,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(296, 31);
             this.textBoxFirstName.TabIndex = 4;
+            this.textBoxFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstName_KeyPress);
             // 
             // textBoxLastName
             // 
@@ -100,6 +101,8 @@ namespace Chocolate_Factory_Management_System
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(296, 31);
             this.textBoxLastName.TabIndex = 5;
+            this.textBoxLastName.TextChanged += new System.EventHandler(this.textBoxLastName_TextChanged);
+            this.textBoxLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLastName_KeyPress);
             // 
             // textBoxAddress
             // 
@@ -166,6 +169,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(296, 31);
             this.textBoxCity.TabIndex = 15;
+            this.textBoxCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCity_KeyPress);
             // 
             // textBoxPincode
             // 
@@ -175,6 +179,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPincode.Name = "textBoxPincode";
             this.textBoxPincode.Size = new System.Drawing.Size(296, 31);
             this.textBoxPincode.TabIndex = 16;
+            this.textBoxPincode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPincode_KeyPress);
             // 
             // textBoxPhoneNo
             // 
@@ -184,6 +189,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(296, 31);
             this.textBoxPhoneNo.TabIndex = 33;
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // buttonClose
             // 
@@ -225,6 +231,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxState.Name = "textBoxState";
             this.textBoxState.Size = new System.Drawing.Size(296, 31);
             this.textBoxState.TabIndex = 24;
+            this.textBoxState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxState_KeyPress);
             // 
             // labelEmail
             // 
@@ -299,7 +306,7 @@ namespace Chocolate_Factory_Management_System
             // buttonEDIT
             // 
             this.buttonEDIT.BackColor = System.Drawing.Color.Coral;
-            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEDIT.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEDIT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonEDIT.Location = new System.Drawing.Point(560, 552);
             this.buttonEDIT.Name = "buttonEDIT";

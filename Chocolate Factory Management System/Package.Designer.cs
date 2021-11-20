@@ -91,6 +91,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductID.Size = new System.Drawing.Size(417, 31);
             this.textBoxProductID.TabIndex = 13;
             this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
+            this.textBoxProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductID_KeyPress);
             // 
             // textBoxNewStock
             // 
@@ -100,6 +101,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxNewStock.Name = "textBoxNewStock";
             this.textBoxNewStock.Size = new System.Drawing.Size(417, 30);
             this.textBoxNewStock.TabIndex = 6;
+            this.textBoxNewStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNewStock_KeyPress);
             // 
             // buttonSubmit
             // 

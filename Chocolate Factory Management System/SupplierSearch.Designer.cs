@@ -73,6 +73,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(388, 31);
             this.textBoxPhoneNo.TabIndex = 3;
+            this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
             // linkLabelNotRegistered
             // 

@@ -60,6 +60,18 @@
     <Compile Include="Adminprofile.Designer.cs">
       <DependentUpon>Adminprofile.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllReports.Designer.cs">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustDeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustDeliveryReport.Designer.cs">
+      <DependentUpon>CustDeliveryReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerComplaintReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,17 +114,17 @@
     <Compile Include="CustomerFeedbackReg.Designer.cs">
       <DependentUpon>CustomerFeedbackReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerFeedbackReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CustomerFeedbackReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CustomerInReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerInReport.Designer.cs">
       <DependentUpon>CustomerInReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomerRegister.cs">
       <SubType>Form</SubType>
@@ -144,11 +156,23 @@
     <Compile Include="CustomerSearch.Designer.cs">
       <DependentUpon>CustomerSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustSalesOrderReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustSalesOrderReg.Designer.cs">
+      <DependentUpon>CustSalesOrderReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeliveryProcess.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeliveryProcess.Designer.cs">
       <DependentUpon>DeliveryProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeliveryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="EmployeeAttendanceReg.cs">
       <SubType>Form</SubType>
@@ -162,11 +186,17 @@
       <DependentUpon>EmployeeAttendanceReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EmployeeSalaryReceipt.cs">
+    <Compile Include="EmployeeSalary1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeSalary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmployeeSalary2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeSalaryReceipt.Designer.cs">
-      <DependentUpon>EmployeeSalaryReceipt.cs</DependentUpon>
+    <Compile Include="EmployeeSalary2.Designer.cs">
+      <DependentUpon>EmployeeSalary2.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeSalaryReceiptReport.cs">
       <AutoGen>True</AutoGen>
@@ -180,12 +210,6 @@
     <Compile Include="EmployeeSalaryReg.Designer.cs">
       <DependentUpon>EmployeeSalaryReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeSalaryReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeSalaryReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="EmployeeSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,11 +222,23 @@
     <Compile Include="EmployeeUpdate.Designer.cs">
       <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="FeedbackReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeedbackReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FinalProductDelete.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FinalProductDelete.Designer.cs">
       <DependentUpon>FinalProductDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedProductReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinishedProductReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ManufacturingProcess.cs">
       <SubType>Form</SubType>
@@ -210,11 +246,41 @@
     <Compile Include="ManufacturingProcess.Designer.cs">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="PackagingReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackagingReg.Designer.cs">
+      <DependentUpon>PackagingReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackagingReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PackagingReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReg.Designer.cs">
+      <DependentUpon>ProductReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProductUpdate.Designer.cs">
       <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityReg.Designer.cs">
+      <DependentUpon>QualityReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QualityReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="QualityTesting.cs">
       <SubType>Form</SubType>
@@ -240,17 +306,17 @@
     <Compile Include="PurchaseOrderReg.Designer.cs">
       <DependentUpon>PurchaseOrderReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="PurchaseOrderReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PurchaseOrderReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Package.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Package.Designer.cs">
       <DependentUpon>Package.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawDetailsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RawDetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="RawMaterial.cs">
       <SubType>Form</SubType>
@@ -270,17 +336,11 @@
     <Compile Include="RawMaterialUpdate.Designer.cs">
       <DependentUpon>RawMaterialUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalesOrderReg.cs">
+    <Compile Include="RawReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesOrderReg.Designer.cs">
-      <DependentUpon>SalesOrderReg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SalesOrderReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SalesOrderReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="RawReg.Designer.cs">
+      <DependentUpon>RawReg.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectRawMaterial.cs">
       <SubType>Form</SubType>
@@ -306,12 +366,6 @@
       <DependentUpon>StockMaintenanceReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SupplierRegReprt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SupplierRegReprt.Designer.cs">
-      <DependentUpon>SupplierRegReprt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,12 +383,6 @@
     </Compile>
     <Compile Include="EmployeeReg.Designer.cs">
       <DependentUpon>EmployeeReg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeSalary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeSalary.Designer.cs">
-      <DependentUpon>EmployeeSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="EmpReg.cs">
       <AutoGen>True</AutoGen>
@@ -392,10 +440,16 @@
     <Compile Include="SupplierRegister.Designer.cs">
       <DependentUpon>SupplierRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupplierReport.cs">
+    <Compile Include="SupplierRegisterReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierRegisterReg.Designer.cs">
+      <DependentUpon>SupplierRegisterReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierRegisterReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SupplierReport.rpt</DependentUpon>
+      <DependentUpon>SupplierRegisterReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SupplierSearch.cs">
@@ -404,8 +458,26 @@
     <Compile Include="SupplierSearch.Designer.cs">
       <DependentUpon>SupplierSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupPurchaseReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupPurchaseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SupRegReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupRegReport.Designer.cs">
+      <DependentUpon>SupRegReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adminprofile.resx">
       <DependentUpon>Adminprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports.resx">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustDeliveryReport.resx">
+      <DependentUpon>CustDeliveryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerComplaintReg.resx">
       <DependentUpon>CustomerComplaintReg.cs</DependentUpon>
@@ -430,12 +502,12 @@
     <EmbeddedResource Include="CustomerFeedbackReg.resx">
       <DependentUpon>CustomerFeedbackReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerFeedbackReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CustomerFeedbackReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerInReport.resx">
       <DependentUpon>CustomerInReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerOrderReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegister.resx">
       <DependentUpon>CustomerRegister.cs</DependentUpon>
@@ -454,8 +526,15 @@
     <EmbeddedResource Include="CustomerSearch.resx">
       <DependentUpon>CustomerSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustSalesOrderReg.resx">
+      <DependentUpon>CustSalesOrderReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeliveryProcess.resx">
       <DependentUpon>DeliveryProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DeliveryReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeAttendanceReg.resx">
       <DependentUpon>EmployeeAttendanceReg.cs</DependentUpon>
@@ -464,8 +543,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EmployeeAttendanceReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeSalaryReceipt.resx">
-      <DependentUpon>EmployeeSalaryReceipt.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeSalary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeSalary1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeSalary2.resx">
+      <DependentUpon>EmployeeSalary2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeSalaryReceiptReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -474,24 +557,45 @@
     <EmbeddedResource Include="EmployeeSalaryReg.resx">
       <DependentUpon>EmployeeSalaryReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeSalaryReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>EmployeeSalaryReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeSearch.resx">
       <DependentUpon>EmployeeSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeUpdate.resx">
       <DependentUpon>EmployeeUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FeedbackReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinalProductDelete.resx">
       <DependentUpon>FinalProductDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedProductReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FinishedProductReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ManufacturingProcess.resx">
       <DependentUpon>ManufacturingProcess.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PackagingReg.resx">
+      <DependentUpon>PackagingReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackagingReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PackagingReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductReg.resx">
+      <DependentUpon>ProductReg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductUpdate.resx">
       <DependentUpon>ProductUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityReg.resx">
+      <DependentUpon>QualityReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QualityReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="QualityTesting.resx">
       <DependentUpon>QualityTesting.cs</DependentUpon>
@@ -506,12 +610,12 @@
     <EmbeddedResource Include="PurchaseOrderReg.resx">
       <DependentUpon>PurchaseOrderReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PurchaseOrderReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PurchaseOrderReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Package.resx">
       <DependentUpon>Package.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawDetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RawDetailsReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RawMaterial.resx">
       <DependentUpon>RawMaterial.cs</DependentUpon>
@@ -522,12 +626,8 @@
     <EmbeddedResource Include="RawMaterialUpdate.resx">
       <DependentUpon>RawMaterialUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SalesOrderReg.resx">
-      <DependentUpon>SalesOrderReg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SalesOrderReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>SalesOrderReport.cs</LastGenOutput>
+    <EmbeddedResource Include="RawReg.resx">
+      <DependentUpon>RawReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectRawMaterial.resx">
       <DependentUpon>SelectRawMaterial.cs</DependentUpon>
@@ -542,9 +642,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>StockMaintenanceReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupplierRegReprt.resx">
-      <DependentUpon>SupplierRegReprt.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Employee1.resx">
       <DependentUpon>Employee1.cs</DependentUpon>
     </EmbeddedResource>
@@ -553,9 +650,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeReg.resx">
       <DependentUpon>EmployeeReg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeSalary.resx">
-      <DependentUpon>EmployeeSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpReg.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -595,12 +689,22 @@
     <EmbeddedResource Include="SupplierRegister.resx">
       <DependentUpon>SupplierRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupplierReport.rpt">
+    <EmbeddedResource Include="SupplierRegisterReg.resx">
+      <DependentUpon>SupplierRegisterReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierRegisterReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>SupplierReport.cs</LastGenOutput>
+      <LastGenOutput>SupplierRegisterReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierSearch.resx">
       <DependentUpon>SupplierSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupPurchaseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupPurchaseReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupRegReport.resx">
+      <DependentUpon>SupRegReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

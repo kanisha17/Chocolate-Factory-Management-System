@@ -56,9 +56,9 @@ namespace Chocolate_Factory_Management_System
             this.labelProductID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelProductID.Location = new System.Drawing.Point(342, 135);
             this.labelProductID.Name = "labelProductID";
-            this.labelProductID.Size = new System.Drawing.Size(166, 31);
+            this.labelProductID.Size = new System.Drawing.Size(248, 31);
             this.labelProductID.TabIndex = 44;
-            this.labelProductID.Text = "Product ID";
+            this.labelProductID.Text = "Enter Product ID";
             // 
             // textBoxProductID
             // 
@@ -68,6 +68,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductID.Size = new System.Drawing.Size(340, 31);
             this.textBoxProductID.TabIndex = 48;
             this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
+            this.textBoxProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductID_KeyPress);
             // 
             // textBoxDiscount
             // 
@@ -76,6 +77,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(340, 31);
             this.textBoxDiscount.TabIndex = 41;
+            this.textBoxDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDiscount_KeyPress);
             // 
             // labelDiscount
             // 
@@ -149,6 +151,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(340, 31);
             this.textBoxPrice.TabIndex = 35;
+            this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KeyPress);
             // 
             // textBoxDescription
             // 
@@ -229,6 +232,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(340, 31);
             this.textBoxProductName.TabIndex = 49;
+            this.textBoxProductName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductName_KeyPress);
             // 
             // ProductUpdate
             // 

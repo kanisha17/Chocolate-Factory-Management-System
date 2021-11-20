@@ -21,7 +21,7 @@ namespace Chocolate_Factory_Management_System
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
             ReportDocument cryst = new ReportDocument();
-            cryst.Load(@"C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\PurchaseOrderReport.rpt");
+            cryst.Load(@"C:\Users\hp\source\repos\Chocolate Factory Management System\Chocolate-Factory-Management-System\Chocolate Factory Management System\SupPurchaseReport.rpt");
             crystalReportViewer1.ReportSource = cryst;
             crystalReportViewer1.Refresh();
             cryst.Refresh();

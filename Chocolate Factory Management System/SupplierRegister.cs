@@ -141,37 +141,41 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonADD_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxPhoneNo.Text.Length == 10 && textBoxPincode.Text.Length == 6)
             {
-                connection.Open();
-                command = new OleDbCommand("insert into Supplier(SupplierID,SupplierName,CompanyName,DOB,Address,Pincode,City,State,PhoneNo,Email) " +
-                    "values(@sid,@suppliername,@companyname,@dob,@address,@pincode,@city,@state,@phoneno,@email)", connection);
-                command.Parameters.AddWithValue("@sid", textBoxSID.Text);
-                command.Parameters.AddWithValue("@suppliername", textBoxSupplierName.Text);
-                command.Parameters.AddWithValue("@companyname", textBoxCompanyName.Text);
-               
-                command.Parameters.AddWithValue("@dob", dateTimePickersDOB.Text);
-                command.Parameters.AddWithValue("@address", textBoxAddress.Text);
-                command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
-                command.Parameters.AddWithValue("@city", textBoxCity.Text);
-                command.Parameters.AddWithValue("@state", textBoxState.Text);
-                command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
-                command.Parameters.AddWithValue("@email", textBoxEmail.Text);
-               
+                try
+                {
+                    connection.Open();
+                    command = new OleDbCommand("insert into Supplier(SupplierID,SupplierName,CompanyName,DOB,Address,Pincode,City,State,PhoneNo,Email) " +
+                        "values(@sid,@suppliername,@companyname,@dob,@address,@pincode,@city,@state,@phoneno,@email)", connection);
+                    command.Parameters.AddWithValue("@sid", textBoxSID.Text);
+                    command.Parameters.AddWithValue("@suppliername", textBoxSupplierName.Text);
+                    command.Parameters.AddWithValue("@companyname", textBoxCompanyName.Text);
 
-                command.ExecuteNonQuery();
-                resetControls();
-                connection.Close();
-                MessageBox.Show("Data Saved Successfully");
+                    command.Parameters.AddWithValue("@dob", dateTimePickersDOB.Text);
+                    command.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                    command.Parameters.AddWithValue("@pincode", textBoxPincode.Text);
+                    command.Parameters.AddWithValue("@city", textBoxCity.Text);
+                    command.Parameters.AddWithValue("@state", textBoxState.Text);
+                    command.Parameters.AddWithValue("@phoneno", textBoxPhoneNo.Text);
+                    command.Parameters.AddWithValue("@email", textBoxEmail.Text);
 
-                SupplierSearch f2 = new SupplierSearch();
-                f2.Show();
-                this.Hide();
+
+                    command.ExecuteNonQuery();
+                    resetControls();
+                    connection.Close();
+                    MessageBox.Show("Data Saved Successfully");
+
+                    SupplierSearch f2 = new SupplierSearch();
+                    f2.Show();
+                    this.Hide();
+                }
+                catch
+                {
+                    MessageBox.Show("Data Not Saved".ToString());
+                }
             }
-            catch 
-            {
-                MessageBox.Show("Data Not Saved".ToString());
-            }
+            else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode"); }
         }
 
         private void buttonEDIT_Click(object sender, EventArgs e)
@@ -182,6 +186,48 @@ namespace Chocolate_Factory_Management_System
         private void buttonDELETE_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void textBoxPincode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxCompanyName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxSupplierName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxState_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
         }
     }
 }

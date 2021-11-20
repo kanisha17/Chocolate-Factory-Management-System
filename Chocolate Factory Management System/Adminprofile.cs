@@ -87,26 +87,82 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonEDIT_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxPhoneNo.Text.Length == 10 && textBoxPincode.Text.Length==6)
             {
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update Admin set FirstName='" + textBoxFirstName.Text + "', LastName='" + textBoxLastName.Text + "'," +
-                    "DOB='" + dateTimePickerDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "'," +
-                    "Pincode='" + textBoxPincode.Text + "', PhoneNo='" + textBoxPhoneNo.Text + "',Email='" + textBoxEmail.Text + "' where AdminID=1";
-                MessageBox.Show(query);
-                command.CommandText = query;
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Updated Successfully");
+                try
+                {
+
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "update Admin set FirstName='" + textBoxFirstName.Text + "', LastName='" + textBoxLastName.Text + "'," +
+                        "DOB='" + dateTimePickerDOB.Value.Date + "', Address='" + textBoxAddress.Text + "', City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "'," +
+                        "Pincode='" + textBoxPincode.Text + "', PhoneNo='" + textBoxPhoneNo.Text + "',Email='" + textBoxEmail.Text + "' where AdminID=1";
+                    MessageBox.Show(query);
+                    command.CommandText = query;
+
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Data Updated Successfully");
+                }
+                catch
+                {
+                    MessageBox.Show("Data Not Updated");
+                }
+                connection.Close();
             }
-            catch
+            else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode "); }
+        }
+
+        private void textBoxFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar !=(char) Keys.Space && e.KeyChar !=(char)Keys.Back)
+                e.Handled = true;
+          
+        }
+
+        private void textBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxState_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxPincode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
             {
-                MessageBox.Show("Data Not Updated");
+                e.Handled = true;
             }
-            connection.Close();
+        }
+
+        private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

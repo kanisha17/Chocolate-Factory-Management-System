@@ -155,6 +155,27 @@ namespace Chocolate_Factory_Management_System
         }
         private void buttonAddToCart_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+
+                string query = "update RawMaterialDetails set AvailableStock='"+textBoxAvailableStock.Text+"' where RawMaterialID=" + textBoxSearch.Text + "";
+
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+
+             
+                connection.Close();
+            }
+            catch
+            {
+               
+            }
+           
             if (comboBox1.SelectedItem != null)
             {
                 addDataToGridView((++SrNo).ToString(), textBoxSearch.Text, comboBox1.SelectedItem.ToString(), textBoxQuantity.Text);
@@ -295,6 +316,35 @@ namespace Chocolate_Factory_Management_System
                     }
                 }
             }
+        }
+
+        private void textBoxQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxQuantity_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxQuantity.Text) == true)
+            {
+
+            }
+            else
+            {
+
+                int a = Convert.ToInt32(textBoxAvailableStock.Text);
+                int qty = Convert.ToInt32(textBoxQuantity.Text);
+
+                int x = a - qty;
+
+                textBoxAvailableStock.Text = x.ToString();
+            }
+
+         
         }
     }
 }   

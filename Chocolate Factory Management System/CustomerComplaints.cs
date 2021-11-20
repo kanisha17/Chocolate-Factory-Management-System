@@ -59,7 +59,7 @@ namespace Chocolate_Factory_Management_System
             try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into CustomerComplaint(CustomerID,CustomerName,Email,PhoneNo,ProductID,ComplaintTakenBy,DefectiveInfo,Improvement,Complaint) " +
+                command = new OleDbCommand("insert into CustomerComplaint(CustomerID,CustomerName,Email,PhoneNo,ProductName,ComplaintTakenBy,DefectiveInfo,Improvement,Complaint) " +
                     "values(@cid,@customername,@email,@phone,@productid,@takenby,@defective,@improvement,@complaint)", connection);
                 command.Parameters.AddWithValue("@cid", textBoxCID.Text);
                 command.Parameters.AddWithValue("@customername", textBoxName.Text);
@@ -146,6 +146,35 @@ namespace Chocolate_Factory_Management_System
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxtakenby_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void textBoxCID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

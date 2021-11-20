@@ -102,6 +102,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(306, 31);
             this.textBoxPrice.TabIndex = 8;
+            this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KeyPress);
             // 
             // labelReview
             // 
@@ -186,6 +187,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductID.Size = new System.Drawing.Size(306, 31);
             this.textBoxProductID.TabIndex = 28;
             this.textBoxProductID.TextChanged += new System.EventHandler(this.textBoxProductID_TextChanged);
+            this.textBoxProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductID_KeyPress);
             // 
             // labelProductID
             // 
@@ -205,6 +207,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.Size = new System.Drawing.Size(306, 31);
             this.textBoxProductName.TabIndex = 30;
+            this.textBoxProductName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProductName_KeyPress);
             // 
             // labelDiscount
             // 
@@ -224,6 +227,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxDiscount.Name = "textBoxDiscount";
             this.textBoxDiscount.Size = new System.Drawing.Size(306, 31);
             this.textBoxDiscount.TabIndex = 32;
+            this.textBoxDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDiscount_KeyPress);
             // 
             // ProductDetails
             // 

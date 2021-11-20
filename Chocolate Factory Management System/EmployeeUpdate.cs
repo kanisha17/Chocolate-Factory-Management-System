@@ -25,28 +25,32 @@ namespace Chocolate_Factory_Management_System
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            try
+            if (textBoxPhone.Text.Length == 10 && textBoxPincode.Text.Length == 6)
             {
+                try
+                {
 
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
-                    "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
-                    "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
-                    "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',PhoneNo='" + textBoxPhone.Text + "'," +
-                    "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" + textBoxEID.Text + "";
-                MessageBox.Show(query);
-                command.CommandText = query;
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    string query = "update EmployeeDetails set EmployeeName='" + textBoxEmployeeName.Text + "'," +
+                        "Department='" + comboBoxDepartment.Text + "',DOB='" + dateTimePickerDOB.Value.Date + "'," +
+                        "Gender='" + comboBoxGender.Text + "',Address='" + textBoxAddress.Text + "',Pincode='" + textBoxPincode.Text + "'," +
+                        "City='" + textBoxCity.Text + "',State='" + textBoxState.Text + "',PhoneNo='" + textBoxPhone.Text + "'," +
+                        "Email='" + textBoxEmail.Text + "',Qualification='" + textBoxQualification.Text + "',DateOfJoining='" + dateTimePickerJoining.Value.Date + "' where EID=" + textBoxEID.Text + "";
+                    MessageBox.Show(query);
+                    command.CommandText = query;
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Data Updated Successfully");
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Data Updated Successfully");
+                }
+                catch
+                {
+                    MessageBox.Show("Data Not Updated");
+                }
+                connection.Close();
             }
-            catch
-            {
-                MessageBox.Show("Data Not Updated");
-            }
-            connection.Close();
+            else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode"); }
         }
 
         private void buttonPrint_Click(object sender, EventArgs e)
@@ -124,6 +128,56 @@ namespace Chocolate_Factory_Management_System
             {
                 printDocument1.Print();
             }
+        }
+
+        private void textBoxEID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPincode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 10 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxEmployeeName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxState_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+                e.Handled = true;
+        }
+
+        private void textBoxQualification_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
         }
     }
 }

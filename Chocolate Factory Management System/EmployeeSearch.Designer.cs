@@ -61,6 +61,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(344, 36);
             this.textBoxEID.TabIndex = 3;
+            this.textBoxEID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEID_KeyPress);
             // 
             // menuStrip1
             // 

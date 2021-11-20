@@ -116,6 +116,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEID.Name = "textBoxEID";
             this.textBoxEID.Size = new System.Drawing.Size(317, 31);
             this.textBoxEID.TabIndex = 9;
+            this.textBoxEID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEID_KeyPress);
             // 
             // dateTimePickerCurrentDate
             // 
@@ -145,6 +146,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxReason.Name = "textBoxReason";
             this.textBoxReason.Size = new System.Drawing.Size(317, 31);
             this.textBoxReason.TabIndex = 14;
+            this.textBoxReason.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxReason_KeyPress);
             // 
             // checkedListBoxMark
             // 
@@ -202,6 +204,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEmpName.Name = "textBoxEmpName";
             this.textBoxEmpName.Size = new System.Drawing.Size(317, 31);
             this.textBoxEmpName.TabIndex = 26;
+            this.textBoxEmpName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEmpName_KeyPress);
             // 
             // EmployeeAttendance
             // 
