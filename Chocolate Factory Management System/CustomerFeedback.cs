@@ -51,13 +51,14 @@ namespace Chocolate_Factory_Management_System
          try
             {
                 connection.Open();
-                command = new OleDbCommand("insert into CustomerFeedback(CustomerID,CustomerName,Email,PhoneNo,Review,Satisfied,Suggestion) values(@cid,@customername,@email,@phone,@review,@satisfied,@suggestion)", connection);
+                command = new OleDbCommand("insert into CustomerFeedback(CustomerID,CustomerName,Email,PhoneNo,ProductName,Review,Satisfied,Suggestion) values(@cid,@customername,@email,@phone,@productname,@review,@satisfied,@suggestion)", connection);
 
 
                 command.Parameters.AddWithValue("@cid", textBoxCID.Text);
                 command.Parameters.AddWithValue("@customername", textBoxName.Text);
                 command.Parameters.AddWithValue("@email",textBoxEmail.Text);
                 command.Parameters.AddWithValue("@phone", textBoxPhoneNo.Text);
+                command.Parameters.AddWithValue("@productname",comboBoxProductName.Text);
                 command.Parameters.AddWithValue("@review", textBoxQ2.Text);
                 command.Parameters.AddWithValue("@satisfied", checkedListBoxQ1.Text);
                 command.Parameters.AddWithValue("@suggestion", textBoxQ2.Text);

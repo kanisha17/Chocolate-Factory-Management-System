@@ -118,8 +118,16 @@ namespace Chocolate_Factory_Management_System
 
         private void stockMaintenanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductDetailsReg p1 = new ProductDetailsReg();
+           ProductReg p1 = new ProductReg();
             p1.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
     }
 }

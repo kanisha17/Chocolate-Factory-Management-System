@@ -53,7 +53,7 @@ namespace Chocolate_Factory_Management_System
             this.labelRawMaterial.AutoSize = true;
             this.labelRawMaterial.BackColor = System.Drawing.Color.Transparent;
             this.labelRawMaterial.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRawMaterial.Location = new System.Drawing.Point(176, 44);
+            this.labelRawMaterial.Location = new System.Drawing.Point(118, 50);
             this.labelRawMaterial.Name = "labelRawMaterial";
             this.labelRawMaterial.Size = new System.Drawing.Size(1092, 54);
             this.labelRawMaterial.TabIndex = 20;
@@ -146,7 +146,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1323, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1269, 40);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -231,7 +231,7 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.brown;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1323, 585);
+            this.ClientSize = new System.Drawing.Size(1269, 551);
             this.Controls.Add(this.textBoxAStock);
             this.Controls.Add(this.textBoxStockInward);
             this.Controls.Add(this.textBoxNetStock);
@@ -249,6 +249,7 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StockAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockAdd";
             this.Load += new System.EventHandler(this.StockAdd_Load);
             this.menuStrip1.ResumeLayout(false);

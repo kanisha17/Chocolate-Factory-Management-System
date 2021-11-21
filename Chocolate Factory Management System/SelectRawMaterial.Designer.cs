@@ -56,6 +56,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(658, 189);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -89,6 +90,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // pRINTToolStripMenuItem
             // 
@@ -97,6 +99,7 @@ namespace Chocolate_Factory_Management_System
             this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
             this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.pRINTToolStripMenuItem.Text = "PRINT";
+            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // labelRawMaterialName
             // 

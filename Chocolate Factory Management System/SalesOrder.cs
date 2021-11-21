@@ -439,13 +439,13 @@ namespace Chocolate_Factory_Management_System
 
                 resetControls();
                 connection.Close();
-             
+                MessageBox.Show("Inserted Sucessfully");
                 
             }
 
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Insertion Failed");
             }
         }
 

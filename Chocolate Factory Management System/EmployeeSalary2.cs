@@ -25,6 +25,74 @@ namespace Chocolate_Factory_Management_System
             textBoxEID.Text = str4;
         }
         double basicsalary, da, hra, grossalary, pf, netsalary;
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("EMPLOYEE SALARY SLIP", new Font("Lucida Bright", 30, FontStyle.Bold), Brushes.Blue, new Point(200, 50));
+            e.Graphics.DrawString("Salary Slip No : " + textBoxSalarySlip.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 150));
+            e.Graphics.DrawString("Date : " +dateTimePicker1.Value.Date, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
+            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
+            e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("Employee ID: " + textBoxEID.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 280));
+            e.Graphics.DrawString("Employee Name : " +textBoxEmployeeName.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 310));
+            e.Graphics.DrawString("Department: " + textBoxDepartment.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 340));
+            e.Graphics.DrawString("City : " + textBoxCity.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 370));
+            e.Graphics.DrawString("Phone No: " + textBoxPhoneNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 400));
+   
+            e.Graphics.DrawString("Basic Salary : " +textBoxBasicSalary.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(300, 480));
+            e.Graphics.DrawString("D.A: " + textBoxDA.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(300, 510));
+            e.Graphics.DrawString("H.R.A : " +textBoxHRA.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(300, 540));
+            e.Graphics.DrawString("Gross Salary : "+textBoxGS.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(300, 570));
+            e.Graphics.DrawString("P.F : "+textBoxPF.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(300, 600));
+            e.Graphics.DrawString("Net Salary : "+textBoxNS.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(300, 630));
+
+        }
+
+        private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void textBoxBasicSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 6 && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void buttonCal_Click(object sender, EventArgs e)
+        {
+            basicsalary = int.Parse(textBoxBasicSalary.Text);
+            if (basicsalary >= 0)
+
+            {
+
+
+                da = basicsalary * 10 / 100;
+                textBoxDA.Text = da.ToString();
+
+                hra = basicsalary * 15 / 100;
+                textBoxHRA.Text = hra.ToString();
+
+                grossalary = basicsalary + da + hra;
+                textBoxGS.Text = grossalary.ToString();
+
+                pf = grossalary * 10 / 100;
+                textBoxPF.Text = pf.ToString();
+
+                netsalary = grossalary - pf;
+                textBoxNS.Text = netsalary.ToString();
+                MessageBox.Show("Net Salary:" + netsalary.ToString());
+            }
+            else { }
+
+        }
+
         void getSalarySlipNo()
         {
 
@@ -94,8 +162,8 @@ namespace Chocolate_Factory_Management_System
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into EmployeeSalary (SlipNo,EID,EmployeeName,BasicSalary,DA,HRA,GrossSalary,ProvidentFund,NetSalary) " +
-                    "values('" +textBoxSalarySlip.Text + "','" + textBoxEID.Text + "','" + textBoxEmployeeName.Text + "','" + textBoxBasicSalary.Text + "'," +
+                command.CommandText = "insert into EmployeeSalary (SlipNo,EID,EmployeeName,Department,PhoneNo,City,SalaryDate,BasicSalary,DA,HRA,GrossSalary,ProvidentFund,NetSalary) " +
+                    "values('" +textBoxSalarySlip.Text + "','" + textBoxEID.Text + "','" + textBoxEmployeeName.Text + "','"+textBoxDepartment.Text+"','"+textBoxPhoneNo.Text+"','"+textBoxCity.Text+"','"+dateTimePicker1.Value.Date+"','" + textBoxBasicSalary.Text + "'," +
                     "'" + textBoxDA.Text + "','" + textBoxHRA.Text + "','" +textBoxGS.Text + "','" + textBoxPF.Text + "','" + textBoxPF.Text + "')";
 
 
@@ -113,30 +181,8 @@ namespace Chocolate_Factory_Management_System
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            basicsalary = int.Parse(textBoxBasicSalary.Text);
-
-            if (basicsalary >= 0)
-            {
-                da = basicsalary * 10 / 100;
-                textBoxDA.Text = da.ToString();
-
-                hra = basicsalary * 15 / 100;
-                textBoxHRA.Text = hra.ToString();
-
-                grossalary = basicsalary + da + hra;
-                textBoxGS.Text = grossalary.ToString();
-
-                pf = grossalary * 10 / 100;
-                textBoxPF.Text = pf.ToString();
-
-                netsalary = grossalary - pf;
-                textBoxNS.Text = netsalary.ToString();
-                MessageBox.Show("Net Salary:" + netsalary.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Enter a valid input");
-            }
-        }
+           
+            
+        }  
     }
 }

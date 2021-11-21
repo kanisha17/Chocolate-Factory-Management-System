@@ -88,7 +88,9 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
 
         private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,14 +106,15 @@ namespace Chocolate_Factory_Management_System
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    string query = "select ProductID from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
+                    string query = "select ProductID,AvailableStock from ProductDetails where ProductName='" + comboBoxProductName.Text + "';";
                     command.CommandText = query;
                     OleDbDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         string p = (string)reader["ProductID"].ToString();
                         textBoxProductID.Text = p;
-                      
+                        string p1 = (string)reader["AvailableStock"].ToString();
+                        textBoxAStock.Text = p1;
 
                     }
                     connection.Close();

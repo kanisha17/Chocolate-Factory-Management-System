@@ -257,7 +257,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxEmail.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(968, 445);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(317, 31);
+            this.textBoxEmail.Size = new System.Drawing.Size(298, 31);
             this.textBoxEmail.TabIndex = 70;
             // 
             // dateTimePickerJoining
@@ -266,7 +266,7 @@ namespace Chocolate_Factory_Management_System
             this.dateTimePickerJoining.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerJoining.Location = new System.Drawing.Point(968, 385);
             this.dateTimePickerJoining.Name = "dateTimePickerJoining";
-            this.dateTimePickerJoining.Size = new System.Drawing.Size(317, 31);
+            this.dateTimePickerJoining.Size = new System.Drawing.Size(298, 31);
             this.dateTimePickerJoining.TabIndex = 72;
             // 
             // labelDateOfJoining
@@ -286,7 +286,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxQualification.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxQualification.Location = new System.Drawing.Point(968, 322);
             this.textBoxQualification.Name = "textBoxQualification";
-            this.textBoxQualification.Size = new System.Drawing.Size(317, 31);
+            this.textBoxQualification.Size = new System.Drawing.Size(298, 31);
             this.textBoxQualification.TabIndex = 68;
             this.textBoxQualification.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxQualification_KeyPress);
             // 
@@ -295,7 +295,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhone.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPhone.Location = new System.Drawing.Point(968, 264);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(317, 31);
+            this.textBoxPhone.Size = new System.Drawing.Size(298, 31);
             this.textBoxPhone.TabIndex = 67;
             this.textBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhone_KeyPress);
             // 
@@ -304,7 +304,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxCity.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCity.Location = new System.Drawing.Point(968, 137);
             this.textBoxCity.Name = "textBoxCity";
-            this.textBoxCity.Size = new System.Drawing.Size(317, 31);
+            this.textBoxCity.Size = new System.Drawing.Size(298, 31);
             this.textBoxCity.TabIndex = 66;
             this.textBoxCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCity_KeyPress);
             // 
@@ -313,7 +313,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxState.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxState.Location = new System.Drawing.Point(968, 201);
             this.textBoxState.Name = "textBoxState";
-            this.textBoxState.Size = new System.Drawing.Size(317, 31);
+            this.textBoxState.Size = new System.Drawing.Size(298, 31);
             this.textBoxState.TabIndex = 65;
             this.textBoxState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxState_KeyPress);
             // 
@@ -394,7 +394,7 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1368, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1312, 42);
             this.menuStrip1.TabIndex = 75;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -436,7 +436,7 @@ namespace Chocolate_Factory_Management_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chocolate_Factory_Management_System.Properties.Resources.Background_Color1;
-            this.ClientSize = new System.Drawing.Size(1368, 592);
+            this.ClientSize = new System.Drawing.Size(1312, 592);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.textBoxEmail);

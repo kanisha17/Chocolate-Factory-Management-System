@@ -128,7 +128,7 @@ namespace Chocolate_Factory_Management_System
                     command.Parameters.AddWithValue("@paymentmode", checkBoxCash.Text);
                     command.Parameters.AddWithValue("@deliverby", textBoxDeliverBy.Text);
                     command.ExecuteNonQuery();
-                    resetControls();
+                  
                     connection.Close();
 
                     MessageBox.Show("Data Saved Successfully");
@@ -142,20 +142,7 @@ namespace Chocolate_Factory_Management_System
             }
             else { MessageBox.Show("Please Enter Only 10 Digit PhoneNo / 6 Digit Pincode"); }
         }
-        void resetControls()
-        {
-            textBoxCustomerID.Clear();
-            textBoxAddress.Clear();
-            textBoxCity.Clear();
-            textBoxDeliverTo.Clear();
-            textBoxPhoneNo.Clear();
-            textBoxPincode.Clear();
-            textBoxDeliverBy.Clear();
-            textBoxDelivery.Clear();
-            textBoxReceiptNo.Clear();
-            checkBoxCash.ResetText();
-        }
-
+       
         private void buttonPrint_Click(object sender, EventArgs e)
         {
            
@@ -166,7 +153,7 @@ namespace Chocolate_Factory_Management_System
             e.Graphics.DrawString("DELIVERY INFORMATION", new Font("Lucida Bright", 30, FontStyle.Bold), Brushes.Blue, new Point(200, 50));
             e.Graphics.DrawString("Delivery No : " +textBoxDelivery.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 150));
             e.Graphics.DrawString("Date : "+dateTimePickerDate.Value.Date, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
-         //   e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
+            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
             e.Graphics.DrawString("Deliver To : " + textBoxDeliverTo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 280));
             e.Graphics.DrawString("Address : " + textBoxAddress.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 310));
@@ -178,7 +165,7 @@ namespace Chocolate_Factory_Management_System
             e.Graphics.DrawString("Payment Mode: " +checkBoxCash.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 490));
             e.Graphics.DrawString("Delivererd By : " + textBoxDeliverBy.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 510));
             e.Graphics.DrawString("Receiving Date : _ _/_ _/_ _ _ _" , new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 540));
-            e.Graphics.DrawString("Signature Of Receiver : _________________", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 570));
+            e.Graphics.DrawString("Signature Of Receiver : _________________", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 580));
 
 
        
@@ -242,6 +229,11 @@ namespace Chocolate_Factory_Management_System
         {
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Space && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

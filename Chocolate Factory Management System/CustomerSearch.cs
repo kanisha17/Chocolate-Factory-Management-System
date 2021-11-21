@@ -57,7 +57,7 @@ namespace Chocolate_Factory_Management_System
                     if (reader1.Read())
                     {
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-                        MessageBox.Show("Data Found");
+                        
 
                         SalesOrder s1 = new SalesOrder(textBoxPhoneNo.Text);
                         s1.ShowDialog();
@@ -65,7 +65,7 @@ namespace Chocolate_Factory_Management_System
                     }
                     else
                     {
-                        MessageBox.Show("Data Not Found");
+                        MessageBox.Show("Please Register And Continue");
                     }
                     connection.Close();
 
@@ -104,7 +104,7 @@ namespace Chocolate_Factory_Management_System
                     }
                     else
                     {
-                        MessageBox.Show("Data Not Found");
+                        MessageBox.Show("Please Register And Continue");
                     }
                     connection.Close();
 
@@ -132,7 +132,7 @@ namespace Chocolate_Factory_Management_System
                     if (reader1.Read())
                     {
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-                        MessageBox.Show("Data Found");
+                     
 
                         CustomerFeedback s1 = new CustomerFeedback(textBoxPhoneNo.Text);
                         s1.ShowDialog();
@@ -140,7 +140,7 @@ namespace Chocolate_Factory_Management_System
                     }
                     else
                     {
-                        MessageBox.Show("Data Not Found");
+                        MessageBox.Show("Please Register And Continue");
                     }
                     connection.Close();
 
@@ -176,7 +176,7 @@ namespace Chocolate_Factory_Management_System
                     }
                     else
                     {
-                        MessageBox.Show("Data Not Found");
+                        MessageBox.Show("Please Register And Continue");
                     }
                     connection.Close();
 
@@ -212,7 +212,7 @@ namespace Chocolate_Factory_Management_System
                     }
                     else
                     {
-                        MessageBox.Show("Data Not Found");
+                        MessageBox.Show("Please Register And Continue");
                     }
                     connection.Close();
 

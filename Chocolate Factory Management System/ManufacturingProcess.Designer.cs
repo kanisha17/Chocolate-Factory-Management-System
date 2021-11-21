@@ -54,6 +54,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxSEARCH.Name = "textBoxSEARCH";
             this.textBoxSEARCH.Size = new System.Drawing.Size(298, 26);
             this.textBoxSEARCH.TabIndex = 26;
+            this.textBoxSEARCH.TextChanged += new System.EventHandler(this.textBoxSEARCH_TextChanged);
             this.textBoxSEARCH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSEARCH_KeyPress);
             // 
             // buttonSEARCH
@@ -61,9 +62,9 @@ namespace Chocolate_Factory_Management_System
             this.buttonSEARCH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonSEARCH.Font = new System.Drawing.Font("Lucida Bright", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSEARCH.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonSEARCH.Location = new System.Drawing.Point(58, 173);
+            this.buttonSEARCH.Location = new System.Drawing.Point(35, 173);
             this.buttonSEARCH.Name = "buttonSEARCH";
-            this.buttonSEARCH.Size = new System.Drawing.Size(200, 61);
+            this.buttonSEARCH.Size = new System.Drawing.Size(223, 61);
             this.buttonSEARCH.TabIndex = 2;
             this.buttonSEARCH.Text = "SEARCH";
             this.buttonSEARCH.UseVisualStyleBackColor = false;

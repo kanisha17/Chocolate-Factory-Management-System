@@ -217,16 +217,17 @@ namespace Chocolate_Factory_Management_System
                 //command.Parameters.AddWithValue("@qty", textBoxQuantity.Text);
                 //int a= command.ExecuteNonQuery();
 
+
                 command.ExecuteNonQuery();
 
                 resetControls();
                 connection.Close();
-
+                MessageBox.Show("Inserted Succesfully");
             }
 
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Insertion Failed");
             }
         }
 
@@ -345,6 +346,19 @@ namespace Chocolate_Factory_Management_System
             }
 
          
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void pRINTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }   

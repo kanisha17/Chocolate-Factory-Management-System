@@ -38,7 +38,6 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonEDIT = new System.Windows.Forms.Button();
-            this.cachedCustomerComplaintReport1 = new Chocolate_Factory_Management_System.CachedCustomerComplaintReport();
             this.labelAStock = new System.Windows.Forms.Label();
             this.labelNetStock = new System.Windows.Forms.Label();
             this.labelStockInward = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxStockInward = new System.Windows.Forms.TextBox();
             this.textBoxAStock = new System.Windows.Forms.TextBox();
             this.comboBoxRawMaterialName = new System.Windows.Forms.ComboBox();
+            this.cachedCustomerComplaintReport1 = new Chocolate_Factory_Management_System.CachedCustomerComplaintReport();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 

@@ -261,8 +261,7 @@ namespace Chocolate_Factory_Management_System
 
         private void productDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductDetailsReg p1 = new ProductDetailsReg();
-            p1.ShowDialog();
+           
         }
 
         private void complaintsToolStripMenuItem1_Click(object sender, EventArgs e)

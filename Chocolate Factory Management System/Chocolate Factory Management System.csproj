@@ -144,12 +144,6 @@
       <DependentUpon>CustomerRegReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomerReportREG.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CustomerReportREG.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CustomerSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,12 +191,6 @@
     </Compile>
     <Compile Include="EmployeeSalary2.Designer.cs">
       <DependentUpon>EmployeeSalary2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeSalaryReceiptReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeSalaryReceiptReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="EmployeeSalaryReg.cs">
       <SubType>Form</SubType>
@@ -294,12 +282,6 @@
     <Compile Include="ProductDetailsReg.Designer.cs">
       <DependentUpon>ProductDetailsReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductDetailsReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductDetailsReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="PurchaseOrderReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,12 +341,6 @@
     </Compile>
     <Compile Include="StockMaintenanceReg.Designer.cs">
       <DependentUpon>StockMaintenanceReg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StockMaintenanceReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StockMaintenanceReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Employee1.cs">
       <SubType>Form</SubType>
@@ -519,10 +495,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CustomerRegReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerReportREG.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CustomerReportREG.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerSearch.resx">
       <DependentUpon>CustomerSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -549,10 +521,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeSalary2.resx">
       <DependentUpon>EmployeeSalary2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeSalaryReceiptReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>EmployeeSalaryReceiptReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeSalaryReg.resx">
       <DependentUpon>EmployeeSalaryReg.cs</DependentUpon>
@@ -603,10 +571,6 @@
     <EmbeddedResource Include="ProductDetailsReg.resx">
       <DependentUpon>ProductDetailsReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductDetailsReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ProductDetailsReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="PurchaseOrderReg.resx">
       <DependentUpon>PurchaseOrderReg.cs</DependentUpon>
     </EmbeddedResource>
@@ -637,10 +601,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockMaintenanceReg.resx">
       <DependentUpon>StockMaintenanceReg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StockMaintenanceReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>StockMaintenanceReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee1.resx">
       <DependentUpon>Employee1.cs</DependentUpon>
@@ -988,6 +948,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\grey2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packaging.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

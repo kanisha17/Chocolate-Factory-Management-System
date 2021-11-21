@@ -427,10 +427,12 @@ namespace Chocolate_Factory_Management_System
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString("PURCHASE INVOICE", new Font("Lucida Bright", 30, FontStyle.Bold), Brushes.Blue, new Point(200, 50));
-            e.Graphics.DrawString("Invoice ID : " + textBoxInvoiceID.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 150));
-            e.Graphics.DrawString("Name : " + textBoxName.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
-            e.Graphics.DrawString("Date : " + DateTime.Now.ToShortDateString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
-            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("Invoice ID : " + textBoxInvoiceID.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 150));
+            e.Graphics.DrawString("Supplier Name : " + textBoxName.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 210));
+            e.Graphics.DrawString("Supplier ID : " +textBoxSID.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 240));
+            e.Graphics.DrawString("Supplier Phone No : " + textBoxPhoneNo.Text, new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 180));
+            e.Graphics.DrawString("Date : " + DateTime.Now.ToShortDateString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 210));
+            e.Graphics.DrawString("Time : " + DateTime.Now.ToLongTimeString(), new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(640, 240));
             e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 280));
             e.Graphics.DrawString("ITEM NAME", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(20, 300));
             e.Graphics.DrawString("QUANTITY", new Font("Lucida Bright", 16, FontStyle.Bold), Brushes.Black, new Point(270, 300));

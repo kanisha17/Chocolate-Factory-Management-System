@@ -170,13 +170,15 @@ namespace Chocolate_Factory_Management_System
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    string query = "select RawMaterialID from RawMaterialDetails where RawMaterialName='" + comboBoxRawMaterialName.Text + "';";
+                    string query = "select RawMaterialID,AvailableStock from RawMaterialDetails where RawMaterialName='" + comboBoxRawMaterialName.Text + "';";
                     command.CommandText = query;
                     OleDbDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         string p = (string)reader["RawMaterialID"].ToString();
                         textBoxProductID.Text = p;
+                        string p1 = (string)reader["AvailableStock"].ToString();
+                        textBoxAStock.Text = p1;
 
                     }
                     connection.Close();

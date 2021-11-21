@@ -92,6 +92,7 @@ namespace Chocolate_Factory_Management_System
                 int g = 7;
                 try
                 {
+                    resetControls();
 
                     int search = Convert.ToInt32(textBoxSEARCH.Text);
                     if (search == c)
@@ -133,20 +134,21 @@ namespace Chocolate_Factory_Management_System
                     MessageBox.Show("Enter a valid input");
                 }
             }
-            void resetControls()
-            {
-                textBoxWrapping.BackColor = System.Drawing.Color.White;
-                textBoxTempering.BackColor = System.Drawing.Color.White;
-                textBoxRoasting.BackColor = System.Drawing.Color.White;
-                textBoxMoulding.BackColor = System.Drawing.Color.White;
-                textBoxGrinding.BackColor = System.Drawing.Color.White;
-                textBoxFermenting.BackColor = System.Drawing.Color.White;
-                textBoxDrying.BackColor = System.Drawing.Color.White;
-                textBoxCracking.BackColor = System.Drawing.Color.White;
-            }
+            
 
 
 
+        }
+        void resetControls()
+        {
+            textBoxWrapping.BackColor = System.Drawing.Color.White;
+            textBoxTempering.BackColor = System.Drawing.Color.White;
+            textBoxRoasting.BackColor = System.Drawing.Color.White;
+            textBoxMoulding.BackColor = System.Drawing.Color.White;
+            textBoxGrinding.BackColor = System.Drawing.Color.White;
+            textBoxFermenting.BackColor = System.Drawing.Color.White;
+            textBoxDrying.BackColor = System.Drawing.Color.White;
+            textBoxCracking.BackColor = System.Drawing.Color.White;
         }
 
         private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)
@@ -162,6 +164,11 @@ namespace Chocolate_Factory_Management_System
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBoxSEARCH_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
