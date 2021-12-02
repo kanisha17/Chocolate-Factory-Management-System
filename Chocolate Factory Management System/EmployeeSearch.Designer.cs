@@ -35,6 +35,7 @@ namespace Chocolate_Factory_Management_System
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelEmployee = new System.Windows.Forms.Label();
             this.linkLabelNotRegistered = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
@@ -72,7 +73,8 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.attendanceToolStripMenuItem,
-            this.salaryToolStripMenuItem});
+            this.salaryToolStripMenuItem,
+            this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(18, 5, 0, 5);
@@ -106,6 +108,15 @@ namespace Chocolate_Factory_Management_System
             this.salaryToolStripMenuItem.Size = new System.Drawing.Size(125, 36);
             this.salaryToolStripMenuItem.Text = "Salary";
             this.salaryToolStripMenuItem.Click += new System.EventHandler(this.salaryToolStripMenuItem_Click);
+            // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // labelEmployee
             // 
@@ -150,7 +161,9 @@ namespace Chocolate_Factory_Management_System
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "EmployeeSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeSearch";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EmployeeSearch_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -168,5 +181,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem salaryToolStripMenuItem;
         private System.Windows.Forms.Label labelEmployee;
         private System.Windows.Forms.LinkLabel linkLabelNotRegistered;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }

@@ -126,9 +126,10 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
             this.Hide();
+           SupplierSearch f2 = new SupplierSearch();
+            f2.ShowDialog();
+          
         }
         private void PurchaseOrder_Load(object sender, EventArgs e)
         {

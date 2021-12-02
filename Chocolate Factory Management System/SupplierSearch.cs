@@ -38,8 +38,8 @@ namespace Chocolate_Factory_Management_System
 
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
 
+                        this.Hide();
                         PurchaseOrder s1 = new PurchaseOrder(textBoxPhoneNo.Text);
-
                         s1.ShowDialog();
 
                     }
@@ -68,15 +68,17 @@ namespace Chocolate_Factory_Management_System
 
         private void linkLabelNotRegistered_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             SupplierRegister s1 = new SupplierRegister();
             s1.ShowDialog();
         }
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
             this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+           
         }
 
         private void textBoxPhoneNo_KeyPress(object sender, KeyPressEventArgs e)

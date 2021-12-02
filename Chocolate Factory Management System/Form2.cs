@@ -19,8 +19,10 @@ namespace Chocolate_Factory_Management_System
 
         private void aDMINPROFILEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Adminprofile a1 = new Adminprofile();
             a1.ShowDialog();
+           
         }
 
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace Chocolate_Factory_Management_System
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             EmployeeSearch s1 = new EmployeeSearch();
             s1.ShowDialog();
         }
@@ -61,13 +64,14 @@ namespace Chocolate_Factory_Management_System
 
         private void cUSTOMERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CustomerSearch s1 = new CustomerSearch();
             s1.ShowDialog();
         }
 
         private void sUPPLIERDETAILSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
             SupplierSearch s1 = new SupplierSearch();
             s1.ShowDialog();
         }
@@ -218,14 +222,15 @@ namespace Chocolate_Factory_Management_System
 
         private void lOGOUTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            Form1 f2 = new Form1();
-            f2.Show();
             this.Hide();
+            Form1 f2 = new Form1();
+            f2.ShowDialog();
+         
         }
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AllReports a1 = new AllReports();
             a1.ShowDialog();
         }
@@ -271,6 +276,7 @@ namespace Chocolate_Factory_Management_System
 
         private void stockMaintenanceToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             StockMaintenanceReg s1 = new StockMaintenanceReg();
             s1.ShowDialog();
         }
@@ -282,6 +288,7 @@ namespace Chocolate_Factory_Management_System
 
         private void billAndPaymentToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             PurchaseOrderReg p1 = new PurchaseOrderReg();
             p1.ShowDialog();
         }
@@ -313,24 +320,28 @@ namespace Chocolate_Factory_Management_System
 
         private void cartToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SelectRawMaterial s1 = new SelectRawMaterial();
             s1.ShowDialog();
         }
 
         private void machineToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ManufacturingProcess m1 = new ManufacturingProcess();
             m1.ShowDialog();
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             QualityTesting q1 = new QualityTesting();
             q1.ShowDialog();
         }
 
         private void packToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Package p1 = new Package();
             p1.ShowDialog();
         }
@@ -352,36 +363,42 @@ namespace Chocolate_Factory_Management_System
 
         private void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ProductDetails p1 = new ProductDetails();
             p1.ShowDialog();
         }
 
         private void uPDATEToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ProductUpdate u1 = new ProductUpdate();
             u1.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FinalProductDelete f1 = new FinalProductDelete();
             f1.ShowDialog();
         }
 
         private void aDDToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             StockMaintenance m1 = new StockMaintenance();
             m1.ShowDialog();
         }
 
         private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             StockAdd s1 = new StockAdd();
             s1.ShowDialog();
         }
 
         private void addToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             RawMaterial r1 = new RawMaterial();
             r1.ShowDialog();
         }
@@ -413,12 +430,14 @@ namespace Chocolate_Factory_Management_System
 
         private void updateToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             RawMaterialUpdate r1 = new RawMaterialUpdate();
             r1.ShowDialog();
         }
 
         private void deleteToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             RawMaterialDelete d1 = new RawMaterialDelete();
             d1.ShowDialog();
         }

@@ -162,6 +162,7 @@ namespace Chocolate_Factory_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(1362, 42);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // eXITToolStripMenuItem
             // 
@@ -353,6 +354,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "CustomerFeedback";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerFeedback";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CustomerFeedback_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

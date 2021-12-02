@@ -34,30 +34,35 @@ namespace Chocolate_Factory_Management_System
 
         private void employeeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             EmployeeReg r1 = new EmployeeReg();
             r1.ShowDialog();
         }
 
         private void salaryToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             EmployeeSalaryReg e1 = new EmployeeSalaryReg();
             e1.ShowDialog();
         }
 
         private void salaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             EmployeeAttendanceReg e1 = new EmployeeAttendanceReg();
             e1.ShowDialog();
         }
 
         private void registrationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             CustomerRegRep r1 = new CustomerRegRep();
             r1.ShowDialog();
         }
 
         private void enquiryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             CustomerEnquiryReg c1 = new CustomerEnquiryReg();
             c1.ShowDialog();
         }
@@ -70,36 +75,42 @@ namespace Chocolate_Factory_Management_System
 
         private void complaintToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             CustomerComplaintReg c1 = new CustomerComplaintReg();
             c1.ShowDialog();
         }
 
         private void orderToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             CustSalesOrderReg c1 = new CustSalesOrderReg();
             c1.ShowDialog();
         }
 
         private void deliveryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             CustDeliveryReport c1 = new CustDeliveryReport();
             c1.ShowDialog();
         }
 
         private void registrationToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             SupplierRegisterReg s1 = new SupplierRegisterReg();
             s1.ShowDialog();
         }
 
         private void orderToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+          
             PurchaseOrderReg s1 = new PurchaseOrderReg();
             s1.ShowDialog();
         }
 
         private void qualityTestingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             QualityReg q1 = new QualityReg();
             q1.ShowDialog();
         }
@@ -112,22 +123,23 @@ namespace Chocolate_Factory_Management_System
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
+            
             RawReg r1 = new RawReg();
             r1.ShowDialog();
         }
 
         private void stockMaintenanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           ProductReg p1 = new ProductReg();
+           
+            ProductReg p1 = new ProductReg();
             p1.ShowDialog();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             Form2 f2 = new Form2();
-            f2.Show();
-            this.Hide();
+            f2.ShowDialog();
+           
         }
     }
 }

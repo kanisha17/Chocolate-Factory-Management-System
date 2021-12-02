@@ -270,7 +270,9 @@ namespace Chocolate_Factory_Management_System
             this.MainMenuStrip = this.menuStripRawMaterial;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RawMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RawMaterial";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RawMaterial_Load);
             this.menuStripRawMaterial.ResumeLayout(false);
             this.menuStripRawMaterial.PerformLayout();

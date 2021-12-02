@@ -74,9 +74,10 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
             this.Hide();
+            CustomerSearch f2 = new CustomerSearch();
+            f2.ShowDialog();
+         
         }
 
         private void buttonSEARCH_Click(object sender, EventArgs e)

@@ -251,6 +251,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "StockAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockAdd";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StockAdd_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

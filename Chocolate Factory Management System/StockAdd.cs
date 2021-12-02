@@ -88,9 +88,10 @@ namespace Chocolate_Factory_Management_System
 
         private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form2 f2 = new Form2();
             f2.Show();
-            this.Hide();
+          
         }
 
         private void comboBoxProductName_SelectedIndexChanged(object sender, EventArgs e)

@@ -366,6 +366,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "CustomerComplaints";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerComplaints";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CustomerComplaints_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

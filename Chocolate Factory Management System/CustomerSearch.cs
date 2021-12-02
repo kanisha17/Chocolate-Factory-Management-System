@@ -39,6 +39,7 @@ namespace Chocolate_Factory_Management_System
 
         private void linkLabelNewRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             CustomerRegister c1 = new CustomerRegister();
             c1.ShowDialog();
         }
@@ -57,8 +58,8 @@ namespace Chocolate_Factory_Management_System
                     if (reader1.Read())
                     {
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-                        
 
+                        this.Hide();
                         SalesOrder s1 = new SalesOrder(textBoxPhoneNo.Text);
                         s1.ShowDialog();
 
@@ -97,8 +98,8 @@ namespace Chocolate_Factory_Management_System
 
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
 
+                        this.Hide();
                         Enquiry s1 = new Enquiry(textBoxPhoneNo.Text);
-
                         s1.ShowDialog();
 
                     }
@@ -132,8 +133,8 @@ namespace Chocolate_Factory_Management_System
                     if (reader1.Read())
                     {
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
-                     
 
+                        this.Hide();
                         CustomerFeedback s1 = new CustomerFeedback(textBoxPhoneNo.Text);
                         s1.ShowDialog();
 
@@ -169,7 +170,7 @@ namespace Chocolate_Factory_Management_System
                     {
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
 
-
+                        this.Hide();
                         CustomerComplaints s1 = new CustomerComplaints(textBoxPhoneNo.Text);
                         s1.ShowDialog();
 
@@ -205,7 +206,7 @@ namespace Chocolate_Factory_Management_System
                     {
                         textBoxPhoneNo.Text = reader1["PhoneNo"].ToString();
 
-
+                        this.Hide();
                         DeliveryProcess s1 = new DeliveryProcess(textBoxPhoneNo.Text);
                         s1.ShowDialog();
 
@@ -238,6 +239,12 @@ namespace Chocolate_Factory_Management_System
             }
         }
 
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
     }
 }
 

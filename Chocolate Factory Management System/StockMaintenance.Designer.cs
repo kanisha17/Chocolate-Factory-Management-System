@@ -253,6 +253,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "StockMaintenance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StockMaintenance";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StockMaintenance_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

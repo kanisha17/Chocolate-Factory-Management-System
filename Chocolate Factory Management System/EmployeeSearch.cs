@@ -42,9 +42,8 @@ namespace Chocolate_Factory_Management_System
                         //   textBoxFullName.Text = reader1["CustomerName"].ToString();
                         textBoxEID.Text = reader1["EID"].ToString();
 
-
+                        this.Hide();
                         EmployeeUpdate s1 = new EmployeeUpdate(textBoxEID.Text);
-
                         s1.ShowDialog();
                         // MessageBox.Show("Data Found");
                     }
@@ -80,9 +79,8 @@ namespace Chocolate_Factory_Management_System
                         //   textBoxFullName.Text = reader1["CustomerName"].ToString();
                         textBoxEID.Text = reader1["EID"].ToString();
 
-
+                        this.Hide();
                         EmployeeAttendance s1 = new EmployeeAttendance(textBoxEID.Text);
-
                         s1.ShowDialog();
                         // MessageBox.Show("Data Found");
                     }
@@ -118,9 +116,8 @@ namespace Chocolate_Factory_Management_System
                         //   textBoxFullName.Text = reader1["CustomerName"].ToString();
                         textBoxEID.Text = reader1["EID"].ToString();
 
-
+                        this.Hide();
                         EmployeeSalary2 s1 = new EmployeeSalary2(textBoxEID.Text);
-
                         s1.ShowDialog();
                         // MessageBox.Show("Data Found");
                     }
@@ -143,6 +140,7 @@ namespace Chocolate_Factory_Management_System
 
         private void linkLabelNotRegistered_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             Employee1 e1 = new Employee1();
             e1.ShowDialog();
         }
@@ -159,6 +157,13 @@ namespace Chocolate_Factory_Management_System
             {
                 e.Handled = true;
             }
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
         }
     }
 }

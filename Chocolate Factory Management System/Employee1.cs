@@ -100,9 +100,10 @@ namespace Chocolate_Factory_Management_System
 
         private void vIEWToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          EmployeeSearch f2 = new EmployeeSearch();
-            f2.Show();
             this.Hide();
+            EmployeeSearch f2 = new EmployeeSearch();
+            f2.ShowDialog();
+          
 
         }
 

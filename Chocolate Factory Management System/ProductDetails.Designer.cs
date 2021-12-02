@@ -257,6 +257,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "ProductDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductDetails";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ProductDetails_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

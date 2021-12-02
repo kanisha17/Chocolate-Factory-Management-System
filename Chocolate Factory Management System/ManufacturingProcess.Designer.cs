@@ -115,6 +115,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
             // textBoxFermenting
             // 
@@ -153,7 +154,7 @@ namespace Chocolate_Factory_Management_System
             this.textBoxRoasting.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRoasting.Location = new System.Drawing.Point(323, 390);
             this.textBoxRoasting.Name = "textBoxRoasting";
-            this.textBoxRoasting.Size = new System.Drawing.Size(105, 36);
+            this.textBoxRoasting.Size = new System.Drawing.Size(110, 36);
             this.textBoxRoasting.TabIndex = 18;
             this.textBoxRoasting.Text = "Roasting";
             // 
@@ -245,6 +246,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "ManufacturingProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManufacturingProcess";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ManufacturingProcess_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

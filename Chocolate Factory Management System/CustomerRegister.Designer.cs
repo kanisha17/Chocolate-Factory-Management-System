@@ -334,7 +334,9 @@ namespace Chocolate_Factory_Management_System
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "CustomerRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CustomerRegister_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -231,6 +231,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "EmployeeAttendance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeAttendance";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.EmployeeAttendance_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

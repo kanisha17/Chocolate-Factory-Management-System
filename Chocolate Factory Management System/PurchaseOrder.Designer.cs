@@ -571,6 +571,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "PurchaseOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PurchaseOrder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PurchaseOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPurchaseOrder)).EndInit();
             this.menuStrip1.ResumeLayout(false);

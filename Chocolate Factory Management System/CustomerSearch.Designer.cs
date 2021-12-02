@@ -39,6 +39,7 @@ namespace Chocolate_Factory_Management_System
             this.complaintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAnOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deliveryProcessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +92,7 @@ namespace Chocolate_Factory_Management_System
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -99,7 +101,8 @@ namespace Chocolate_Factory_Management_System
             this.feedbackToolStripMenuItem,
             this.complaintToolStripMenuItem,
             this.placeAnOrderToolStripMenuItem,
-            this.deliveryProcessToolStripMenuItem});
+            this.deliveryProcessToolStripMenuItem,
+            this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1307, 40);
@@ -151,6 +154,15 @@ namespace Chocolate_Factory_Management_System
             this.deliveryProcessToolStripMenuItem.Text = "Delivery Process";
             this.deliveryProcessToolStripMenuItem.Click += new System.EventHandler(this.deliveryProcessToolStripMenuItem_Click);
             // 
+            // eXITToolStripMenuItem
+            // 
+            this.eXITToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
+            this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
+            this.eXITToolStripMenuItem.Text = "EXIT";
+            this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
             // CustomerSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -167,7 +179,9 @@ namespace Chocolate_Factory_Management_System
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerSearch";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -186,5 +200,6 @@ namespace Chocolate_Factory_Management_System
         private System.Windows.Forms.ToolStripMenuItem complaintToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem placeAnOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deliveryProcessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem;
     }
 }

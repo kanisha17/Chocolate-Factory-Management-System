@@ -52,12 +52,12 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.stockMaintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelReport = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -151,7 +151,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.registrationToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
-            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.registrationToolStripMenuItem.Text = "Registration";
             this.registrationToolStripMenuItem.Click += new System.EventHandler(this.registrationToolStripMenuItem_Click);
             // 
@@ -159,7 +159,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.enquiryToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enquiryToolStripMenuItem.Name = "enquiryToolStripMenuItem";
-            this.enquiryToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.enquiryToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.enquiryToolStripMenuItem.Text = "Enquiry";
             this.enquiryToolStripMenuItem.Click += new System.EventHandler(this.enquiryToolStripMenuItem_Click);
             // 
@@ -167,7 +167,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.feedbackToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.feedbackToolStripMenuItem.Text = "Feedback";
             this.feedbackToolStripMenuItem.Click += new System.EventHandler(this.feedbackToolStripMenuItem_Click);
             // 
@@ -175,7 +175,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.complaintToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.complaintToolStripMenuItem.Name = "complaintToolStripMenuItem";
-            this.complaintToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.complaintToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.complaintToolStripMenuItem.Text = "Complaint";
             this.complaintToolStripMenuItem.Click += new System.EventHandler(this.complaintToolStripMenuItem_Click);
             // 
@@ -183,7 +183,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.orderToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.orderToolStripMenuItem.Text = "Order";
             this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
             // 
@@ -191,7 +191,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.deliveryToolStripMenuItem.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryToolStripMenuItem.Name = "deliveryToolStripMenuItem";
-            this.deliveryToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.deliveryToolStripMenuItem.Size = new System.Drawing.Size(261, 36);
             this.deliveryToolStripMenuItem.Text = "Delivery";
             this.deliveryToolStripMenuItem.Click += new System.EventHandler(this.deliveryToolStripMenuItem_Click);
             // 
@@ -214,7 +214,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.registrationToolStripMenuItem1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrationToolStripMenuItem1.Name = "registrationToolStripMenuItem1";
-            this.registrationToolStripMenuItem1.Size = new System.Drawing.Size(270, 36);
+            this.registrationToolStripMenuItem1.Size = new System.Drawing.Size(261, 36);
             this.registrationToolStripMenuItem1.Text = "Registration";
             this.registrationToolStripMenuItem1.Click += new System.EventHandler(this.registrationToolStripMenuItem1_Click);
             // 
@@ -222,7 +222,7 @@ namespace Chocolate_Factory_Management_System
             // 
             this.orderToolStripMenuItem1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderToolStripMenuItem1.Name = "orderToolStripMenuItem1";
-            this.orderToolStripMenuItem1.Size = new System.Drawing.Size(270, 36);
+            this.orderToolStripMenuItem1.Size = new System.Drawing.Size(261, 36);
             this.orderToolStripMenuItem1.Text = "Order";
             this.orderToolStripMenuItem1.Click += new System.EventHandler(this.orderToolStripMenuItem1_Click);
             // 
@@ -265,6 +265,12 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem8.Text = "Raw Material";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(304, 40);
+            this.toolStripMenuItem7.Text = ".";
+            // 
             // stockMaintenanceToolStripMenuItem
             // 
             this.stockMaintenanceToolStripMenuItem.Name = "stockMaintenanceToolStripMenuItem";
@@ -282,6 +288,12 @@ namespace Chocolate_Factory_Management_System
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(304, 4);
             // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(304, 40);
+            this.toolStripMenuItem12.Text = ".";
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -289,27 +301,15 @@ namespace Chocolate_Factory_Management_System
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(304, 40);
-            this.toolStripMenuItem7.Text = ".";
-            // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(304, 40);
-            this.toolStripMenuItem12.Text = ".";
-            // 
             // labelReport
             // 
             this.labelReport.AutoSize = true;
             this.labelReport.Font = new System.Drawing.Font("Lucida Bright", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReport.Location = new System.Drawing.Point(618, 216);
             this.labelReport.Name = "labelReport";
-            this.labelReport.Size = new System.Drawing.Size(378, 62);
+            this.labelReport.Size = new System.Drawing.Size(346, 62);
             this.labelReport.TabIndex = 1;
-            this.labelReport.Text = "ALL Reports";
+            this.labelReport.Text = "All Reports";
             // 
             // AllReports
             // 
@@ -323,6 +323,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "AllReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AllReports";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

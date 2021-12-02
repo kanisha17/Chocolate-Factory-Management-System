@@ -95,23 +95,23 @@ namespace Chocolate_Factory_Management_System
                     resetControls();
 
                     int search = Convert.ToInt32(textBoxSEARCH.Text);
-                    if (search == c)
+                    if (search == a)
                     {
                         textBoxFermenting.BackColor = System.Drawing.Color.Red;
                     }
-                    else if (search == e1)
+                    else if (search == d)
                     {
                         textBoxDrying.BackColor = System.Drawing.Color.Red;
                     }
-                    else if (search == a)
+                    else if (search == e1)
                     {
                         textBoxRoasting.BackColor = System.Drawing.Color.Red;
                     }
-                    else if (search == d)
+                    else if (search == f)
                     {
                         textBoxCracking.BackColor = System.Drawing.Color.Red;
                     }
-                    else if (search == f)
+                    else if (search == g)
                     {
                         textBoxGrinding.BackColor = System.Drawing.Color.Red;
                     }
@@ -119,7 +119,7 @@ namespace Chocolate_Factory_Management_System
                     {
                         textBoxTempering.BackColor = System.Drawing.Color.Red;
                     }
-                    else if (search == g)
+                    else if (search == b)
                     {
                         textBoxMoulding.BackColor = System.Drawing.Color.Red;
                     }
@@ -169,6 +169,13 @@ namespace Chocolate_Factory_Management_System
         private void textBoxSEARCH_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void eXITToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
         }
     }
 }

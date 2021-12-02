@@ -220,7 +220,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1303, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1303, 40);
             this.menuStrip1.TabIndex = 62;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -229,7 +229,7 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen;
             this.eXITToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.exit1;
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 38);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 
@@ -255,7 +255,9 @@ namespace Chocolate_Factory_Management_System
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FinalProductDelete";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinalProductDelete";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FinalProductDelete_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

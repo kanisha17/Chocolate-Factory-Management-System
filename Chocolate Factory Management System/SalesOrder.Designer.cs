@@ -46,6 +46,7 @@ namespace Chocolate_Factory_Management_System
             this.labelChange = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.eXITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPaid = new System.Windows.Forms.Label();
             this.textBoxPaid = new System.Windows.Forms.TextBox();
             this.labelSO = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace Chocolate_Factory_Management_System
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.textBoxPhoneNo = new System.Windows.Forms.TextBox();
-            this.pRINTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelPhoneNo = new System.Windows.Forms.Label();
             this.textBoxStock = new System.Windows.Forms.TextBox();
             this.labelStock = new System.Windows.Forms.Label();
@@ -260,6 +260,15 @@ namespace Chocolate_Factory_Management_System
             this.eXITToolStripMenuItem.Size = new System.Drawing.Size(106, 36);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
+            // 
+            // pRINTToolStripMenuItem
+            // 
+            this.pRINTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
+            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
+            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
+            this.pRINTToolStripMenuItem.Text = "PRINT";
+            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
             // 
             // labelPaid
             // 
@@ -473,15 +482,6 @@ namespace Chocolate_Factory_Management_System
             this.textBoxPhoneNo.TabIndex = 58;
             this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
-            // pRINTToolStripMenuItem
-            // 
-            this.pRINTToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pRINTToolStripMenuItem.Image = global::Chocolate_Factory_Management_System.Properties.Resources.a101;
-            this.pRINTToolStripMenuItem.Name = "pRINTToolStripMenuItem";
-            this.pRINTToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.pRINTToolStripMenuItem.Text = "PRINT";
-            this.pRINTToolStripMenuItem.Click += new System.EventHandler(this.pRINTToolStripMenuItem_Click);
-            // 
             // labelPhoneNo
             // 
             this.labelPhoneNo.AutoSize = true;
@@ -585,6 +585,7 @@ namespace Chocolate_Factory_Management_System
             this.Name = "SalesOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SalesOrder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SalesOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaleOrder)).EndInit();
             this.menuStrip1.ResumeLayout(false);
